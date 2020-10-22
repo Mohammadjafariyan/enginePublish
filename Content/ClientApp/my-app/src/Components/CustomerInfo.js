@@ -40,8 +40,8 @@ _showError(' مقدار بازگشتی از سرور نال است ');
         if (!DataHolder.selectedCustomer)
             return <></>;
 
-        console.log('CustomerInfo===>DataHolder.selectedCustomer====>')
-        console.log(DataHolder.selectedCustomer)
+        //consolelog('CustomerInfo===>DataHolder.selectedCustomer====>')
+        //consolelog(DataHolder.selectedCustomer)
         return (
             <div>
 

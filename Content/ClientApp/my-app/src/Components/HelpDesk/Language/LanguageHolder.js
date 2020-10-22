@@ -32,7 +32,7 @@ class LanguageHolder extends Component {
 
         if ( !_getHelpDesk() || !_getHelpDesk().language.Name) {
 
-            console.log("هیچ زبانی انتخاب نشده است",_getHelpDesk())
+            //consolelog("هیچ زبانی انتخاب نشده است",_getHelpDesk())
             _showError("هیچ زبانی انتخاب نشده است");
             return ;
         }

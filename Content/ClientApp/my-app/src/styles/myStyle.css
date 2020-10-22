@@ -6,6 +6,12 @@
     float: right;
 }
 
+.MySwitcher{
+
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
 .smallLink{
     font-size: 14px !important;
     margin-top: 5px;

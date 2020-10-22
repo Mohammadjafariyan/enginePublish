@@ -75,7 +75,7 @@ function ajaxCallFill(url, target, body) {
         },
         error: function (err) {
 
-            console.error(err);
+            //consoleerror(err);
             showError('خطایی رخ داد' + err.responseText);
         }
 

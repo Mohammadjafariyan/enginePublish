@@ -9,11 +9,11 @@ class dispatcher {
     dispatch(res) {
         if (res.Type == -1)//error
         {
-            console.error(res.Message);
+            //consoleerror(res.Message);
 
 
         }
-        console.log('dispatcher===>',res.Name)
+        //consolelog('dispatcher===>',res.Name)
         switch (res.Name) {
 
             /*========== eventTrigger==========*/
@@ -22,6 +22,21 @@ class dispatcher {
                     CurrentUserInfo.EventTriggerIndex.eventTriggerGetAllCallback(res);
                 }
                 break;
+
+            case "eventTriggerSaveCallback":
+                if (CurrentUserInfo.EventTriggerIndex){
+                    CurrentUserInfo.EventTriggerIndex.eventTriggerSaveCallback(res);
+                }
+                break;
+
+
+            case "eventTriggerDeleteCallback":
+                if (CurrentUserInfo.EventTriggerIndex){
+                    CurrentUserInfo.EventTriggerIndex.eventTriggerDeleteCallback(res);
+                }
+                break;
+
+                
             /*===========eventTrigger end============*/
             
             
@@ -381,7 +396,7 @@ class dispatcher {
 
                 //cookieManager.removeItem('customerToken')
                 cookieManager.removeItem('adminToken')
-                console.log('ClearCookie==>adminToken===>', cookieManager.getItem('adminToken'))
+                //consolelog('ClearCookie==>adminToken===>', cookieManager.getItem('adminToken'))
                 CurrentUserInfo.customerToken = null;
 
                 CurrentUserInfo.LayoutPage.setState({tmp: Math.random(), isClearCookie: true})
@@ -618,7 +633,7 @@ class dispatcher {
             default:
                 if (res && res.Message) {
 
-                    console.error(res.Message);
+                    //consoleerror(res.Message);
 
                     CurrentUserInfo.LayoutPage.showError(res.Message);
 

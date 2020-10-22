@@ -19,7 +19,7 @@
         var a, r = { title: "Your Session is About to Expire!", message: "Your session is about to expire.", logoutButton: "Logout", keepAliveButton: "Stay Connected", keepAliveUrl: "/new-able/default/session-timeout.html", ajaxType: "POST", ajaxData: "", redirUrl: "/timed-out", logoutUrl: "/log-out", warnAfter: 9e5, redirAfter: 12e5, keepAliveInterval: 5e3, keepAlive: !0, ignoreUserActivity: !1, onStart: !1, onWarn: !1, onRedir: !1, countdownMessage: !1, countdownBar: !1, countdownSmart: !1 },
             d = r,
             l = {};
-        if (t && (d = e.extend(r, t)), d.warnAfter >= d.redirAfter) return console.error('Bootstrap-session-timeout plugin is miss-configured. Option "redirAfter" must be equal or greater than "warnAfter".'), !1;
+        if (t && (d = e.extend(r, t)), d.warnAfter >= d.redirAfter) return //consoleerror('Bootstrap-session-timeout plugin is miss-configured. Option "redirAfter" must be equal or greater than "warnAfter".'), !1;
         if ("function" != typeof d.onWarn) {
             var u = d.countdownMessage ? "<p>" + d.countdownMessage.replace(/{timer}/g, '<span class="countdown-holder"></span>') + "</p>" : "",
                 c = d.countdownBar ? '<div class="progress progress-lg">                   <div class="progress-bar progress-bar-success countdown-bar active" role="progressbar" style="min-width: 15px; width: 100%;">                     <span class="countdown-holder"></span>                   </div>                 </div>' : "";

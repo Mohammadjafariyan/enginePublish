@@ -82,10 +82,10 @@
                 return;
             }
             m = "[" + new Date().toTimeString() + "] SignalR: " + msg;
-            if (window.console.debug) {
-                window.console.debug(m);
-            } else if (window.console.log) {
-                window.console.log(m);
+            if (window.//consoledebug) {
+                window.//consoledebug(m);
+            } else if (window.//consolelog) {
+                window.//consolelog(m);
             }
         },
 

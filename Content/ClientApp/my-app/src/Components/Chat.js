@@ -216,7 +216,7 @@ export default class Chat extends Component {
 
             this.setState({chats: this.state.chats, temp: Math.random()});
         } else {
-            console.error("i is not found");
+            //consoleerror("i is not found");
         }
     }
 
@@ -422,10 +422,10 @@ export default class Chat extends Component {
     }
 
     DeleteMessageCallback(res) {
-        console.log("رسپانس حذف پیام");
+        //consolelog("رسپانس حذف پیام");
 
         if (!res || !res.Content || !res.Content.uniqId || !res.Content.targetId) {
-            console.error(" مقدار بازگشتی از سرور نال است ");
+            //consoleerror(" مقدار بازگشتی از سرور نال است ");
             return;
         }
 
@@ -437,16 +437,16 @@ export default class Chat extends Component {
         );
 
         if (!message) {
-            console.error(uniqId + " یافت نشد ");
+            //consoleerror(uniqId + " یافت نشد ");
             return;
         }
-        console.log("در حال حذف پیام");
+        //consolelog("در حال حذف پیام");
 
         let inner = message;
 
         if (inner) {
             inner.Message = "حذف شد";
-            console.log("پیام حذف شد در رسپانس");
+            //consolelog("پیام حذف شد در رسپانس");
         }
 
         message.IsDisabled = false;
@@ -455,10 +455,10 @@ export default class Chat extends Component {
     }
 
     EditMessageCallback(res) {
-        console.log("رسپانس درخواست ویرایش");
+        //consolelog("رسپانس درخواست ویرایش");
 
         if (!res || !res.Content || !res.Content.uniqId || !res.Content.targetId) {
-            console.error(" مقدار بازگشتی از سرور نال است ");
+            //consoleerror(" مقدار بازگشتی از سرور نال است ");
             return;
         }
 
@@ -470,10 +470,10 @@ export default class Chat extends Component {
         );
 
         if (!message) {
-            console.error(uniqId + " یافت نشد ");
+            //consoleerror(uniqId + " یافت نشد ");
             return;
         }
-        console.log("انجام ویرایش در رسپاسن");
+        //consolelog("انجام ویرایش در رسپاسن");
 
         let inner = message;
 
@@ -521,16 +521,16 @@ export default class Chat extends Component {
     }
 
     DeleteMsgOnClick(uniqId, gapFileUniqId, THIS) {
-        console.log("جذف پیغام");
+        //consolelog("جذف پیغام");
 
         let message = CurrentUserInfo.ChatPage.state.chats.find(
             (f) => f.UniqId === uniqId
         );
         if (!message) {
-            console.error(uniqId + " یافت نشد ");
+            //consoleerror(uniqId + " یافت نشد ");
             return;
         }
-        console.log("ارسال درخواست حذف پیغام ");
+        //consolelog("ارسال درخواست حذف پیغام ");
 
         message.IsDisabled = true;
 
@@ -540,17 +540,17 @@ export default class Chat extends Component {
             uniqId,
             targetId: CurrentUserInfo.targetId,
         });
-        console.log(" درخواست حذف پیغام ارسال شد ");
+        //consolelog(" درخواست حذف پیغام ارسال شد ");
     }
 
     EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
-        console.log("ویرایش فراخوانی شد");
+        //consolelog("ویرایش فراخوانی شد");
 
         let message = CurrentUserInfo.ChatPage.state.chats.find(
             (f) => f.UniqId === uniqId
         );
         if (!message) {
-            console.error(uniqId + " یافت نشد ");
+            //consoleerror(uniqId + " یافت نشد ");
             return;
         }
 
@@ -587,8 +587,8 @@ export default class Chat extends Component {
         this.submit = (e) => {
             e.preventDefault();
 
-            console.log("انجام ویرایش توسط کاربر");
-            console.log("ارسال درخواست ویرایش");
+            //consolelog("انجام ویرایش توسط کاربر");
+            //consolelog("ارسال درخواست ویرایش");
 
             MyCaller.Send("EditMessage", {
                 uniqId,

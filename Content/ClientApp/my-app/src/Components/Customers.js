@@ -47,7 +47,7 @@ export default class Customers extends Component {
     totalUserCountsChangedCallback(res){
         if (!res.Content.CustomerList || !res.Content.CustomerList.length){
 
-            console.log('res.CustomerList is null or empty');
+            //consolelog('res.CustomerList is null or empty');
             return;
         }
 

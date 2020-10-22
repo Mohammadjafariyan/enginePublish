@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var name = element.getAttribute('data-dump');
           var instance = element.getAttribute('data-instance');
           var hot = window[instance];
-          console.log('data of ' + name, hot.getData());
+          //consolelog('data of ' + name, hot.getData());
         }
       });
     }
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var name = element.getAttribute('data-dump');
           var instance = element.getAttribute('data-instance');
           var hot = window[instance];
-          console.log('data of ' + name, hot.getData());
+          //consolelog('data of ' + name, hot.getData());
         }
       });
     }
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var name = element.getAttribute('data-dump');
           var instance = element.getAttribute('data-instance');
           var hot = window[instance];
-          console.log('data of ' + name, hot.getData());
+          //consolelog('data of ' + name, hot.getData());
         }
       });
     }
@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //           var name = element.getAttribute('data-dump');
 //           var instance = element.getAttribute('data-instance');
 //           var hot = window[instance];
-//           console.log('data of ' + name, hot.getData());
+//           //consolelog('data of ' + name, hot.getData());
 //         }
 //       });
 //     }
@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var name = element.getAttribute('data-dump');
           var instance = element.getAttribute('data-instance');
           var hot = window[instance];
-          console.log('data of ' + name, hot.getData());
+          //consolelog('data of ' + name, hot.getData());
         }
       });
     }
@@ -408,7 +408,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var name = element.getAttribute('data-dump');
           var instance = element.getAttribute('data-instance');
           var hot = window[instance];
-          console.log('data of ' + name, hot.getData());
+          //consolelog('data of ' + name, hot.getData());
         }
       });
     }
@@ -472,7 +472,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var name = element.getAttribute('data-dump');
           var instance = element.getAttribute('data-instance');
           var hot = window[instance];
-          console.log('data of ' + name, hot.getData());
+          //consolelog('data of ' + name, hot.getData());
         }
       });
     }
@@ -534,7 +534,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var name = element.getAttribute('data-dump');
           var instance = element.getAttribute('data-instance');
           var hot = window[instance];
-          console.log('data of ' + name, hot.getData());
+          //consolelog('data of ' + name, hot.getData());
         }
       });
     }
@@ -584,7 +584,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var name = element.getAttribute('data-dump');
           var instance = element.getAttribute('data-instance');
           var hot = window[instance];
-          console.log('data of ' + name, hot.getData());
+          //consolelog('data of ' + name, hot.getData());
         }
       });
     }

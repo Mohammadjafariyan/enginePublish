@@ -32,7 +32,7 @@ function validate(container_id) {
             idropdown = $(this).children('select').attr('idropdown');
         }
 
-        //console.log(container_id);
+        ////consolelog(container_id);
         var current_flag = false;
         if (valid_type == 'text') {
             current_flag = input_val.length > 1 ? true : false

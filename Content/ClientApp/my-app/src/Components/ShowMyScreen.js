@@ -122,8 +122,8 @@ function VIDEO_CALL_STOP(chatId) {
     } catch (e) {
         //ingore
     }
-    console.log(mediaRecorder.state);
-    console.log("recorder stopped");
+    //consolelog(mediaRecorder.state);
+    //consolelog("recorder stopped");
 
 
     captureStream.getTracks()
@@ -146,7 +146,7 @@ function VIDEO_CALL_INIT(THIS, callback,chatId) {
 
 
     if (navigator.mediaDevices.getDisplayMedia) {
-        console.log('getUserMedia supported.');
+        //consolelog('getUserMedia supported.');
 
         var constraints = {
             video: {
@@ -181,7 +181,7 @@ function VIDEO_CALL_INIT(THIS, callback,chatId) {
             //videoElem.srcObject=stream;
 
 
-            console.log(mediaRecorder.state);
+            //consolelog(mediaRecorder.state);
 
 
             mediaRecorder.ondataavailable = function (e) {
@@ -214,7 +214,7 @@ function VIDEO_CALL_INIT(THIS, callback,chatId) {
 
         let onError = function (err) {
             callback(THIS, 'اجازه دسترسی داده نشد', err);
-            console.error('The following error occured: ' + err);
+            //consoleerror('The following error occured: ' + err);
 
 
         }
@@ -224,7 +224,7 @@ function VIDEO_CALL_INIT(THIS, callback,chatId) {
     } else {
         callback(THIS, 'این امکان در مرورگر شما پشتیبانی نمی شود');
         alert('این امکان در مرورگر شما پشتیبانی نمی شود')
-        console.error('getUserMedia not supported on your browser!');
+        //consoleerror('getUserMedia not supported on your browser!');
     }
 
 

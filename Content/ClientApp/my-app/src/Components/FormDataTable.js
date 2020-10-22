@@ -23,8 +23,8 @@ class FormDataTable extends Component {
             return;
         }
 
-        console.log('FormDataTable==>getFormDataCallback')
-        console.log(res)
+        //consolelog('FormDataTable==>getFormDataCallback')
+        //consolelog(res)
 
 
         let formStructure = res.Content.Form;

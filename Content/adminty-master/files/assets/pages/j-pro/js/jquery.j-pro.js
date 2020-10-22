@@ -426,7 +426,7 @@ JustFormsPro.prototype = {
 				return false;
 			}
 			str = config.debugArr.join( '\n -------------- \n' );
-			console.warn( str );
+			//consolewarn( str );
 			alert( str );
 			config.debugArr = [];
 			$form.on( "submit", false );
@@ -586,7 +586,7 @@ JustFormsPro.prototype = {
 
 			// Server error processing
 			if ( config.debug ) {
-				console.warn( data );
+				//consolewarn( data );
 			}
 
 			result = $.parseJSON( data );
