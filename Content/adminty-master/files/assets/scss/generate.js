@@ -10,7 +10,7 @@ const partials = path.join(__dirname, './partials')
 const generateImport = (dirname, filename) => {
   filename = filename.replace('_', '').replace('.scss', '');
   const line = '@import \'partials/' + dirname + filename + '\';';
-  console.log(line);
+  //consolelog(line);
 }
 
 const files = fs.readdirSync(partials)

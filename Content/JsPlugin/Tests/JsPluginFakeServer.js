@@ -197,13 +197,13 @@ startUp=function() {
 
     }catch (e) {
 
-        console.error(e);
-        console.error('خطایی اتفاق افتاد');
+        //consoleerror(e);
+        //consoleerror('خطایی اتفاق افتاد');
 
-        console.log('اتصال مجدد بعد از 20 ثانیه مکس')
+        //consolelog('اتصال مجدد بعد از 20 ثانیه مکس')
         setTimeout(function () {
 
-            console.log('تلاش برای برقراری اتصال مجدد')
+            //consolelog('تلاش برای برقراری اتصال مجدد')
 
             startUp();
 

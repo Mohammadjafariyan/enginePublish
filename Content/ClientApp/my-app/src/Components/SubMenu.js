@@ -37,7 +37,7 @@ export default class SubMenu extends Component {
   totalUserCountsChangedCallback(res){
    /* if(!res || !res.Content.TotalWaitingForAnswerCount || !res.Content.NotChattedCount)
 {
-  console.error(res);
+  //consoleerror(res);
   CurrentUserInfo.LayoutPage.showError('totalUserCountsChangedCallback error')
   return;
 }*/

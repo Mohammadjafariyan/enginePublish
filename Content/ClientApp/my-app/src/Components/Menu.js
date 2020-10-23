@@ -34,7 +34,7 @@ export default class Menu extends Component {
         
       /*  if(!res || !res.Content.TotalWaitingForAnswerCount || !res.Content.NotChattedCount || !res.Content.TotalNewChatReceived)
         {
-            console.error(res);
+            //consoleerror(res);
             CurrentUserInfo.LayoutPage.showError('totalUserCountsChangedCallback error')
             return;
         }*/
@@ -75,7 +75,7 @@ export default class Menu extends Component {
                     اطلاعات کاربران
                 </Button>
 
-                <Button variant="light" className={'btn btn-default ' +(DataHolder.currentPage==='HelpDeskPage' ? ' bg-primary text-white ' : '')} type="button"
+                <Button id={'HelpDeskArticles'} variant="light" className={'btn btn-default ' +(DataHolder.currentPage==='HelpDeskPage' ? ' bg-primary text-white ' : '')} type="button"
                         onClick={() => {
                             this.setPage('HelpDeskPage');
                             DataHolder.subPage=null;
@@ -102,12 +102,19 @@ export default class Menu extends Component {
                     شبکه های اجتماعی
                 </Button>
                 <Button variant="light" className={'btn btn-default ' + (DataHolder.currentPage==='AutomaticSend' ? ' bg-primary text-white ' : '')} type="button"
-                    onClick={() => {
-                        this.setPage('AutomaticSend');
-                    }}>
+                        onClick={() => {
+                            this.setPage('AutomaticSend');
+                        }}>
                     ارسال های اتوماتیک
-                    </Button>
+                </Button>
 
+                <Button variant="light" className={'btn btn-default ' + (DataHolder.currentPage==='EventTrigger' ? ' bg-primary text-white ' : '')} type="button"
+                        onClick={() => {
+                            this.setPage('EventTrigger');
+                        }}>
+                    ها     EventTrigger 
+                </Button>
+                
                 <Button variant="light" className={'btn btn-default ' + (!DataHolder.currentPage ? ' bg-primary text-white ' : '')} type="button"
                         onClick={() => {
                             this.setPage(null);

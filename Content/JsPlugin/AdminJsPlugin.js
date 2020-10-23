@@ -24,8 +24,8 @@ let Logger = function (msg) {
         xhttp.open("POST", baseUrlForapi + "/log/log", true);
         xhttp.send(JSON.stringify({log: msg}));
     } catch (e) {
-        console.error(e);
-        console.error('عدم امکان ارسال لاگ سیستم');
+        //consoleerror(e);
+        //consoleerror('عدم امکان ارسال لاگ سیستم');
 
     }
 }
@@ -185,13 +185,13 @@ let startUp = function () {
 
         Logger(e);
 
-        console.error(e);
-        console.error('خطایی اتفاق افتاد');
+        //consoleerror(e);
+        //consoleerror('خطایی اتفاق افتاد');
 
-        console.log('اتصال مجدد بعد از 20 ثانیه مکس')
+        //consolelog('اتصال مجدد بعد از 20 ثانیه مکس')
         setTimeout(function () {
 
-            console.log('تلاش برای برقراری اتصال مجدد')
+            //consolelog('تلاش برای برقراری اتصال مجدد')
 
             startUp();
 
@@ -505,7 +505,7 @@ class BasePlugin {
         var gapFileUniqId = res.Content.gapFileUniqId;
 
 
-        console.warn('multimediaDeliveredCallback', getDoc().querySelector("#muf_" + gapFileUniqId))
+        //consolewarn('multimediaDeliveredCallback', getDoc().querySelector("#muf_" + gapFileUniqId))
 
         getDoc().querySelector("span[id='muf_" + gapFileUniqId + "']")
             .replaceWith(createElementFromHTML('<i style="margin: 10px;">√</i>'));
@@ -986,7 +986,7 @@ let configWebSocket = function (onOpen) {
     }/*
     CurrentUserInfo.ws = new WebSocket("ws://" + baseUrl + ":8181/");
     CurrentUserInfo.ws.onopen = function () {
-        console.log('اتصال برقرار شد');
+        //consolelog('اتصال برقرار شد');
         /*alert("About to send data");
         ws.send("Hello World"); // I WANT TO SEND THIS MESSAGE TO THE SERVER!!!!!!!!
         alert("Message sent!");#1#
@@ -1004,12 +1004,12 @@ let configWebSocket = function (onOpen) {
     CurrentUserInfo.ws.onmessage = function (evt) {
         var received_msg = evt.data;
 
-        console.log(evt);
+        //consolelog(evt);
         _dispatcher.dispatch(JSON.parse(received_msg));
     };
     CurrentUserInfo.ws.onclose = function () {
         // websocket is closed.
-        console.error("اتصال قطع شد");
+        //consoleerror("اتصال قطع شد");
         
 
 
@@ -1639,7 +1639,7 @@ function bindgapFileAdder() {
 
             var fileReader = new FileReader();
             fileReader.onload = function (e) {
-                console.log(e.target.result)
+                //consolelog(e.target.result)
 
                 let uniqId = GetChats() + 1;
                 CurrentUserInfo.uniqId = uniqId;
@@ -1666,11 +1666,11 @@ function enterTextMessageAndSend() {
 
 
 function DeleteMessageCallback(res) {
-    console.log('رسپانس حذف پیام');
+    //consolelog('رسپانس حذف پیام');
 
     if (!res || !res.Content || !res.Content.uniqId || !res.Content.targetId) {
         
-        console.error(' مقدار بازگشتی از سرور نال است ');
+        //consoleerror(' مقدار بازگشتی از سرور نال است ');
         return;
     }
 
@@ -1679,17 +1679,17 @@ function DeleteMessageCallback(res) {
 
     let message = getDoc().querySelector(`.gapMsg[uniqid='${uniqId}']`)
     if (!message) {
-        console.error(uniqId + " یافت نشد ");
+        //consoleerror(uniqId + " یافت نشد ");
         return;
     }
-    console.log('در حال حذف پیام');
+    //consolelog('در حال حذف پیام');
 
     let inner = GetInnerTextElement(message);
 
 
     if (inner) {
         inner.innerText = "حذف شد";
-        console.log('پیام حذف شد در رسپانس');
+        //consolelog('پیام حذف شد در رسپانس');
 
     }
 
@@ -1699,7 +1699,7 @@ function DeleteMessageCallback(res) {
             buttons[i].disabled = false;
         }
     } else {
-        console.error('دکمه ها یافت نشد');
+        //consoleerror('دکمه ها یافت نشد');
 
     }
 
@@ -1748,7 +1748,7 @@ function GetInnerTextElement(message, dontRemoveContent) {
     }
     
     if (!inner){
-        console.error('پیغام حذف نشد ، یافت نشد');
+        //consoleerror('پیغام حذف نشد ، یافت نشد');
 return inner;
     }
 
@@ -1789,11 +1789,11 @@ function replaceAll(str, find, replace) {
 
 function EditMessageCallback(res) {
 
-    console.log('رسپانس درخواست ویرایش');
+    //consolelog('رسپانس درخواست ویرایش');
 
     if (!res || !res.Content || !res.Content.uniqId || !res.Content.targetId) {
         
-        console.error(' مقدار بازگشتی از سرور نال است ');
+        //consoleerror(' مقدار بازگشتی از سرور نال است ');
         return;
     }
 
@@ -1802,10 +1802,10 @@ function EditMessageCallback(res) {
 
     let message = getDoc().querySelector(`.gapMsg[uniqid='${uniqId}']`)
     if (!message) {
-        console.error(uniqId + " یافت نشد ");
+        //consoleerror(uniqId + " یافت نشد ");
         return;
     }
-    console.log('انجام ویرایش در رسپاسن');
+    //consolelog('انجام ویرایش در رسپاسن');
 
 
     let inner = GetInnerTextElement(message, true);
@@ -1817,19 +1817,19 @@ function EditMessageCallback(res) {
 
 
     }
-    console.log('ویرایش انجام شد');
+    //consolelog('ویرایش انجام شد');
 
 }
 
 function DeleteMsgOnClick(uniqId, gapFileUniqId, THIS) {
-    console.log('جذف پیغام');
+    //consolelog('جذف پیغام');
 
     let message = getDoc().querySelector(`.gapMsg[uniqid='${uniqId}']`)
     if (!message) {
-        console.error(uniqId + " یافت نشد ");
+        //consoleerror(uniqId + " یافت نشد ");
         return;
     }
-    console.log('ارسال درخواست حذف پیغام ');
+    //consolelog('ارسال درخواست حذف پیغام ');
 
 
     let buttons = message.querySelectorAll('button');
@@ -1838,29 +1838,29 @@ function DeleteMsgOnClick(uniqId, gapFileUniqId, THIS) {
             buttons[i].disabled = true;
         }
     } else {
-        console.error('دکمه ها یافت نشد');
+        //consoleerror('دکمه ها یافت نشد');
 
     }
 
     MyCaller.Send("DeleteMessage", {uniqId, targetId: CurrentUserInfo.targetId});
-    console.log(' درخواست حذف پیغام ارسال شد ');
+    //consolelog(' درخواست حذف پیغام ارسال شد ');
 
 }
 
 function EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
-    console.log('ویرایش فراخوانی شد');
+    //consolelog('ویرایش فراخوانی شد');
 
     let message = getDoc().querySelector(`.gapMsg[uniqid='${uniqId}']`)
     if (!message) {
-        console.error(uniqId + " یافت نشد ");
+        //consoleerror(uniqId + " یافت نشد ");
         return;
     }
     if (!message.parentElement) {
-        console.error(message.parentElement + " یافت نشد ");
+        //consoleerror(message.parentElement + " یافت نشد ");
         return;
     }
 
-    console.log('ورودی پر می شود جهت ویرایش');
+    //consolelog('ورودی پر می شود جهت ویرایش');
     let inner = GetInnerTextElement(message);
 
     if (inner.classList.contains('gapMe') || inner.classList.contains('gapHe')) {
@@ -1873,7 +1873,7 @@ function EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
         }
     }
     if (!inner) {
-        console.error('inner is null');
+        //consoleerror('inner is null');
         return;
         ;
     }
@@ -1891,13 +1891,13 @@ function EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
         alert('امکان ویرایش عکس وجود ندارد');
     };
 
-    console.log('خالی کردن بایند ها انجام شد');
+    //consolelog('خالی کردن بایند ها انجام شد');
 
     getDoc().querySelector('#gapChatForm').onsubmit = function (e) {
         e.preventDefault();
 
-        console.log('انجام ویرایش توسط کاربر');
-        console.log('ارسال درخواست ویرایش');
+        //consolelog('انجام ویرایش توسط کاربر');
+        //consolelog('ارسال درخواست ویرایش');
 
         MyCaller.Send("EditMessage",
             {
@@ -1909,7 +1909,7 @@ function EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
         getDoc().querySelector('#gapChatInput').value = '';
         CurrentUserInfo.commonDomManager.bindSubmitButton();
         CurrentUserInfo.commonDomManager.bindGapChatInput();
-        console.log('بایند ها برگردانده شد');
+        //consolelog('بایند ها برگردانده شد');
 
         return false;
     }
@@ -2188,14 +2188,14 @@ class DomManager {
     }
 
     createNewPanel() {
-        console.log('\'#gapSearchButton\').onclick');
+        //consolelog('\'#gapSearchButton\').onclick');
         let gapSearchPanel = CurrentUserInfo.commonDomManager
             .getScreenPanel('#gapSearchPanel');
 
-        console.log('gapSearchPanel', gapSearchPanel);
+        //consolelog('gapSearchPanel', gapSearchPanel);
 
         if (!gapSearchPanel) {
-            console.log('CurrentUserInfo.commonDomManager.createScreenPanel', gapSearchPanel);
+            //consolelog('CurrentUserInfo.commonDomManager.createScreenPanel', gapSearchPanel);
 
             CurrentUserInfo.commonDomManager.createScreenPanel('gapSearchPanel');
         }
@@ -2576,7 +2576,7 @@ class dispatcher {
     dispatch(res) {
         if (res.Type == -1)//error
         {
-            console.error(res.Message);
+            //consoleerror(res.Message);
         }
         switch (res.Name) {
             case"getAllTagsForCurrentAdminCallback":
@@ -2704,7 +2704,7 @@ class dispatcher {
             default:
                 if (res && res.Message) {
 
-                    console.error(res.Message);
+                    //consoleerror(res.Message);
 
                     if (debugMode) {
                         alert(res.Message)
@@ -2785,14 +2785,14 @@ function searchHandlerCallback(res) {
         let id;
         if (CurrentUserInfo.currentUsersIsAdmins) {
             if (!item.MyAccount || !item.MyAccount.Name) {
-                console.error('item.MyAccount is null', item);
+                //consoleerror('item.MyAccount is null', item);
             }
 
             id = item.MyAccount.Id;
             name = item.MyAccount.Name;
         } else {
             if (!item.Customer || !item.Customer.Name) {
-                console.error('item.Customer is null', item);
+                //consoleerror('item.Customer is null', item);
             }
             name = item.Customer.Name;
             id = item.Customer.Id;
@@ -2822,7 +2822,7 @@ function searchHandlerCallback(res) {
         let chatId;
         if (CurrentUserInfo.currentUsersIsAdmins) {
             if (!item.MyAccount || !item.MyAccount.Name) {
-                console.error('item.MyAccount is null', item);
+                //consoleerror('item.MyAccount is null', item);
             }
 
             id = item.MyAccount.Id;
@@ -2830,7 +2830,7 @@ function searchHandlerCallback(res) {
             chatId = item.Id;
         } else {
             if (!item.Customer || !item.Customer.Name) {
-                console.error('item.Customer is null', item);
+                //consoleerror('item.Customer is null', item);
             }
             name = item.Customer.Name;
             id = item.Customer.Id;
@@ -3453,8 +3453,8 @@ let CommentService = function (msg, callback) {
         );
 
     } catch (e) {
-        console.error(e);
-        console.error('عدم امکان ارسال لاگ سیستم');
+        //consoleerror(e);
+        //consoleerror('عدم امکان ارسال لاگ سیستم');
     }
 }
 

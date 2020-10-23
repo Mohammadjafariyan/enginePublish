@@ -46,8 +46,8 @@ var delay = (function(){
         console = {
             log: function () { return undefined; }
         };
-    } else if (!debugging || console.log === undefined) {
-        console.log = function () { return undefined; };
+    } else if (!debugging || //consolelog === undefined) {
+        //consolelog = function () { return undefined; };
     }
 
     //Date
@@ -136,7 +136,7 @@ var delay = (function(){
                 // Get/set options on the fly
                 case 'options':
                     // Setter
-                    //console.log('options', elem.length, data);
+                    ////consolelog('options', elem.length, data);
                     var obj = undefined;
                     elem.each(function (i, e) {
                         if($(e).hasClass('PIApostit')) {
@@ -240,7 +240,7 @@ var delay = (function(){
                                 posY = $(this).offset().top;
                             }
                             $.extend(data, { posX: posX, posY: posY }, true);
-                            //console.log('create', i, e);
+                            ////consolelog('create', i, e);
                             $.PostItAll.new('', data, $(e), callback);
                         });
                     } else {
@@ -398,7 +398,7 @@ var delay = (function(){
                 var importFile = function() {
                     //Check support
                     if (!window.FileReader) {
-                        console.log('Browser do not support FileReader.')
+                        //consolelog('Browser do not support FileReader.')
                         return;
                     }
                     //Get file
@@ -567,7 +567,7 @@ var delay = (function(){
             optPos.posY = parseInt(window.pageYOffset, 10);
             optPos.use = false;
 
-            //console.log('init opt', $.fn.postitall.defaults);
+            ////consolelog('init opt', $.fn.postitall.defaults);
             if(opt === undefined) {
                 opt = $.extend(true, {}, $.fn.postitall.defaults);
                 opt.posX = optPos.posX;
@@ -632,7 +632,7 @@ var delay = (function(){
 
             //Check if we have the id
             var options = opt;
-            //console.log('options', options);
+            ////consolelog('options', options);
             if(options.id !== "") {
                 //Random bg & textcolor
                 options = randCol(options);
@@ -640,7 +640,7 @@ var delay = (function(){
                 setTimeout(function() { note.init(obj, options); if(callback !== undefined) callback($.fn.postitall.globals.prefix + options.id, options, obj[0]); }, 100);
             } else {
                 //Get new id
-                //console.log('paso');
+                ////consolelog('paso');
                 note.getIndex(($.fn.postitall.globals.savable || options.features.savable), function(index) {
                     //Id
                     options.id = index;
@@ -742,7 +742,7 @@ var delay = (function(){
                     $(notes).each(function(i,o) {
                         if($($.fn.postitall.globals.prefix + o.id).length <= 0) {
                             if(typeof callbacks === 'object') {
-                                //console.log(callbacks);
+                                ////consolelog(callbacks);
                                 if(callbacks.onCreated !== undefined) {
                                     o.onCreated = callbacks.onCreated;
                                 }
@@ -765,7 +765,7 @@ var delay = (function(){
                             if(o.flags !== undefined) {
                                 o.flags.highlight = false;
                                 if(highlight !== undefined && o.id == highlight) {
-                                    //console.log('highlight note', highlight);
+                                    ////consolelog('highlight note', highlight);
                                     o.flags.highlight = true;
                                 }
                             }
@@ -844,7 +844,7 @@ var delay = (function(){
             //TODO : Revisar
             if(delStorage && delDomain !== "" && delDomain !== undefined) { //&& $.fn.postitall.globals.savable
                 //Storage notes
-                console.log('clearStorage',delDomain);
+                //consolelog('clearStorage',delDomain);
                 $.PostItAll.clearStorage(delDomain);
             }
         },
@@ -852,13 +852,13 @@ var delay = (function(){
             if(delDomain !== undefined) {
                 //Delete notes of an specific domain
                 storageManager.removeDom({ domain : delDomain }, function() {
-                    console.log("Storage cleared for domain", delDomain);
+                    //consolelog("Storage cleared for domain", delDomain);
                     if(callback !== undefined) callback();
                 });
             } else {
                 //Delete all notes
                 storageManager.clear(function() {
-                    console.log("Storage cleared");
+                    //consolelog("Storage cleared");
                     if(callback !== undefined) callback();
                 });
             }
@@ -920,7 +920,7 @@ var delay = (function(){
                         document.body.removeChild(element);
                     } else {
                         alert('No notes to export');
-                        console.log(obj);
+                        //consolelog(obj);
                     }
                 }, 250);
             }
@@ -954,7 +954,7 @@ var delay = (function(){
             //obj id
             obj.attr('id', $.fn.postitall.globals.prefix.substring(1) + opt.id);
 
-            //console.log('init');
+            ////consolelog('init');
             //this.attachedTo();
 
             //create stuff
@@ -1023,11 +1023,11 @@ var delay = (function(){
                     if($(''+data.attachedTo.element).length > 0) {
                         objToAttach = $(''+data.attachedTo.element).first();
                     } else {
-                        console.log('Object to attach not found in DOM.');
+                        //consolelog('Object to attach not found in DOM.');
                         return;
                     }
                 } else {
-                    console.log('Incorrect object to attach. Define a jQuery object or a DOM selector for the element property.');
+                    //consolelog('Incorrect object to attach. Define a jQuery object or a DOM selector for the element property.');
                     return;
                 }
             } else {
@@ -1055,7 +1055,7 @@ var delay = (function(){
             //Breakpoints / responsive behaviour (https://github.com/txusko/PostItAll/issues/11)
             var fixVertical = function(callback) {
                 var scrollPosition = self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop;
-                //console.log(data.posY, scrollPosition, (data.posY + data.height), (scrollPosition + $(window).height()));
+                ////consolelog(data.posY, scrollPosition, (data.posY + data.height), (scrollPosition + $(window).height()));
                 if(data.posY < scrollPosition) {
                     data.posY = position.top + 20;
                     if(data.attachedTo.arrow && data.style.arrow != "top") {
@@ -1076,7 +1076,7 @@ var delay = (function(){
                 var dataPosX = data.posX;
                 if(pos1 == "right")
                     dataPosX = dataPosX + noteWidth;
-                //console.log(dataPosX, data.posX, $(window).width());
+                ////consolelog(dataPosX, data.posX, $(window).width());
                 if(dataPosX < 0) {
                     data.posX = position.left + 20;
                     if(data.attachedTo.arrow && data.style.arrow != "left") {
@@ -1198,7 +1198,7 @@ var delay = (function(){
             var options = obj.data('PIA-options');
             if(!$.fn.postitall.globals.savable && !options.features.savable)
                 return;
-            //console.log('save', options);
+            ////consolelog('save', options);
             options.features.savable = true;
             this.saveOptions(options, callback);
         },
@@ -1207,9 +1207,9 @@ var delay = (function(){
         saveOptions : function(options, callback) {
             if(options === undefined)
                 options = this.options;
-            //console.log('saveOptions', options.posX, options.posY, options.width, options.height);
+            ////consolelog('saveOptions', options.posX, options.posY, options.width, options.height);
             if ($.fn.postitall.globals.savable || options.features.savable) {
-                //console.log(options);
+                ////consolelog(options);
                 storageManager.add(options, function(error) {
                     if(error != "") {
                         if(callback != null) callback(error);
@@ -1229,17 +1229,17 @@ var delay = (function(){
             //this.switchOnLights();
             //this.disableKeyboardNav();
 
-            //console.log(obj);
+            ////consolelog(obj);
             if(obj === undefined)
                 obj = $($.fn.postitall.globals.prefix + this.options.id);
             if(callOnDelete === undefined)
                 callOnDelete = true;
 
             var options = obj.data('PIA-options');
-            //console.log(this,options, obj);
+            ////consolelog(this,options, obj);
             var id = options.id;
 
-            //console.log('destroy', id, $.fn.postitall.globals.savable, options.features.savable);
+            ////consolelog('destroy', id, $.fn.postitall.globals.savable, options.features.savable);
             //Remove from localstorage
             if ($.fn.postitall.globals.savable || options.features.savable) {
                 if(options.features.savable) {
@@ -1266,7 +1266,7 @@ var delay = (function(){
         remove : function(options) {
             //hide object
             var id = options.id;
-            //console.log('remove', id);
+            ////consolelog('remove', id);
             $($.fn.postitall.globals.prefix + id).removeData('PIA-id')
                 .removeData('PIA-initialized')
                 .removeData('PIA-settings')
@@ -1314,7 +1314,7 @@ var delay = (function(){
             };
             var dateFinish = new Date(dat);
             if(dateFinish > Date.now()) {
-                console.log('show again on ' + dateFinish, Date.now() );
+                //consolelog('show again on ' + dateFinish, Date.now() );
                 setToHappen(function() {
                     t.show(index);
                 }, dateFinish);
@@ -1330,7 +1330,7 @@ var delay = (function(){
             if($.fn.postitall.globals.addArrow == "none" && options.features == "none") {
                 return;
             }
-            //console.log('arrowChangeOption', options.style.arrow, value);
+            ////consolelog('arrowChangeOption', options.style.arrow, value);
             //Get new position
             if(options.style.arrow == value || value == 'none') {
                 //If this position is the same as before, remove arrow and show selectors
@@ -1362,7 +1362,7 @@ var delay = (function(){
             $($.fn.postitall.globals.prefix + index).removeClass('arrow_box_top arrow_box_right arrow_box_bottom arrow_box_left', 1000, "easeInElastic");
             $($.fn.postitall.globals.prefix + index).find('.icon_box').hide();
             if(!$.ui) $($.fn.postitall.globals.prefix + index).css('overflow', 'hidden').css('resize', 'both');
-            //console.log('hide');
+            ////consolelog('hide');
             if(callback !== undefined) setTimeout(function() { callback(); }, 100);
         },
 
@@ -1378,7 +1378,7 @@ var delay = (function(){
 
             //delay(function() {
                 //Add arrow
-                //console.log(options.style.arrow, ($.fn.postitall.globals.prefix + index));
+                ////consolelog(options.style.arrow, ($.fn.postitall.globals.prefix + index));
                 switch(options.style.arrow) {
                     case 'top':
                         $($.fn.postitall.globals.prefix + index).addClass('arrow_box_top', 1000, "easeInElastic").css('overflow', '').css('resize', '');
@@ -1393,13 +1393,13 @@ var delay = (function(){
                         $($.fn.postitall.globals.prefix + index).addClass('arrow_box_left', 1000, "easeInElastic").css('overflow', '').css('resize', '');
                     break;
                 }
-                //console.log('options.style.arrow',options.style.arrow);
+                ////consolelog('options.style.arrow',options.style.arrow);
                 if(options.style.arrow == 'none')
                     $($.fn.postitall.globals.prefix + index).find('.icon_box').show();
                 var icon = $($.fn.postitall.globals.prefix + index).find('div[data-value="'+options.style.arrow+'"]');
                 icon.show();
                 icon.find('span').hide();
-                //console.log('show');
+                ////consolelog('show');
 
             //}, 250);
         },
@@ -1423,18 +1423,18 @@ var delay = (function(){
             if(isNaN(htmlEditorBarHeight) || htmlEditorBarHeight <= 30) {
                 htmlEditorBarHeight = 35;
             }
-            //console.log('divHeight',divHeight,'contentHeight',contentHeight);
+            ////consolelog('divHeight',divHeight,'contentHeight',contentHeight);
             if(contentHeight > divHeight - 30) {
                 divHeight = contentHeight + htmlEditorBarHeight;
             } else if(contentHeight > options.minHeight) {
                 //Comment this line if we want to preserve user height
                 divHeight = contentHeight + htmlEditorBarHeight;
             }
-            //console.log('newHeight',divHeight);
+            ////consolelog('newHeight',divHeight);
             options.height = divHeight;
             //obj.animate({ 'height': divHeight }, 250);
             obj.css('height', divHeight);
-            //console.log('auto', divWidth);
+            ////consolelog('auto', divWidth);
             options.width = divWidth;
 
             if(!$( "#pia_editable_" + id ).is(':focus')) {
@@ -1454,16 +1454,16 @@ var delay = (function(){
             var content = "";
             var paso = false;
             storageManager.getlength(function(len) {
-                //console.log('getIndex.len', len);
+                ////consolelog('getIndex.len', len);
                 var loadedItems = $('.PIApostit').length;
                 var items = len + loadedItems + 1;
-                //console.log('getIndex.items', items);
+                ////consolelog('getIndex.items', items);
                 for(var i = 1; i <= items; i++) {
                     (function(i) {
                         storageManager.get(i, function(content) {
-                            //console.log('getIndex.get', paso, i, content);
+                            ////consolelog('getIndex.get', paso, i, content);
                             if(!paso && (content == null || content == "") && $( "#idPostIt_" + i ).length <= 0) {
-                                //console.log('nou index', i);
+                                ////consolelog('nou index', i);
                                 paso = true;
                             }
                             if(callback != null && (paso || i >= items)) {
@@ -1494,7 +1494,7 @@ var delay = (function(){
             });
             /*jslint unparam: false*/
             if (save) {
-                //console.log('setOptions save', t.options);
+                ////consolelog('setOptions save', t.options);
                 this.saveOptions(t.options);
             }
         },
@@ -1656,7 +1656,7 @@ var delay = (function(){
                 // un-lock scroll position
                 var scrollPosition = $('html').data('scroll-position');
                 if(scrollPosition != undefined) {
-                    //console.log('unlock', scrollPosition);
+                    ////consolelog('unlock', scrollPosition);
                     var tmpOvf = $('html').data('previous-overflow');
                     $('html').css('overflow', (tmpOvf != "hidden") ? tmpOvf : "visible" );
                     window.scrollTo(scrollPosition[0], scrollPosition[1]);
@@ -1676,26 +1676,26 @@ var delay = (function(){
 
         //Enable keyboard actions
         enableKeyboardNav : function(callback) {
-            //console.log('enableKeyboardNav');
+            ////consolelog('enableKeyboardNav');
             this.callback = callback;
             $(document).on('keyup.keyboard', $.proxy(this.keyboardAction, this));
         },
 
         //Disable keybord actions
         disableKeyboardNav : function() {
-            //console.log('disableKeyboardNav');
+            ////consolelog('disableKeyboardNav');
             $(document).off('keyup.keyboard');
         },
 
         //Keyboard actions
         keyboardAction : function(event) {
-            //console.log('keyboardAction', event);
+            ////consolelog('keyboardAction', event);
             var KEYCODE_ESC        = 27;
             var keycode = event.keyCode;
             var key     = String.fromCharCode(keycode).toLowerCase();
             //On keypress ESC
             if (keycode === KEYCODE_ESC) { // || key.match(/x|o|c/)) {
-                //console.log('key press ESC');
+                ////consolelog('key press ESC');
                 if(this.callback != undefined) this.callback();
                 this.switchOnLights();
                 this.disableKeyboardNav();
@@ -1706,7 +1706,7 @@ var delay = (function(){
         resizeAction : function(event) {
             var t = this;
             delay(function(){
-                //console.log('resizeAction', t.options.id);
+                ////consolelog('resizeAction', t.options.id);
                 //Lights switched off
                 var highlightedId = $("#the_lights").data('highlightedId');
                 if(highlightedId !== undefined && highlightedId !== ""){
@@ -1736,14 +1736,14 @@ var delay = (function(){
                 $('.PIApostit').each(function(i,e) {
                     obj = $($.fn.postitall.globals.prefix + $(e).data('PIA-id'));
                     options = $($.fn.postitall.globals.prefix + $(e).data('PIA-id')).data('PIA-options');
-                    //console.log(i,options,obj);
+                    ////consolelog(i,options,obj);
                     if(options !== undefined && options.attachedTo.element !== undefined && options.attachedTo.element !== "") {
                         //Attached elements
                         if(options.attachedTo.fixed !== undefined && options.attachedTo.fixed)
                             t.attachedTo(options);
                     } else {
                         //Floating elements
-                        //console.log('new pos for note ', i, e);
+                        ////consolelog('new pos for note ', i, e);
                         var noteLoc = obj.offset();
                         var screenLoc = { 'height': $(window).height(), 'width': $(window).width() };
                         var top = noteLoc.top;
@@ -1767,7 +1767,7 @@ var delay = (function(){
                     }
                     //Save
                     obj.data('PIA-options', options);
-                    //console.log('options', options);
+                    ////consolelog('options', options);
                 });
                 //$.PostItAll.save();
             }, 100);
@@ -1788,7 +1788,7 @@ var delay = (function(){
                 'leftMinimized': leftMinimized,
             };
             this.options.oldPosition = propCss;
-            //console.log('saveOldPosition', this.options.oldPosition);
+            ////consolelog('saveOldPosition', this.options.oldPosition);
             this.setOptions(this.options, true);
         },
 
@@ -1802,7 +1802,7 @@ var delay = (function(){
             var scrollRight1 = scrollLeft1 + $(window).width();
             var scrollLeft2 = parseInt(tmpLeft, 10);
             var scrollRight2 = scrollLeft2 + parseInt(tmpWidth,10);
-            //console.log(scrollTop2,scrollTop1,scrollBottom2,scrollBottom1);
+            ////consolelog(scrollTop2,scrollTop1,scrollBottom2,scrollBottom1);
             if(scrollTop2 > scrollTop1 && scrollBottom2 < scrollBottom1 && scrollLeft2 > scrollLeft1 && scrollRight2 < scrollRight1) {
                 if(callback !== undefined) callback();
             } else {
@@ -2172,7 +2172,7 @@ var delay = (function(){
             t.hoverState = false;
             //Options
             $( $.fn.postitall.globals.prefix + index ).unbind('mouseenter mouseleave');
-            //console.log('t.options.style.arrow',t.options.style.arrow);
+            ////consolelog('t.options.style.arrow',t.options.style.arrow);
             if(t.options.style.arrow === undefined || t.options.style.arrow == "none")
                 $( $.fn.postitall.globals.prefix + index).find(".icon_box").fadeTo(fadeOuTime, 1);
             $( $.fn.postitall.globals.prefix + index).find('.PIAfront').find(".PIAicon, .PIAiconFixed").fadeTo(fadeInTime, 1);
@@ -2214,7 +2214,7 @@ var delay = (function(){
 
         //Get css text-shadow style
         getTextShadowStyle : function(hexcolor) {
-            //console.log(hexcolor);
+            ////consolelog(hexcolor);
             var nThreshold = 105;
             var components = this.getRGBComponents(hexcolor);
             var bgDelta = (components.R * 0.299) + (components.G * 0.587) + (components.B * 0.114);
@@ -2731,25 +2731,25 @@ var delay = (function(){
                         semantic: true,
                     })
                     .on('tbwfocus', function(){
-                        //console.log('tbwfocus!');
+                        ////consolelog('tbwfocus!');
                         //$( "#pia_editable_" + index ).dblclick();
                         //delay(function(){$( "#pia_editable_" + index ).focus();},500);
                     })
                     .on('tbwblur', function(){
-                        //console.log('tbwblur!');
+                        ////consolelog('tbwblur!');
                         //delay(function() {
                         //    $('#pia_editable_' + index).trumbowyg('destroy');
                         //},1000);
                         //$('.trumbowyg-close-button').click();
                     })
                     .on('tbwresize', function(){
-                        //console.log('tbwresize!');
+                        ////consolelog('tbwresize!');
                         //delay(function() {
                         //    this.autoresize($($.fn.postitall.globals.prefix + index));
                         //},1000);
                     });
                     $('#pia_editable_' + index).on('tbwclose', function(){
-                        //console.log('tbwclose!');
+                        ////consolelog('tbwclose!');
                         $('#pia_editable_' + index).attr('contenteditable', true);
                         $('#pia_editable_' + index).css('height', 'auto');
                         t.toogleToolbar('show', ['idPIAIconBottom_', 'pia_toolbar_', '.selectedArrow_']);
@@ -2780,7 +2780,7 @@ var delay = (function(){
             /*.on('focusout', '[contenteditable]', function () {
                 $('#pia_editable_' + index).trumbowyg('destroy');
                 $('#pia_editable_' + index).attr('contenteditable', true);
-                console.log('focusout!!', '#pia_editable_' + index);
+                //consolelog('focusout!!', '#pia_editable_' + index);
                 var objeto = $(this);
                 return objeto;
             })*/
@@ -2788,7 +2788,7 @@ var delay = (function(){
                 var objeto = $(this);
                 if (objeto.data('before') !== objeto.html()) {
                     delay(function() {
-                        //console.log('change!');
+                        ////consolelog('change!');
                         var content = objeto.text();
                         if ($.fn.postitall.globals.pasteHtml || options.features.pasteHtml)
                             content = objeto.html();
@@ -2857,7 +2857,7 @@ var delay = (function(){
                 }
                 if ($.fn.postitall.globals.resizable &&  options.features.resizable) {
                     var pos = false;
-                    //console.log('options.minHeight',options.minHeight);
+                    ////consolelog('options.minHeight',options.minHeight);
                     obj.resizable({
                         animate: true,
                         helper: 'ui-resizable-helper',
@@ -2875,7 +2875,7 @@ var delay = (function(){
                         },
                         stop: function () {
                             delay(function(){
-                                //console.log('stop autoresize');
+                                ////consolelog('stop autoresize');
                                 t.autoresize();
                                 options.right = '';
                                 //if ($.fn.postitall.globals.savable && options.features.savable) {
@@ -2955,7 +2955,7 @@ var delay = (function(){
                 var icon = $($.fn.postitall.globals.prefix+index).find('div[data-value="'+options.style.arrow+'"]');
                 icon.show();
                 icon.find('span').hide();
-                //console.log('arrowPaso', arrowPaso, index, options.style.arrow);
+                ////consolelog('arrowPaso', arrowPaso, index, options.style.arrow);
             }
 
             //Change hidden state if note is higlighted
@@ -2995,7 +2995,7 @@ var delay = (function(){
                         $('#minicolors_bg_' + index).minicolors({
                             //opacity: true,
                             change: function (hex, rgb) {
-                                console.log(hex, rgb);
+                                //consolelog(hex, rgb);
                                 $($.fn.postitall.globals.prefix + index).css('background-color', hex);
                                 //$($.fn.postitall.globals.prefix + index).css('opacity', rgb);
                                 options.style.backgroundcolor = hex;
@@ -3030,7 +3030,7 @@ var delay = (function(){
                 if(options.features.hideUntil !== null)
                     t.showAgain(index, options.features.hideUntil);
                 else
-                    console.log('estic amagat sense data de fi', options.features);
+                    //consolelog('estic amagat sense data de fi', options.features);
 
             }
 
@@ -3751,7 +3751,7 @@ var delay = (function(){
             var varname = 'PostIt_' + obj.id.toString();
             var testPrefs = JSON.stringify(obj);
             $localStorage.setItem(varname, testPrefs);
-            //console.log('Saved', varname, testPrefs);
+            ////consolelog('Saved', varname, testPrefs);
             if(callback != null) callback("");
         },
         get: function (id, callback) {
@@ -3761,7 +3761,7 @@ var delay = (function(){
                 varvalue = JSON.parse(varvalue);
             else
                 varvalue = "";
-            //console.log('Loaded', varname, varvalue);
+            ////consolelog('Loaded', varname, varvalue);
             if(callback != null) callback(varvalue);
         },
         remove: function (id, callback) {
@@ -3784,11 +3784,11 @@ var delay = (function(){
             callback(name);
         },
         view: function () {
-            console.log('view local');
-            console.log($localStorage);
+            //consolelog('view local');
+            //consolelog($localStorage);
         },
         getAll: function (callback) {
-            console.log('TODO getAll on localStorage');
+            //consolelog('TODO getAll on localStorage');
         }
     };
 

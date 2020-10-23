@@ -545,7 +545,7 @@
 			if (opts.numericInput) {
 				reverseTokens(maskTokens[0]);
 			}
-			// console.log(JSON.stringify(maskTokens));
+			// //consolelog(JSON.stringify(maskTokens));
 			return maskTokens;
 		},
 
@@ -645,7 +645,7 @@
 					mask = opts.groupmarker.start + mask + opts.groupmarker.end + opts.quantifiermarker.start + repeatStart + "," + opts.repeat + opts.quantifiermarker.end;
 				}
 
-				// console.log(mask);
+				// //consolelog(mask);
 				var masksetDefinition;
 				if (Inputmask.prototype.masksCache[mask] === undefined || nocache === true) {
 					masksetDefinition = {
@@ -688,7 +688,7 @@
 					}
 				});
 				altMask += opts.groupmarker.end;
-				// console.log(altMask);
+				// //consolelog(altMask);
 				return generateMask(altMask, opts.mask, opts);
 			} else opts.mask = opts.mask.pop();
 		}
@@ -1010,7 +1010,7 @@
 												if (altMatch.match.def === altMatch2.match.def || staticCanMatchDefinition(altMatch, altMatch2)) {
 													hasMatch = altMatch.match.nativeDef === altMatch2.match.nativeDef;
 													// if (altMatch.alternation != altMatch2.alternation) {
-													// 	console.log("alternation mismatch");
+													// 	//consolelog("alternation mismatch");
 													// }
 													if (altMatch.alternation == altMatch2.alternation && //can we merge if the alternation is different??  TODO TOCHECK INVESTIGATE
 														altMatch2.locator[altMatch2.alternation].toString().indexOf(altMatch.locator[altMatch.alternation]) === -1) {
@@ -1165,7 +1165,7 @@
 					}
 				}
 				if (getMaskSet().tests[pos] && getMaskSet().tests[pos][0].cd === cacheDependency) { //cacheDependency is set on all tests, just check on the first
-					//console.log("cache hit " + pos + " - " + ndxIntlzr);
+					////consolelog("cache hit " + pos + " - " + ndxIntlzr);
 					return filterTests(getMaskSet().tests[pos]);
 				}
 				for (var mtndx = ndxInitializer.shift(); mtndx < maskTokens.length; mtndx++) {
@@ -1194,7 +1194,7 @@
 				return filterTests($.extend(true, [], matches));
 			}
 			getMaskSet().tests[pos] = $.extend(true, [], matches); //set a clone to prevent overwriting some props
-			// console.log(pos + " - " + JSON.stringify(matches));
+			// //consolelog(pos + " - " + JSON.stringify(matches));
 			return filterTests(getMaskSet().tests[pos]);
 		}
 
@@ -2175,7 +2175,7 @@
 		var EventRuler = {
 			on: function (input, eventName, eventHandler) {
 				var ev = function (e) {
-					// console.log("triggered " + e.type);
+					// //consolelog("triggered " + e.type);
 
 					if (this.inputmask === undefined && this.nodeName !== "FORM") { //happens when cloning an object with jquery.clone
 						var imOpts = $.data(this, "_inputmask_opts");
@@ -2212,7 +2212,7 @@
 								}
 								break;
 						}
-						// console.log("executed " + e.type);
+						// //consolelog("executed " + e.type);
 						var returnVal = eventHandler.apply(this, arguments);
 						if (returnVal === false) {
 							e.preventDefault();
@@ -2448,7 +2448,7 @@
 				var input = this,
 					inputValue = input.inputmask._valueGet();
 
-				//console.log(inputValue);
+				////consolelog(inputValue);
 				if (getBuffer().join("") !== inputValue) {
 					var caretPos = caret(input);
 					inputValue = inputValue.replace(new RegExp("(" + Inputmask.escapeRegex(getBufferTemplate().join("")) + ")*"), "");

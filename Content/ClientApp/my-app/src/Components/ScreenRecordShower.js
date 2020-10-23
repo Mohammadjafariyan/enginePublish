@@ -16,7 +16,7 @@ class ScreenRecordShower extends Component {
     }
     videoElementRef(e){
         //debugger;
-        console.log(e)
+        //consolelog(e)
     }
     
     componentDidMount() {
