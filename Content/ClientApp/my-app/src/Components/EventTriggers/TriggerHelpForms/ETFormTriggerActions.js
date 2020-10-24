@@ -5,6 +5,8 @@ import {CurrentUserInfo, MyCaller} from "../../../Help/Socket";
 import Table from "react-bootstrap/Table";
 import Badge from "react-bootstrap/Badge";
 import {_showError} from "../../../Pages/LayoutPage";
+import {SetEventTrigger} from "../EventTriggerForm";
+import {DataHolder} from "../../../Help/DataHolder";
 
 
 class EtFormTriggerActions extends Component {
@@ -47,14 +49,16 @@ class EtFormTriggerActions extends Component {
     }
 
     isValid(){
-        if (this.state.IsShowMessageEnabled && (!this.state.localizedMessages || this.state.localizedMessages.length==0))
+        if (DataHolder.selectedEventTrigger.IsShowMessageEnabled && (!DataHolder.selectedEventTrigger.localizedMessages || DataHolder.selectedEventTrigger.localizedMessages.length==0))
         {
             _showError('در صورت نمایش پیغام ، یک پیغام وارد کنید')
             return false
         }
         return true;
     }
-
+    componentDidMount() {
+        SetEventTrigger(DataHolder.selectedEventTrigger);
+    }
     render() {
         return (
             <div>
@@ -80,17 +84,19 @@ class EtFormTriggerActions extends Component {
                                 
                                 <AddLocalizedMessage onConfirm={(textArea,lang)=>{
                                     
-                                    let localizedMessages= this.state.localizedMessages;
+                                    let localizedMessages= DataHolder.selectedEventTrigger.localizedMessages;
                                     if(!localizedMessages){
                                         localizedMessages=[];
                                     }
 
                                     localizedMessages.push({textArea,lang});
+                                   
+                                    DataHolder.selectedEventTrigger['localizedMessages']=localizedMessages;
                                     this.setState({localizedMessages});
                                 }}>
                                     
                                     
-                                    {this.state.localizedMessages && this.state.localizedMessages.length>0 && 
+                                    {DataHolder.selectedEventTrigger.localizedMessages && DataHolder.selectedEventTrigger.localizedMessages.length>0 && 
                                     this.showLocalizedMessages()}
                                     
                                     
@@ -129,7 +135,7 @@ class EtFormTriggerActions extends Component {
             </thead>
             <tbody>
             {
-                this.state.localizedMessages.map((m,i,arr)=>{
+                DataHolder.selectedEventTrigger.localizedMessages.map((m,i,arr)=>{
 
 
                     return  <tr>
@@ -139,12 +145,14 @@ class EtFormTriggerActions extends Component {
                         <th>
                             <Badge variant={'danger'} onClick={()=>{
 
-                                let localizedMessages= this.state.localizedMessages;
+                                let localizedMessages= DataHolder.selectedEventTrigger.localizedMessages;
                                 if(!localizedMessages){
                                     localizedMessages=[];
                                 }
 
                                 localizedMessages=  localizedMessages.filter(lm=>lm!==m);
+
+                                DataHolder.selectedEventTrigger.localizedMessages=localizedMessages
                                 this.setState({localizedMessages});
                                 
                             }}>

@@ -2,6 +2,8 @@
 import Card from "react-bootstrap/Card";
 import {MySwitcher} from "../../Utilities/Utility";
 import {CurrentUserInfo} from "../../../Help/Socket";
+import {SetEventTrigger} from "../EventTriggerForm";
+import {DataHolder} from "../../../Help/DataHolder";
 
 
 
@@ -14,6 +16,9 @@ class EtFormTriggerPlatforms extends Component {
     }
     setRunInDesktopDevices(RunInDesktopDevices){
         this.setState({RunInDesktopDevices})
+    }
+    componentDidMount() {
+        SetEventTrigger(DataHolder.selectedEventTrigger);
     }
 
     setRunInMobileDevices(RunInMobileDevices){

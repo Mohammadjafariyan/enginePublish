@@ -85,7 +85,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".floatLeft{\r\n\r\n    margin-top: 10px;\r\n}\r\n.floatRight{\r\n    float: right;\r\n}\r\n\r\n.MySwitcher{\r\n\r\n    padding-top: 30px;\r\n    padding-bottom: 50px;\r\n}\r\n\r\n.smallLink{\r\n    font-size: 14px !important;\r\n    margin-top: 5px;\r\n}\r\n\r\n.text-summary2{\r\n    display: flex;\r\n    line-height: 1.5em;\r\n    overflow: hidden;\r\n\r\n    padding-left: 10px;\r\n    \r\n    padding-top:14px !important;\r\n}\r\n\r\n.centered{\r\n\r\n\r\n    padding-right: 10% !important;\r\n    padding-left: 10% !important;\r\n}\r\n.modal-90w {\r\n    width: 90% !important;\r\n    max-width: none!important;\r\n}\r\n.modal-big-h-w{\r\n    \r\n    height: 40vh;\r\n    \r\n    padding-left: 35%;\r\n}\r\n\r\n\r\n.small{\r\n    color: #a0a1a2;\r\n    direction: rtl;\r\n    \r\n}\r\n\r\n.text-summary{\r\n    line-height: 1.5em;\r\n    height: 3em;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    width: 100%;\r\n}\r\n.p-datatable .p-datatable-header{\r\n    background: none !important;\r\n}\r\n\r\n.fullWidth{\r\n    width: 100%;\r\n}\r\n\r\n.fillerHolder{\r\n\r\n    position: relative;\r\n}\r\n\r\n.floatRight{\r\n    float: right;\r\n}\r\n.floatLeft{\r\n    float: left;\r\n}\r\n\r\n.bigIcon{\r\n    font-size: 40px !important;\r\n}\r\n\r\n@media screen and (max-width: 800px) {\r\n    .listGroup {\r\n\r\n        height: 40vh\r\n    }\r\n\r\n    .nativeName {\r\n\r\n       display: none;\r\n    }\r\n\r\n}\r\n\r\n.FormDataPage .listGroup{\r\n    height: 30vh\r\n\r\n\r\n}\r\n.listGroup{\r\n    overflow:auto;\r\n    height:80vh\r\n}\r\n.link{\r\n    color: #1c84c6 !important;\r\n}\r\n.FormRendererSingleElement{\r\n    display: flex;\r\n}\r\n.filler{\r\n    position: absolute;\r\n    left: 0px;\r\n    right: 0px;\r\n    bottom: 0px;\r\n    top: 0px;\r\n}\r\n.filler:hover{\r\n    border:1px solid #00AEEF;\r\n    cursor: pointer;\r\n    \r\n}\r\n.toolsMenuFormCreator{\r\n    \r\n    border: 1px solid #ddd;\r\n    border-radius: 2px 2px 2px 2px;\r\n}\r\n\r\n.formElement{\r\n    \r\n    \r\n    \r\n    background-color: #6a8894;\r\n}\r\n\r\n\r\n.userTag{\r\n    position: absolute;\r\n    left: 2px;\r\n    top: 2px;\r\n}\r\n.userTag:hover{\r\n    color:#0edbf9;\r\n    cursor: pointer;\r\n}\r\n\r\n.userTagBlue{\r\n    color:#1e88e5;\r\n\r\n}\r\n.pointer:hover{\r\n    cursor: pointer;\r\n}\r\n.onMobile {\r\n    display: none;\r\n}\r\n\r\na:not([href]):not([class]):hover,a:hover{\r\n    color: #04aecd !important;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\na:not([href]):not([class]),a{\r\n    color: #09e2ca !important;\r\n}\r\n\r\n\r\n@media screen and (max-width: 1366px) {\r\n  \r\n}\r\n@media screen and (max-width: 1024px) {\r\n  \r\n}\r\n/* Use a media query to add a breakpoint at 800px: */\r\n@media screen and (max-width: 800px) {\r\n    .onMobile {\r\n        display: inherit/* The width is 100%, when the viewport is 800px or smaller */\r\n    }\r\n\r\n    .onDesktop{\r\n        display: none/* The width is 100%, when the viewport is 800px or smaller */\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 600px) {\r\n   \r\n\r\n\r\n}\r\n\r\n\r\n\r\n.onthefly{\r\n\r\n    position: fixed;\r\n    left: 20px;\r\n    border:50px solid darkblue;\r\n\r\n    top:70%;\r\n\r\n\r\n}\r\n\r\n\r\n.inOneLine{\r\ndisplay: flex;\r\n}\r\n\r\n.userCard{\r\n    margin-Top:5px\r\n}\r\n\r\n.hideWhole{\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: black;\r\n    opacity: 0.3;\r\n    top: 0px;\r\n    left: 0px;\r\n    z-index: 20;\r\n}\r\n\r\n.showSingle{\r\n     \r\n     z-index: 21;\r\n }\r\n\r\n.alert{\r\n    z-index: 21;\r\n}\r\n\r\n\r\n.active {\r\n    background-color: #00ACED;\r\n    color:white;\r\n}\r\n\r\n .gapStat{\r\n     height: 10px;\r\n     width: 10px;\r\n     background-color: #29bb1c;\r\n     border-radius: 50%;\r\n     display: inline-block;\r\n     text-align: center;\r\n }\r\n.MsgCount{\r\n    height: 100%;\r\n    width: 17px;\r\n    background-color: #51a3f1;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    text-align: center;\r\n    color: white;\r\n    float: left;\r\n}\r\n.selectedUserInList {\r\n    background-color: bisque;\r\n}\r\n\r\n.userInList:hover {\r\n    background-color: aqua;\r\n    cursor: pointer\r\n}\r\n\r\n\r\n.noMargin {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}\r\n\r\n\r\n.chatPanel{\r\n    max-height: 500px;\r\n    overflow: auto\r\n    ;\r\n}\r\n\r\n.post{\r\n    margin-top: 20px;\r\n}\r\n\r\n\r\n.chatPanel::-webkit-scrollbar {\r\n    width: 12px;\r\n}\r\n\r\n.chatPanel::-webkit-scrollbar-track {\r\n    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);\r\n    border-radius: 10px;\r\n}\r\n\r\n.chatPanel::-webkit-scrollbar-thumb {\r\n    border-radius: 10px;\r\n    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);\r\n}", ""]);
+exports.push([module.i, "\r\n.notValid{\r\n    border:1px solid red;\r\n}\r\n.floatLeft{\r\n\r\n    margin-top: 10px;\r\n}\r\n.floatRight{\r\n    float: right;\r\n}\r\n\r\n.MySwitcher{\r\n\r\n    padding-top: 30px;\r\n    padding-bottom: 50px;\r\n}\r\n\r\n.smallLink{\r\n    font-size: 14px !important;\r\n    margin-top: 5px;\r\n}\r\n\r\n.text-summary2{\r\n    display: flex;\r\n    line-height: 1.5em;\r\n    overflow: hidden;\r\n\r\n    padding-left: 10px;\r\n    \r\n    padding-top:14px !important;\r\n}\r\n\r\n.centered{\r\n\r\n\r\n    padding-right: 10% !important;\r\n    padding-left: 10% !important;\r\n}\r\n.modal-90w {\r\n    width: 90% !important;\r\n    max-width: none!important;\r\n}\r\n.modal-big-h-w{\r\n    \r\n    height: 40vh;\r\n    \r\n    padding-left: 35%;\r\n}\r\n\r\n\r\n.small{\r\n    color: #a0a1a2;\r\n    direction: rtl;\r\n    \r\n}\r\n\r\n.text-summary{\r\n    line-height: 1.5em;\r\n    height: 3em;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    width: 100%;\r\n}\r\n.p-datatable .p-datatable-header{\r\n    background: none !important;\r\n}\r\n\r\n.fullWidth{\r\n    width: 100%;\r\n}\r\n\r\n.fillerHolder{\r\n\r\n    position: relative;\r\n}\r\n\r\n.floatRight{\r\n    float: right;\r\n}\r\n.floatLeft{\r\n    float: left;\r\n}\r\n\r\n.bigIcon{\r\n    font-size: 40px !important;\r\n}\r\n\r\n@media screen and (max-width: 800px) {\r\n    .listGroup {\r\n\r\n        height: 40vh\r\n    }\r\n\r\n    .nativeName {\r\n\r\n       display: none;\r\n    }\r\n\r\n}\r\n\r\n.FormDataPage .listGroup{\r\n    height: 30vh\r\n\r\n\r\n}\r\n.listGroup{\r\n    overflow:auto;\r\n    height:80vh\r\n}\r\n.link{\r\n    color: #1c84c6 !important;\r\n}\r\n.FormRendererSingleElement{\r\n    display: flex;\r\n}\r\n.filler{\r\n    position: absolute;\r\n    left: 0px;\r\n    right: 0px;\r\n    bottom: 0px;\r\n    top: 0px;\r\n}\r\n.filler:hover{\r\n    border:1px solid #00AEEF;\r\n    cursor: pointer;\r\n    \r\n}\r\n.toolsMenuFormCreator{\r\n    \r\n    border: 1px solid #ddd;\r\n    border-radius: 2px 2px 2px 2px;\r\n}\r\n\r\n.formElement{\r\n    \r\n    \r\n    \r\n    background-color: #6a8894;\r\n}\r\n\r\n\r\n.userTag{\r\n    position: absolute;\r\n    left: 2px;\r\n    top: 2px;\r\n}\r\n.userTag:hover{\r\n    color:#0edbf9;\r\n    cursor: pointer;\r\n}\r\n\r\n.userTagBlue{\r\n    color:#1e88e5;\r\n\r\n}\r\n.pointer:hover{\r\n    cursor: pointer;\r\n}\r\n.onMobile {\r\n    display: none;\r\n}\r\n\r\na:not([href]):not([class]):hover,a:hover{\r\n    color: #04aecd !important;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\na:not([href]):not([class]),a{\r\n    color: #09e2ca !important;\r\n}\r\n\r\n\r\n@media screen and (max-width: 1366px) {\r\n  \r\n}\r\n@media screen and (max-width: 1024px) {\r\n  \r\n}\r\n/* Use a media query to add a breakpoint at 800px: */\r\n@media screen and (max-width: 800px) {\r\n    .onMobile {\r\n        display: inherit/* The width is 100%, when the viewport is 800px or smaller */\r\n    }\r\n\r\n    .onDesktop{\r\n        display: none/* The width is 100%, when the viewport is 800px or smaller */\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 600px) {\r\n   \r\n\r\n\r\n}\r\n\r\n\r\n\r\n.onthefly{\r\n\r\n    position: fixed;\r\n    left: 20px;\r\n    border:50px solid darkblue;\r\n\r\n    top:70%;\r\n\r\n\r\n}\r\n\r\n\r\n.inOneLine{\r\ndisplay: flex;\r\n}\r\n\r\n.userCard{\r\n    margin-Top:5px\r\n}\r\n\r\n.hideWhole{\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: black;\r\n    opacity: 0.3;\r\n    top: 0px;\r\n    left: 0px;\r\n    z-index: 20;\r\n}\r\n\r\n.showSingle{\r\n     \r\n     z-index: 21;\r\n }\r\n\r\n.alert{\r\n    z-index: 21;\r\n}\r\n\r\n\r\n.active {\r\n    background-color: #00ACED;\r\n    color:white;\r\n}\r\n\r\n .gapStat{\r\n     height: 10px;\r\n     width: 10px;\r\n     background-color: #29bb1c;\r\n     border-radius: 50%;\r\n     display: inline-block;\r\n     text-align: center;\r\n }\r\n.MsgCount{\r\n    height: 100%;\r\n    width: 17px;\r\n    background-color: #51a3f1;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    text-align: center;\r\n    color: white;\r\n    float: left;\r\n}\r\n.selectedUserInList {\r\n    background-color: bisque;\r\n}\r\n\r\n.userInList:hover {\r\n    background-color: aqua;\r\n    cursor: pointer\r\n}\r\n\r\n\r\n.noMargin {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}\r\n\r\n\r\n.chatPanel{\r\n    max-height: 500px;\r\n    overflow: auto\r\n    ;\r\n}\r\n\r\n.post{\r\n    margin-top: 20px;\r\n}\r\n\r\n\r\n.chatPanel::-webkit-scrollbar {\r\n    width: 12px;\r\n}\r\n\r\n.chatPanel::-webkit-scrollbar-track {\r\n    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);\r\n    border-radius: 10px;\r\n}\r\n\r\n.chatPanel::-webkit-scrollbar-thumb {\r\n    border-radius: 10px;\r\n    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -736,7 +736,8 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         chats: this.state.chats,
         temp: Math.random()
       });
-    } else {console.error("i is not found");
+    } else {
+      console.error("i is not found");
     }
   }
 
@@ -1011,6 +1012,7 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   DeleteMessageCallback(res) {
     console.log("رسپانس حذف پیام");
+
     if (!res || !res.Content || !res.Content.uniqId || !res.Content.targetId) {
       console.error(" مقدار بازگشتی از سرور نال است ");
       return;
@@ -1023,13 +1025,14 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     if (!message) {
       console.error(uniqId + " یافت نشد ");
       return;
-    } console.log("در حال حذف پیام");
+    }
 
-
+    console.log("در حال حذف پیام");
     let inner = message;
 
     if (inner) {
-      inner.Message = "حذف شد"; console.log("پیام حذف شد در رسپانس");
+      inner.Message = "حذف شد";
+      console.log("پیام حذف شد در رسپانس");
     }
 
     message.IsDisabled = false;
@@ -1040,6 +1043,7 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   EditMessageCallback(res) {
     console.log("رسپانس درخواست ویرایش");
+
     if (!res || !res.Content || !res.Content.uniqId || !res.Content.targetId) {
       console.error(" مقدار بازگشتی از سرور نال است ");
       return;
@@ -1052,9 +1056,9 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     if (!message) {
       console.error(uniqId + " یافت نشد ");
       return;
-    } console.log("انجام ویرایش در رسپاسن");
+    }
 
-
+    console.log("انجام ویرایش در رسپاسن");
     let inner = message;
 
     if (inner) {
@@ -1112,9 +1116,9 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     if (!message) {
       console.error(uniqId + " یافت نشد ");
       return;
-    } console.log("ارسال درخواست حذف پیغام ");
+    }
 
-
+    console.log("ارسال درخواست حذف پیغام ");
     message.IsDisabled = true;
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].ChatPage.setState({
       tmp: Math.random()
@@ -1122,7 +1126,8 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send("DeleteMessage", {
       uniqId,
       targetId: _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].targetId
-    }); console.log(" درخواست حذف پیغام ارسال شد ");
+    });
+    console.log(" درخواست حذف پیغام ارسال شد ");
   }
 
   EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
@@ -1163,9 +1168,9 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.chatFormOnChange = e => {};
 
     this.submit = e => {
-      e.preventDefault(); console.log("انجام ویرایش توسط کاربر");
+      e.preventDefault();
+      console.log("انجام ویرایش توسط کاربر");
       console.log("ارسال درخواست ویرایش");
-
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send("EditMessage", {
         uniqId,
         targetId: _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].targetId,
@@ -2437,9 +2442,9 @@ class CustomerInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].selectedCustomer) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null); console.log('CustomerInfo===>DataHolder.selectedCustomer====>')
-    console.log(DataHolder.selectedCustomer)
-
+    if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].selectedCustomer) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+    console.log('CustomerInfo===>DataHolder.selectedCustomer====>');
+    console.log(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].selectedCustomer);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
@@ -3723,6 +3728,10 @@ class EventTriggerDelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
       onClick: () => {
         this.deleteEventTrigger();
         _Help_Socket__WEBPACK_IMPORTED_MODULE_3__["CurrentUserInfo"].EventTriggerIndex.deleteEventTrigger(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedEventTrigger);
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedEventTrigger = null;
+        _Help_Socket__WEBPACK_IMPORTED_MODULE_3__["CurrentUserInfo"].EventTriggersPage.setState({
+          tmp: Math.random()
+        });
       },
       __self: this,
       __source: {
@@ -3735,7 +3744,7 @@ class EventTriggerDelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25,
+        lineNumber: 27,
         columnNumber: 21
       }
     })));
@@ -3743,7 +3752,7 @@ class EventTriggerDelete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
 
   deleteEventTrigger() {
     if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedEventTrigger) return;
-    MyCaller.Send('EventTriggerDelete', {
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_3__["MyCaller"].Send('EventTriggerDelete', {
       id: _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedEventTrigger.Id
     });
   }
@@ -3971,39 +3980,36 @@ const SaveSelectedEventTrigger = () => {
 
       /*------------------------------getvalues:------------------------------*/
 
-      let eventTrigger = {};
-      /*info*/
+      let eventTrigger = _Help_DataHolder__WEBPACK_IMPORTED_MODULE_7__["DataHolder"].selectedEventTrigger;
+      /*     /!*info*!/
+           eventTrigger['Name'] = CurrentUserInfo.EtFormInformation.getName();
+               /!*actions*!/
+           eventTrigger['IsShowMessageEnabled'] = CurrentUserInfo.EtFormTriggerActions.getIsShowMessageEnabled();
+           eventTrigger['IsOpenChatBox'] = CurrentUserInfo.EtFormTriggerActions.getIsOpenChatBox();
+           eventTrigger['IsPlayASound'] = CurrentUserInfo.EtFormTriggerActions.getIsPlayASound();
+           eventTrigger['localizedMessages'] = CurrentUserInfo.EtFormTriggerActions.getlocalizedMessages();
+               /!*Behaviours *!/
+           eventTrigger['ExecuteOnlyIfOnline'] = CurrentUserInfo.EtFormTriggerBehaviours.getExecuteOnlyIfOnline();
+           eventTrigger['ExecuteOnlyIfFirstTimeVisit'] = CurrentUserInfo.EtFormTriggerBehaviours.getExecuteOnlyIfFirstTimeVisit();
+           eventTrigger['ExecuteOnlyIfNoOtherTriggerFired'] = CurrentUserInfo.EtFormTriggerBehaviours.getExecuteOnlyIfNoOtherTriggerFired();
+           eventTrigger['ExecuteOnlyIfFromACountry'] = CurrentUserInfo.EtFormTriggerBehaviours.getExecuteOnlyIfFromACountry();
+           eventTrigger['Counties'] = CurrentUserInfo.EtFormTriggerBehaviours.getCounties();
+             /!*Events*!/
+           eventTrigger['S_EventOnExitTab'] = CurrentUserInfo.EtFormTriggerEvents.getS_EventOnExitTab();
+           eventTrigger['S_EventOnLinkClick'] = CurrentUserInfo.EtFormTriggerEvents.getS_EventOnLinkClick();
+           eventTrigger['S_EventSpecificPages'] = CurrentUserInfo.EtFormTriggerEvents.getS_EventSpecificPages();
+           eventTrigger['S_EventAddressParameters'] = CurrentUserInfo.EtFormTriggerEvents.getS_EventAddressParameters();
+           eventTrigger['S_EventUserCustomName'] = CurrentUserInfo.EtFormTriggerEvents.getS_EventUserCustomName();
+           eventTrigger['S_EventDelay'] = CurrentUserInfo.EtFormTriggerEvents.getS_EventDelay();
+               eventTrigger['links'] = CurrentUserInfo.EtFormTriggerEvents.getlinks();
+           eventTrigger['pages'] = CurrentUserInfo.EtFormTriggerEvents.getpages();
+           eventTrigger['pageParameters'] = CurrentUserInfo.EtFormTriggerEvents.getpageParameters();
+           eventTrigger['userEventNames'] = CurrentUserInfo.EtFormTriggerEvents.getuserEventNames();
+               /!*Platforms*!/
+           eventTrigger['RunInMobileDevices'] = CurrentUserInfo.EtFormTriggerPlatforms.getRunInMobileDevices()
+           eventTrigger['RunInDesktopDevices'] = CurrentUserInfo.EtFormTriggerPlatforms.getRunInDesktopDevices()
+      */
 
-      eventTrigger['Name'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormInformation.getName();
-      /*actions*/
-
-      eventTrigger['IsShowMessageEnabled'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerActions.getIsShowMessageEnabled();
-      eventTrigger['IsOpenChatBox'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerActions.getIsOpenChatBox();
-      eventTrigger['IsPlayASound'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerActions.getIsPlayASound();
-      eventTrigger['localizedMessages'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerActions.getlocalizedMessages();
-      /*Behaviours */
-
-      eventTrigger['ExecuteOnlyIfOnline'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.getExecuteOnlyIfOnline();
-      eventTrigger['ExecuteOnlyIfFirstTimeVisit'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.getExecuteOnlyIfFirstTimeVisit();
-      eventTrigger['ExecuteOnlyIfNoOtherTriggerFired'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.getExecuteOnlyIfNoOtherTriggerFired();
-      eventTrigger['ExecuteOnlyIfFromACountry'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.getExecuteOnlyIfFromACountry();
-      eventTrigger['Counties'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.getCounties();
-      /*Events*/
-
-      eventTrigger['S_EventOnExitTab'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getS_EventOnExitTab();
-      eventTrigger['S_EventOnLinkClick'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getS_EventOnLinkClick();
-      eventTrigger['S_EventSpecificPages'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getS_EventSpecificPages();
-      eventTrigger['S_EventAddressParameters'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getS_EventAddressParameters();
-      eventTrigger['S_EventUserCustomName'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getS_EventUserCustomName();
-      eventTrigger['S_EventDelay'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getS_EventDelay();
-      eventTrigger['links'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getlinks();
-      eventTrigger['pages'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getpages();
-      eventTrigger['pageParameters'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getpageParameters();
-      eventTrigger['userEventNames'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.getuserEventNames();
-      /*Platforms*/
-
-      eventTrigger['RunInMobileDevices'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerPlatforms.getRunInMobileDevices();
-      eventTrigger['RunInDesktopDevices'] = _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerPlatforms.getRunInDesktopDevices();
       /*------------------------------end getvalues:------------------------------*/
 
       /*------------------------------در حال لود:------------------------------*/
@@ -4034,36 +4040,51 @@ const SaveSelectedEventTrigger = () => {
 
 const SetEventTrigger = eventTrigger => {
   /*info*/
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormInformation.setName(eventTrigger['Name']);
-  /*actions*/
-
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerActions.setIsShowMessageEnabled(eventTrigger['IsShowMessageEnabled']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerActions.setIsOpenChatBox(eventTrigger['IsOpenChatBox']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerActions.setIsPlayASound(eventTrigger['IsPlayASound']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerActions.setlocalizedMessages(eventTrigger['localizedMessages']);
-  /*Behaviours */
-
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.setExecuteOnlyIfOnline(eventTrigger['ExecuteOnlyIfOnline']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.setExecuteOnlyIfFirstTimeVisit(eventTrigger['ExecuteOnlyIfFirstTimeVisit']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.setExecuteOnlyIfNoOtherTriggerFired(eventTrigger['ExecuteOnlyIfNoOtherTriggerFired']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.setExecuteOnlyIfFromACountry(eventTrigger['ExecuteOnlyIfFromACountry']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerBehaviours.setCounties(eventTrigger['Counties']);
-  /*Events*/
-
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setS_EventOnExitTab(eventTrigger['S_EventOnExitTab']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setS_EventOnLinkClick(eventTrigger['S_EventOnLinkClick']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setS_EventSpecificPages(eventTrigger['S_EventSpecificPages']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setS_EventAddressParameters(eventTrigger['S_EventAddressParameters']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setS_EventUserCustomName(eventTrigger['S_EventUserCustomName']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setS_EventDelay(eventTrigger['S_EventDelay']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setlinks(eventTrigger['Counties']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setpages(eventTrigger['pages']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setpageParameters(eventTrigger['pageParameters']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerEvents.setuserEventNames(eventTrigger['userEventNames']);
-  /*Platforms*/
-
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerPlatforms.setRunInMobileDevices(eventTrigger['RunInMobileDevices']);
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_11__["CurrentUserInfo"].EtFormTriggerPlatforms.setRunInDesktopDevices(eventTrigger['RunInDesktopDevices']);
+  _Help_DataHolder__WEBPACK_IMPORTED_MODULE_7__["DataHolder"].selectedEventTrigger = eventTrigger;
+  /* if (CurrentUserInfo.EtFormInformation)
+   CurrentUserInfo.EtFormInformation.setName(eventTrigger['Name']);
+  
+   /!*actions*!/
+   if (CurrentUserInfo.EtFormTriggerActions){
+       CurrentUserInfo.EtFormTriggerActions.setIsShowMessageEnabled(eventTrigger['IsShowMessageEnabled']);
+       CurrentUserInfo.EtFormTriggerActions.setIsOpenChatBox( eventTrigger['IsOpenChatBox']);
+       CurrentUserInfo.EtFormTriggerActions.setIsPlayASound(eventTrigger['IsPlayASound'] );
+       CurrentUserInfo.EtFormTriggerActions.setlocalizedMessages(eventTrigger['localizedMessages']);
+      }
+    
+      /!*Behaviours *!/
+   if (CurrentUserInfo.EtFormTriggerBehaviours) {
+          CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfOnline(eventTrigger['ExecuteOnlyIfOnline']);
+       CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfFirstTimeVisit(eventTrigger['ExecuteOnlyIfFirstTimeVisit']);
+       CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfNoOtherTriggerFired(eventTrigger['ExecuteOnlyIfNoOtherTriggerFired']);
+       CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfFromACountry(eventTrigger['ExecuteOnlyIfFromACountry']);
+   }
+   if (CurrentUserInfo.EtFormTriggerBehaviours) {
+   CurrentUserInfo.EtFormTriggerBehaviours.setCounties(eventTrigger['Counties']);
+   }
+      /!*Events*!/
+   if (CurrentUserInfo.EtFormTriggerEvents) {
+          CurrentUserInfo.EtFormTriggerEvents.setS_EventOnExitTab( eventTrigger['S_EventOnExitTab']);
+   CurrentUserInfo.EtFormTriggerEvents.setS_EventOnLinkClick(eventTrigger['S_EventOnLinkClick'] );
+   CurrentUserInfo.EtFormTriggerEvents.setS_EventSpecificPages( eventTrigger['S_EventSpecificPages']);
+   CurrentUserInfo.EtFormTriggerEvents.setS_EventAddressParameters(eventTrigger['S_EventAddressParameters'] );
+    CurrentUserInfo.EtFormTriggerEvents.setS_EventUserCustomName(eventTrigger['S_EventUserCustomName'] );
+   CurrentUserInfo.EtFormTriggerEvents.setS_EventDelay(eventTrigger['S_EventDelay'] );
+   }
+      if (CurrentUserInfo.EtFormTriggerEvents) {
+          CurrentUserInfo.EtFormTriggerEvents.setlinks(eventTrigger['links']);
+   CurrentUserInfo.EtFormTriggerEvents.setpages(eventTrigger['pages']);
+   CurrentUserInfo.EtFormTriggerEvents.setpageParameters(eventTrigger['pageParameters']);
+   CurrentUserInfo.EtFormTriggerEvents.setuserEventNames(eventTrigger['userEventNames']);
+   }
+  
+   
+   
+   /!*Platforms*!/
+   if (CurrentUserInfo.EtFormTriggerPlatforms) {
+          CurrentUserInfo.EtFormTriggerPlatforms.setRunInMobileDevices(eventTrigger['RunInMobileDevices'] )
+    CurrentUserInfo.EtFormTriggerPlatforms.setRunInDesktopDevices(eventTrigger['RunInDesktopDevices']);
+   }*/
 };
 
 /***/ }),
@@ -4137,7 +4158,9 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
     }
 
     let evTrig = {
-      Name: 'Event Trigger جدید'
+      Name: 'Event Trigger جدید',
+      RunInDesktopDevices: true,
+      RunInMobileDevices: true
     };
     list.push(evTrig);
     this.setState({
@@ -4158,7 +4181,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
     }
 
     this.setState({
-      list: res.Content.EntityList
+      list: res.Content
     });
   }
 
@@ -4258,10 +4281,14 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
 
   openEventTrigger(evTrig) {
     _Help_DataHolder__WEBPACK_IMPORTED_MODULE_7__["DataHolder"].selectedEventTrigger = evTrig;
-    setTimeout(() => {
-      debugger;
-      Object(_EventTriggerForm__WEBPACK_IMPORTED_MODULE_8__["SetEventTrigger"])(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_7__["DataHolder"].selectedEventTrigger);
-    }, 1000);
+    /* setTimeout(()=>{
+         debugger;
+         SetEventTrigger(DataHolder.selectedEventTrigger)
+         },100)*/
+
+    this.setState({
+      tmp: Math.random()
+    });
     if (_Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].EventTriggersPage) _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].EventTriggersPage.setState({
       tmp: Math.random()
     });
@@ -4411,7 +4438,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Utilities_Utility__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Utilities/Utility */ "./src/Components/Utilities/Utility.js");
 /* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Help/Socket */ "./src/Help/Socket.js");
 /* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
+/* harmony import */ var _EventTriggerForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../EventTriggerForm */ "./src/Components/EventTriggers/EventTriggerForm.js");
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../Help/DataHolder */ "./src/Help/DataHolder.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\EventTriggers\\TriggerHelpForms\\ETFormInformation.js";
+
+
 
 
 
@@ -4438,7 +4469,7 @@ class EtFormInformation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
   }
 
   isValid() {
-    if (!this.state.Name) {
+    if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.Name) {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])('عنوان خالی است');
 
       return false;
@@ -4447,12 +4478,16 @@ class EtFormInformation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
     return true;
   }
 
+  componentDidMount() {
+    Object(_EventTriggerForm__WEBPACK_IMPORTED_MODULE_7__["SetEventTrigger"])(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger);
+  }
+
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36,
+        lineNumber: 42,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -4460,14 +4495,14 @@ class EtFormInformation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37,
+        lineNumber: 43,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Header, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40,
+        lineNumber: 46,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -4475,7 +4510,7 @@ class EtFormInformation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41,
+        lineNumber: 47,
         columnNumber: 25
       }
     }, "\u062A\u0646\u0638\u06CC\u0645\u0627\u062A \u0639\u0645\u0648\u0645\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
@@ -4487,21 +4522,21 @@ class EtFormInformation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 51,
         columnNumber: 25
       }
     }, "\u0646\u0627\u0645 \u0631\u0627\u0647 \u0627\u0646\u062F\u0627\u0632 \u0631\u0648\u06CC\u062F\u0627\u062F \u06CC\u0627 (Event Trigger) \u0631\u0627 \u0648\u0627\u0631\u062F \u0646\u0645\u0627\u06CC\u06CC\u062F")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Body, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50,
+        lineNumber: 56,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Text, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52,
+        lineNumber: 58,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_4__["MyInput"], {
@@ -4511,7 +4546,7 @@ class EtFormInformation extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54,
+        lineNumber: 60,
         columnNumber: 29
       }
     })))));
@@ -4540,7 +4575,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/Table */ "./node_modules/react-bootstrap/esm/Table.js");
 /* harmony import */ var react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap/Badge */ "./node_modules/react-bootstrap/esm/Badge.js");
 /* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
+/* harmony import */ var _EventTriggerForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../EventTriggerForm */ "./src/Components/EventTriggers/EventTriggerForm.js");
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../Help/DataHolder */ "./src/Help/DataHolder.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\EventTriggers\\TriggerHelpForms\\ETFormTriggerActions.js";
+
+
 
 
 
@@ -4597,7 +4636,7 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
   }
 
   isValid() {
-    if (this.state.IsShowMessageEnabled && (!this.state.localizedMessages || this.state.localizedMessages.length == 0)) {
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.IsShowMessageEnabled && (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.localizedMessages || _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.localizedMessages.length == 0)) {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])('در صورت نمایش پیغام ، یک پیغام وارد کنید');
 
       return false;
@@ -4606,12 +4645,16 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
     return true;
   }
 
+  componentDidMount() {
+    Object(_EventTriggerForm__WEBPACK_IMPORTED_MODULE_7__["SetEventTrigger"])(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger);
+  }
+
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60,
+        lineNumber: 64,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -4619,14 +4662,14 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61,
+        lineNumber: 65,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Header, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64,
+        lineNumber: 68,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -4634,7 +4677,7 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
+        lineNumber: 69,
         columnNumber: 25
       }
     }, "Event Trigger \u0639\u0645\u0644\u06CC\u0627\u062A \u0627\u0635\u0644\u06CC \u0627\u06CC\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
@@ -4645,21 +4688,21 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69,
+        lineNumber: 73,
         columnNumber: 25
       }
     }, "\u0645\u06CC\u062A\u0648\u0627\u0646\u06CC\u062F \u0686\u0646\u062F \u0639\u0645\u0644\u06CC\u0627\u062A \u0645\u062E\u062A\u0644\u0641 \u062A\u0639\u0631\u06CC\u0641 \u06A9\u0646\u06CC\u062F")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Body, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74,
+        lineNumber: 78,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Text, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 80,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -4669,12 +4712,12 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78,
+        lineNumber: 82,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["AddLocalizedMessage"], {
       onConfirm: (textArea, lang) => {
-        let localizedMessages = this.state.localizedMessages;
+        let localizedMessages = _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.localizedMessages;
 
         if (!localizedMessages) {
           localizedMessages = [];
@@ -4684,6 +4727,7 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
           textArea,
           lang
         });
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger['localizedMessages'] = localizedMessages;
         this.setState({
           localizedMessages
         });
@@ -4691,14 +4735,14 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81,
+        lineNumber: 85,
         columnNumber: 33
       }
-    }, this.state.localizedMessages && this.state.localizedMessages.length > 0 && this.showLocalizedMessages())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    }, _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.localizedMessages && _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.localizedMessages.length > 0 && this.showLocalizedMessages())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103,
+        lineNumber: 109,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -4708,14 +4752,14 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104,
+        lineNumber: 110,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107,
+        lineNumber: 113,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -4725,7 +4769,7 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109,
+        lineNumber: 115,
         columnNumber: 29
       }
     })))));
@@ -4739,71 +4783,71 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121,
+        lineNumber: 127,
         columnNumber: 16
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122,
+        lineNumber: 128,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123,
+        lineNumber: 129,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 124,
+        lineNumber: 130,
         columnNumber: 17
       }
     }, "\u067E\u0631\u0686\u0645"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125,
+        lineNumber: 131,
         columnNumber: 17
       }
     }, "\u0645\u062A\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126,
+        lineNumber: 132,
         columnNumber: 17
       }
     }, "\u0632\u0628\u0627\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127,
+        lineNumber: 133,
         columnNumber: 17
       }
     }, "\u062D\u0630\u0641"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130,
+        lineNumber: 136,
         columnNumber: 13
       }
-    }, this.state.localizedMessages.map((m, i, arr) => {
+    }, _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.localizedMessages.map((m, i, arr) => {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135,
+          lineNumber: 141,
           columnNumber: 29
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136,
+          lineNumber: 142,
           columnNumber: 25
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -4815,40 +4859,41 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136,
+          lineNumber: 142,
           columnNumber: 29
         }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137,
+          lineNumber: 143,
           columnNumber: 25
         }
       }, m.textArea), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138,
+          lineNumber: 144,
           columnNumber: 25
         }
       }, m.lang.name, " ", m.lang.Name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139,
+          lineNumber: 145,
           columnNumber: 25
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_5__["default"], {
         variant: 'danger',
         onClick: () => {
-          let localizedMessages = this.state.localizedMessages;
+          let localizedMessages = _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.localizedMessages;
 
           if (!localizedMessages) {
             localizedMessages = [];
           }
 
           localizedMessages = localizedMessages.filter(lm => lm !== m);
+          _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.localizedMessages = localizedMessages;
           this.setState({
             localizedMessages
           });
@@ -4856,7 +4901,7 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140,
+          lineNumber: 146,
           columnNumber: 29
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -4864,7 +4909,7 @@ class EtFormTriggerActions extends react__WEBPACK_IMPORTED_MODULE_0__["Component
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152,
+          lineNumber: 160,
           columnNumber: 33
         }
       }))));
@@ -4894,7 +4939,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/Badge */ "./node_modules/react-bootstrap/esm/Badge.js");
 /* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
 /* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Help/Socket */ "./src/Help/Socket.js");
+/* harmony import */ var _EventTriggerForm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../EventTriggerForm */ "./src/Components/EventTriggers/EventTriggerForm.js");
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../Help/DataHolder */ "./src/Help/DataHolder.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\EventTriggers\\TriggerHelpForms\\ETFormTriggerBehaviours.js";
+
+
 
 
 
@@ -4961,7 +5010,7 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
   }
 
   isValid() {
-    if (this.state.ExecuteOnlyIfFromACountry && (!this.state.countries || this.state.countries.length == 0)) {
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.ExecuteOnlyIfFromACountry && (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.countries || _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.countries.length == 0)) {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_5__["_showError"])('درصورت انتخاب فیلتر کشور ، باید یک کشور را انتخاب کنید');
 
       return false;
@@ -4970,12 +5019,16 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
     return true;
   }
 
+  componentDidMount() {
+    Object(_EventTriggerForm__WEBPACK_IMPORTED_MODULE_7__["SetEventTrigger"])(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger);
+  }
+
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
+        lineNumber: 76,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -4983,14 +5036,14 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72,
+        lineNumber: 78,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Header, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75,
+        lineNumber: 81,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -4998,7 +5051,7 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 82,
         columnNumber: 25
       }
     }, "Event Trigger \u067E\u0627\u0631\u0627\u0645\u062A\u0631 \u0647\u0627\u06CC \u0631\u0641\u062A\u0627\u0631\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
@@ -5009,21 +5062,21 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80,
+        lineNumber: 86,
         columnNumber: 25
       }
     }, "Event Trigger      \u062A\u0646\u0638\u06CC\u0645\u0627\u062A \u0645\u0631\u0628\u0648\u0637 \u0628\u0647 \u0631\u0641\u062A\u0627\u0631")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Body, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85,
+        lineNumber: 91,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Text, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87,
+        lineNumber: 93,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5033,14 +5086,14 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89,
+        lineNumber: 95,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95,
+        lineNumber: 101,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5050,24 +5103,31 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 102,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99,
+        lineNumber: 105,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
-      title: 'اگر trigger دیگری استفاده نشده باشد',
+      title: 'اگر رویداد دیگری استفاده نشده باشد',
       name: 'ExecuteOnlyIfNoOtherTriggerFired',
       parent: this,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101,
+        lineNumber: 107,
+        columnNumber: 29
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 112,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5077,14 +5137,14 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106,
+        lineNumber: 113,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["AddLocalizedMessage"], {
       title: 'انتخاب و افزودن یک کشور',
       notinput: false,
       onConfirm: (textArea, lang) => {
-        let countries = this.state.countries;
+        let countries = _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.countries;
 
         if (!countries) {
           countries = [];
@@ -5094,6 +5154,7 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
           textArea,
           lang
         });
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger['countries'] = countries;
         this.setState({
           countries
         });
@@ -5101,10 +5162,10 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110,
+        lineNumber: 117,
         columnNumber: 33
       }
-    }, this.state.countries && this.state.countries.length > 0 && this.showAddesCounties()))))));
+    }, _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.countries && _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.countries.length > 0 && this.showAddesCounties()))))));
   }
 
   showAddesCounties() {
@@ -5115,64 +5176,64 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 139,
+        lineNumber: 149,
         columnNumber: 16
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140,
+        lineNumber: 150,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141,
+        lineNumber: 151,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 142,
+        lineNumber: 152,
         columnNumber: 17
       }
     }, "\u067E\u0631\u0686\u0645"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 143,
+        lineNumber: 153,
         columnNumber: 17
       }
     }, "\u0632\u0628\u0627\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144,
+        lineNumber: 154,
         columnNumber: 17
       }
     }, "\u062D\u0630\u0641"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147,
+        lineNumber: 157,
         columnNumber: 13
       }
-    }, this.state.countries.map((m, i, arr) => {
+    }, _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.countries.map((m, i, arr) => {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152,
+          lineNumber: 162,
           columnNumber: 29
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153,
+          lineNumber: 163,
           columnNumber: 25
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -5184,27 +5245,27 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153,
+          lineNumber: 163,
           columnNumber: 29
         }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154,
+          lineNumber: 164,
           columnNumber: 25
         }
       }, m.lang.name, " ", m.lang.Name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 155,
+          lineNumber: 165,
           columnNumber: 25
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_4__["default"], {
         variant: 'danger',
         onClick: () => {
-          let countries = this.state.countries;
+          let countries = _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger.countries;
 
           if (!countries) {
             countries = [];
@@ -5218,7 +5279,7 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 156,
+          lineNumber: 166,
           columnNumber: 29
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -5226,7 +5287,7 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 168,
+          lineNumber: 178,
           columnNumber: 33
         }
       }))));
@@ -5258,7 +5319,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap/Col */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
 /* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../Help/Socket */ "./src/Help/Socket.js");
+/* harmony import */ var _EventTriggerForm__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../EventTriggerForm */ "./src/Components/EventTriggers/EventTriggerForm.js");
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../Help/DataHolder */ "./src/Help/DataHolder.js");
+/* harmony import */ var primereact_inputnumber__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! primereact/inputnumber */ "./node_modules/primereact/inputnumber.js");
+/* harmony import */ var primereact_inputnumber__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(primereact_inputnumber__WEBPACK_IMPORTED_MODULE_10__);
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\EventTriggers\\TriggerHelpForms\\ETFormTriggerEvents.js";
+
+
+
 
 
 
@@ -5273,6 +5341,14 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
     super(props);
     this.state = {};
     _Help_Socket__WEBPACK_IMPORTED_MODULE_7__["CurrentUserInfo"].EtFormTriggerEvents = this;
+  }
+
+  componentDidMount() {
+    Object(_EventTriggerForm__WEBPACK_IMPORTED_MODULE_8__["SetEventTrigger"])(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger);
+
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger && _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.Id) {
+      this.setPreDisableds();
+    }
   }
   /*set*/
 
@@ -5380,31 +5456,38 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
   }
 
   isValid() {
-    if (this.state.S_EventOnLinkClick && (!this.state.links || this.state.links.length === 0)) {
+    /*   DataHolder.selectedEventTrigger.S_EventOnLinkClickNotValid=false;
+       DataHolder.selectedEventTrigger.S_EventSpecificPagesNotValid=false;
+       DataHolder.selectedEventTrigger.S_EventAddressParametersNotValid=false;
+       DataHolder.selectedEventTrigger.EventUserCustomNameNotValid=false;
+       DataHolder.selectedEventTrigger.S_EventDelayNotValid=false;*/
+    console.log(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger);
+
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventOnLinkClick && (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.links || _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.links.length === 0)) {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])('درصورت انتخاب لینک بایستی لینکی تعریف شود');
 
       return false;
     }
 
-    if (this.state.S_EventSpecificPages && (!this.state.pages || this.state.pages.length === 0)) {
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventSpecificPages && (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.pages || _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.pages.length === 0)) {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])('در صورت انتخاب فیلتر صفحات ، بایستی حداقل یک صفحه تعریف شود');
 
       return false;
     }
 
-    if (this.state.S_EventAddressParameters && (!this.state.pageParameters || this.state.pageParameters.length === 0)) {
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventAddressParameters && (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.pageParameters || _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.pageParameters.length === 0)) {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])('در صورت انتخاب فیلتر پارامتر های آدرس ، باید حداقل یک پارامتر انتخاب شود');
 
       return false;
     }
 
-    if (this.state.EventUserCustomName && (!this.state.userEventNames || this.state.userEventNames.length === 0)) {
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventUserCustomName && (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.userEventNames || _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.userEventNames.length === 0)) {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])('در صورت انتخاب رویداد های کاربر ، باید حداقل یک نام رویداد وارد شود');
 
       return false;
     }
 
-    if (this.state.S_EventDelay && !this.state.delay) {
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventDelay && !_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.delay) {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])('فیلتر رویداد با تاخیر فعال است اما زمان وارد نشده است');
 
       return false;
@@ -5413,19 +5496,26 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
     return true;
   }
 
+  setPreDisableds() {
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventOnExitTab) this.setEnabled(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventOnExitTab, 'S_EventOnExitTab', 'S_EventSpecificPages', 'S_EventAddressParameters', 'S_EventDelay');
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventSpecificPages) this.setEnabled(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventSpecificPages, 'S_EventSpecificPages', 'S_EventOnExitTab', 'S_EventDelay');
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventAddressParameters) this.setEnabled(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventAddressParameters, 'S_EventAddressParameters', 'S_EventOnExitTab', 'S_EventDelay');
+    if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventUserCustomName) this.setEnabled(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.EventUserCustomName, 'S_EventUserCustomName', 'S_EventDelay');
+  }
+
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141,
+        lineNumber: 176,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 142,
+        lineNumber: 177,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Header, {
@@ -5433,7 +5523,7 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145,
+        lineNumber: 180,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -5441,7 +5531,7 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146,
+        lineNumber: 181,
         columnNumber: 25
       }
     }, "Event Trigger \u062A\u0646\u0638\u06CC\u0645\u0627\u062A \u0631\u0648\u06CC\u062F\u0627\u062F \u0627\u06CC\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
@@ -5452,25 +5542,30 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150,
+        lineNumber: 185,
         columnNumber: 25
       }
-    }, "Event Trigger    \u0631\u0648\u06CC\u062F\u0627\u062F \u06CC\u0627 \u0648\u0627\u0642\u0639\u0647 \u0627\u06CC\u0646")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Body, {
+    }, "Event Trigger \u0631\u0648\u06CC\u062F\u0627\u062F \u06CC\u0627 \u0648\u0627\u0642\u0639\u0647 \u0627\u06CC\u0646")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Body, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155,
+        lineNumber: 190,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Text, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157,
+        lineNumber: 192,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
-      onChange: checked => this.setEnabled(checked, 'S_EventOnExitTab', 'S_EventSpecificPages', 'S_EventAddressParameters', 'S_EventDelay'),
+      onChange: checked => {
+        this.setEnabled(checked, 'S_EventOnExitTab', 'S_EventSpecificPages', 'S_EventAddressParameters', 'S_EventDelay');
+        this.setState({
+          tmp: Math.random()
+        });
+      },
       disabled: this.Isdisabled('S_EventOnExitTab'),
       title: 'زمان ترک کردن صفحه',
       name: 'EventOnExitTab',
@@ -5478,14 +5573,14 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 159,
+        lineNumber: 194,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 167,
+        lineNumber: 206,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5497,10 +5592,12 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 168,
+        lineNumber: 207,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["FormInModalWithTable"], {
+      name: 'links',
+      parent: this,
       inputTitle: 'Style CSS #id',
       inputTitlePlaceHolder: 'کد مخصوص در html',
       linkTitle: "افزودن یک لینک",
@@ -5508,18 +5605,19 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
         this.setState({
           links
         });
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger['links'] = links;
       },
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 173,
+        lineNumber: 212,
         columnNumber: 33
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185,
+        lineNumber: 225,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5531,14 +5629,17 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 187,
+        lineNumber: 227,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["FormInModalWithTable"], {
+      name: 'pages',
+      parent: this,
       inputTitle: 'آدرس اینترنتی صفحه (علامت * برای زیر صفحات ، علامت ** برای انتخابگر هرچیز و علامت ! برای انتخابگر منفی)',
       inputTitlePlaceHolder: 'برای مثال : acme.com/blog/*/category/**',
       linkTitle: "افزودن یک صفحه",
       onConfirm: pages => {
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger['pages'] = pages;
         this.setState({
           pages
         });
@@ -5546,14 +5647,14 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 193,
+        lineNumber: 233,
         columnNumber: 33
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 205,
+        lineNumber: 247,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5565,16 +5666,19 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 207,
+        lineNumber: 249,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["FormInModalWithTable"], {
+      name: 'pageParameters',
+      parent: this,
       inputTitle: 'URL parameter key (eg. \'key\' in \'https://acme.com/?key=value\')',
       inputTitlePlaceHolder: 'عنوان کلید',
       secondinputTitle: 'URL parameter value (eg. \'value\' in \'https://acme.com/?key=value\')',
       secondinputTitlePlaceHolder: 'مقادر کلید',
       linkTitle: "افزودن یک پارامتر در آدرس",
       onConfirm: pageParameters => {
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger['pageParameters'] = pageParameters;
         this.setState({
           pageParameters
         });
@@ -5582,14 +5686,14 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 213,
+        lineNumber: 255,
         columnNumber: 33
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 227,
+        lineNumber: 270,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5601,14 +5705,17 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 229,
+        lineNumber: 272,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["FormInModalWithTable"], {
+      name: 'userEventNames',
+      parent: this,
       inputTitle: 'عنوان event شما',
       inputTitlePlaceHolder: 'عنوان event : onSelectEvent',
       linkTitle: " event افزودن یک  ",
       onConfirm: userEventNames => {
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger['userEventNames'] = userEventNames;
         this.setState({
           userEventNames
         });
@@ -5616,14 +5723,14 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 234,
+        lineNumber: 278,
         columnNumber: 33
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 252,
+        lineNumber: 297,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5634,42 +5741,42 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 253,
+        lineNumber: 298,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 258,
+        lineNumber: 303,
         columnNumber: 33
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 259,
+        lineNumber: 304,
         columnNumber: 33
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260,
+        lineNumber: 305,
         columnNumber: 33
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 261,
+        lineNumber: 306,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 262,
+        lineNumber: 307,
         columnNumber: 37
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -5677,37 +5784,44 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 263,
+        lineNumber: 308,
         columnNumber: 37
       }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MyInput"], {
-      onChange: val => {
-        this.setState({
-          delay: val
-        });
-      },
-      title: '',
-      placeholder: 'زمان به ثانیه',
-      name: 'delay',
-      parent: this,
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 264,
+        lineNumber: 310,
+        columnNumber: 41
+      }
+    }, "\u0632\u0645\u0627\u0646 \u0628\u0647 \u062B\u0627\u0646\u06CC\u0647"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputnumber__WEBPACK_IMPORTED_MODULE_10__["InputNumber"], {
+      showButtons: true,
+      mode: "currency",
+      id: "withoutgrouping",
+      value: _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger['delay'],
+      onValueChange: e => {
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger['delay'] = e.value;
+      },
+      mode: "decimal",
+      useGrouping: false,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 314,
         columnNumber: 41
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 270,
+        lineNumber: 329,
         columnNumber: 37
       }
     })))))));
   }
 
   Isdisabled(s) {
-    return !this.state[s] && this.state.S_SelectAny ? 'disabled' : null;
+    return !_Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger[s] && _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger.S_SelectAny ? 'disabled' : null;
   }
 
   setEnabled(checked, name) {
@@ -5772,6 +5886,10 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       obj['S_SelectAny'] = checked;
     }
 
+    for (let k in obj) {
+      _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger[k] = obj[k];
+    }
+
     this.setState(obj);
   }
 
@@ -5795,7 +5913,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Card */ "./node_modules/react-bootstrap/esm/Card.js");
 /* harmony import */ var _Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities/Utility */ "./src/Components/Utilities/Utility.js");
 /* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Help/Socket */ "./src/Help/Socket.js");
+/* harmony import */ var _EventTriggerForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../EventTriggerForm */ "./src/Components/EventTriggers/EventTriggerForm.js");
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Help/DataHolder */ "./src/Help/DataHolder.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\EventTriggers\\TriggerHelpForms\\ETFormTriggerPlatforms.js";
+
+
 
 
 
@@ -5812,6 +5934,10 @@ class EtFormTriggerPlatforms extends react__WEBPACK_IMPORTED_MODULE_0__["Compone
     this.setState({
       RunInDesktopDevices
     });
+  }
+
+  componentDidMount() {
+    Object(_EventTriggerForm__WEBPACK_IMPORTED_MODULE_4__["SetEventTrigger"])(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_5__["DataHolder"].selectedEventTrigger);
   }
 
   setRunInMobileDevices(RunInMobileDevices) {
@@ -5837,7 +5963,7 @@ class EtFormTriggerPlatforms extends react__WEBPACK_IMPORTED_MODULE_0__["Compone
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37,
+        lineNumber: 42,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -5845,14 +5971,14 @@ class EtFormTriggerPlatforms extends react__WEBPACK_IMPORTED_MODULE_0__["Compone
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38,
+        lineNumber: 43,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Header, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41,
+        lineNumber: 46,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -5860,7 +5986,7 @@ class EtFormTriggerPlatforms extends react__WEBPACK_IMPORTED_MODULE_0__["Compone
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42,
+        lineNumber: 47,
         columnNumber: 25
       }
     }, "Event Trigger \u067E\u0644\u062A\u0641\u0631\u0645 \u0647\u0627\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
@@ -5871,21 +5997,21 @@ class EtFormTriggerPlatforms extends react__WEBPACK_IMPORTED_MODULE_0__["Compone
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46,
+        lineNumber: 51,
         columnNumber: 25
       }
     }, "Event Trigger      \u062A\u0646\u0638\u06CC\u0645\u0627\u062A \u0645\u0631\u0628\u0648\u0637 \u0628\u0647 \u067E\u0644\u062A\u0641\u0631\u0645")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Body, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51,
+        lineNumber: 56,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_1__["default"].Text, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53,
+        lineNumber: 58,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5897,14 +6023,14 @@ class EtFormTriggerPlatforms extends react__WEBPACK_IMPORTED_MODULE_0__["Compone
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55,
+        lineNumber: 60,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60,
+        lineNumber: 65,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5916,7 +6042,7 @@ class EtFormTriggerPlatforms extends react__WEBPACK_IMPORTED_MODULE_0__["Compone
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61,
+        lineNumber: 66,
         columnNumber: 29
       }
     })))));
@@ -5967,10 +6093,10 @@ class FormDataTable extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_2__["_showError"])('دیتای خوانده شده اشکال دارد');
 
       return;
-    } console.log('FormDataTable==>getFormDataCallback')
-    console.log(res)
+    }
 
-
+    console.log('FormDataTable==>getFormDataCallback');
+    console.log(res);
     let formStructure = res.Content.Form;
     let formData = res.Content.formData;
     let Page = res.Content.Page;
@@ -6547,8 +6673,9 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   componentDidMount() {
-    console.log('FormShowerInChat->componentDidMount:')
-    console.log(this.state.elements)
+    console.log('FormShowerInChat->componentDidMount:');
+    console.log(this.state.elements);
+
     if (!this.state.elements) {
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send('GetFormSingle', {
         formId: this.props.formId,
@@ -6560,13 +6687,13 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   saveFormDataCallback(res) {
     //debugger
-    console.log('FormShowerInChat->saveFormDataCallback:')
-    console.log(res)
-
+    console.log('FormShowerInChat->saveFormDataCallback:');
+    console.log(res);
     /*form.AfterMessage,
                 formId,
                 chatId,
                 FormValues*/
+
     if (!res || !res.Content || !res.Content.FormValues || res.Content.FormValues.length == 0) {
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].LayoutPage.showError('اطلاعات بازگشتی از سرور نال است');
       return;
@@ -6592,7 +6719,8 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     this.setState({
       tmp: Math.random()
-    }); console.log(res);
+    });
+    console.log(res);
   }
 
   getFormSingleCallback(res) {
@@ -6600,9 +6728,9 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     if (!res || !res.Content) {
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].LayoutPage.showError('اطلاعات بازگشتی از سرور نال است');
       return;
-    } console.log('this.state.elements', this.state.elements);
+    }
 
-
+    console.log('this.state.elements', this.state.elements);
     this.setState({
       elements: res.Content.Elements,
       Name: res.Content.Name,
@@ -6610,7 +6738,8 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       OnlyMe: res.Content.OnlyMe,
       Message: res.Content.Message,
       Id: res.Content.Id
-    }); console.log(res);
+    });
+    console.log(res);
   }
 
   render() {
@@ -21602,7 +21731,8 @@ class Language extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_4__["_showMsg"])("در حال خواندن اطلاعات");
 
     new _CountryService__WEBPACK_IMPORTED_MODULE_3__["CountryService"]().GetAll().then(re => {
-      console.log(re)
+      console.log(re);
+
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_4__["_showMsg"])("لیست کشور ها خوانده شد");
 
       let _selectedCountry;
@@ -21826,7 +21956,8 @@ class LanguageHolder extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   onLanugageSelect() {
     if (!Object(_Pages_HelpDeskPage__WEBPACK_IMPORTED_MODULE_13__["_getHelpDesk"])() || !Object(_Pages_HelpDeskPage__WEBPACK_IMPORTED_MODULE_13__["_getHelpDesk"])().language.Name) {
-      console.log("هیچ زبانی انتخاب نشده است",_getHelpDesk())
+      console.log("هیچ زبانی انتخاب نشده است", Object(_Pages_HelpDeskPage__WEBPACK_IMPORTED_MODULE_13__["_getHelpDesk"])());
+
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])("هیچ زبانی انتخاب نشده است");
 
       return;
@@ -24081,8 +24212,9 @@ class ScreenRecordShower extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
     };
   }
 
-  videoElementRef(e) {//debugger;
-    console.log(e)
+  videoElementRef(e) {
+    //debugger;
+    console.log(e);
   }
 
   componentDidMount() {
@@ -24681,8 +24813,9 @@ class SendFromHelpDesk extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_7__["_showMsg"])("اطلاعات رسید");
     }).catch(e => {
-      Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_7__["_showError"])('خطایی در درخواست اطلاعات help desk بوجود آمد'); console.error(e);
+      Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_7__["_showError"])('خطایی در درخواست اطلاعات help desk بوجود آمد');
 
+      console.error(e);
     });
   }
 
@@ -25413,11 +25546,11 @@ function configStream() {
 function VIDEO_CALL_STOP(chatId) {
   try {
     mediaRecorder.stop();
-  } catch (e) {} //ingore
+  } catch (e) {//ingore
+  }
+
   console.log(mediaRecorder.state);
   console.log("recorder stopped");
-
-
   captureStream.getTracks().forEach(track => track.stop());
   /*MyCaller.Send('ScreenRecordCustomerClose', {myAccountId: CurrentUserInfo.targetId,
       msg:msg});*/
@@ -25454,6 +25587,7 @@ function VIDEO_CALL_INIT(THIS, callback, chatId) {
 
       mediaRecorder = new MediaRecorder(stream);
       mediaRecorder.start(3000); //videoElem.srcObject=stream;
+
       console.log(mediaRecorder.state);
 
       mediaRecorder.ondataavailable = function (e) {
@@ -25481,13 +25615,15 @@ function VIDEO_CALL_INIT(THIS, callback, chatId) {
     };
 
     let onError = function (err) {
-      callback(THIS, 'اجازه دسترسی داده نشد', err); console.error('The following error occured: ' + err);
+      callback(THIS, 'اجازه دسترسی داده نشد', err);
+      console.error('The following error occured: ' + err);
     };
 
     navigator.mediaDevices.getDisplayMedia(constraints).then(onSuccess, onError);
   } else {
     callback(THIS, 'این امکان در مرورگر شما پشتیبانی نمی شود');
-    alert('این امکان در مرورگر شما پشتیبانی نمی شود'); console.error('getUserMedia not supported on your browser!');
+    alert('این امکان در مرورگر شما پشتیبانی نمی شود');
+    console.error('getUserMedia not supported on your browser!');
   }
 
   window.onresize = function () {//canvas.width = mainSection.offsetWidth;
@@ -26842,7 +26978,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap/Badge */ "./node_modules/react-bootstrap/esm/Badge.js");
 /* harmony import */ var react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap/Table */ "./node_modules/react-bootstrap/esm/Table.js");
 /* harmony import */ var react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap/Card */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../Help/DataHolder */ "./src/Help/DataHolder.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\Utilities\\Utility.js";
+
 
 
 
@@ -26857,14 +26995,14 @@ var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupport
 const MyInput = props => {
   const [val, setVal] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
   react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
-    setVal(props.parent.state[props.name]);
-  }, [props.parent.state[props.name]]);
+    setVal(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name]);
+  }, [_Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name]]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: 'float-right',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 25,
       columnNumber: 9
     }
   }, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputtext__WEBPACK_IMPORTED_MODULE_1__["InputText"], {
@@ -26877,11 +27015,15 @@ const MyInput = props => {
     onChange: e => {
       setVal(e.target.value);
 
-      if (props.parent) {
+      if (props.parent && props.parent.setState) {
         props.parent.state[props.name] = e.target.value;
         props.parent.setState({
           tmp: Math.random()
         });
+      }
+
+      if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger && !props.noEventHandler) {
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name] = e.target.value;
       }
 
       if (props.onChange) {
@@ -26891,19 +27033,22 @@ const MyInput = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 26,
       columnNumber: 9
     }
   }));
 };
 const MySwitcher = props => {
   const [val, setVal] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.checked);
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    setVal(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name]);
+  }, [_Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name]]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: 'MySwitcher',
+    className: 'MySwitcher ',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 57,
       columnNumber: 12
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -26911,7 +27056,7 @@ const MySwitcher = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 58,
       columnNumber: 9
     }
   }, props.icon && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -26920,7 +27065,7 @@ const MySwitcher = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 61,
       columnNumber: 28
     }
   }), props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputswitch__WEBPACK_IMPORTED_MODULE_2__["InputSwitch"], {
@@ -26934,6 +27079,10 @@ const MySwitcher = props => {
         tmp: Math.random()
       });
 
+      if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger) {
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name] = e.target.value;
+      }
+
       if (props.onChange) {
         props.onChange(e.target.value);
       }
@@ -26941,7 +27090,7 @@ const MySwitcher = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 67,
       columnNumber: 9
     }
   }), val && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, props.children));
@@ -26955,7 +27104,7 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
+      lineNumber: 97,
       columnNumber: 19
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -26979,7 +27128,7 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 98,
       columnNumber: 9
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -26993,7 +27142,7 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100,
+      lineNumber: 117,
       columnNumber: 9
     }
   }));
@@ -27004,7 +27153,7 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113,
+      lineNumber: 130,
       columnNumber: 9
     }
   }, props.title ? props.title : 'یک پیغام بومی سازی شده اضافه کنید'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_dialog__WEBPACK_IMPORTED_MODULE_4__["Dialog"], {
@@ -27019,21 +27168,21 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123,
+      lineNumber: 140,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127,
+      lineNumber: 144,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128,
+      lineNumber: 145,
       columnNumber: 17
     }
   }, "\u0632\u0628\u0627\u0646 \u0645\u062D\u0644\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HelpDesk_Language_Language__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -27045,49 +27194,49 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130,
+      lineNumber: 147,
       columnNumber: 17
     }
   })), !props.noinput && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141,
+      lineNumber: 158,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142,
+      lineNumber: 159,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143,
+      lineNumber: 160,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144,
+      lineNumber: 161,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145,
+      lineNumber: 162,
       columnNumber: 16
     }
   }, "\u0645\u062A\u0646 \u067E\u06CC\u063A\u0627\u0645"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146,
+      lineNumber: 163,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputtextarea__WEBPACK_IMPORTED_MODULE_6__["InputTextarea"], {
@@ -27098,21 +27247,25 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 164,
       columnNumber: 16
     }
   })), props.body), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, props.children));
 };
 const FormInModalWithTable = props => {
-  const [Name, setName] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
+  FormInModalWithTable.state = {};
+  const [ModalName, setModalName] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
   const [SecondName, setSecondName] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
   const [messages, setMessages] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
   const [showModal, setShowModal] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    setMessages(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name]);
+  }, [_Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name]]);
   const footer = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 173,
+      lineNumber: 196,
       columnNumber: 19
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -27127,7 +27280,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174,
+      lineNumber: 197,
       columnNumber: 9
     }
   }));
@@ -27138,7 +27291,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187,
+      lineNumber: 210,
       columnNumber: 9
     }
   }, props.linkTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_dialog__WEBPACK_IMPORTED_MODULE_4__["Dialog"], {
@@ -27153,23 +27306,28 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196,
+      lineNumber: 219,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MyInput, {
+    noEventHandler: true,
+    parent: FormInModalWithTable,
     onChange: val => {
-      setName(val);
+      debugger;
+      setModalName(val);
     },
     title: props.inputTitle,
     placeholder: props.inputTitlePlaceHolder,
-    name: 'Name',
+    name: 'ModalName',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201,
+      lineNumber: 224,
       columnNumber: 13
     }
   }), props.secondinputTitle && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MyInput, {
+    noEventHandler: true,
+    parent: FormInModalWithTable,
     onChange: val => {
       setSecondName(val);
     },
@@ -27179,7 +27337,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209,
+      lineNumber: 233,
       columnNumber: 13
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -27193,18 +27351,18 @@ const FormInModalWithTable = props => {
         localizedMessages = [];
       }
 
+      _Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name] = localizedMessages;
       localizedMessages.push({
-        Name: Name,
+        Name: ModalName,
         SecondName: SecondName
       });
-      setName(null);
       setMessages(localizedMessages);
     },
     variant: 'primary',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216,
+      lineNumber: 240,
       columnNumber: 13
     }
   }, "\u0627\u0641\u0632\u0648\u062F\u0646")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, messages && messages.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -27214,42 +27372,42 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245,
+      lineNumber: 271,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246,
+      lineNumber: 272,
       columnNumber: 21
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247,
+      lineNumber: 273,
       columnNumber: 21
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248,
+      lineNumber: 274,
       columnNumber: 25
     }
   }, props.inputTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249,
+      lineNumber: 275,
       columnNumber: 25
     }
   }, "\u062D\u0630\u0641"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252,
+      lineNumber: 278,
       columnNumber: 21
     }
   }, messages && messages.length > 0 && messages.map((m, i, arr) => {
@@ -27257,21 +27415,21 @@ const FormInModalWithTable = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 256,
+        lineNumber: 282,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 258,
+        lineNumber: 284,
         columnNumber: 33
       }
     }, m.Name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 259,
+        lineNumber: 285,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -27284,12 +27442,13 @@ const FormInModalWithTable = props => {
         }
 
         localizedMessages = localizedMessages.filter(lm => lm !== m);
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name] = localizedMessages;
         setMessages(localizedMessages);
       },
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260,
+        lineNumber: 286,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -27297,7 +27456,7 @@ const FormInModalWithTable = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 272,
+        lineNumber: 300,
         columnNumber: 41
       }
     }))));
@@ -28216,9 +28375,11 @@ __webpack_require__.r(__webpack_exports__);
 class dispatcher {
   dispatch(res) {
     if (res.Type == -1) //error
-      {} console.error(res.Message);
-      console.log('dispatcher===>',res.Name)
+      {
+        console.error(res.Message);
+      }
 
+    console.log('dispatcher===>', res.Name);
 
     switch (res.Name) {
       /*========== eventTrigger==========*/
@@ -28602,8 +28763,8 @@ class dispatcher {
 
       case "ClearCookie":
         //cookieManager.removeItem('customerToken')
-        _CookieManager__WEBPACK_IMPORTED_MODULE_1__["cookieManager"].removeItem('adminToken'); console.log('ClearCookie==>adminToken===>', cookieManager.getItem('adminToken'))
-
+        _CookieManager__WEBPACK_IMPORTED_MODULE_1__["cookieManager"].removeItem('adminToken');
+        console.log('ClearCookie==>adminToken===>', _CookieManager__WEBPACK_IMPORTED_MODULE_1__["cookieManager"].getItem('adminToken'));
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].customerToken = null;
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LayoutPage.setState({
           tmp: Math.random(),
@@ -28908,7 +29069,8 @@ const MyCaller = {
       CurrentUserInfo.LayoutPage.showError('در حال اتصال به سرور و ارسال درخواست');
       setTimeout(() => {
         if (CurrentUserInfo.ws.readyState === WebSocket.CLOSED || CurrentUserInfo.ws.readyState === WebSocket.CLOSED) {
-          Socket(function () {console.log('opened !');
+          Socket(function () {
+            console.log('opened !');
           });
         }
 
@@ -28964,10 +29126,10 @@ const Socket = function (onOpen) {
 
   CurrentUserInfo.ws.onopen = function () {
     console.log('اتصال برقرار شد');
-
     /*alert("About to send data");
     ws.send("Hello World"); // I WANT TO SEND THIS MESSAGE TO THE SERVER!!!!!!!!
     alert("Message sent!");*/
+
     if (onOpen) {
       onOpen();
     }
@@ -28979,11 +29141,13 @@ const Socket = function (onOpen) {
     _Dispatcher__WEBPACK_IMPORTED_MODULE_0__["_dispatcher"].dispatch(JSON.parse(received_msg));
   };
 
-  CurrentUserInfo.ws.onclose = function () {// websocket is closed.
+  CurrentUserInfo.ws.onclose = function () {
+    // websocket is closed.
     console.error("اتصال قطع شد");
   };
 };
-Socket(function () {console.log('opened !');
+Socket(function () {
+  console.log('opened !');
 });
 
 /***/ }),
@@ -29287,7 +29451,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../Help/Socket */ "./src/Help/Socket.js");
 /* harmony import */ var react_bootstrap_cjs_Spinner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/cjs/Spinner */ "./node_modules/react-bootstrap/cjs/Spinner.js");
 /* harmony import */ var react_bootstrap_cjs_Spinner__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_cjs_Spinner__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Help/DataHolder */ "./src/Help/DataHolder.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Pages\\Event_TriggersPage.js";
+
 
 
 
@@ -29304,26 +29470,30 @@ class EventTriggersPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
     _Help_Socket__WEBPACK_IMPORTED_MODULE_6__["CurrentUserInfo"].EventTriggersPage = this;
   }
 
+  componentWillUnmount() {
+    _Help_DataHolder__WEBPACK_IMPORTED_MODULE_8__["DataHolder"].selectedEventTrigger = null;
+  }
+
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 26,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22,
+        lineNumber: 28,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23,
+        lineNumber: 29,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -29331,14 +29501,14 @@ class EventTriggersPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24,
+        lineNumber: 30,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_EventTriggers_EventTriggerIndex__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25,
+        lineNumber: 31,
         columnNumber: 29
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -29346,14 +29516,14 @@ class EventTriggersPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27,
+        lineNumber: 33,
         columnNumber: 25
       }
     }, !this.state.loading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_EventTriggers_EventTriggerSave__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30,
+        lineNumber: 36,
         columnNumber: 29
       }
     }), this.state.loading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Spinner__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -29362,7 +29532,7 @@ class EventTriggersPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36,
+        lineNumber: 42,
         columnNumber: 32
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -29370,7 +29540,7 @@ class EventTriggersPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37,
+        lineNumber: 43,
         columnNumber: 36
       }
     }, "\u0644\u0637\u0641\u0627 \u0645\u0646\u062A\u0638\u0631 \u0628\u0645\u0627\u0646\u06CC\u062F ....")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -29378,14 +29548,14 @@ class EventTriggersPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39,
+        lineNumber: 45,
         columnNumber: 32
       }
     }, "\u0644\u0637\u0641\u0627 \u0645\u0646\u062A\u0638\u0631 \u0628\u0645\u0627\u0646\u06CC\u062F ...."))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47,
+        lineNumber: 53,
         columnNumber: 17
       }
     }));
@@ -29460,9 +29630,9 @@ class FormCreatorPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     if (!res || !res.Content) {
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].LayoutPage.showError('اطلاعات بازگشتی از سرور نال است');
       return;
-    } console.log(res);
+    }
 
-
+    console.log(res);
     this.setState({
       elements: res.Content.Elements,
       Name: res.Content.Name,
@@ -32579,8 +32749,8 @@ class OnlineCustomerListHolder extends react__WEBPACK_IMPORTED_MODULE_0__["Compo
 
   newCustomerOnlineCallback(res) {
     if (res.Content.OnlineTp != _Help_Socket__WEBPACK_IMPORTED_MODULE_2__["CurrentUserInfo"].UserType) {
-      console.log(res)
-      console.log(`res.Content.Type!=CurrentUserInfo.UserType res.Content.Type= ${res.Content.Type}!=${CurrentUserInfo.UserType}`)
+      console.log(res);
+      console.log(`res.Content.Type!=CurrentUserInfo.UserType res.Content.Type= ${res.Content.Type}!=${_Help_Socket__WEBPACK_IMPORTED_MODULE_2__["CurrentUserInfo"].UserType}`);
       return;
     }
 
@@ -32756,7 +32926,7 @@ const LoadImageAndSet = function (e2, callback) {
     var fileReader = new FileReader();
 
     fileReader.onload = function (e) {
-      console.log(e.target.result)
+      console.log(e.target.result);
       callback(e.target.result);
     };
 
@@ -34132,6 +34302,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./src/App.js");
 /* harmony import */ var _serviceWorker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./serviceWorker */ "./src/serviceWorker.js");
+/* harmony import */ var _serviceWorker__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_serviceWorker__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\index.js";
 
 
@@ -34175,10 +34346,148 @@ module.exports = __webpack_require__.p + "media/logo.ee7cd8ed.svg";
 /*!******************************!*\
   !*** ./src/serviceWorker.js ***!
   \******************************/
-/*! exports provided: register, unregister */
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\serviceWorker.js: Unexpected token (47:10)\n\n\u001b[0m \u001b[90m 45 | \u001b[39m            \u001b[32m'This web app is being served cache-first by a service '\u001b[39m \u001b[33m+\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 | \u001b[39m              \u001b[32m'worker. To learn more, visit https://bit.ly/CRA-PWA'\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 | \u001b[39m          )\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 48 | \u001b[39m        })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 49 | \u001b[39m      } \u001b[36melse\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 50 | \u001b[39m        \u001b[90m// Is not localhost. Just register service worker\u001b[39m\u001b[0m\n    at Object._raise (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.raiseWithData (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:735:17)\n    at Object.raise (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:729:17)\n    at Object.unexpected (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:8752:16)\n    at Object.parseExprAtom (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:10047:20)\n    at Object.parseExprAtom (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:4614:20)\n    at Object.parseExprSubscripts (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:9597:23)\n    at Object.parseMaybeUnary (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:9577:21)\n    at Object.parseExprOps (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:9447:23)\n    at Object.parseMaybeConditional (D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\node_modules\\@babel\\parser\\lib\\index.js:9420:23)");
+// This optional code is used to register a service worker.
+// register() is not called by default.
+// This lets the app load faster on subsequent visits in production, and gives
+// it offline capabilities. However, it also means that developers (and users)
+// will only see deployed updates on subsequent visits to a page, after all the
+// existing tabs open on the page have been closed, since previously cached
+// resources are updated in the background.
+// To learn more about the benefits of this model and instructions on how to
+// opt-in, read https://bit.ly/CRA-PWA
+
+/*const isLocalhost = Boolean(
+  window.location.hostname === 'localhost' ||
+    // [::1] is the IPv6 localhost address.
+    window.location.hostname === '[::1]' ||
+    // 127.0.0.0/8 are considered localhost for IPv4.
+    window.location.hostname.match(
+      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+    )
+);
+
+export function register(config) {
+  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+    // The URL constructor is available in all browsers that support SW.
+    const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
+    if (publicUrl.origin !== window.location.origin) {
+      // Our service worker won't work if PUBLIC_URL is on a different origin
+      // from what our page is served on. This might happen if a CDN is used to
+      // serve assets; see https://github.com/facebook/create-react-app/issues/2374
+      return;
+    }
+
+    window.addEventListener('load', () => {
+      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+
+      if (isLocalhost) {
+        // This is running on localhost. Let's check if a service worker still exists or not.
+        checkValidServiceWorker(swUrl, config);
+
+        // Add some additional logging to localhost, pointing developers to the
+        // service worker/PWA documentation.
+        navigator.serviceWorker.ready.then(() => {
+          console.log(
+            'This web app is being served cache-first by a service ' +
+              'worker. To learn more, visit https://bit.ly/CRA-PWA'
+          );
+        });
+      } else {
+        // Is not localhost. Just register service worker
+        registerValidSW(swUrl, config);
+      }
+    });
+  }
+}
+
+function registerValidSW(swUrl, config) {
+  navigator.serviceWorker
+    .register(swUrl)
+    .then(registration => {
+      registration.onupdatefound = () => {
+        const installingWorker = registration.installing;
+        if (installingWorker == null) {
+          return;
+        }
+        installingWorker.onstatechange = () => {
+          if (installingWorker.state === 'installed') {
+            if (navigator.serviceWorker.controller) {
+              // At this point, the updated precached content has been fetched,
+              // but the previous service worker will still serve the older
+              // content until all client tabs are closed.
+              console.log(
+                'New content is available and will be used when all ' +
+                  'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
+              );
+
+              // Execute callback
+              if (config && config.onUpdate) {
+                config.onUpdate(registration);
+              }
+            } else {
+              // At this point, everything has been precached.
+              // It's the perfect time to display a
+              // "Content is cached for offline use." message.
+              console.log('Content is cached for offline use.');
+
+              // Execute callback
+              if (config && config.onSuccess) {
+                config.onSuccess(registration);
+              }
+            }
+          }
+        };
+      };
+    })
+    .catch(error => {
+      console.error('Error during service worker registration:', error);
+    });
+}
+
+function checkValidServiceWorker(swUrl, config) {
+  // Check if the service worker can be found. If it can't reload the page.
+  fetch(swUrl, {
+    headers: { 'Service-Worker': 'script' },
+  })
+    .then(response => {
+      // Ensure service worker exists, and that we really are getting a JS file.
+      const contentType = response.headers.get('content-type');
+      if (
+        response.status === 404 ||
+        (contentType != null && contentType.indexOf('javascript') === -1)
+      ) {
+        // No service worker found. Probably a different app. Reload the page.
+        navigator.serviceWorker.ready.then(registration => {
+          registration.unregister().then(() => {
+            window.location.reload();
+          });
+        });
+      } else {
+        // Service worker found. Proceed as normal.
+        registerValidSW(swUrl, config);
+      }
+    })
+    .catch(() => {
+      console.log(
+        'No internet connection found. App is running in offline mode.'
+      );
+    });
+}
+
+export function unregister() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready
+      .then(registration => {
+        registration.unregister();
+      })
+      .catch(error => {
+        console.error(error.message);
+      });
+  }
+}*/
 
 /***/ }),
 

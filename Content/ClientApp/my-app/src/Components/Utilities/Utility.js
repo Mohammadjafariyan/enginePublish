@@ -10,23 +10,29 @@ import '../../styles/myStyle.css'
 import Badge from "react-bootstrap/Badge";
 import Table from "react-bootstrap/Table";
 import Card from "react-bootstrap/Card";
+import {DataHolder} from "../../Help/DataHolder";
 
 export const MyInput=(props)=>{
 
     const [val,setVal]= useState();
-   
+
+
     React.useEffect(() => {
-        setVal(props.parent.state[props.name]);
-    }, [props.parent.state[props.name]])
+        setVal(DataHolder.selectedEventTrigger[props.name]);
+    }, [DataHolder.selectedEventTrigger[props.name]])
     
     return <>
         <label className={'float-right'}>{props.title}</label>
         <InputText  placeholder={props.placeholder} className={'float-left'} style={{width:'100%'}} value={val} onChange={(e) => {
             setVal( e.target.value);
             
-            if (props.parent) {
+            if (props.parent &&  props.parent.setState) {
                 props.parent.state[props.name]=e.target.value;
                 props.parent.setState({tmp:Math.random()});
+            }
+            
+            if (DataHolder.selectedEventTrigger && !props.noEventHandler) {
+                DataHolder.selectedEventTrigger[props.name]=e.target.value;
             }
          
             
@@ -40,7 +46,15 @@ export const MyInput=(props)=>{
 export const MySwitcher=(props)=>{
 
     const [val,setVal]= useState(props.checked);
-    return <div className={'MySwitcher'}>
+
+
+    React.useEffect(() => {
+        setVal( DataHolder.selectedEventTrigger[props.name]);
+    }, [ DataHolder.selectedEventTrigger[props.name]])
+
+  
+
+    return <div className={'MySwitcher '}>
         <label className={'float-right ' + (props.disabled ? 'disabled' : '')} >
             
             
@@ -56,6 +70,9 @@ export const MySwitcher=(props)=>{
                            props.parent.state[props.name]=e.target.value;
                            props.parent.setState({tmp:Math.random()});
                            
+                           if (DataHolder.selectedEventTrigger){
+                               DataHolder.selectedEventTrigger[props.name]=e.target.value;
+                           }
                            
                            if (props.onChange){
                                props.onChange(e.target.value);
@@ -163,12 +180,18 @@ export const AddLocalizedMessage=(props)=>{
 
 export const FormInModalWithTable=(props)=>{
 
-    const [Name,setName]= useState();
+    FormInModalWithTable.state={};
+    const [ModalName,setModalName]= useState();
     const [SecondName ,setSecondName]= useState();
     const [messages,setMessages]= useState();
     
     
     const [showModal,setShowModal]= useState(false);
+
+
+    React.useEffect(() => {
+        setMessages(DataHolder.selectedEventTrigger[props.name]);
+    }, [DataHolder.selectedEventTrigger[props.name]])
 
     const footer= <div>
         <Button label="تمام" id={'removeLanguageConfirm'} icon="pi pi-check" onClick={() => {
@@ -197,16 +220,17 @@ export const FormInModalWithTable=(props)=>{
                 modal style={{ width: '450px' }} footer={footer}
                 onHide={() => setShowModal(false)}>
 
+ 
+            <MyInput noEventHandler={true}  parent={FormInModalWithTable}  onChange={(val)=>{
 
-            <MyInput onChange={(val)=>{
+                debugger;
+                setModalName(val);
 
-                setName(val);
-
-            }} title={props.inputTitle} placeholder={props.inputTitlePlaceHolder} name={'Name'}  />
+            }} title={props.inputTitle} placeholder={props.inputTitlePlaceHolder} name={'ModalName'}   />
 
 
             {props.secondinputTitle && 
-            <MyInput onChange={(val)=>{
+            <MyInput noEventHandler={true}  parent={FormInModalWithTable} onChange={(val)=>{
 
                 setSecondName(val);
 
@@ -224,8 +248,10 @@ export const FormInModalWithTable=(props)=>{
                         localizedMessages=[];
                     }
 
-                    localizedMessages.push({Name:Name,SecondName:SecondName});
-                    setName(null)
+
+                    DataHolder.selectedEventTrigger[props.name]=localizedMessages;
+
+                    localizedMessages.push({Name:ModalName,SecondName:SecondName});
                     setMessages(localizedMessages);
                
                 }}
@@ -265,6 +291,8 @@ export const FormInModalWithTable=(props)=>{
                                         }
 
                                         localizedMessages=  localizedMessages.filter(lm=>lm!==m);
+
+                                        DataHolder.selectedEventTrigger[props.name]=localizedMessages;
                                         setMessages(localizedMessages);
 
                                     }}>

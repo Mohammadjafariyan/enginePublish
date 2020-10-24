@@ -1,3 +1,7 @@
+
+.notValid{
+    border:1px solid red;
+}
 .floatLeft{
 
     margin-top: 10px;

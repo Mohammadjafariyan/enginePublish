@@ -5,6 +5,8 @@ import Table from "react-bootstrap/Table";
 import Badge from "react-bootstrap/Badge";
 import {_showError} from "../../../Pages/LayoutPage";
 import {CurrentUserInfo} from "../../../Help/Socket";
+import {SetEventTrigger} from "../EventTriggerForm";
+import {DataHolder} from "../../../Help/DataHolder";
 
 class EtFormTriggerBehaviours extends Component {
     state={};
@@ -58,12 +60,16 @@ class EtFormTriggerBehaviours extends Component {
     }
     
     isValid(){
-        if (this.state.ExecuteOnlyIfFromACountry && (!this.state.countries || this.state.countries.length==0))
+        if (DataHolder.selectedEventTrigger.ExecuteOnlyIfFromACountry && (!DataHolder.selectedEventTrigger.countries || DataHolder.selectedEventTrigger.countries.length==0))
         {
             _showError('درصورت انتخاب فیلتر کشور ، باید یک کشور را انتخاب کنید')
             return false
         }
         return true;
+    }
+
+    componentDidMount() {
+        SetEventTrigger(DataHolder.selectedEventTrigger);
     }
     render() {
         return (
@@ -98,28 +104,32 @@ class EtFormTriggerBehaviours extends Component {
                             </MySwitcher>
                             <hr/>
 
-                            <MySwitcher title={'اگر trigger دیگری استفاده نشده باشد'} name={'ExecuteOnlyIfNoOtherTriggerFired'} parent={this}>
+                            <MySwitcher title={'اگر رویداد دیگری استفاده نشده باشد'} name={'ExecuteOnlyIfNoOtherTriggerFired'} parent={this}>
 
                             </MySwitcher>
 
 
+                            <hr/>
                             <MySwitcher title={'اگر کاربر از کشور خاصی باشد'} name={'ExecuteOnlyIfFromACountry'} parent={this}>
 
 
 
                                 <AddLocalizedMessage title={'انتخاب و افزودن یک کشور'} notinput={false} onConfirm={(textArea,lang)=>{
 
-                                    let countries= this.state.countries;
+                                    let countries= DataHolder.selectedEventTrigger.countries;
                                     if(!countries){
                                         countries=[];
                                     }
 
                                     countries.push({textArea,lang});
+
+
+                                    DataHolder.selectedEventTrigger['countries']=countries;
                                     this.setState({countries});
                                 }}>
 
 
-                                    {this.state.countries && this.state.countries.length>0 &&
+                                    {DataHolder.selectedEventTrigger.countries && DataHolder.selectedEventTrigger.countries.length>0 &&
                                     this.showAddesCounties()}
 
 
@@ -146,7 +156,7 @@ class EtFormTriggerBehaviours extends Component {
             </thead>
             <tbody>
             {
-                this.state.countries.map((m,i,arr)=>{
+                DataHolder.selectedEventTrigger.countries.map((m,i,arr)=>{
 
 
                     return  <tr>
@@ -155,7 +165,7 @@ class EtFormTriggerBehaviours extends Component {
                         <th>
                             <Badge variant={'danger'} onClick={()=>{
 
-                                let countries= this.state.countries;
+                                let countries= DataHolder.selectedEventTrigger.countries;
                                 if(!countries){
                                     countries=[];
                                 }

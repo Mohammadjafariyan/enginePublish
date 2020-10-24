@@ -117,26 +117,26 @@ const SaveSelectedEventTrigger = () => {
 
                     /*------------------------------getvalues:------------------------------*/
 
-                    let eventTrigger = {};
-                    /*info*/
+                    let eventTrigger = DataHolder.selectedEventTrigger;
+               /*     /!*info*!/
                     eventTrigger['Name'] = CurrentUserInfo.EtFormInformation.getName();
 
 
-                    /*actions*/
+                    /!*actions*!/
                     eventTrigger['IsShowMessageEnabled'] = CurrentUserInfo.EtFormTriggerActions.getIsShowMessageEnabled();
                     eventTrigger['IsOpenChatBox'] = CurrentUserInfo.EtFormTriggerActions.getIsOpenChatBox();
                     eventTrigger['IsPlayASound'] = CurrentUserInfo.EtFormTriggerActions.getIsPlayASound();
                     eventTrigger['localizedMessages'] = CurrentUserInfo.EtFormTriggerActions.getlocalizedMessages();
 
 
-                    /*Behaviours */
+                    /!*Behaviours *!/
                     eventTrigger['ExecuteOnlyIfOnline'] = CurrentUserInfo.EtFormTriggerBehaviours.getExecuteOnlyIfOnline();
                     eventTrigger['ExecuteOnlyIfFirstTimeVisit'] = CurrentUserInfo.EtFormTriggerBehaviours.getExecuteOnlyIfFirstTimeVisit();
                     eventTrigger['ExecuteOnlyIfNoOtherTriggerFired'] = CurrentUserInfo.EtFormTriggerBehaviours.getExecuteOnlyIfNoOtherTriggerFired();
                     eventTrigger['ExecuteOnlyIfFromACountry'] = CurrentUserInfo.EtFormTriggerBehaviours.getExecuteOnlyIfFromACountry();
                     eventTrigger['Counties'] = CurrentUserInfo.EtFormTriggerBehaviours.getCounties();
 
-                    /*Events*/
+                    /!*Events*!/
                     eventTrigger['S_EventOnExitTab'] = CurrentUserInfo.EtFormTriggerEvents.getS_EventOnExitTab();
                     eventTrigger['S_EventOnLinkClick'] = CurrentUserInfo.EtFormTriggerEvents.getS_EventOnLinkClick();
                     eventTrigger['S_EventSpecificPages'] = CurrentUserInfo.EtFormTriggerEvents.getS_EventSpecificPages();
@@ -151,10 +151,10 @@ const SaveSelectedEventTrigger = () => {
                     eventTrigger['userEventNames'] = CurrentUserInfo.EtFormTriggerEvents.getuserEventNames();
 
 
-                    /*Platforms*/
+                    /!*Platforms*!/
                     eventTrigger['RunInMobileDevices'] = CurrentUserInfo.EtFormTriggerPlatforms.getRunInMobileDevices()
                     eventTrigger['RunInDesktopDevices'] = CurrentUserInfo.EtFormTriggerPlatforms.getRunInDesktopDevices()
-
+*/
                     /*------------------------------end getvalues:------------------------------*/
 
 
@@ -183,41 +183,62 @@ const SaveSelectedEventTrigger = () => {
 
 export const SetEventTrigger=(eventTrigger)=>{
     /*info*/
-    CurrentUserInfo.EtFormInformation.setName(eventTrigger['Name']);
 
+    DataHolder.selectedEventTrigger=eventTrigger;
 
-    /*actions*/
-     CurrentUserInfo.EtFormTriggerActions.setIsShowMessageEnabled(eventTrigger['IsShowMessageEnabled']);
-    CurrentUserInfo.EtFormTriggerActions.setIsOpenChatBox( eventTrigger['IsOpenChatBox']);
-    CurrentUserInfo.EtFormTriggerActions.setIsPlayASound(eventTrigger['IsPlayASound'] );
-      CurrentUserInfo.EtFormTriggerActions.setlocalizedMessages(eventTrigger['localizedMessages']);
+    /* if (CurrentUserInfo.EtFormInformation)
+     CurrentUserInfo.EtFormInformation.setName(eventTrigger['Name']);
+ 
+ 
+     /!*actions*!/
+     if (CurrentUserInfo.EtFormTriggerActions){
+         CurrentUserInfo.EtFormTriggerActions.setIsShowMessageEnabled(eventTrigger['IsShowMessageEnabled']);
+         CurrentUserInfo.EtFormTriggerActions.setIsOpenChatBox( eventTrigger['IsOpenChatBox']);
+         CurrentUserInfo.EtFormTriggerActions.setIsPlayASound(eventTrigger['IsPlayASound'] );
+         CurrentUserInfo.EtFormTriggerActions.setlocalizedMessages(eventTrigger['localizedMessages']);
+ 
+     }
+      
+ 
+     /!*Behaviours *!/
+     if (CurrentUserInfo.EtFormTriggerBehaviours) {
+ 
+         CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfOnline(eventTrigger['ExecuteOnlyIfOnline']);
+         CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfFirstTimeVisit(eventTrigger['ExecuteOnlyIfFirstTimeVisit']);
+         CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfNoOtherTriggerFired(eventTrigger['ExecuteOnlyIfNoOtherTriggerFired']);
+         CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfFromACountry(eventTrigger['ExecuteOnlyIfFromACountry']);
+     }
+     if (CurrentUserInfo.EtFormTriggerBehaviours) {
+     CurrentUserInfo.EtFormTriggerBehaviours.setCounties(eventTrigger['Counties']);
+     }
+ 
+     /!*Events*!/
+     if (CurrentUserInfo.EtFormTriggerEvents) {
+ 
+         CurrentUserInfo.EtFormTriggerEvents.setS_EventOnExitTab( eventTrigger['S_EventOnExitTab']);
+     CurrentUserInfo.EtFormTriggerEvents.setS_EventOnLinkClick(eventTrigger['S_EventOnLinkClick'] );
+     CurrentUserInfo.EtFormTriggerEvents.setS_EventSpecificPages( eventTrigger['S_EventSpecificPages']);
+     CurrentUserInfo.EtFormTriggerEvents.setS_EventAddressParameters(eventTrigger['S_EventAddressParameters'] );
+      CurrentUserInfo.EtFormTriggerEvents.setS_EventUserCustomName(eventTrigger['S_EventUserCustomName'] );
+     CurrentUserInfo.EtFormTriggerEvents.setS_EventDelay(eventTrigger['S_EventDelay'] );
+     }
+ 
+     if (CurrentUserInfo.EtFormTriggerEvents) {
+ 
+         CurrentUserInfo.EtFormTriggerEvents.setlinks(eventTrigger['links']);
+     CurrentUserInfo.EtFormTriggerEvents.setpages(eventTrigger['pages']);
+     CurrentUserInfo.EtFormTriggerEvents.setpageParameters(eventTrigger['pageParameters']);
+     CurrentUserInfo.EtFormTriggerEvents.setuserEventNames(eventTrigger['userEventNames']);
+     }
+ 
+ 
+     
+     
+     /!*Platforms*!/
+     if (CurrentUserInfo.EtFormTriggerPlatforms) {
+ 
+         CurrentUserInfo.EtFormTriggerPlatforms.setRunInMobileDevices(eventTrigger['RunInMobileDevices'] )
+      CurrentUserInfo.EtFormTriggerPlatforms.setRunInDesktopDevices(eventTrigger['RunInDesktopDevices']);
+     }*/
 
-
-    /*Behaviours */  
-    CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfOnline(eventTrigger['ExecuteOnlyIfOnline'] );
-     CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfFirstTimeVisit(eventTrigger['ExecuteOnlyIfFirstTimeVisit']);
-   CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfNoOtherTriggerFired( eventTrigger['ExecuteOnlyIfNoOtherTriggerFired'] );
-     CurrentUserInfo.EtFormTriggerBehaviours.setExecuteOnlyIfFromACountry(eventTrigger['ExecuteOnlyIfFromACountry']);
-
-
-    CurrentUserInfo.EtFormTriggerBehaviours.setCounties(eventTrigger['Counties']);
-
-    /*Events*/
-    CurrentUserInfo.EtFormTriggerEvents.setS_EventOnExitTab( eventTrigger['S_EventOnExitTab']);
-    CurrentUserInfo.EtFormTriggerEvents.setS_EventOnLinkClick(eventTrigger['S_EventOnLinkClick'] );
-    CurrentUserInfo.EtFormTriggerEvents.setS_EventSpecificPages( eventTrigger['S_EventSpecificPages']);
-    CurrentUserInfo.EtFormTriggerEvents.setS_EventAddressParameters(eventTrigger['S_EventAddressParameters'] );
-     CurrentUserInfo.EtFormTriggerEvents.setS_EventUserCustomName(eventTrigger['S_EventUserCustomName'] );
-    CurrentUserInfo.EtFormTriggerEvents.setS_EventDelay(eventTrigger['S_EventDelay'] );
-
-    CurrentUserInfo.EtFormTriggerEvents.setlinks(eventTrigger['Counties']);
-    CurrentUserInfo.EtFormTriggerEvents.setpages(eventTrigger['pages']);
-    CurrentUserInfo.EtFormTriggerEvents.setpageParameters(eventTrigger['pageParameters']);
-    CurrentUserInfo.EtFormTriggerEvents.setuserEventNames(eventTrigger['userEventNames']);
-
-    
-    
-    /*Platforms*/
-    CurrentUserInfo.EtFormTriggerPlatforms.setRunInMobileDevices(eventTrigger['RunInMobileDevices'] )
-     CurrentUserInfo.EtFormTriggerPlatforms.setRunInDesktopDevices(eventTrigger['RunInDesktopDevices']);
 }

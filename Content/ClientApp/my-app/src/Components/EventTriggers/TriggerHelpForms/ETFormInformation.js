@@ -7,6 +7,8 @@ import {MyInput} from "../../Utilities/Utility";
 
 import {CurrentUserInfo, MyCaller} from "../../../Help/Socket";
 import {_showError} from "../../../Pages/LayoutPage";
+import {SetEventTrigger} from "../EventTriggerForm";
+import {DataHolder} from "../../../Help/DataHolder";
 
 class EtFormInformation extends Component {
     state={};
@@ -23,12 +25,16 @@ class EtFormInformation extends Component {
     }
     
     isValid(){
-        if (!this.state.Name)
+        if (!DataHolder.selectedEventTrigger.Name)
         {
             _showError('عنوان خالی است')
             return false
         }
         return true
+    }
+    
+    componentDidMount() {
+        SetEventTrigger(DataHolder.selectedEventTrigger);
     }
 
     render() {

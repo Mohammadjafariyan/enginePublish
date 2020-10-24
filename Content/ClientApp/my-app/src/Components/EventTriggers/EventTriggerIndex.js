@@ -47,7 +47,7 @@ class EventTriggerIndex extends Component {
         }
         
         
-        let evTrig={Name:'Event Trigger جدید'};
+        let evTrig={Name:'Event Trigger جدید',RunInDesktopDevices:true,RunInMobileDevices:true};
         list.push(evTrig);
         
         this.setState({list:list});
@@ -69,7 +69,7 @@ class EventTriggerIndex extends Component {
         
         
         
-        this.setState({list:res.Content.EntityList})
+        this.setState({list:res.Content})
     }
 
     render() {
@@ -127,14 +127,19 @@ class EventTriggerIndex extends Component {
     }
 
     openEventTrigger(evTrig) {
-      
+
+
+
         DataHolder.selectedEventTrigger=evTrig;
 
-        setTimeout(()=>{
+       /* setTimeout(()=>{
             debugger;
             SetEventTrigger(DataHolder.selectedEventTrigger)
-        },1000)
 
+
+        },100)*/
+
+        this.setState({tmp:Math.random()})
 
         if (CurrentUserInfo.EventTriggersPage)
             CurrentUserInfo.EventTriggersPage.setState({tmp:Math.random()});

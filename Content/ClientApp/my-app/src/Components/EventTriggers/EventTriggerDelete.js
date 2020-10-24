@@ -19,6 +19,8 @@ class EventTriggerDelete extends Component {
                         this.deleteEventTrigger();
 
                         CurrentUserInfo.EventTriggerIndex.deleteEventTrigger(DataHolder.selectedEventTrigger)
+                        DataHolder.selectedEventTrigger=null;
+                        CurrentUserInfo.EventTriggersPage.setState({tmp:Math.random()});
                     }}
                 >
                     Event Trigger حذف 

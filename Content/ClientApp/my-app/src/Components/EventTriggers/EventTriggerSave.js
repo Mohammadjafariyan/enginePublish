@@ -7,7 +7,7 @@ class EventTriggerSave extends Component {
     render() {
         return (
             <div>
-                {!DataHolder.selectedEventTrigger && this.showMessage()}
+                {!DataHolder.selectedEventTrigger  && this.showMessage()}
                 {DataHolder.selectedEventTrigger && <EventTriggerForm/>}
                 
                 
