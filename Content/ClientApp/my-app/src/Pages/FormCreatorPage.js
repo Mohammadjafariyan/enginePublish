@@ -45,7 +45,7 @@ class FormCreatorPage extends Component {
             return;
         }
 
-        //consolelog(res);
+        console.log(res);
 
 
         this.setState({

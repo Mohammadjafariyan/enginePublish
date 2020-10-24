@@ -1356,7 +1356,7 @@
   // $.error breaks jQuery chaining
   var logError = function( message ) {
     if ( window.console ) {
-      window.//consoleerror( message );
+      window.console.error( message );
     }
   };
 

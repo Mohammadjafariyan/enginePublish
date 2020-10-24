@@ -107,7 +107,7 @@ class SendFromHelpDesk extends Component {
             }).catch(e => {
 
             _showError('خطایی در درخواست اطلاعات help desk بوجود آمد');
-            //consoleerror(e);
+            console.error(e);
         })
     }
 

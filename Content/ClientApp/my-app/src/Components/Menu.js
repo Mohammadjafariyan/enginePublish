@@ -34,7 +34,7 @@ export default class Menu extends Component {
         
       /*  if(!res || !res.Content.TotalWaitingForAnswerCount || !res.Content.NotChattedCount || !res.Content.TotalNewChatReceived)
         {
-            //consoleerror(res);
+            console.error(res);
             CurrentUserInfo.LayoutPage.showError('totalUserCountsChangedCallback error')
             return;
         }*/

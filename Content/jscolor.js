@@ -86,7 +86,7 @@ var jsc = {
 					optsStr = dataOpts;
 
 				} else if (m) { // installation using className (DEPRECATED)
-					//consolewarn('Installation using class name is DEPRECATED. Use data-jscolor="" attribute instead.' + jsc.docsRef);
+					console.warn('Installation using class name is DEPRECATED. Use data-jscolor="" attribute instead.' + jsc.docsRef);
 					if (m[4]) {
 						optsStr = m[4];
 					}
@@ -97,14 +97,14 @@ var jsc = {
 					try {
 						opts = jsc.parseOptionsStr(optsStr);
 					} catch (e) {
-						//consolewarn(e + '\n' + optsStr);
+						console.warn(e + '\n' + optsStr);
 					}
 				}
 
 				try {
 					new jsc.pub(targetElm, opts);
 				} catch (e) {
-					//consolewarn(e);
+					console.warn(e);
 				}
 			}
 		}
@@ -164,11 +164,11 @@ var jsc = {
 			try {
 				el = document.querySelector(sel);
 			} catch (e) {
-				//consolewarn(e);
+				console.warn(e);
 				return null;
 			}
 			if (!el) {
-				//consolewarn('No element matches the selector: %s', sel);
+				console.warn('No element matches the selector: %s', sel);
 			}
 			return el;
 		}
@@ -178,7 +178,7 @@ var jsc = {
 			return nodeOrSelector;
 		}
 
-		//consolewarn('Invalid node of type %s: %s', typeof nodeOrSelector, nodeOrSelector);
+		console.warn('Invalid node of type %s: %s', typeof nodeOrSelector, nodeOrSelector);
 		return null;
 	},
 
@@ -1094,7 +1094,7 @@ var jsc = {
 			try {
 				callback = new Function (thisObj[prop]);
 			} catch (e) {
-				//consoleerror(e);
+				console.error(e);
 			}
 		} else {
 			// function
@@ -1539,7 +1539,7 @@ var jsc = {
 					try {
 						setOption(opt, jsc.pub.options[opt]);
 					} catch (e) {
-						//consolewarn(e);
+						console.warn(e);
 					}
 				}
 			}
@@ -1556,7 +1556,7 @@ var jsc = {
 			} else if (Array.isArray(opts.preset)) {
 				presetsArr = opts.preset.slice(); // slice() to clone
 			} else {
-				//consolewarn('Unrecognized preset value');
+				console.warn('Unrecognized preset value');
 			}
 		}
 
@@ -1573,7 +1573,7 @@ var jsc = {
 				continue; // preset is empty string
 			}
 			if (!jsc.pub.presets.hasOwnProperty(pres)) {
-				//consolewarn('Unknown preset: %s', pres);
+				console.warn('Unknown preset: %s', pres);
 				continue;
 			}
 			for (var opt in jsc.pub.presets[pres]) {
@@ -1581,7 +1581,7 @@ var jsc = {
 					try {
 						setOption(opt, jsc.pub.presets[pres][opt]);
 					} catch (e) {
-						//consolewarn(e);
+						console.warn(e);
 					}
 				}
 			}
@@ -1599,7 +1599,7 @@ var jsc = {
 					try {
 						setOption(opt, opts[opt]);
 					} catch (e) {
-						//consolewarn(e);
+						console.warn(e);
 					}
 				}
 			}
@@ -1620,7 +1620,7 @@ var jsc = {
 				try {
 					return getOption(arguments[0]);
 				} catch (e) {
-					//consolewarn(e);
+					console.warn(e);
 				}
 				return false;
 
@@ -1631,7 +1631,7 @@ var jsc = {
 						return false;
 					}
 				} catch (e) {
-					//consolewarn(e);
+					console.warn(e);
 					return false;
 				}
 				this.redraw(); // immediately redraws the picker, if it's displayed
@@ -1649,7 +1649,7 @@ var jsc = {
 								success = false;
 							}
 						} catch (e) {
-							//consolewarn(e);
+							console.warn(e);
 							success = false;
 						}
 					}
@@ -1674,7 +1674,7 @@ var jsc = {
 			if (value === undefined) {
 				// getting channel value
 				if (!this.channels.hasOwnProperty(name.toLowerCase())) {
-					//consolewarn('Getting unknown channel: ' + name);
+					console.warn('Getting unknown channel: ' + name);
 					return false;
 				}
 				return this.channels[name.toLowerCase()];
@@ -1691,7 +1691,7 @@ var jsc = {
 					case 'v': res = this.fromHSVA(null, null, value, null); break;
 					case 'a': res = this.fromHSVA(null, null, null, value); break;
 					default:
-						//consolewarn('Setting unknown channel: ' + name);
+						console.warn('Setting unknown channel: ' + name);
 						return false;
 				}
 				if (res) {
@@ -1832,7 +1832,7 @@ var jsc = {
 		// DEPRECATED. Use .fromHSVA() instead
 		//
 		this.fromHSV = function (h, s, v, flags) {
-			//consolewarn('fromHSV() method is DEPRECATED. Using fromHSVA() instead.' + jsc.docsRef);
+			console.warn('fromHSV() method is DEPRECATED. Using fromHSVA() instead.' + jsc.docsRef);
 			return this.fromHSVA(h, s, v, null, flags);
 		};
 
@@ -1840,7 +1840,7 @@ var jsc = {
 		// DEPRECATED. Use .fromRGBA() instead
 		//
 		this.fromRGB = function (r, g, b, flags) {
-			//consolewarn('fromRGB() method is DEPRECATED. Using fromRGBA() instead.' + jsc.docsRef);
+			console.warn('fromRGB() method is DEPRECATED. Using fromRGBA() instead.' + jsc.docsRef);
 			return this.fromRGBA(r, g, b, null, flags);
 		};
 
@@ -2215,7 +2215,7 @@ var jsc = {
 				var newOpt = jsc.deprecatedOpts[option];
 				if (newOpt) {
 					// if we have a new name for this option, let's log a warning and use the new name
-					//consolewarn('Option \'%s\' is DEPRECATED, using \'%s\' instead.' + jsc.docsRef, oldOpt, newOpt);
+					console.warn('Option \'%s\' is DEPRECATED, using \'%s\' instead.' + jsc.docsRef, oldOpt, newOpt);
 					option = newOpt;
 				} else {
 					// new name not available for the option
@@ -2239,7 +2239,7 @@ var jsc = {
 				var newOpt = jsc.deprecatedOpts[option];
 				if (newOpt) {
 					// if we have a new name for this option, let's log a warning and use the new name
-					//consolewarn('Option \'%s\' is DEPRECATED, using \'%s\' instead.' + jsc.docsRef, oldOpt, newOpt);
+					console.warn('Option \'%s\' is DEPRECATED, using \'%s\' instead.' + jsc.docsRef, oldOpt, newOpt);
 					option = newOpt;
 				} else {
 					// new name not available for the option
@@ -3058,7 +3058,7 @@ jsc.pub.install = function (rootNode) {
 		jsc.installBySelector('[data-jscolor]', rootNode);
 	} catch (e) {
 		success = false;
-		//consolewarn(e);
+		console.warn(e);
 	}
 
 	// for backward compatibility with DEPRECATED installation using class name
@@ -3153,7 +3153,7 @@ jsc.pub.lookupClass = 'jscolor';
 // DEPRECATED. Use jscolor.install() instead
 //
 jsc.pub.init = function () {
-	//consolewarn('jscolor.init() is DEPRECATED. Using jscolor.install() instead.' + jsc.docsRef);
+	console.warn('jscolor.init() is DEPRECATED. Using jscolor.install() instead.' + jsc.docsRef);
 	return jsc.pub.install();
 };
 
@@ -3162,7 +3162,7 @@ jsc.pub.init = function () {
 //
 // Install jscolor on all elements that have the specified class name
 jsc.pub.installByClassName = function () {
-	//consoleerror('jscolor.installByClassName() is DEPRECATED. Use data-jscolor="" attribute instead of a class name.' + jsc.docsRef);
+	console.error('jscolor.installByClassName() is DEPRECATED. Use data-jscolor="" attribute instead of a class name.' + jsc.docsRef);
 	return false;
 };
 

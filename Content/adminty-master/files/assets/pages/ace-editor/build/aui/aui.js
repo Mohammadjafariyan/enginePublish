@@ -1279,7 +1279,7 @@ with any configuration info required for the module.
 
 /**
  * Log to the browser console if debug is on and the browser has a
- * supported //console
+ * supported console.
  *
  * @property useBrowserConsole
  * @type boolean
@@ -1669,7 +1669,7 @@ with any configuration info required for the module.
 
 /**
  * Alternative console log function for use in environments without
- * a supported native //console  The function is executed in the
+ * a supported native console.  The function is executed in the
  * YUI instance context.
  * @since 3.1.0
  * @property logFn
@@ -4740,7 +4740,7 @@ INSTANCE.log = function(msg, cat, src, silent) {
                 m = (src) ? src + ': ' + msg : msg;
                 if (Y.Lang.isFunction(c.logFn)) {
                     c.logFn.call(Y, msg, cat, src);
-                } else if (typeof console != UNDEFINED && //consolelog) {
+                } else if (typeof console != UNDEFINED && console.log) {
                     f = (cat && console[cat] && (cat in LEVELS)) ? cat : 'log';
                     console[f](m);
                 } else if (typeof opera != UNDEFINED) {
@@ -5563,7 +5563,7 @@ Y.Loader.prototype = {
                    mr = m && m.requires;
                if (m) {
                    if (!m._inspected && req && mr.length != req.length) {
-                       // //consolelog('deleting ' + m.name);
+                       // console.log('deleting ' + m.name);
                        // m.requres = YObject.keys(Y.merge(YArray.hash(req), YArray.hash(mr)));
                        delete m.expanded;
                        // delete m.expanded_map;
@@ -6173,7 +6173,7 @@ Y.Loader.prototype = {
             ftests = Y.Features && Y.Features.tests.load,
             hash;
 
-        // //consolelog(name);
+        // console.log(name);
 
         // pattern match leaves module stub that needs to be filled out
         if (mod.temp && adddef) {
@@ -6184,7 +6184,7 @@ Y.Loader.prototype = {
             delete mod.expanded;
         }
 
-        // //consolelog('cache: ' + mod.langCache + ' == ' + this.lang);
+        // console.log('cache: ' + mod.langCache + ' == ' + this.lang);
 
         // if (mod.expanded && (!mod.langCache || mod.langCache == this.lang)) {
         if (mod.expanded && (!this.lang || mod.langCache === this.lang)) {

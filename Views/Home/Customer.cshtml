@@ -22,7 +22,7 @@
     <script src="~/signalr/hubs"></script>
     <!--SignalR script to update the chat page and send messages.-->
     <script>
-        //consolelog(localStorage.getItem("test"));
+        console.log(localStorage.getItem("test"));
         localStorage.setItem("test","123");
         $(function () {
             // Reference the auto-generated proxy for the hub.
@@ -117,16 +117,16 @@
             var percent_complete = (e.loaded / e.total) * 100;
 
             // Percentage of upload completed
-            //consolelog(percent_complete);
+            console.log(percent_complete);
         });
 
         // AJAX request finished event
         request.addEventListener('load', function (e) {
             // HTTP status message
-            //consolelog(request.status);
+            console.log(request.status);
 
             // request.response will hold the response from the server
-            //consolelog(request.response);
+            console.log(request.response);
         });
 
         // send POST request to server side script

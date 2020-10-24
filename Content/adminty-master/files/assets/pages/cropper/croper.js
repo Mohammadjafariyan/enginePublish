@@ -34,25 +34,25 @@
       // Cropper
       $image.on({
           'build.cropper': function(e) {
-              /* //consolelog(e.type);*/
+              /* console.log(e.type);*/
           },
           'built.cropper': function(e) {
-              /*   //consolelog(e.type);*/
+              /*   console.log(e.type);*/
           },
           'cropstart.cropper': function(e) {
-              /*   //consolelog(e.type, e.action);*/
+              /*   console.log(e.type, e.action);*/
           },
           'cropmove.cropper': function(e) {
-              /* //consolelog(e.type, e.action);*/
+              /* console.log(e.type, e.action);*/
           },
           'cropend.cropper': function(e) {
-              /*//consolelog(e.type, e.action);*/
+              /*console.log(e.type, e.action);*/
           },
           'crop.cropper': function(e) {
-              /* //consolelog(e.type, e.x, e.y, e.width, e.height, e.rotate, e.scaleX, e.scaleY);*/
+              /* console.log(e.type, e.x, e.y, e.width, e.height, e.rotate, e.scaleX, e.scaleY);*/
           },
           'zoom.cropper': function(e) {
-              /*  //consolelog(e.type, e.ratio);*/
+              /*  console.log(e.type, e.ratio);*/
           }
       }).cropper(options);
 
@@ -124,7 +124,7 @@
                       try {
                           data.option = JSON.parse($target.val());
                       } catch (e) {
-                          //consolelog(e.message);
+                          console.log(e.message);
                       }
                   }
               }
@@ -172,7 +172,7 @@
                   try {
                       $target.val(JSON.stringify(result));
                   } catch (e) {
-                      //consolelog(e.message);
+                      console.log(e.message);
                   }
               }
 

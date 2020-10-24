@@ -162,7 +162,7 @@ var tm_counter = -1;
         {
             if(!$this.Global_tm.already_exists)
                 init_method();
-            ////consolelog($this.Global_tm);
+            //console.log($this.Global_tm);
         }
 
         //ALL METHODS

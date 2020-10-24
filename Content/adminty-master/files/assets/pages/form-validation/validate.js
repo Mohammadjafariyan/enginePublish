@@ -748,14 +748,14 @@
     },
 
     warn: function(msg) {
-      if (typeof console !== "undefined" && //consolewarn) {
-        //consolewarn("[validate.js] " + msg);
+      if (typeof console !== "undefined" && console.warn) {
+        console.warn("[validate.js] " + msg);
       }
     },
 
     error: function(msg) {
-      if (typeof console !== "undefined" && //consoleerror) {
-        //consoleerror("[validate.js] " + msg);
+      if (typeof console !== "undefined" && console.error) {
+        console.error("[validate.js] " + msg);
       }
     }
   });

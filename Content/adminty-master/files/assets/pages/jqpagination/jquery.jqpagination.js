@@ -204,13 +204,13 @@
 
 			// ignore if max_page is not a number
 			if (!base.isNumber(max_page)) {
-				//consoleerror('jqPagination: max_page is not a number');
+				console.error('jqPagination: max_page is not a number');
 				return false;
 			}
 			
 			// ignore if max_page is less than the current_page
 			if (max_page < base.options.current_page) {
-				//consoleerror('jqPagination: max_page lower than current_page');
+				console.error('jqPagination: max_page lower than current_page');
 				return false;
 			}
 			
@@ -339,7 +339,7 @@
 					}
 
 					// if we've not got a result fire an error and return false
-					if( result === false ) //consoleerror('jqPagination: cannot get / set option ' + key);
+					if( result === false ) console.error('jqPagination: cannot get / set option ' + key);
 					return result;
 					
 					break;
@@ -356,7 +356,7 @@
 				default:
 
 					// the function name must not exist
-					//consoleerror('jqPagination: method "' + method + '" does not exist');
+					console.error('jqPagination: method "' + method + '" does not exist');
 					return false;
 
 			}
@@ -421,9 +421,9 @@ if (!console) {
 	var console	= {},
 		func	= function () { return false; };
 
-	//consolelog		= func;
-	//consoleinfo	= func;
-	//consolewarn	= func;
-	//consoleerror	= func;
+	console.log		= func;
+	console.info	= func;
+	console.warn	= func;
+	console.error	= func;
 
 }

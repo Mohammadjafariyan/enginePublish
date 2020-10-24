@@ -112,12 +112,12 @@ var card =
 	    var toInitialize;
 	    this.options = extend(true, this.defaults, opts);
 	    if (!this.options.form) {
-	      //consolelog("Please provide a form");
+	      console.log("Please provide a form");
 	      return;
 	    }
 	    this.$el = QJ(this.options.form);
 	    if (!this.options.container) {
-	      //consolelog("Please provide a container");
+	      console.log("Please provide a container");
 	      return;
 	    }
 	    this.$container = QJ(this.options.container);
@@ -145,7 +145,7 @@ var card =
 	      selector = this.options[name] ? this.options[name] : selector;
 	      obj = QJ.find(this.$el, selector);
 	      if (!obj.length && this.options.debug) {
-	        //consoleerror("Card can't find a " + name + " in your form.");
+	        console.error("Card can't find a " + name + " in your form.");
 	      }
 	      this["$" + name] = obj;
 	    }

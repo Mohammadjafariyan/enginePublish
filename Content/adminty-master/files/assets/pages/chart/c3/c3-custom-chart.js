@@ -79,9 +79,9 @@ $(document).ready(function() {
                 ['data2', 120],
             ],
             type: 'donut',
-            onclick: function(d, i) { //consolelog("onclick", d, i); },
-            onmouseover: function(d, i) { //consolelog("onmouseover", d, i); },
-            onmouseout: function(d, i) { //consolelog("onmouseout", d, i); }
+            onclick: function(d, i) { console.log("onclick", d, i); },
+            onmouseover: function(d, i) { console.log("onmouseover", d, i); },
+            onmouseout: function(d, i) { console.log("onmouseout", d, i); }
         },
         color: {
             pattern: ['#4C5667', '#1ABC9C']
@@ -121,9 +121,9 @@ $(document).ready(function() {
                 ['data2', 120],
             ],
             type: 'pie',
-            onclick: function(d, i) { //consolelog("onclick", d, i); },
-            onmouseover: function(d, i) { //consolelog("onmouseover", d, i); },
-            onmouseout: function(d, i) { //consolelog("onmouseout", d, i); }
+            onclick: function(d, i) { console.log("onclick", d, i); },
+            onmouseover: function(d, i) { console.log("onmouseover", d, i); },
+            onmouseout: function(d, i) { console.log("onmouseout", d, i); }
         },
         color: {
             pattern: ['#1ABC9C', '#4C5667', '#00C292', '#AB8CE4']

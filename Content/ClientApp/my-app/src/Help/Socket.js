@@ -30,7 +30,7 @@ return;
                         CurrentUserInfo.ws.readyState === WebSocket.CLOSED) {
 
                         Socket(function() {
-                            //consolelog('opened !');
+                            console.log('opened !');
                         })
                     }
 
@@ -114,7 +114,7 @@ export const Socket = function (onOpen) {
     let baseUrl=document.getElementById('baseUrl').value;
     CurrentUserInfo.ws = new WebSocket("ws://" + baseUrl + ":8181/");
     CurrentUserInfo.ws.onopen = function () {
-        //consolelog('اتصال برقرار شد');
+        console.log('اتصال برقرار شد');
         /*alert("About to send data");
         ws.send("Hello World"); // I WANT TO SEND THIS MESSAGE TO THE SERVER!!!!!!!!
         alert("Message sent!");*/
@@ -133,12 +133,12 @@ export const Socket = function (onOpen) {
     };
     CurrentUserInfo.ws.onclose = function () {
         // websocket is closed.
-        //consoleerror("اتصال قطع شد");
+        console.error("اتصال قطع شد");
 
     };
 }
 
 
 Socket(function() {
-    //consolelog('opened !');
+    console.log('opened !');
 })

@@ -9,11 +9,11 @@ class dispatcher {
     dispatch(res) {
         if (res.Type == -1)//error
         {
-            //consoleerror(res.Message);
+            console.error(res.Message);
 
 
         }
-        //consolelog('dispatcher===>',res.Name)
+        console.log('dispatcher===>',res.Name)
         switch (res.Name) {
 
             /*========== eventTrigger==========*/
@@ -396,7 +396,7 @@ class dispatcher {
 
                 //cookieManager.removeItem('customerToken')
                 cookieManager.removeItem('adminToken')
-                //consolelog('ClearCookie==>adminToken===>', cookieManager.getItem('adminToken'))
+                console.log('ClearCookie==>adminToken===>', cookieManager.getItem('adminToken'))
                 CurrentUserInfo.customerToken = null;
 
                 CurrentUserInfo.LayoutPage.setState({tmp: Math.random(), isClearCookie: true})
@@ -633,7 +633,7 @@ class dispatcher {
             default:
                 if (res && res.Message) {
 
-                    //consoleerror(res.Message);
+                    console.error(res.Message);
 
                     CurrentUserInfo.LayoutPage.showError(res.Message);
 

@@ -314,7 +314,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
                 additionalData: f
             })
         }, CKEDITOR.on("log", function(a) {
-            if (window.console && window.//consolelog) {
+            if (window.console && window.console.log) {
                 var f = console[a.data.type] ? a.data.type : "log",
                     b = a.data.errorCode;
                 if (a = a.data.additionalData) console[f]("[CKEDITOR] Error code: " + b + ".", a);
@@ -18100,7 +18100,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
                 scayt_customerid: "scayt_customerId"
             },
             alarmCompatibilityMessage: function() {
-                5 > this.warningCounter && (//consolewarn("Note: You are using latest version of SCAYT plug-in. It is recommended to upgrade WebSpellChecker.net application to version v4.8.3.Contact us by e-mail at support@webspellchecker.net."), this.warningCounter += 1)
+                5 > this.warningCounter && (console.warn("Note: You are using latest version of SCAYT plug-in. It is recommended to upgrade WebSpellChecker.net application to version v4.8.3.Contact us by e-mail at support@webspellchecker.net."), this.warningCounter += 1)
             },
             reloadMarkup: function(a) {
                 var f;

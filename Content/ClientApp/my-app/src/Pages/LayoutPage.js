@@ -104,14 +104,14 @@ export default class LayoutPage extends Component {
 
 
         let adminToken= cookieManager.getItem("adminToken");
-        ////consolelog(adminToken)
+        //console.log(adminToken)
 
         if (this.state.isClearCookie){
             adminToken=null;
             
         }
 
-       // //consolelog(adminToken)
+       // console.log(adminToken)
 
         if (adminToken && adminToken!='null' && adminToken!='undefined') {
 

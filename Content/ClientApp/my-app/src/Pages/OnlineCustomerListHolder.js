@@ -66,7 +66,7 @@ export default class OnlineCustomerListHolder extends Component {
 
         if (!res.Content.CustomerList || !res.Content.CustomerList.length) {
 
-            //consolelog('res.CustomerList is null or empty');
+            console.log('res.CustomerList is null or empty');
             return;
         }
 
@@ -106,8 +106,8 @@ export default class OnlineCustomerListHolder extends Component {
     newCustomerOnlineCallback(res) {
 
         if (res.Content.OnlineTp != CurrentUserInfo.UserType) {
-            //consolelog(res)
-            //consolelog(`res.Content.Type!=CurrentUserInfo.UserType res.Content.Type= ${res.Content.Type}!=${CurrentUserInfo.UserType}`)
+            console.log(res)
+            console.log(`res.Content.Type!=CurrentUserInfo.UserType res.Content.Type= ${res.Content.Type}!=${CurrentUserInfo.UserType}`)
             return;
         }
 

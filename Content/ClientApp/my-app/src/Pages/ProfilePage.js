@@ -17,7 +17,7 @@ const LoadImageAndSet = function (e2, callback) {
 
         var fileReader = new FileReader();
         fileReader.onload = function (e) {
-            //consolelog(e.target.result)
+            console.log(e.target.result)
 
             callback(e.target.result);
         }

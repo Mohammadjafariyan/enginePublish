@@ -36,7 +36,7 @@ class Language extends Component {
 
         new CountryService().GetAll().then(re=>{
             
-            //consolelog(re)
+            console.log(re)
             _showMsg("لیست کشور ها خوانده شد")
             
             let _selectedCountry;

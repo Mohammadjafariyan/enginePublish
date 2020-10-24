@@ -736,7 +736,7 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         chats: this.state.chats,
         temp: Math.random()
       });
-    } else {//consoleerror("i is not found");
+    } else {console.error("i is not found");
     }
   }
 
@@ -1010,9 +1010,9 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   DeleteMessageCallback(res) {
-    //consolelog("رسپانس حذف پیام");
+    console.log("رسپانس حذف پیام");
     if (!res || !res.Content || !res.Content.uniqId || !res.Content.targetId) {
-      //consoleerror(" مقدار بازگشتی از سرور نال است ");
+      console.error(" مقدار بازگشتی از سرور نال است ");
       return;
     }
 
@@ -1021,15 +1021,15 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     let message = _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].ChatPage.state.chats.find(f => f.UniqId === uniqId);
 
     if (!message) {
-      //consoleerror(uniqId + " یافت نشد ");
+      console.error(uniqId + " یافت نشد ");
       return;
-    } //consolelog("در حال حذف پیام");
+    } console.log("در حال حذف پیام");
 
 
     let inner = message;
 
     if (inner) {
-      inner.Message = "حذف شد"; //consolelog("پیام حذف شد در رسپانس");
+      inner.Message = "حذف شد"; console.log("پیام حذف شد در رسپانس");
     }
 
     message.IsDisabled = false;
@@ -1039,9 +1039,9 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   EditMessageCallback(res) {
-    //consolelog("رسپانس درخواست ویرایش");
+    console.log("رسپانس درخواست ویرایش");
     if (!res || !res.Content || !res.Content.uniqId || !res.Content.targetId) {
-      //consoleerror(" مقدار بازگشتی از سرور نال است ");
+      console.error(" مقدار بازگشتی از سرور نال است ");
       return;
     }
 
@@ -1050,9 +1050,9 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     let message = _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].ChatPage.state.chats.find(f => f.UniqId === uniqId);
 
     if (!message) {
-      //consoleerror(uniqId + " یافت نشد ");
+      console.error(uniqId + " یافت نشد ");
       return;
-    } //consolelog("انجام ویرایش در رسپاسن");
+    } console.log("انجام ویرایش در رسپاسن");
 
 
     let inner = message;
@@ -1106,13 +1106,13 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   DeleteMsgOnClick(uniqId, gapFileUniqId, THIS) {
-    //consolelog("جذف پیغام");
+    console.log("جذف پیغام");
     let message = _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].ChatPage.state.chats.find(f => f.UniqId === uniqId);
 
     if (!message) {
-      //consoleerror(uniqId + " یافت نشد ");
+      console.error(uniqId + " یافت نشد ");
       return;
-    } //consolelog("ارسال درخواست حذف پیغام ");
+    } console.log("ارسال درخواست حذف پیغام ");
 
 
     message.IsDisabled = true;
@@ -1122,15 +1122,15 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send("DeleteMessage", {
       uniqId,
       targetId: _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].targetId
-    }); //consolelog(" درخواست حذف پیغام ارسال شد ");
+    }); console.log(" درخواست حذف پیغام ارسال شد ");
   }
 
   EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
-    //consolelog("ویرایش فراخوانی شد");
+    console.log("ویرایش فراخوانی شد");
     let message = _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].ChatPage.state.chats.find(f => f.UniqId === uniqId);
 
     if (!message) {
-      //consoleerror(uniqId + " یافت نشد ");
+      console.error(uniqId + " یافت نشد ");
       return;
     }
 
@@ -1163,8 +1163,8 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.chatFormOnChange = e => {};
 
     this.submit = e => {
-      e.preventDefault(); //consolelog("انجام ویرایش توسط کاربر");
-      //consolelog("ارسال درخواست ویرایش");
+      e.preventDefault(); console.log("انجام ویرایش توسط کاربر");
+      console.log("ارسال درخواست ویرایش");
 
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send("EditMessage", {
         uniqId,
@@ -2437,8 +2437,8 @@ class CustomerInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].selectedCustomer) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null); //consolelog('CustomerInfo===>DataHolder.selectedCustomer====>')
-    //consolelog(DataHolder.selectedCustomer)
+    if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].selectedCustomer) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null); console.log('CustomerInfo===>DataHolder.selectedCustomer====>')
+    console.log(DataHolder.selectedCustomer)
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
@@ -3290,7 +3290,7 @@ class Customers extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   totalUserCountsChangedCallback(res) {
     if (!res.Content.CustomerList || !res.Content.CustomerList.length) {
-      //consolelog('res.CustomerList is null or empty');
+      console.log('res.CustomerList is null or empty');
       return;
     }
 
@@ -5967,8 +5967,8 @@ class FormDataTable extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_2__["_showError"])('دیتای خوانده شده اشکال دارد');
 
       return;
-    } //consolelog('FormDataTable==>getFormDataCallback')
-    //consolelog(res)
+    } console.log('FormDataTable==>getFormDataCallback')
+    console.log(res)
 
 
     let formStructure = res.Content.Form;
@@ -6547,8 +6547,8 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   componentDidMount() {
-    //consolelog('FormShowerInChat->componentDidMount:')
-    //consolelog(this.state.elements)
+    console.log('FormShowerInChat->componentDidMount:')
+    console.log(this.state.elements)
     if (!this.state.elements) {
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send('GetFormSingle', {
         formId: this.props.formId,
@@ -6560,8 +6560,8 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   saveFormDataCallback(res) {
     //debugger
-    //consolelog('FormShowerInChat->saveFormDataCallback:')
-    //consolelog(res)
+    console.log('FormShowerInChat->saveFormDataCallback:')
+    console.log(res)
 
     /*form.AfterMessage,
                 formId,
@@ -6592,7 +6592,7 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     this.setState({
       tmp: Math.random()
-    }); //consolelog(res);
+    }); console.log(res);
   }
 
   getFormSingleCallback(res) {
@@ -6600,7 +6600,7 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     if (!res || !res.Content) {
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].LayoutPage.showError('اطلاعات بازگشتی از سرور نال است');
       return;
-    } //consolelog('this.state.elements', this.state.elements);
+    } console.log('this.state.elements', this.state.elements);
 
 
     this.setState({
@@ -6610,7 +6610,7 @@ class FormShowerInChat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       OnlyMe: res.Content.OnlyMe,
       Message: res.Content.Message,
       Id: res.Content.Id
-    }); //consolelog(res);
+    }); console.log(res);
   }
 
   render() {
@@ -21602,7 +21602,7 @@ class Language extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_4__["_showMsg"])("در حال خواندن اطلاعات");
 
     new _CountryService__WEBPACK_IMPORTED_MODULE_3__["CountryService"]().GetAll().then(re => {
-      //consolelog(re)
+      console.log(re)
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_4__["_showMsg"])("لیست کشور ها خوانده شد");
 
       let _selectedCountry;
@@ -21826,7 +21826,7 @@ class LanguageHolder extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   onLanugageSelect() {
     if (!Object(_Pages_HelpDeskPage__WEBPACK_IMPORTED_MODULE_13__["_getHelpDesk"])() || !Object(_Pages_HelpDeskPage__WEBPACK_IMPORTED_MODULE_13__["_getHelpDesk"])().language.Name) {
-      //consolelog("هیچ زبانی انتخاب نشده است",_getHelpDesk())
+      console.log("هیچ زبانی انتخاب نشده است",_getHelpDesk())
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])("هیچ زبانی انتخاب نشده است");
 
       return;
@@ -22556,7 +22556,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }
     /*  if(!res || !res.Content.TotalWaitingForAnswerCount || !res.Content.NotChattedCount || !res.Content.TotalNewChatReceived)
       {
-          //consoleerror(res);
+          console.error(res);
           CurrentUserInfo.LayoutPage.showError('totalUserCountsChangedCallback error')
           return;
       }*/
@@ -24082,7 +24082,7 @@ class ScreenRecordShower extends react__WEBPACK_IMPORTED_MODULE_0__["Component"]
   }
 
   videoElementRef(e) {//debugger;
-    //consolelog(e)
+    console.log(e)
   }
 
   componentDidMount() {
@@ -24681,7 +24681,7 @@ class SendFromHelpDesk extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
       Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_7__["_showMsg"])("اطلاعات رسید");
     }).catch(e => {
-      Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_7__["_showError"])('خطایی در درخواست اطلاعات help desk بوجود آمد'); //consoleerror(e);
+      Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_7__["_showError"])('خطایی در درخواست اطلاعات help desk بوجود آمد'); console.error(e);
 
     });
   }
@@ -25414,8 +25414,8 @@ function VIDEO_CALL_STOP(chatId) {
   try {
     mediaRecorder.stop();
   } catch (e) {} //ingore
-  //consolelog(mediaRecorder.state);
-  //consolelog("recorder stopped");
+  console.log(mediaRecorder.state);
+  console.log("recorder stopped");
 
 
   captureStream.getTracks().forEach(track => track.stop());
@@ -25432,7 +25432,7 @@ function setRecordVideo() {}
 
 function VIDEO_CALL_INIT(THIS, callback, chatId) {
   if (navigator.mediaDevices.getDisplayMedia) {
-    //consolelog('getUserMedia supported.');
+    console.log('getUserMedia supported.');
     var constraints = {
       video: {
         cursor: "always"
@@ -25454,7 +25454,7 @@ function VIDEO_CALL_INIT(THIS, callback, chatId) {
 
       mediaRecorder = new MediaRecorder(stream);
       mediaRecorder.start(3000); //videoElem.srcObject=stream;
-      //consolelog(mediaRecorder.state);
+      console.log(mediaRecorder.state);
 
       mediaRecorder.ondataavailable = function (e) {
         new Promise(resolve => {
@@ -25481,13 +25481,13 @@ function VIDEO_CALL_INIT(THIS, callback, chatId) {
     };
 
     let onError = function (err) {
-      callback(THIS, 'اجازه دسترسی داده نشد', err); //consoleerror('The following error occured: ' + err);
+      callback(THIS, 'اجازه دسترسی داده نشد', err); console.error('The following error occured: ' + err);
     };
 
     navigator.mediaDevices.getDisplayMedia(constraints).then(onSuccess, onError);
   } else {
     callback(THIS, 'این امکان در مرورگر شما پشتیبانی نمی شود');
-    alert('این امکان در مرورگر شما پشتیبانی نمی شود'); //consoleerror('getUserMedia not supported on your browser!');
+    alert('این امکان در مرورگر شما پشتیبانی نمی شود'); console.error('getUserMedia not supported on your browser!');
   }
 
   window.onresize = function () {//canvas.width = mainSection.offsetWidth;
@@ -25589,7 +25589,7 @@ class SubMenu extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   totalUserCountsChangedCallback(res) {
     /* if(!res || !res.Content.TotalWaitingForAnswerCount || !res.Content.NotChattedCount)
     {
-    //consoleerror(res);
+    console.error(res);
     CurrentUserInfo.LayoutPage.showError('totalUserCountsChangedCallback error')
     return;
     }*/
@@ -28216,8 +28216,8 @@ __webpack_require__.r(__webpack_exports__);
 class dispatcher {
   dispatch(res) {
     if (res.Type == -1) //error
-      {} //consoleerror(res.Message);
-      //consolelog('dispatcher===>',res.Name)
+      {} console.error(res.Message);
+      console.log('dispatcher===>',res.Name)
 
 
     switch (res.Name) {
@@ -28602,7 +28602,7 @@ class dispatcher {
 
       case "ClearCookie":
         //cookieManager.removeItem('customerToken')
-        _CookieManager__WEBPACK_IMPORTED_MODULE_1__["cookieManager"].removeItem('adminToken'); //consolelog('ClearCookie==>adminToken===>', cookieManager.getItem('adminToken'))
+        _CookieManager__WEBPACK_IMPORTED_MODULE_1__["cookieManager"].removeItem('adminToken'); console.log('ClearCookie==>adminToken===>', cookieManager.getItem('adminToken'))
 
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].customerToken = null;
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LayoutPage.setState({
@@ -28823,7 +28823,7 @@ class dispatcher {
 
       default:
         if (res && res.Message) {
-          //consoleerror(res.Message);
+          console.error(res.Message);
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LayoutPage.showError(res.Message);
 
           if (res.Message.indexOf('کانکشکن متفاوت') >= 0) {
@@ -28908,7 +28908,7 @@ const MyCaller = {
       CurrentUserInfo.LayoutPage.showError('در حال اتصال به سرور و ارسال درخواست');
       setTimeout(() => {
         if (CurrentUserInfo.ws.readyState === WebSocket.CLOSED || CurrentUserInfo.ws.readyState === WebSocket.CLOSED) {
-          Socket(function () {//consolelog('opened !');
+          Socket(function () {console.log('opened !');
           });
         }
 
@@ -28963,7 +28963,7 @@ const Socket = function (onOpen) {
   CurrentUserInfo.ws = new WebSocket("ws://" + baseUrl + ":8181/");
 
   CurrentUserInfo.ws.onopen = function () {
-    //consolelog('اتصال برقرار شد');
+    console.log('اتصال برقرار شد');
 
     /*alert("About to send data");
     ws.send("Hello World"); // I WANT TO SEND THIS MESSAGE TO THE SERVER!!!!!!!!
@@ -28980,10 +28980,10 @@ const Socket = function (onOpen) {
   };
 
   CurrentUserInfo.ws.onclose = function () {// websocket is closed.
-    //consoleerror("اتصال قطع شد");
+    console.error("اتصال قطع شد");
   };
 };
-Socket(function () {//consolelog('opened !');
+Socket(function () {console.log('opened !');
 });
 
 /***/ }),
@@ -29460,7 +29460,7 @@ class FormCreatorPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     if (!res || !res.Content) {
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].LayoutPage.showError('اطلاعات بازگشتی از سرور نال است');
       return;
-    } //consolelog(res);
+    } console.log(res);
 
 
     this.setState({
@@ -31564,11 +31564,11 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    let adminToken = _Help_CookieManager__WEBPACK_IMPORTED_MODULE_3__["cookieManager"].getItem("adminToken"); ////consolelog(adminToken)
+    let adminToken = _Help_CookieManager__WEBPACK_IMPORTED_MODULE_3__["cookieManager"].getItem("adminToken"); //console.log(adminToken)
 
     if (this.state.isClearCookie) {
       adminToken = null;
-    } // //consolelog(adminToken)
+    } // console.log(adminToken)
 
 
     if (adminToken && adminToken != 'null' && adminToken != 'undefined') {
@@ -32540,7 +32540,7 @@ class OnlineCustomerListHolder extends react__WEBPACK_IMPORTED_MODULE_0__["Compo
              c.SenderType==ChatSenderType.CustomerToAccount && c.DeliverDateTime.HasValue==false),
          OnlineStatus*/
     if (!res.Content.CustomerList || !res.Content.CustomerList.length) {
-      //consolelog('res.CustomerList is null or empty');
+      console.log('res.CustomerList is null or empty');
       return;
     }
 
@@ -32579,8 +32579,8 @@ class OnlineCustomerListHolder extends react__WEBPACK_IMPORTED_MODULE_0__["Compo
 
   newCustomerOnlineCallback(res) {
     if (res.Content.OnlineTp != _Help_Socket__WEBPACK_IMPORTED_MODULE_2__["CurrentUserInfo"].UserType) {
-      //consolelog(res)
-      //consolelog(`res.Content.Type!=CurrentUserInfo.UserType res.Content.Type= ${res.Content.Type}!=${CurrentUserInfo.UserType}`)
+      console.log(res)
+      console.log(`res.Content.Type!=CurrentUserInfo.UserType res.Content.Type= ${res.Content.Type}!=${CurrentUserInfo.UserType}`)
       return;
     }
 
@@ -32756,7 +32756,7 @@ const LoadImageAndSet = function (e2, callback) {
     var fileReader = new FileReader();
 
     fileReader.onload = function (e) {
-      //consolelog(e.target.result)
+      console.log(e.target.result)
       callback(e.target.result);
     };
 

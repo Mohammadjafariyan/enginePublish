@@ -25,8 +25,8 @@ let Logger = function (msg) {
         xhttp.open("POST", baseUrlForapi + "/log/log", true);
         xhttp.send(JSON.stringify({log: msg}));
     } catch (e) {
-        //consoleerror(e);
-        //consoleerror('عدم امکان ارسال لاگ سیستم');
+        console.error(e);
+        console.error('عدم امکان ارسال لاگ سیستم');
 
     }
 }
@@ -193,13 +193,13 @@ let startUp = function () {
 
         Logger(e);
 
-        //consoleerror(e);
-        //consoleerror('خطایی اتفاق افتاد');
+        console.error(e);
+        console.error('خطایی اتفاق افتاد');
 
-        //consolelog('اتصال مجدد بعد از 20 ثانیه مکس')
+        console.log('اتصال مجدد بعد از 20 ثانیه مکس')
         setTimeout(function () {
 
-            //consolelog('تلاش برای برقراری اتصال مجدد')
+            console.log('تلاش برای برقراری اتصال مجدد')
 
             startUp();
 
@@ -436,7 +436,7 @@ function OpenChatScreen(AccountId, AccountName, ProfilePhotoId) {
 
 function makeOnlineAdminCircle(arrItem) {
     if (!arrItem) {
-        //consoleerror('makeOnlineAdminCircle is null');
+        console.error('makeOnlineAdminCircle is null');
         return;
     }
 
@@ -741,7 +741,7 @@ class BasePlugin {
         var gapFileUniqId = res.Content.gapFileUniqId;
 
 
-        //consolewarn('multimediaDeliveredCallback', getDoc().querySelector("#muf_" + gapFileUniqId))
+        console.warn('multimediaDeliveredCallback', getDoc().querySelector("#muf_" + gapFileUniqId))
 
         getDoc().querySelector("span[id='muf_" + gapFileUniqId + "']")
             .replaceWith(createElementFromHTML('<i style="margin: 10px;">√</i>'));
@@ -1101,8 +1101,8 @@ class BasePlugin {
           let dateExist=  Array.from(getDoc().querySelectorAll('.gapHline'))
                 .find(el => el.textContent.indexOf(arr[i].Date)>=0);
 
-            //consolelog('dateExist === > ', dateExist)
-            //consolelog('arr[i].Date === > ', arr[i].Date)
+            console.log('dateExist === > ', dateExist)
+            console.log('arr[i].Date === > ', arr[i].Date)
 
             if(dateExist){
                 dateExist.style.color="#ddd";
@@ -1374,7 +1374,7 @@ class BasePlugin {
 let configWebSocket = function (onOpen) {
     CurrentUserInfo.ws = new WebSocket("ws://" + baseUrl + ":8181/");
     CurrentUserInfo.ws.onopen = function () {
-        //consolelog('اتصال برقرار شد');
+        console.log('اتصال برقرار شد');
         /*alert("About to send data");
         ws.send("Hello World"); // I WANT TO SEND THIS MESSAGE TO THE SERVER!!!!!!!!
         alert("Message sent!");*/
@@ -1392,12 +1392,12 @@ let configWebSocket = function (onOpen) {
     CurrentUserInfo.ws.onmessage = function (evt) {
         var received_msg = evt.data;
 
-        //consolelog(evt);
+        console.log(evt);
         _dispatcher.dispatch(JSON.parse(received_msg));
     };
     CurrentUserInfo.ws.onclose = function () {
         // websocket is closed.
-        //consoleerror("اتصال قطع شد");
+        console.error("اتصال قطع شد");
 
 
         socketConnect();
@@ -2048,7 +2048,7 @@ function bindgapFileAdder() {
 
             var fileReader = new FileReader();
             fileReader.onload = function (e) {
-                //consolelog(e.target.result)
+                console.log(e.target.result)
 
                 let uniqId = GetChats() + 1;
                 CurrentUserInfo.uniqId = uniqId;
@@ -2077,17 +2077,17 @@ function enterTextMessageAndSend() {
 
 
 function DeleteMessageCallback(res) {
-    //consolelog('رسپانس حذف پیام');
+    console.log('رسپانس حذف پیام');
 
     if (!res || !res.Content || !res.Content.uniqId) {
 
-        //consoleerror(' مقدار بازگشتی از سرور نال است ');
+        console.error(' مقدار بازگشتی از سرور نال است ');
         return;
     }
 
     if (CurrentUserInfo.targetId && CurrentUserInfo.targetId != res.Content.targetId) {
 
-        //consoleerror('کاربر تارگت درست نیست');
+        console.error('کاربر تارگت درست نیست');
         return;
     }
     let uniqId = res.Content.uniqId;
@@ -2095,17 +2095,17 @@ function DeleteMessageCallback(res) {
 
     let message = getDoc().querySelector(`.gapMsg[uniqid='${uniqId}']`)
     if (!message) {
-        //consoleerror(uniqId + " یافت نشد ");
+        console.error(uniqId + " یافت نشد ");
         return;
     }
-    //consolelog('در حال حذف پیام');
+    console.log('در حال حذف پیام');
 
     let inner = GetInnerTextElement(message);
 
 
     if (inner) {
         inner.innerText = "حذف شد";
-        //consolelog('پیام حذف شد در رسپانس');
+        console.log('پیام حذف شد در رسپانس');
 
     }
 
@@ -2115,7 +2115,7 @@ function DeleteMessageCallback(res) {
             buttons[i].disabled = false;
         }
     } else {
-        //consoleerror('دکمه ها یافت نشد');
+        console.error('دکمه ها یافت نشد');
 
     }
 
@@ -2164,7 +2164,7 @@ function GetInnerTextElement(message, dontRemoveContent) {
     }
     
     if (!inner){
-        //consoleerror('پیغام حذف نشد ، یافت نشد');
+        console.error('پیغام حذف نشد ، یافت نشد');
 return inner;
     }
 
@@ -2205,17 +2205,17 @@ function replaceAll(str, find, replace) {
 
 function EditMessageCallback(res) {
 
-    //consolelog('رسپانس درخواست ویرایش');
+    console.log('رسپانس درخواست ویرایش');
 
     if (!res || !res.Content || !res.Content.uniqId) {
 
-        //consoleerror(' مقدار بازگشتی از سرور نال است ');
+        console.error(' مقدار بازگشتی از سرور نال است ');
         return;
     }
 
     if (CurrentUserInfo.targetId && CurrentUserInfo.targetId != res.Content.targetId) {
 
-        //consoleerror('کاربر تارگت درست نیست');
+        console.error('کاربر تارگت درست نیست');
         return;
     }
     let uniqId = res.Content.uniqId;
@@ -2223,10 +2223,10 @@ function EditMessageCallback(res) {
 
     let message = getDoc().querySelector(`.gapMsg[uniqid='${uniqId}']`)
     if (!message) {
-        //consoleerror(uniqId + " یافت نشد ");
+        console.error(uniqId + " یافت نشد ");
         return;
     }
-    //consolelog('انجام ویرایش در رسپاسن');
+    console.log('انجام ویرایش در رسپاسن');
 
 
     let inner = GetInnerTextElement(message, true);
@@ -2238,19 +2238,19 @@ function EditMessageCallback(res) {
 
 
     }
-    //consolelog('ویرایش انجام شد');
+    console.log('ویرایش انجام شد');
 
 }
 
 function DeleteMsgOnClick(uniqId, gapFileUniqId, THIS) {
-    //consolelog('جذف پیغام');
+    console.log('جذف پیغام');
 
     let message = getDoc().querySelector(`.gapMsg[uniqid='${uniqId}']`)
     if (!message) {
-        //consoleerror(uniqId + " یافت نشد ");
+        console.error(uniqId + " یافت نشد ");
         return;
     }
-    //consolelog('ارسال درخواست حذف پیغام ');
+    console.log('ارسال درخواست حذف پیغام ');
 
 
     let buttons = message.querySelectorAll('button');
@@ -2259,29 +2259,29 @@ function DeleteMsgOnClick(uniqId, gapFileUniqId, THIS) {
             buttons[i].disabled = true;
         }
     } else {
-        //consoleerror('دکمه ها یافت نشد');
+        console.error('دکمه ها یافت نشد');
 
     }
 
     MyCaller.Send("DeleteMessage", {uniqId, targetId: CurrentUserInfo.targetId});
-    //consolelog(' درخواست حذف پیغام ارسال شد ');
+    console.log(' درخواست حذف پیغام ارسال شد ');
 
 }
 
 function EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
-    //consolelog('ویرایش فراخوانی شد');
+    console.log('ویرایش فراخوانی شد');
 
     let message = getDoc().querySelector(`.gapMsg[uniqid='${uniqId}']`)
     if (!message) {
-        //consoleerror(uniqId + " یافت نشد ");
+        console.error(uniqId + " یافت نشد ");
         return;
     }
     if (!message.parentElement) {
-        //consoleerror(message.parentElement + " یافت نشد ");
+        console.error(message.parentElement + " یافت نشد ");
         return;
     }
 
-    //consolelog('ورودی پر می شود جهت ویرایش');
+    console.log('ورودی پر می شود جهت ویرایش');
     let inner = GetInnerTextElement(message);
 
     if (inner.classList.contains('gapMe') || inner.classList.contains('gapHe')) {
@@ -2294,7 +2294,7 @@ function EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
         }
     }
     if (!inner) {
-        //consoleerror('inner is null');
+        console.error('inner is null');
         return;
         ;
     }
@@ -2312,13 +2312,13 @@ function EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
         alert('امکان ویرایش عکس وجود ندارد');
     };
 
-    //consolelog('خالی کردن بایند ها انجام شد');
+    console.log('خالی کردن بایند ها انجام شد');
 
     getDoc().querySelector('#gapChatForm').onsubmit = function (e) {
         e.preventDefault();
 
-        //consolelog('انجام ویرایش توسط کاربر');
-        //consolelog('ارسال درخواست ویرایش');
+        console.log('انجام ویرایش توسط کاربر');
+        console.log('ارسال درخواست ویرایش');
 
         MyCaller.Send("EditMessage",
             {
@@ -2332,7 +2332,7 @@ function EditMsgOnClick(uniqId, gapFileUniqId, THIS) {
         CurrentUserInfo.commonDomManager.bindGapChatInput();
 
         bindIsTyping();
-        //consolelog('بایند ها برگردانده شد');
+        console.log('بایند ها برگردانده شد');
 
         return false;
     }
@@ -2644,14 +2644,14 @@ class DomManager {
     }
 
     createNewPanel() {
-        //consolelog('\'#gapSearchButton\').onclick');
+        console.log('\'#gapSearchButton\').onclick');
         let gapSearchPanel = CurrentUserInfo.commonDomManager
             .getScreenPanel('#gapSearchPanel');
 
-        //consolelog('gapSearchPanel', gapSearchPanel);
+        console.log('gapSearchPanel', gapSearchPanel);
 
         if (!gapSearchPanel) {
-            //consolelog('CurrentUserInfo.commonDomManager.createScreenPanel', gapSearchPanel);
+            console.log('CurrentUserInfo.commonDomManager.createScreenPanel', gapSearchPanel);
 
             CurrentUserInfo.commonDomManager.createScreenPanel('gapSearchPanel');
         }
@@ -3065,7 +3065,7 @@ class dispatcher {
     dispatch(res) {
         if (res.Type == -1)//error
         {
-            //consoleerror(res.Message);
+            console.error(res.Message);
         }
         switch (res.Name) {
 
@@ -3246,7 +3246,7 @@ class dispatcher {
             default:
                 if (res && res.Message) {
 
-                    //consoleerror(res.Message);
+                    console.error(res.Message);
 
                     if (debugMode) {
                         alert(res.Message)
@@ -3327,14 +3327,14 @@ function searchHandlerCallback(res) {
         let id;
         if (CurrentUserInfo.currentUsersIsAdmins) {
             if (!item.MyAccount || !item.MyAccount.Name) {
-                //consoleerror('item.MyAccount is null', item);
+                console.error('item.MyAccount is null', item);
             }
 
             id = item.MyAccount.Id;
             name = item.MyAccount.Name;
         } else {
             if (!item.Customer || !item.Customer.Name) {
-                //consoleerror('item.Customer is null', item);
+                console.error('item.Customer is null', item);
             }
             name = item.Customer.Name;
             id = item.Customer.Id;
@@ -3364,7 +3364,7 @@ function searchHandlerCallback(res) {
         let chatId;
         if (CurrentUserInfo.currentUsersIsAdmins) {
             if (!item.MyAccount || !item.MyAccount.Name) {
-                //consoleerror('item.MyAccount is null', item);
+                console.error('item.MyAccount is null', item);
             }
 
             id = item.MyAccount.Id;
@@ -3372,7 +3372,7 @@ function searchHandlerCallback(res) {
             chatId = item.Id;
         } else {
             if (!item.Customer || !item.Customer.Name) {
-                //consoleerror('item.Customer is null', item);
+                console.error('item.Customer is null', item);
             }
             name = item.Customer.Name;
             id = item.Customer.Id;
@@ -4036,8 +4036,8 @@ let CommentService = function (msg, callback) {
         );
 
     } catch (e) {
-        //consoleerror(e);
-        //consoleerror('عدم امکان ارسال لاگ سیستم');
+        console.error(e);
+        console.error('عدم امکان ارسال لاگ سیستم');
     }
 }
 
@@ -4783,8 +4783,8 @@ let gapDeskApiCaller = function (url, data, callback) {
         xhttp.open("POST", url, true);
         xhttp.send(JSON.stringify(data));
     } catch (e) {
-        //consoleerror(e);
-        //consoleerror('خطا در درخواست اطلاعات HelpDesk');
+        console.error(e);
+        console.error('خطا در درخواست اطلاعات HelpDesk');
 
     }
 }
@@ -5026,7 +5026,7 @@ function gapFormSubmit(THIS, e, chatId) {
 
     let data = seriJson(THIS);
 
-    //consolelog(data)
+    console.log(data)
 
     if (!data.requestArray['formId']) {
         alert('کد فرم یافت نشد');
@@ -5113,7 +5113,7 @@ function startCapture() {
             mediaRecorder.ondataavailable = function (e) {
                 //chunks.push(e.data);
                 //debugger;
-                //consolelog(e)
+                console.log(e)
             }
 
             mediaRecorder.start();
@@ -5121,7 +5121,7 @@ function startCapture() {
             return res;
         })
         .catch(err => {
-            //consoleerror("Error:" + err);
+            console.error("Error:" + err);
             return null;
         });
 }
@@ -5130,7 +5130,7 @@ function startCapture() {
 function startCaptureVideo() {
     startCapture().then(res => {
 
-        //consolelog(res)
+        console.log(res)
         dumpOptionsInfo();
     })
 }
@@ -5145,10 +5145,10 @@ function stopCapture(evt) {
 function dumpOptionsInfo() {
     const videoTrack = videoElem.srcObject.getVideoTracks()[0];
 
-    //consoleinfo("Track settings:");
-    //consoleinfo(JSON.stringify(videoTrack.getSettings(), null, 2));
-    //consoleinfo("Track constraints:");
-    //consoleinfo(JSON.stringify(videoTrack.getConstraints(), null, 2));
+    console.info("Track settings:");
+    console.info(JSON.stringify(videoTrack.getSettings(), null, 2));
+    console.info("Track constraints:");
+    console.info(JSON.stringify(videoTrack.getConstraints(), null, 2));
 }
 
 
@@ -5177,8 +5177,8 @@ function VIDEO_CALL_STOP(THIS, msg) {
     } catch (e) {
         //ingore
     }
-    //consolelog(mediaRecorder.state);
-    //consolelog("recorder stopped");
+    console.log(mediaRecorder.state);
+    console.log("recorder stopped");
 
     THIS.parentNode.remove();
 
@@ -5232,7 +5232,7 @@ function VIDEO_CALL_INIT(THIS, callback, chatId) {
 
 
     if (navigator.mediaDevices.getDisplayMedia) {
-        //consolelog('getUserMedia supported.');
+        console.log('getUserMedia supported.');
 
         var constraints = {
             video: {
@@ -5262,11 +5262,11 @@ function VIDEO_CALL_INIT(THIS, callback, chatId) {
             //videoElem.srcObject=stream;
 
 
-            //consolelog(mediaRecorder.state);
+            console.log(mediaRecorder.state);
 
 
             /* mediaRecorder.onstop = function (e) {
-                 //consolelog("data available after MediaRecorder.stop() called.");
+                 console.log("data available after MediaRecorder.stop() called.");
  
                  const clipName = prompt('Enter a name for your sound clip?', 'My unnamed clip');
  
@@ -5296,7 +5296,7 @@ function VIDEO_CALL_INIT(THIS, callback, chatId) {
                  chunks = [];
                  const audioURL = window.URL.createObjectURL(blob);
                  audio.src = audioURL;
-                 //consolelog("recorder stopped");
+                 console.log("recorder stopped");
  
                  deleteButton.onclick = function (e) {
                      let evtTgt = e.target;
@@ -5342,7 +5342,7 @@ function VIDEO_CALL_INIT(THIS, callback, chatId) {
 
         let onError = function (err) {
             callback(THIS, 'اجازه دسترسی داده نشد', err);
-            //consoleerror('The following error occured: ' + err);
+            console.error('The following error occured: ' + err);
 
 
         }
@@ -5352,7 +5352,7 @@ function VIDEO_CALL_INIT(THIS, callback, chatId) {
     } else {
         callback(THIS, 'این امکان در مرورگر شما پشتیبانی نمی شود');
         alert('این امکان در مرورگر شما پشتیبانی نمی شود')
-        //consoleerror('getUserMedia not supported on your browser!');
+        console.error('getUserMedia not supported on your browser!');
     }
 
 
@@ -5387,7 +5387,7 @@ function VOICE_CALL_INIT() {
 //main block for doing the audio recording
 
     if (navigator.mediaDevices.getUserMedia) {
-        //consolelog('getUserMedia supported.');
+        console.log('getUserMedia supported.');
 
         const constraints = {audio: true};
         let chunks = [];
@@ -5399,8 +5399,8 @@ function VOICE_CALL_INIT() {
 
             record.onclick = function () {
                 mediaRecorder.start();
-                //consolelog(mediaRecorder.state);
-                //consolelog("recorder started");
+                console.log(mediaRecorder.state);
+                console.log("recorder started");
                 record.style.background = "red";
 
                 stop.disabled = false;
@@ -5409,8 +5409,8 @@ function VOICE_CALL_INIT() {
 
             stop.onclick = function () {
                 mediaRecorder.stop();
-                //consolelog(mediaRecorder.state);
-                //consolelog("recorder stopped");
+                console.log(mediaRecorder.state);
+                console.log("recorder stopped");
                 record.style.background = "";
                 record.style.color = "";
                 // mediaRecorder.requestData();
@@ -5420,7 +5420,7 @@ function VOICE_CALL_INIT() {
             }
 
             mediaRecorder.onstop = function (e) {
-                //consolelog("data available after MediaRecorder.stop() called.");
+                console.log("data available after MediaRecorder.stop() called.");
 
                 const clipName = prompt('Enter a name for your sound clip?', 'My unnamed clip');
 
@@ -5450,7 +5450,7 @@ function VOICE_CALL_INIT() {
                 chunks = [];
                 const audioURL = window.URL.createObjectURL(blob);
                 audio.src = audioURL;
-                //consolelog("recorder stopped");
+                console.log("recorder stopped");
 
                 deleteButton.onclick = function (e) {
                     let evtTgt = e.target;
@@ -5474,13 +5474,13 @@ function VOICE_CALL_INIT() {
         }
 
         let onError = function (err) {
-            //consolelog('The following error occured: ' + err);
+            console.log('The following error occured: ' + err);
         }
 
         navigator.mediaDevices.getUserMedia(constraints).then(onSuccess, onError);
 
     } else {
-        //consolelog('getUserMedia not supported on your browser!');
+        console.log('getUserMedia not supported on your browser!');
     }
 
     function visualize(stream) {

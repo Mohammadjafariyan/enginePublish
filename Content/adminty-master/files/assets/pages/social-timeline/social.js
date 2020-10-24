@@ -349,7 +349,7 @@
               "endDate": "12/06/2016",
               "drops": "up"
           }, function(start, end, label) {
-              //consolelog("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+              console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
           });
       });
 
@@ -390,7 +390,7 @@
                       if (!value) return;
                       if (opacity) value += ', ' + opacity;
                       if (typeof console === 'object') {
-                          //consolelog(value);
+                          console.log(value);
                       }
                   },
                   theme: 'bootstrap'

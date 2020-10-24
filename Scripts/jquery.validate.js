@@ -24,7 +24,7 @@ $.extend( $.fn, {
 		// If nothing is selected, return nothing; can't chain anyway
 		if ( !this.length ) {
 			if ( options && options.debug && window.console ) {
-				//consolewarn( "Nothing selected, can't validate, returning nothing." );
+				console.warn( "Nothing selected, can't validate, returning nothing." );
 			}
 			return;
 		}
@@ -640,7 +640,7 @@ $.extend( $.validator, {
 			.filter( function() {
 				var name = this.name || $( this ).attr( "name" ); // For contenteditable
 				if ( !name && validator.settings.debug && window.console ) {
-					//consoleerror( "%o has no name assigned", this );
+					console.error( "%o has no name assigned", this );
 				}
 
 				// Set form expando on contenteditable
@@ -795,7 +795,7 @@ $.extend( $.validator, {
 					}
 				} catch ( e ) {
 					if ( this.settings.debug && window.console ) {
-						//consolelog( "Exception occurred when checking element " + element.id + ", check the '" + rule.method + "' method.", e );
+						console.log( "Exception occurred when checking element " + element.id + ", check the '" + rule.method + "' method.", e );
 					}
 					if ( e instanceof TypeError ) {
 						e.message += ".  Exception occurred when checking element " + element.id + ", check the '" + rule.method + "' method.";

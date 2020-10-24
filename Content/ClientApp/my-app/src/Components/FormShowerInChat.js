@@ -25,8 +25,8 @@ class FormShowerInChat extends Component {
 
     componentDidMount() {
 
-        //consolelog('FormShowerInChat->componentDidMount:')
-        //consolelog(this.state.elements)
+        console.log('FormShowerInChat->componentDidMount:')
+        console.log(this.state.elements)
         if (!this.state.elements)
         {
             MyCaller.Send('GetFormSingle', {formId: this.props.formId,uniqId:this.props.chatUniqId});
@@ -36,9 +36,9 @@ class FormShowerInChat extends Component {
     ///این ممتد در واقع باید بیرون از این کلاس می بود
     saveFormDataCallback(res){
         //debugger
-        //consolelog('FormShowerInChat->saveFormDataCallback:')
+        console.log('FormShowerInChat->saveFormDataCallback:')
 
-        //consolelog(res)
+        console.log(res)
 
         /*form.AfterMessage,
                     formId,
@@ -69,7 +69,7 @@ class FormShowerInChat extends Component {
 
         this.setState({tmp:Math.random()});
 
-        //consolelog(res);
+        console.log(res);
     }
 
     getFormSingleCallback(res) {
@@ -81,7 +81,7 @@ class FormShowerInChat extends Component {
             return;
         }
 
-        //consolelog('this.state.elements', this.state.elements);
+        console.log('this.state.elements', this.state.elements);
 
         this.setState({
             elements: res.Content.Elements,
@@ -92,7 +92,7 @@ class FormShowerInChat extends Component {
             Id: res.Content.Id
         });
 
-        //consolelog(res);
+        console.log(res);
 
     }
 
