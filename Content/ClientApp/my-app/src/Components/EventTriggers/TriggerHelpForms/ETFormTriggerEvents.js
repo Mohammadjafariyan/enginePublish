@@ -191,7 +191,7 @@ class EtFormTriggerEvents extends Component {
                         {/*<Card.Title>{variant} Card Title </Card.Title>*/}
                         <Card.Text>
 
-                            <MySwitcher onChange={(checked) => {
+                            <MySwitcher description={'وقتی که ماوس از صفحه خارج می شود این رویداد اتفاق خواهد افتاد'} onChange={(checked) => {
                                 this.setEnabled(checked, 'S_EventOnExitTab', 'S_EventSpecificPages',
                                     'S_EventAddressParameters', 'S_EventDelay');
 
@@ -276,7 +276,7 @@ class EtFormTriggerEvents extends Component {
 
 
                                 <FormInModalWithTable name={'userEventNames'} parent={this}
-                                                      inputTitle={'عنوان event شما'}
+                                                      inputTitle={'عنوان رویداد شما'}
                                                       inputTitlePlaceHolder={'عنوان event : onSelectEvent'}
 
                                                       linkTitle={" event افزودن یک  "}

@@ -25,6 +25,8 @@ class EventTriggerIndex extends Component {
 
     eventTriggerSaveCallback(res){
         CurrentUserInfo.EventTriggersPage.setState({loading: false})
+        
+        DataHolder.selectedEventTrigger.Id=res.Id;
 
         _showMsg("با موفقیت ذخیره شد")
 

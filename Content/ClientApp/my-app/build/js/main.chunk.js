@@ -4138,6 +4138,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].EventTriggersPage.setState({
       loading: false
     });
+    _Help_DataHolder__WEBPACK_IMPORTED_MODULE_7__["DataHolder"].selectedEventTrigger.Id = res.Id;
 
     Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_2__["_showMsg"])("با موفقیت ذخیره شد");
   }
@@ -4190,7 +4191,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77,
+        lineNumber: 79,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -4201,14 +4202,14 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79,
+        lineNumber: 81,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83,
+        lineNumber: 85,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -4216,14 +4217,14 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84,
+        lineNumber: 86,
         columnNumber: 25
       }
     })), "Event Trigger \u062C\u062F\u06CC\u062F"), this.state.list && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_ListGroup__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89,
+        lineNumber: 91,
         columnNumber: 17
       }
     }, this.state.list.map((l, i, arr) => {
@@ -4232,7 +4233,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92,
+          lineNumber: 94,
           columnNumber: 32
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -4244,7 +4245,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94,
+          lineNumber: 96,
           columnNumber: 28
         }
       }, l.Name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4252,7 +4253,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100,
+          lineNumber: 102,
           columnNumber: 26
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputswitch__WEBPACK_IMPORTED_MODULE_4__["InputSwitch"], {
@@ -4272,7 +4273,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101,
+          lineNumber: 103,
           columnNumber: 30
         }
       })));
@@ -5054,7 +5055,7 @@ class EtFormTriggerBehaviours extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
         lineNumber: 82,
         columnNumber: 25
       }
-    }, "Event Trigger \u067E\u0627\u0631\u0627\u0645\u062A\u0631 \u0647\u0627\u06CC \u0631\u0641\u062A\u0627\u0631\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+    }, "Event Trigger \u0634\u0631\u0648\u0637 \u0627\u0646\u062C\u0627\u0645 \u0627\u06CC\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
       className: 'float-left ',
       style: {
         color: '#6c757d'
@@ -5560,6 +5561,7 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
+      description: 'وقتی که ماوس از صفحه خارج می شود این رویداد اتفاق خواهد افتاد',
       onChange: checked => {
         this.setEnabled(checked, 'S_EventOnExitTab', 'S_EventSpecificPages', 'S_EventAddressParameters', 'S_EventDelay');
         this.setState({
@@ -5711,7 +5713,7 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["FormInModalWithTable"], {
       name: 'userEventNames',
       parent: this,
-      inputTitle: 'عنوان event شما',
+      inputTitle: 'عنوان رویداد شما',
       inputTitlePlaceHolder: 'عنوان event : onSelectEvent',
       linkTitle: " event افزودن یک  ",
       onConfirm: userEventNames => {
@@ -27052,6 +27054,9 @@ const MySwitcher = props => {
       columnNumber: 12
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    "aria-label": props.description,
+    "data-microtip-position": "left",
+    role: "tooltip",
     className: 'float-right ' + (props.disabled ? 'disabled' : ''),
     __self: undefined,
     __source: {

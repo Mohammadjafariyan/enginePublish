@@ -55,7 +55,7 @@ export const MySwitcher=(props)=>{
   
 
     return <div className={'MySwitcher '}>
-        <label className={'float-right ' + (props.disabled ? 'disabled' : '')} >
+        <label  aria-label={props.description} data-microtip-position="left" role="tooltip" className={'float-right ' + (props.disabled ? 'disabled' : '')} >
             
             
             {props.icon && <i style={{}} className={'h3 fa fa-'+props.icon}></i> }

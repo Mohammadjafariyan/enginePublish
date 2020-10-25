@@ -80,7 +80,7 @@ class EtFormTriggerBehaviours extends Component {
                 >
                     <Card.Header>
                         <span className={'float-right'}>
-                          Event Trigger پارامتر های رفتاری   
+                          Event Trigger شروط انجام این   
                         </span>
 
                         <small className={'float-left '} style={{color:'#6c757d'}}>
