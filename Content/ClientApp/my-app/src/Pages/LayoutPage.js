@@ -34,6 +34,8 @@ import LanguageHolder from "../Components/HelpDesk/Language/LanguageHolder";
 import Container from "react-bootstrap/Container";
 import CustomerProfilePage from "./CustomerProfilePage";
 import EventTriggersPage from "./Event_TriggersPage";
+import LiveAssistPage from "./LiveAssistPage";
+import UsersSeparationLayout from "../Components/UsersSeparation/UsersSeparationLayout";
 
 
 
@@ -128,23 +130,40 @@ export default class LayoutPage extends Component {
                 </div>
     )
             }else if(DataHolder.currentPage ==='FakeServerMonitor')
-            
+
             {
-              return( 
-                  <div>
-                      <Toast  position="bottom-left"ref={(el) => this.toast = el} />
-                      <Menu/>
-                      <MessageAlerts/>
+                return(
+                    <div>
+                        <Toast  position="bottom-left"ref={(el) => this.toast = el} />
+                        <Menu/>
+                        <MessageAlerts/>
 
 
 
-                      <FakeServerMonitor></FakeServerMonitor>
-                
-                
-                </div>
+                        <FakeServerMonitor></FakeServerMonitor>
+
+
+                    </div>
                 )
             }
+            else if(DataHolder.currentPage ==='usersSeparation')
 
+            {
+                return(
+                    <div>
+                        <Toast  position="bottom-left"ref={(el) => this.toast = el} />
+                        <Menu/>
+                        <MessageAlerts/>
+
+
+
+                        <UsersSeparationLayout></UsersSeparationLayout>
+
+
+                    </div>
+                )
+            }
+            
 
             else if (DataHolder.currentPage === "FormCreator") {
 
@@ -241,8 +260,8 @@ export default class LayoutPage extends Component {
                         <SocialChannelsPage></SocialChannelsPage>
                     </>)
             }
-
-            else if (DataHolder.currentPage === "HelpDeskPage") {
+            
+        else if (DataHolder.currentPage === "HelpDeskPage") {
 
                 return (
                     <>
@@ -252,18 +271,36 @@ export default class LayoutPage extends Component {
                         <Menu/>
                         <MessageAlerts/>
 
-                       
-                            <Container>
-                                <LanguageHolder onSelect={(countryCode)=>{
 
-                                }}/>
-                            </Container>
+                        <Container>
+                            <LanguageHolder onSelect={(countryCode)=>{
+
+                            }}/>
+                        </Container>
 
                         <HelpDeskPage></HelpDeskPage>
 
-                  
 
-                        
+
+
+                    </>)
+            }
+            else if (DataHolder.currentPage === "LiveAssistPage") {
+
+                return (
+                    <>
+                        {this.state.focusForSelectingAdmin &&  <div className="hideWhole"></div>}
+
+                        <Toast  position="bottom-left"ref={(el) => this.toast = el} />
+                        <Menu/>
+                        <MessageAlerts/>
+
+
+                        <LiveAssistPage></LiveAssistPage>
+
+
+
+
                     </>)
             }
 

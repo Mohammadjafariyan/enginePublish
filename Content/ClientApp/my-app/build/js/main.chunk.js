@@ -85,7 +85,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\r\n.notValid{\r\n    border:1px solid red;\r\n}\r\n.floatLeft{\r\n\r\n    margin-top: 10px;\r\n}\r\n.floatRight{\r\n    float: right;\r\n}\r\n\r\n.MySwitcher{\r\n\r\n    padding-top: 30px;\r\n    padding-bottom: 50px;\r\n}\r\n\r\n.smallLink{\r\n    font-size: 14px !important;\r\n    margin-top: 5px;\r\n}\r\n\r\n.text-summary2{\r\n    display: flex;\r\n    line-height: 1.5em;\r\n    overflow: hidden;\r\n\r\n    padding-left: 10px;\r\n    \r\n    padding-top:14px !important;\r\n}\r\n\r\n.centered{\r\n\r\n\r\n    padding-right: 10% !important;\r\n    padding-left: 10% !important;\r\n}\r\n.modal-90w {\r\n    width: 90% !important;\r\n    max-width: none!important;\r\n}\r\n.modal-big-h-w{\r\n    \r\n    height: 40vh;\r\n    \r\n    padding-left: 35%;\r\n}\r\n\r\n\r\n.small{\r\n    color: #a0a1a2;\r\n    direction: rtl;\r\n    \r\n}\r\n\r\n.text-summary{\r\n    line-height: 1.5em;\r\n    height: 3em;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    width: 100%;\r\n}\r\n.p-datatable .p-datatable-header{\r\n    background: none !important;\r\n}\r\n\r\n.fullWidth{\r\n    width: 100%;\r\n}\r\n\r\n.fillerHolder{\r\n\r\n    position: relative;\r\n}\r\n\r\n.floatRight{\r\n    float: right;\r\n}\r\n.floatLeft{\r\n    float: left;\r\n}\r\n\r\n.bigIcon{\r\n    font-size: 40px !important;\r\n}\r\n\r\n@media screen and (max-width: 800px) {\r\n    .listGroup {\r\n\r\n        height: 40vh\r\n    }\r\n\r\n    .nativeName {\r\n\r\n       display: none;\r\n    }\r\n\r\n}\r\n\r\n.FormDataPage .listGroup{\r\n    height: 30vh\r\n\r\n\r\n}\r\n.listGroup{\r\n    overflow:auto;\r\n    height:80vh\r\n}\r\n.link{\r\n    color: #1c84c6 !important;\r\n}\r\n.FormRendererSingleElement{\r\n    display: flex;\r\n}\r\n.filler{\r\n    position: absolute;\r\n    left: 0px;\r\n    right: 0px;\r\n    bottom: 0px;\r\n    top: 0px;\r\n}\r\n.filler:hover{\r\n    border:1px solid #00AEEF;\r\n    cursor: pointer;\r\n    \r\n}\r\n.toolsMenuFormCreator{\r\n    \r\n    border: 1px solid #ddd;\r\n    border-radius: 2px 2px 2px 2px;\r\n}\r\n\r\n.formElement{\r\n    \r\n    \r\n    \r\n    background-color: #6a8894;\r\n}\r\n\r\n\r\n.userTag{\r\n    position: absolute;\r\n    left: 2px;\r\n    top: 2px;\r\n}\r\n.userTag:hover{\r\n    color:#0edbf9;\r\n    cursor: pointer;\r\n}\r\n\r\n.userTagBlue{\r\n    color:#1e88e5;\r\n\r\n}\r\n.pointer:hover{\r\n    cursor: pointer;\r\n}\r\n.onMobile {\r\n    display: none;\r\n}\r\n\r\na:not([href]):not([class]):hover,a:hover{\r\n    color: #04aecd !important;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\na:not([href]):not([class]),a{\r\n    color: #09e2ca !important;\r\n}\r\n\r\n\r\n@media screen and (max-width: 1366px) {\r\n  \r\n}\r\n@media screen and (max-width: 1024px) {\r\n  \r\n}\r\n/* Use a media query to add a breakpoint at 800px: */\r\n@media screen and (max-width: 800px) {\r\n    .onMobile {\r\n        display: inherit/* The width is 100%, when the viewport is 800px or smaller */\r\n    }\r\n\r\n    .onDesktop{\r\n        display: none/* The width is 100%, when the viewport is 800px or smaller */\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 600px) {\r\n   \r\n\r\n\r\n}\r\n\r\n\r\n\r\n.onthefly{\r\n\r\n    position: fixed;\r\n    left: 20px;\r\n    border:50px solid darkblue;\r\n\r\n    top:70%;\r\n\r\n\r\n}\r\n\r\n\r\n.inOneLine{\r\ndisplay: flex;\r\n}\r\n\r\n.userCard{\r\n    margin-Top:5px\r\n}\r\n\r\n.hideWhole{\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: black;\r\n    opacity: 0.3;\r\n    top: 0px;\r\n    left: 0px;\r\n    z-index: 20;\r\n}\r\n\r\n.showSingle{\r\n     \r\n     z-index: 21;\r\n }\r\n\r\n.alert{\r\n    z-index: 21;\r\n}\r\n\r\n\r\n.active {\r\n    background-color: #00ACED;\r\n    color:white;\r\n}\r\n\r\n .gapStat{\r\n     height: 10px;\r\n     width: 10px;\r\n     background-color: #29bb1c;\r\n     border-radius: 50%;\r\n     display: inline-block;\r\n     text-align: center;\r\n }\r\n.MsgCount{\r\n    height: 100%;\r\n    width: 17px;\r\n    background-color: #51a3f1;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    text-align: center;\r\n    color: white;\r\n    float: left;\r\n}\r\n.selectedUserInList {\r\n    background-color: bisque;\r\n}\r\n\r\n.userInList:hover {\r\n    background-color: aqua;\r\n    cursor: pointer\r\n}\r\n\r\n\r\n.noMargin {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}\r\n\r\n\r\n.chatPanel{\r\n    max-height: 500px;\r\n    overflow: auto\r\n    ;\r\n}\r\n\r\n.post{\r\n    margin-top: 20px;\r\n}\r\n\r\n\r\n.chatPanel::-webkit-scrollbar {\r\n    width: 12px;\r\n}\r\n\r\n.chatPanel::-webkit-scrollbar-track {\r\n    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);\r\n    border-radius: 10px;\r\n}\r\n\r\n.chatPanel::-webkit-scrollbar-thumb {\r\n    border-radius: 10px;\r\n    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);\r\n}", ""]);
+exports.push([module.i, "\r\n.usData{\r\n    overflow: auto;\r\n /*   word-break: break-all;\r\n    direction: ltr;*/\r\n}\r\n.marginTop{\r\n    margin-top: 10vh;\r\n}\r\n.p-field-radiobutton label{\r\n\r\n    margin-right: 5px;\r\n    margin-left: 5px;\r\n}\r\n\r\n\r\n.scallSmall{\r\n    zoom: 0.6;\r\n    -moz-transform: scale(0.5);\r\n}\r\n\r\n#shadowRoot{\r\n    \r\n    height: 100vh;\r\n    overflow: auto;\r\n    \r\n}\r\n.fakeMouse{\r\nwidth: 100%;\r\nheight: 100%;\r\n    position: relative;\r\n    z-index: 6;\r\n\r\n}\r\n.notValid{\r\n    border:1px solid red;\r\n}\r\n.floatLeft{\r\n\r\n    margin-top: 10px;\r\n}\r\n.floatRight{\r\n    float: right;\r\n}\r\n\r\n.MySwitcher{\r\n\r\n    padding-top: 30px;\r\n    padding-bottom: 50px;\r\n}\r\n\r\n.smallLink{\r\n    font-size: 14px !important;\r\n    margin-top: 5px;\r\n}\r\n\r\n.text-summary2{\r\n    display: flex;\r\n    line-height: 1.5em;\r\n    overflow: hidden;\r\n\r\n    padding-left: 10px;\r\n    \r\n    padding-top:14px !important;\r\n}\r\n\r\n.centered{\r\n\r\n\r\n    padding-right: 10% !important;\r\n    padding-left: 10% !important;\r\n}\r\n.modal-90w {\r\n    width: 90% !important;\r\n    max-width: none!important;\r\n}\r\n.modal-big-h-w{\r\n    \r\n    height: 40vh;\r\n    \r\n    padding-left: 35%;\r\n}\r\n\r\n\r\n.small{\r\n    color: #a0a1a2;\r\n    direction: rtl;\r\n    \r\n}\r\n\r\n.text-summary{\r\n    line-height: 1.5em;\r\n    height: 3em;\r\n    overflow: hidden;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    width: 100%;\r\n}\r\n.p-datatable .p-datatable-header{\r\n    background: none !important;\r\n}\r\n\r\n.fullWidth{\r\n    width: 100%;\r\n}\r\n\r\n.fillerHolder{\r\n\r\n    position: relative;\r\n}\r\n\r\n.floatRight{\r\n    float: right;\r\n}\r\n.floatLeft{\r\n    float: left;\r\n}\r\n\r\n.bigIcon{\r\n    font-size: 40px !important;\r\n}\r\n\r\n@media screen and (max-width: 800px) {\r\n    .listGroup {\r\n\r\n        height: 40vh\r\n    }\r\n\r\n    .nativeName {\r\n\r\n       display: none;\r\n    }\r\n\r\n}\r\n\r\n.FormDataPage .listGroup{\r\n    height: 30vh\r\n\r\n\r\n}\r\n.listGroup{\r\n    overflow:auto;\r\n    height:80vh\r\n}\r\n.link{\r\n    color: #1c84c6 !important;\r\n}\r\n.FormRendererSingleElement{\r\n    display: flex;\r\n}\r\n.filler{\r\n    position: absolute;\r\n    left: 0px;\r\n    right: 0px;\r\n    bottom: 0px;\r\n    top: 0px;\r\n}\r\n.filler:hover{\r\n    border:1px solid #00AEEF;\r\n    cursor: pointer;\r\n    \r\n}\r\n.toolsMenuFormCreator{\r\n    \r\n    border: 1px solid #ddd;\r\n    border-radius: 2px 2px 2px 2px;\r\n}\r\n\r\n.formElement{\r\n    \r\n    \r\n    \r\n    background-color: #6a8894;\r\n}\r\n\r\n\r\n.userTag{\r\n    position: absolute;\r\n    left: 2px;\r\n    top: 2px;\r\n}\r\n.userTag:hover{\r\n    color:#0edbf9;\r\n    cursor: pointer;\r\n}\r\n\r\n.userTagBlue{\r\n    color:#1e88e5;\r\n\r\n}\r\n.pointer:hover{\r\n    cursor: pointer;\r\n}\r\n.onMobile {\r\n    display: none;\r\n}\r\n\r\na:not([href]):not([class]):hover,a:hover{\r\n    color: #04aecd !important;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\na:not([href]):not([class]),a{\r\n    color: #09e2ca !important;\r\n}\r\n\r\n\r\n@media screen and (max-width: 1366px) {\r\n  \r\n}\r\n@media screen and (max-width: 1024px) {\r\n  \r\n}\r\n/* Use a media query to add a breakpoint at 800px: */\r\n@media screen and (max-width: 800px) {\r\n    .onMobile {\r\n        display: inherit/* The width is 100%, when the viewport is 800px or smaller */\r\n    }\r\n\r\n    .onDesktop{\r\n        display: none/* The width is 100%, when the viewport is 800px or smaller */\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 600px) {\r\n   \r\n\r\n\r\n}\r\n\r\n\r\n\r\n.onthefly{\r\n\r\n    position: fixed;\r\n    left: 20px;\r\n    border:50px solid darkblue;\r\n\r\n    top:70%;\r\n\r\n\r\n}\r\n\r\n\r\n.inOneLine{\r\ndisplay: flex;\r\n}\r\n\r\n.userCard{\r\n    margin-Top:5px\r\n}\r\n\r\n.hideWhole{\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: black;\r\n    opacity: 0.3;\r\n    top: 0px;\r\n    left: 0px;\r\n    z-index: 20;\r\n}\r\n\r\n.showSingle{\r\n     \r\n     z-index: 21;\r\n }\r\n\r\n.alert{\r\n    z-index: 21;\r\n}\r\n\r\n\r\n.active {\r\n    background-color: #00ACED;\r\n    color:white;\r\n}\r\n\r\n .gapStat{\r\n     height: 10px;\r\n     width: 10px;\r\n     background-color: #29bb1c;\r\n     border-radius: 50%;\r\n     display: inline-block;\r\n     text-align: center;\r\n }\r\n.MsgCount{\r\n    height: 100%;\r\n    width: 17px;\r\n    background-color: #51a3f1;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    text-align: center;\r\n    color: white;\r\n    float: left;\r\n}\r\n.selectedUserInList {\r\n    background-color: bisque;\r\n}\r\n\r\n.userInList:hover {\r\n    background-color: aqua;\r\n    cursor: pointer\r\n}\r\n\r\n\r\n.noMargin {\r\n    margin: 0px;\r\n    padding: 0px;\r\n}\r\n\r\n\r\n.chatPanel{\r\n    max-height: 500px;\r\n    overflow: auto\r\n    ;\r\n}\r\n\r\n.post{\r\n    margin-top: 20px;\r\n}\r\n\r\n\r\n.chatPanel::-webkit-scrollbar {\r\n    width: 12px;\r\n}\r\n\r\n.chatPanel::-webkit-scrollbar-track {\r\n    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);\r\n    border-radius: 10px;\r\n}\r\n\r\n.chatPanel::-webkit-scrollbar-thumb {\r\n    border-radius: 10px;\r\n    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5);\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -103,7 +103,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".lds-ellipsis {\r\n    display: inline-block;\r\n    position: relative;\r\n    width: 80px;\r\n    height: 80px;\r\n}\r\n\r\n.whileWriting{\r\n    \r\n    \r\n}\r\n.lds-ellipsis div {\r\n    position: absolute;\r\n    top: 33px;\r\n    width: 13px;\r\n    height: 13px;\r\n    border-radius: 50%;\r\n    background: #14dede;\r\n    animation-timing-function: cubic-bezier(0, 1, 1, 0);\r\n}\r\n.lds-ellipsis div:nth-child(1) {\r\n    left: 8px;\r\n    animation: lds-ellipsis1 0.6s infinite;\r\n}\r\n.lds-ellipsis div:nth-child(2) {\r\n    left: 8px;\r\n    animation: lds-ellipsis2 0.6s infinite;\r\n}\r\n.lds-ellipsis div:nth-child(3) {\r\n    left: 32px;\r\n    animation: lds-ellipsis2 0.6s infinite;\r\n}\r\n.lds-ellipsis div:nth-child(4) {\r\n    left: 56px;\r\n    animation: lds-ellipsis3 0.6s infinite;\r\n}\r\n@keyframes lds-ellipsis1 {\r\n    0% {\r\n        transform: scale(0);\r\n    }\r\n    100% {\r\n        transform: scale(1);\r\n    }\r\n}\r\n@keyframes lds-ellipsis3 {\r\n    0% {\r\n        transform: scale(1);\r\n    }\r\n    100% {\r\n        transform: scale(0);\r\n    }\r\n}\r\n@keyframes lds-ellipsis2 {\r\n    0% {\r\n        transform: translate(0, 0);\r\n    }\r\n    100% {\r\n        transform: translate(24px, 0);\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, ".typing-loader{\r\n  \r\n    width: 6px;\r\n    height: 6px;\r\n    animation: line 1s linear infinite alternate;\r\n}\r\n\r\n@keyframes line{\r\n    0%{\r\n\r\n        background-color: rgba(0,0,0, 1);\r\n        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),\r\n        24px 0px 0px 0px rgba(0,0,0,0.2);\r\n\r\n    }\r\n    25%{\r\n        background-color: rgba(0,0,0, 0.4);\r\n        box-shadow: 12px 0px 0px 0px rgba(0,0,0,2),\r\n        24px 0px 0px 0px rgba(0,0,0,0.2);\r\n\r\n    }\r\n    75%{ background-color: rgba(0,0,0, 0.4);\r\n        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),\r\n        24px 0px 0px 0px rgba(0,0,0,2);\r\n\r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n.typing-loader{\r\n    width: 6px;\r\n    height: 6px;\r\n    animation: line 1s linear infinite alternate;\r\n}\r\n\r\n@keyframes line{\r\n    0%{\r\n\r\n        background-color: rgba(0,0,0, 1);\r\n        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),\r\n        24px 0px 0px 0px rgba(0,0,0,0.2);\r\n\r\n    }\r\n    25%{\r\n        background-color: rgba(0,0,0, 0.4);\r\n        box-shadow: 12px 0px 0px 0px rgba(0,0,0,2),\r\n        24px 0px 0px 0px rgba(0,0,0,0.2);\r\n\r\n    }\r\n    75%{ background-color: rgba(0,0,0, 0.4);\r\n        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2),\r\n        24px 0px 0px 0px rgba(0,0,0,2);\r\n\r\n    }\r\n}\r\n\r\n\r\n.lds-ellipsis {\r\n    display: inline-block;\r\n    position: relative;\r\n    width: 80px;\r\n    height: 80px;\r\n}\r\n\r\n.whileWriting{\r\n    \r\n    \r\n}\r\n.lds-ellipsis div {\r\n    position: absolute;\r\n    top: 33px;\r\n    width: 13px;\r\n    height: 13px;\r\n    border-radius: 50%;\r\n    background: #14dede;\r\n    animation-timing-function: cubic-bezier(0, 1, 1, 0);\r\n}\r\n.lds-ellipsis div:nth-child(1) {\r\n    left: 8px;\r\n    animation: lds-ellipsis1 0.6s infinite;\r\n}\r\n.lds-ellipsis div:nth-child(2) {\r\n    left: 8px;\r\n    animation: lds-ellipsis2 0.6s infinite;\r\n}\r\n.lds-ellipsis div:nth-child(3) {\r\n    left: 32px;\r\n    animation: lds-ellipsis2 0.6s infinite;\r\n}\r\n.lds-ellipsis div:nth-child(4) {\r\n    left: 56px;\r\n    animation: lds-ellipsis3 0.6s infinite;\r\n}\r\n@keyframes lds-ellipsis1 {\r\n    0% {\r\n        transform: scale(0);\r\n    }\r\n    100% {\r\n        transform: scale(1);\r\n    }\r\n}\r\n@keyframes lds-ellipsis3 {\r\n    0% {\r\n        transform: scale(1);\r\n    }\r\n    100% {\r\n        transform: scale(0);\r\n    }\r\n}\r\n@keyframes lds-ellipsis2 {\r\n    0% {\r\n        transform: translate(0, 0);\r\n    }\r\n    100% {\r\n        transform: translate(24px, 0);\r\n    }\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -521,7 +521,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ScreenRecordShower__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ScreenRecordShower */ "./src/Components/ScreenRecordShower.js");
 /* harmony import */ var dompurify__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! dompurify */ "./node_modules/dompurify/dist/purify.js");
 /* harmony import */ var dompurify__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(dompurify__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _WhileWriting__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./WhileWriting */ "./src/Components/WhileWriting.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\Chat.js";
+
 
 
 
@@ -540,12 +542,39 @@ var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupport
 class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(arg) {
     super(arg);
-    this.state = {};
+    this.state = {
+      chats: []
+    };
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].ChatPage = this;
     this.submit = this.submit.bind(this);
   }
 
-  componentDidMount() {}
+  componentDidMount() {} //نمایش در حال تایپ کاربر
+
+
+  customerStartTypingCallback(res) {
+    // اگر پیامی نبود برگرد
+    if (!res || !res.Content || !res.Content.text) {
+      return;
+    }
+
+    let chat;
+    var i = this.state.chats.findIndex(c => c.IsTyping);
+
+    if (i >= 0) {
+      this.state.chats[i].Message = res.Content.text;
+      this.setState({
+        rndom: Math.random()
+      });
+    } else {
+      chat = {
+        Message: res.Content.text
+      };
+      chat.IsReceive = true;
+      chat.IsTyping = true;
+      this.addChat(chat, true);
+    }
+  }
 
   newSendPMByMeInAnotherPlaceCallback(res) {
     if (res.Content.MultimediaContent) {
@@ -770,14 +799,14 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 251,
+        lineNumber: 291,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MarkAsResovled__WEBPACK_IMPORTED_MODULE_11__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 252,
+        lineNumber: 292,
         columnNumber: 17
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -785,7 +814,7 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 254,
+        lineNumber: 294,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -793,14 +822,14 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 255,
+        lineNumber: 295,
         columnNumber: 21
       }
     }, _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].SelectedUserName, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 257,
+        lineNumber: 297,
         columnNumber: 25
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -808,7 +837,7 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 259,
+        lineNumber: 299,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -816,7 +845,7 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260,
+        lineNumber: 300,
         columnNumber: 25
       }
     }), this.state.err && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -824,7 +853,7 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 264,
+        lineNumber: 304,
         columnNumber: 29
       }
     }, this.state.err), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -836,14 +865,14 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 267,
+        lineNumber: 307,
         columnNumber: 25
       }
     }, this.state.chats && this.state.chats.length === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 275,
+        lineNumber: 315,
         columnNumber: 33
       }
     }, "\u0647\u06CC\u0686 \u0686\u062A\u06CC \u06CC\u0627\u0641\u062A \u0646\u0634\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ChatPannel, {
@@ -852,7 +881,7 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 277,
+        lineNumber: 317,
         columnNumber: 29
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ChatForm__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -871,7 +900,7 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 282,
+        lineNumber: 321,
         columnNumber: 25
       }
     }))));
@@ -960,8 +989,10 @@ class Chat extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
     if (!chats || !chats.length) {
       chats = [];
-    }
+    } /// اگر در حال تایپ باشد ُ  از حالت تایپ در بیاور 
 
+
+    chats = chats.filter(c => !c.IsTyping);
     return chats;
   }
 
@@ -1200,7 +1231,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 617,
+          lineNumber: 659,
           columnNumber: 17
         }
       }, props.onDelete && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1208,7 +1239,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 619,
+          lineNumber: 661,
           columnNumber: 25
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1218,7 +1249,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 620,
+          lineNumber: 662,
           columnNumber: 29
         }
       }, "x"), el.Delay && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -1226,7 +1257,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 627,
+          lineNumber: 669,
           columnNumber: 42
         }
       }, " \u0628\u0639\u062F \u0627\u0632 ", el.Delay, " \u062F\u0642\u06CC\u0642\u0647 "), el.Time && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1237,7 +1268,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 628,
+          lineNumber: 670,
           columnNumber: 41
         }
       }, " ", el.Time, " "), props.parent && props.parent.DeleteMsgOnClick && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1247,7 +1278,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 630,
+          lineNumber: 672,
           columnNumber: 79
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1258,7 +1289,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 631,
+          lineNumber: 673,
           columnNumber: 33
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -1267,7 +1298,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 637,
+          lineNumber: 679,
           columnNumber: 37
         }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1278,7 +1309,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 639,
+          lineNumber: 681,
           columnNumber: 33
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -1287,7 +1318,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 645,
+          lineNumber: 687,
           columnNumber: 37
         }
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1300,7 +1331,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 652,
+          lineNumber: 694,
           columnNumber: 21
         }
       }, el.formId && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormShowerInChat__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1310,8 +1341,8 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 655,
-          columnNumber: 40
+          lineNumber: 698,
+          columnNumber: 25
         }
       }), el.MultimediaContent && showMultimedia(el.MultimediaContent), !el.MultimediaContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         key: el.Message,
@@ -1321,7 +1352,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 658,
+          lineNumber: 701,
           columnNumber: 51
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(IsDelivered, {
@@ -1329,7 +1360,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 666,
+          lineNumber: 707,
           columnNumber: 25
         }
       })));
@@ -1340,7 +1371,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 674,
+          lineNumber: 715,
           columnNumber: 17
         }
       }, props.onDelete && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1348,7 +1379,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 676,
+          lineNumber: 717,
           columnNumber: 25
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1358,7 +1389,7 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 677,
+          lineNumber: 718,
           columnNumber: 29
         }
       }, "x"), el.Delay && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -1366,20 +1397,19 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 685,
+          lineNumber: 726,
           columnNumber: 42
         }
       }, " \u0628\u0639\u062F \u0627\u0632 ", el.Delay, "\u062F\u0642\u06CC\u0642\u0647 ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "card-body",
         style: {
           wordBreak: 'break-all',
-          display: 'flex',
           direction: 'ltr'
         },
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 688,
+          lineNumber: 729,
           columnNumber: 21
         }
       }, el.formId && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormShowerInChat__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -1391,18 +1421,34 @@ function ChatPannel(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 689,
-          columnNumber: 40
+          lineNumber: 730,
+          columnNumber: 39
         }
       }), el.MultimediaContent && showMultimedia(el.MultimediaContent), !el.MultimediaContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         key: el.Message,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 692,
+          lineNumber: 734,
           columnNumber: 51
         }
-      }, " ", el.Message, " ")));
+      }, " ", el.Message, " "), el.IsTyping && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: 'float-right',
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 739,
+          columnNumber: 41
+        }
+      }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WhileWriting__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        IsTyping: el.IsTyping,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 739,
+          columnNumber: 73
+        }
+      }))));
     }
   });
 }
@@ -1413,7 +1459,7 @@ function IsDelivered(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 704,
+        lineNumber: 749,
         columnNumber: 16
       }
     }, "\u221A");
@@ -1424,7 +1470,7 @@ function IsDelivered(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 707,
+        lineNumber: 752,
         columnNumber: 16
       }
     }, "\u06A9\u0627\u0631\u0628\u0631 \u0622\u0641\u0644\u0627\u06CC\u0646 \u0627\u0633\u062A");
@@ -1434,7 +1480,7 @@ function IsDelivered(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 710,
+      lineNumber: 755,
       columnNumber: 12
     }
   });
@@ -1468,7 +1514,7 @@ function showMultimedia(pastedData) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 737,
+        lineNumber: 782,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
@@ -1476,7 +1522,7 @@ function showMultimedia(pastedData) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 738,
+        lineNumber: 783,
         columnNumber: 17
       }
     }));
@@ -1488,7 +1534,7 @@ function showMultimedia(pastedData) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 745,
+        lineNumber: 790,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
@@ -1496,7 +1542,7 @@ function showMultimedia(pastedData) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 746,
+        lineNumber: 791,
         columnNumber: 17
       }
     }));
@@ -1514,7 +1560,7 @@ function showMultimedia(pastedData) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 753,
+        lineNumber: 798,
         columnNumber: 13
       }
     });
@@ -1527,7 +1573,7 @@ function showMultimedia(pastedData) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 767,
+        lineNumber: 812,
         columnNumber: 13
       }
     }, pastedData);
@@ -1606,7 +1652,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 863,
+        lineNumber: 895,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1614,7 +1660,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 865,
+        lineNumber: 897,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1622,7 +1668,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 868,
+        lineNumber: 900,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1630,7 +1676,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 869,
+        lineNumber: 901,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1638,21 +1684,21 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 871,
+        lineNumber: 903,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 872,
+        lineNumber: 904,
         columnNumber: 33
       }
     }, "\u0627\u062A\u0648\u0645\u0627\u062A\u06CC\u06A9 \u0627\u0632 \u0637\u0631\u0641 \u0627\u062F\u0645\u06CC\u0646 \u06A9\u0645 \u0645\u0631\u0627\u062C\u0639\u0647 \u0627\u0631\u0633\u0627\u0644 \u0645\u06CC \u0634\u0648\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 873,
+        lineNumber: 905,
         columnNumber: 33
       }
     }, "\u0627\u0632 \u0637\u0631\u0641 \u0627\u062F\u0645\u06CC\u0646 \u0647\u0627\u06CC \u0645\u062E\u0635\u0648\u0635 \u0647\u0631 \u0628\u062E\u0634 \u0633\u0627\u06CC\u062A \u067E\u06CC\u063A\u0627\u0645 \u0627\u0631\u0633\u0627\u0644 \u0645\u06CC \u0634\u0648\u062F"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ChatPannel, {
@@ -1667,7 +1713,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 876,
+        lineNumber: 908,
         columnNumber: 25
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1675,7 +1721,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 884,
+        lineNumber: 918,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1683,7 +1729,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 887,
+        lineNumber: 921,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -1691,7 +1737,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 888,
+        lineNumber: 922,
         columnNumber: 29
       }
     }, " \u0632\u0645\u0627\u0646 \u062A\u0627\u062E\u06CC\u0631 \u0628\u0647 \u062F\u0642\u06CC\u0642\u0647 "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -1725,7 +1771,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 889,
+        lineNumber: 923,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
@@ -1734,7 +1780,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 910,
+        lineNumber: 944,
         columnNumber: 29
       }
     }, "\u0645\u062F\u062A \u0632\u0645\u0627\u0646\u06CC \u06A9\u0647 \u06A9\u0627\u0631\u0628\u0631 \u0648\u0627\u0631\u062F \u0633\u0627\u06CC\u062A \u0634\u062F\u0647 \u0627\u0633\u062A \u0627\u0645\u0627 \u0647\u06CC\u0686 \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC \u062F\u0631\u06CC\u0627\u0641\u062A \u0646\u06A9\u0631\u062F\u0647 \u0627\u0633\u062A ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1742,7 +1788,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 913,
+        lineNumber: 948,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ChatForm__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -1771,7 +1817,7 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 915,
+        lineNumber: 950,
         columnNumber: 29
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1784,10 +1830,10 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 965,
+        lineNumber: 999,
         columnNumber: 25
       }
-    }, "\u062B\u0628\u062A "))));
+    }, "\u062B\u0628\u062A"))));
   }
 
   saveAutomaticSendChats() {
@@ -1810,14 +1856,14 @@ class AutomaticSendPage extends Chat {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 1000,
+        lineNumber: 1035,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 1002,
+        lineNumber: 1037,
         columnNumber: 17
       }
     }, this.state.admins.map((el, i, arr) => {
@@ -1832,14 +1878,14 @@ class AutomaticSendPage extends Chat {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 1006,
+          lineNumber: 1041,
           columnNumber: 32
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 1009,
+          lineNumber: 1044,
           columnNumber: 29
         }
       }, el.Name));
@@ -2755,11 +2801,18 @@ class CustomerInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 184,
         columnNumber: 37
       }
-    })), "\u0646\u0645\u0627\u06CC\u0634 \u06A9\u0627\u0645\u0644 \u067E\u0631\u0648\u0641\u0627\u06CC\u0644 \u06A9\u0627\u0631\u0628\u0631")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Satistification__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    })), "\u0646\u0645\u0627\u06CC\u0634 \u06A9\u0627\u0645\u0644 \u067E\u0631\u0648\u0641\u0627\u06CC\u0644 \u06A9\u0627\u0631\u0628\u0631")), (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].selectedCustomer || !_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].selectedCustomer.UsersSeparationParams) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 192,
+        columnNumber: 25
+      }
+    }, "\u06A9\u0627\u0631\u0628\u0631 \u0639\u0636\u0648 \u0646\u06CC\u0633\u062A"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Satistification__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 195,
         columnNumber: 25
       }
     }))));
@@ -2775,11 +2828,12 @@ class CustomerInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 /*!*******************************************!*\
   !*** ./src/Components/CustomerProfile.js ***!
   \*******************************************/
-/*! exports provided: default */
+/*! exports provided: default, BackButton */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BackButton", function() { return BackButton; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/esm/Button.js");
@@ -2829,6 +2883,35 @@ class CustomerProfile extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (CustomerProfile);
+const BackButton = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 14
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    variant: 'light',
+    onClick: () => {
+      _Help_Socket__WEBPACK_IMPORTED_MODULE_3__["CurrentUserInfo"].Menu.setPage(_Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].Back);
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: 'fa fa-arrow-left',
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 13
+    }
+  }), "\u0628\u0627\u0632\u06AF\u0634\u062A"));
+};
 
 /***/ }),
 
@@ -2999,7 +3082,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var primereact_dialog__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(primereact_dialog__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _ScreenRecordShower__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./ScreenRecordShower */ "./src/Components/ScreenRecordShower.js");
 /* harmony import */ var _ScreenRecordShowerSendRequest__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./ScreenRecordShowerSendRequest */ "./src/Components/ScreenRecordShowerSendRequest.js");
+/* harmony import */ var _LiveAssist_LiveAssistLayout__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./LiveAssist/LiveAssistLayout */ "./src/Components/LiveAssist/LiveAssistLayout.js");
+/* harmony import */ var _UsersSeparation_UsersSeparationData__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./UsersSeparation/UsersSeparationData */ "./src/Components/UsersSeparation/UsersSeparationData.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\CustomerToolbar.js";
+
+
 
 
 
@@ -3052,28 +3139,35 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52,
+        lineNumber: 54,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CustomerInfo__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55,
+        lineNumber: 57,
         columnNumber: 17
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OtherTools__WEBPACK_IMPORTED_MODULE_10__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57,
+        lineNumber: 59,
+        columnNumber: 17
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UsersSeparation_UsersSeparationData__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60,
         columnNumber: 17
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserDeviceInfo__WEBPACK_IMPORTED_MODULE_8__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58,
+        lineNumber: 62,
         columnNumber: 17
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3081,7 +3175,7 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59,
+        lineNumber: 63,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3089,7 +3183,7 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61,
+        lineNumber: 65,
         columnNumber: 21
       }
     }, "\u0627\u0631\u0633\u0627\u0644 \u0641\u0631\u0645"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3097,21 +3191,21 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
+        lineNumber: 69,
         columnNumber: 21
       }
     }, !_Help_DataHolder__WEBPACK_IMPORTED_MODULE_5__["DataHolder"].selectedCustomer && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67,
+        lineNumber: 71,
         columnNumber: 58
       }
     }, "\u06A9\u0627\u0631\u0628\u0631\u06CC \u0627\u0646\u062A\u062E\u0627\u0628 \u0646\u0634\u062F\u0647 \u0627\u0633\u062A"), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_5__["DataHolder"].selectedCustomer && (!this.state.formList || this.state.formList.length == 0) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
+        lineNumber: 74,
         columnNumber: 28
       }
     }, "\u0647\u06CC\u0686 \u0641\u0631\u0645\u06CC \u062A\u0639\u0631\u06CC\u0641 \u0646\u0634\u062F\u0647 \u0648 \u06CC\u0627 \u062A\u0645\u0627\u0645\u06CC \u0641\u0631\u0645 \u0647\u0627 \u0627\u0633\u062A\u0641\u0627\u062F\u0647 \u0634\u062F\u0647 \u0627\u0633\u062A"), this.state.formList && this.state.formList.map((el, i, arr) => {
@@ -3124,7 +3218,7 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78,
+          lineNumber: 82,
           columnNumber: 33
         }
       }, el.Name, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -3136,7 +3230,7 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80,
+          lineNumber: 84,
           columnNumber: 98
         }
       })));
@@ -3144,21 +3238,21 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 95,
         columnNumber: 17
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserTags__WEBPACK_IMPORTED_MODULE_9__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93,
+        lineNumber: 97,
         columnNumber: 17
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LastPagesVisited__WEBPACK_IMPORTED_MODULE_11__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 100,
         columnNumber: 12
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SendFromHelpDeskModal__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -3167,14 +3261,14 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99,
+        lineNumber: 103,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SendFromHelpDesk__WEBPACK_IMPORTED_MODULE_14__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100,
+        lineNumber: 104,
         columnNumber: 21
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SendFromHelpDeskModal__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -3184,14 +3278,14 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105,
+        lineNumber: 109,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ScreenRecordShowerSendRequest__WEBPACK_IMPORTED_MODULE_17__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107,
+        lineNumber: 111,
         columnNumber: 21
       }
     })));
@@ -4141,6 +4235,8 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
     _Help_DataHolder__WEBPACK_IMPORTED_MODULE_7__["DataHolder"].selectedEventTrigger.Id = res.Id;
 
     Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_2__["_showMsg"])("با موفقیت ذخیره شد");
+
+    this.componentDidMount();
   }
 
   eventTriggerDeleteCallback(res) {
@@ -4191,7 +4287,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79,
+        lineNumber: 81,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -4202,14 +4298,14 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81,
+        lineNumber: 83,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85,
+        lineNumber: 87,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -4217,14 +4313,14 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86,
+        lineNumber: 88,
         columnNumber: 25
       }
     })), "Event Trigger \u062C\u062F\u06CC\u062F"), this.state.list && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_ListGroup__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 93,
         columnNumber: 17
       }
     }, this.state.list.map((l, i, arr) => {
@@ -4233,7 +4329,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94,
+          lineNumber: 96,
           columnNumber: 32
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -4245,7 +4341,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96,
+          lineNumber: 98,
           columnNumber: 28
         }
       }, l.Name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -4253,12 +4349,18 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102,
+          lineNumber: 104,
           columnNumber: 26
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputswitch__WEBPACK_IMPORTED_MODULE_4__["InputSwitch"], {
         checked: l.IsEnabled,
         onChange: e => {
+          if (!l.Id) {
+            Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_2__["_showError"])(" را زخیره کنید   (Event Trigger) لطفا ابتدا این رویداد ");
+
+            return;
+          }
+
           if (!l.IsEnabled) {
             l.IsEnabled = true;
           } else {
@@ -4273,7 +4375,7 @@ class EventTriggerIndex extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] 
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103,
+          lineNumber: 105,
           columnNumber: 30
         }
       })));
@@ -5642,6 +5744,7 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       linkTitle: "افزودن یک صفحه",
       onConfirm: pages => {
         _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger['pages'] = pages;
+        console.log('DataHolder.selectedEventTrigger>>>', _Help_DataHolder__WEBPACK_IMPORTED_MODULE_9__["DataHolder"].selectedEventTrigger);
         this.setState({
           pages
         });
@@ -5656,7 +5759,7 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 247,
+        lineNumber: 249,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
@@ -5668,7 +5771,7 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 249,
+        lineNumber: 251,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["FormInModalWithTable"], {
@@ -5688,26 +5791,26 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 255,
+        lineNumber: 257,
         columnNumber: 33
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 270,
+        lineNumber: 272,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
       onChange: checked => this.setEnabled(checked, 'S_EventUserCustomName', 'S_EventDelay'),
       disabled: this.Isdisabled('S_EventUserCustomName'),
-      title: 'در event خاص شما',
+      title: ' خاص شما event در ',
       name: 'EventUserCustomName',
       parent: this,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 272,
+        lineNumber: 274,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["FormInModalWithTable"], {
@@ -5725,17 +5828,18 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 278,
+        lineNumber: 280,
         columnNumber: 33
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 297,
+        lineNumber: 299,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_2__["MySwitcher"], {
+      onChange: checked => this.setEnabled(checked, 'S_EventDelay'),
       disabled: this.Isdisabled('S_EventDelay'),
       title: 'بعد از تاخیر ( زمان)',
       name: 'EventDelay',
@@ -5743,42 +5847,42 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 298,
+        lineNumber: 300,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 303,
+        lineNumber: 306,
         columnNumber: 33
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 304,
+        lineNumber: 307,
         columnNumber: 33
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 305,
+        lineNumber: 308,
         columnNumber: 33
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 306,
+        lineNumber: 309,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 307,
+        lineNumber: 310,
         columnNumber: 37
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -5786,14 +5890,14 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 308,
+        lineNumber: 311,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 310,
+        lineNumber: 313,
         columnNumber: 41
       }
     }, "\u0632\u0645\u0627\u0646 \u0628\u0647 \u062B\u0627\u0646\u06CC\u0647"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputnumber__WEBPACK_IMPORTED_MODULE_10__["InputNumber"], {
@@ -5809,14 +5913,14 @@ class EtFormTriggerEvents extends react__WEBPACK_IMPORTED_MODULE_0__["Component"
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 314,
+        lineNumber: 317,
         columnNumber: 41
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 329,
+        lineNumber: 332,
         columnNumber: 37
       }
     })))))));
@@ -6938,14 +7042,6 @@ class MyHeader extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 124,
-        columnNumber: 17
-      }
-    }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].selectedCustomer && _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].selectedCustomer.IsTyping && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WhileWriting__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      IsTyping: _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].selectedCustomer.IsTyping,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 127,
         columnNumber: 17
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -22499,6 +22595,678 @@ class LastPagesVisited extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./src/Components/LiveAssist/LiveAssistInitialize.js":
+/*!***********************************************************!*\
+  !*** ./src/Components/LiveAssist/LiveAssistInitialize.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Table */ "./node_modules/react-bootstrap/esm/Table.js");
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Help/Socket */ "./src/Help/Socket.js");
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Help/DataHolder */ "./src/Help/DataHolder.js");
+/* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
+var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\LiveAssist\\LiveAssistInitialize.js";
+
+
+
+
+
+
+
+class LiveAssistInitialize extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(...args) {
+    super(...args);
+    this.state = {};
+  }
+
+  sendRequest() {
+    if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_4__["DataHolder"].selectedCustomer) {
+      Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_5__["_showError"])("هیچ کاربری انتخاب نشده است");
+
+      return;
+    }
+
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_3__["CurrentUserInfo"].LiveAssistLayout.setState({
+      loading: true,
+      step: "show"
+    });
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_3__["MyCaller"].Send("LiveAssistRequest", {
+      customerId: _Help_DataHolder__WEBPACK_IMPORTED_MODULE_4__["DataHolder"].selectedCustomer.Id
+    });
+  }
+
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fa fa-television bigIcon",
+      "aria-hidden": "true",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26,
+        columnNumber: 9
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      striped: true,
+      bordered: true,
+      hover: true,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28,
+        columnNumber: 9
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29,
+        columnNumber: 11
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31,
+        columnNumber: 15
+      }
+    }, "\u0627\u0633\u062A\u0627\u0631\u062A \u0635\u0641\u062D\u0647 \u0645\u0631\u0648\u0631\u06AF\u0631 \u0645\u0634\u062A\u0631\u06A9"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34,
+        columnNumber: 11
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36,
+        columnNumber: 15
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37,
+        columnNumber: 17
+      }
+    }, "\u0628\u0631\u0627\u06CC \u0634\u0631\u0648\u0639 \u062F\u06A9\u0645\u0647 \u0632\u06CC\u0631 \u0631\u0627 \u0641\u0634\u0627\u0631 \u062F\u0647\u06CC\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      variant: "success",
+      onClick: () => {
+        this.sendRequest();
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fa fa-user-circle bigIcon",
+      "aria-hidden": "true",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 19
+      }
+    }), "\u0634\u0631\u0648\u0639"))))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (LiveAssistInitialize);
+
+/***/ }),
+
+/***/ "./src/Components/LiveAssist/LiveAssistLayout.js":
+/*!*******************************************************!*\
+  !*** ./src/Components/LiveAssist/LiveAssistLayout.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _LiveAssistInitialize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LiveAssistInitialize */ "./src/Components/LiveAssist/LiveAssistInitialize.js");
+/* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Help/Socket */ "./src/Help/Socket.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/Container */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var _LiveAssistShower__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LiveAssistShower */ "./src/Components/LiveAssist/LiveAssistShower.js");
+var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\LiveAssist\\LiveAssistLayout.js";
+
+
+
+
+
+
+
+class LiveAssistLayout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(arg) {
+    super(arg);
+    this.state = {};
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_2__["CurrentUserInfo"].LiveAssistLayout = this;
+  }
+
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18,
+        columnNumber: 13
+      }
+    }, this.state.loading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Spinner"], {
+      animation: "border",
+      role: "status",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "sr-only",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 21
+      }
+    }, "\u0644\u0637\u0641\u0627 \u0645\u0646\u062A\u0638\u0631 \u0628\u0645\u0627\u0646\u06CC\u062F ....")), !this.state.step && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LiveAssistInitialize__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27,
+        columnNumber: 17
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LiveAssistShower__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32,
+        columnNumber: 17
+      }
+    }));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (LiveAssistLayout);
+
+/***/ }),
+
+/***/ "./src/Components/LiveAssist/LiveAssistShower.js":
+/*!*******************************************************!*\
+  !*** ./src/Components/LiveAssist/LiveAssistShower.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Help/DataHolder */ "./src/Help/DataHolder.js");
+/* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Help/Socket */ "./src/Help/Socket.js");
+/* harmony import */ var _Pages_ChattedAndReturnedCustomerListPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Pages/ChattedAndReturnedCustomerListPage */ "./src/Pages/ChattedAndReturnedCustomerListPage.js");
+/* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var _styles_myStyle_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../styles/myStyle.css */ "./src/styles/myStyle.css");
+/* harmony import */ var _styles_myStyle_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_myStyle_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_shadow__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-shadow */ "./node_modules/react-shadow/react-shadow.esm.js");
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var scale_number_range__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! scale-number-range */ "./node_modules/scale-number-range/index.js");
+/* harmony import */ var scale_number_range__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(scale_number_range__WEBPACK_IMPORTED_MODULE_9__);
+var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\LiveAssist\\LiveAssistShower.js";
+
+
+
+
+
+
+
+
+
+
+
+class LiveAssistShower extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(ar) {
+    super(ar); // this.iframeRef = React.createRef();
+
+    this.state = {};
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_2__["CurrentUserInfo"].LiveAssistShower = this;
+    this.mouse = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    this.spinner = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    this.shadowRoot = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    this.scroller = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    this.fakeMouse = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+  }
+
+  setScroll(x, y) {
+    debugger;
+    this.shadowRoot.current.scrollTo(x, y);
+  }
+
+  isValid(data, name) {
+    if (!data || !data.Content || !data.Content[name]) {
+      console.error("data is null : LiveAssistSendDocCallback");
+      return false;
+    }
+
+    return true;
+  }
+
+  liveAssistSendDocCallback(data) {
+    if (!this.isValid(data, "htmlbase64")) {
+      return;
+    }
+
+    if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedCustomer) {
+      Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_4__["_showError"])("هیچ کاربری انتخاب نشده است");
+
+      return;
+    }
+
+    if (data.Content.CustomerId != _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedCustomer.Id) {
+      Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_4__["_showError"])("خطا در سیستم ، اطلاعات بازگشتی با کد کاربر انتخاب شده یکسان نیست لطفا مجددا امتحان کنید");
+
+      return;
+    }
+
+    let html = decodeURIComponent(escape(atob(data.Content.htmlbase64)));
+    this.html = html;
+    /*    let iframedoc =
+          this.iframeRef.current.contentDocument || this.iframeRef.current.contentWindow.document;
+    
+        iframedoc.body.innerHTML += html;*/
+
+    this.setState({
+      html: html,
+      CustomerId: data.Content.CustomerId,
+      width: data.Content.width,
+      height: data.Content.height
+    });
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_2__["CurrentUserInfo"].LiveAssistLayout.setState({
+      loading: false
+    });
+    /*
+        let shadow = this.shadowRoot.current.attachShadow({mode: 'open'});
+    
+        shadow.innerHTML+=html;*/
+  } //    MyCaller.Send("LiveAssistFireEvent", {x: ev.x, y: ev.y, event: JSON.stringify(parse(e)), type: type});
+
+
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 92,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      variant: 'primary',
+      onClick: () => {
+        this.configToSendMouseEvents();
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 95,
+        columnNumber: 9
+      }
+    }, !this.state.sendingMyEvents && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 101,
+        columnNumber: 11
+      }
+    }, " \u0627\u0631\u0633\u0627\u0644 \u062D\u0631\u06A9\u0627\u062A \u0645\u0627\u0648\u0633 \u0645\u0646"), this.state.sendingMyEvents && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Spinner"], {
+      animation: "border",
+      role: "status",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "sr-only",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 106,
+        columnNumber: 15
+      }
+    }, "\u062F\u0631 \u062D\u0627\u0644 \u0627\u0631\u0633\u0627\u0644 \u062D\u0631\u06A9\u0627\u062A \u0645\u0627\u0648\u0633")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 109,
+        columnNumber: 13
+      }
+    }, " \u062A\u0648\u0642\u0641 \u0627\u0631\u0633\u0627\u0644 \u062D\u0631\u06A9\u0627\u062A \u0645\u0627\u0648\u0633 \u0645\u0646"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 114,
+        columnNumber: 9
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        overflow: 'auto'
+      },
+      ref: this.scroller,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 116,
+        columnNumber: 11
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_shadow__WEBPACK_IMPORTED_MODULE_7__["default"].div, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 126,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: 'fakeMouse',
+      ref: this.fakeMouse,
+      style: {
+        top: '80px',
+        left: '15px',
+        right: '15px',
+        bottom: '15px',
+        position: this.state.html ? 'absolute' : 'relative',
+        zIndex: 99999999999999
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 129,
+        columnNumber: 15
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+      className: "mouse",
+      ref: this.mouse,
+      style: {
+        position: "absolute",
+        left: '0px',
+        width: '25px',
+        height: '25px'
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 136,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+      d: "M20,21l4.5,8l-3.4,2l-4.6-8.1L12,29V9l16,12H20z",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 137,
+        columnNumber: 19
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      ref: this.spinner,
+      style: {
+        position: 'absolute',
+        display: 'none'
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 140,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Spinner"], {
+      animation: "grow",
+      variant: "warning",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 141,
+        columnNumber: 19
+      }
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        height: '100vh',
+        overflow: 'auto'
+      },
+      ref: this.shadowRoot,
+      dangerouslySetInnerHTML: {
+        __html: this.state.html
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 145,
+        columnNumber: 15
+      }
+    }))));
+  }
+  /*======================================*/
+
+
+  isValid(data, name) {
+    if (!data || !data.Content || !data.Content[name]) {
+      console.error("data is null : LiveAssistSendDocCallback");
+      return false;
+    }
+
+    return true;
+  }
+
+  liveAssistFireEventCallback(res) {
+    //      const {x: ev.x, y: ev.y, event: JSON.stringify(parse(e)), type: type}=res.Content;
+    if (!this.isValid(res, "Event")) {
+      return;
+    }
+
+    let _event = JSON.parse(res.Content.Event);
+
+    this.firedEvents = _event;
+    if (res.Content.x && res.Content.y) this.fireMouseEventAndReRender(res.Content);
+    if (res.Content && res.Content.sx != null && res.Content.sy != null) _Help_Socket__WEBPACK_IMPORTED_MODULE_2__["CurrentUserInfo"].LiveAssistShower.setScroll(res.Content.sx, res.Content.sy);
+
+    if (res.Content.type === 'click') {
+      const x = this.mouseEvent.x;
+      const y = this.mouseEvent.y;
+      this.spinner.current.style.left = `${x}px`;
+      this.spinner.current.style.top = `${y}px`;
+      this.spinner.current.style.display = 'block';
+
+      if (!this.isTimeOutSet) {
+        this.isTimeOutSet = true;
+        setTimeout(() => {
+          this.spinner.current.style.display = 'none';
+          this.isTimeOutSet = false;
+        }, 1000);
+      }
+    } else if (res.Content.type === 'scroll') {} else if (res.Content.type === 'keydown') {} else if (res.Content.type === 'focus') {}
+  }
+
+  configToSendMouseEvents() {
+    this.setState({
+      sendingMyEvents: true
+    });
+    let html = this.fakeMouse.current;
+    html.addEventListener('mousemove', e => {
+      this.fireEvent('mousemove', e);
+    });
+    html.addEventListener('click', e => {
+      this.fireEvent('click', e);
+    });
+    window.addEventListener('scroll', e => {
+      this.fireEvent('scroll', e);
+    });
+    html.addEventListener('keydown', e => {
+      this.fireEvent('keydown', e);
+    });
+    html.addEventListener('focus', e => {
+      this.fireEvent('focus', e);
+    });
+  }
+
+  getMousePos(e) {
+    let distance = this.shadowRoot.current.getBoundingClientRect();
+    let y = e.offsetY;
+    let x = e.offsetX;
+    /*  y=Math.round((y<0 ? y*-1:y)  /0.6) ;
+      x=Math.round((x<0 ? x*-1:x)/0.6);
+      
+      */
+    // x=  scale(x, 0,this.state.width*0.6,0,this.state.width)
+    //  y=  scale(y, 0,this.state.height*0.6,0,this.state.height)
+
+    x = x / 0.6;
+    y = Math.round(y < 0 ? y * -1 : y);
+    x = Math.round(x < 0 ? x * -1 : x); //   x= scaleValue(x,[distance.width,distance.height],[this.state.width,this.state.height])
+    // y= scaleValue(y,[distance.width,distance.height],[this.state.width,this.state.height])
+    // let tupple=getPosition( e,this.shadowRoot.current)
+
+    debugger;
+    /*  let x= Math.round((e.pageX-element.left ))+ this.scroller.current.scrollLeft ;//scaleValue( e.offsetX + this.scroller.current.scrollLeft, [ element.width , element.height ], [ this.state.width, this.state.height ] );
+      let y= Math.round((e.pageY-element.top )) +this.scroller.current.scrollTop;//scaleValue( e.offsetY + this.scroller.current.scrollTop, [ element.width , element.height ], [ this.state.width, this.state.height ] );
+    */
+
+    return {
+      x: x,
+      y: y
+    };
+  }
+
+  fireEvent(type, e) {
+    let ev = this.getMousePos(e);
+    /*  ev.x=ev.x > 0 ? ev.x : 0;
+      ev.y=ev.y > 0 ? ev.y : 0;*/
+
+    this.firedEvents = e;
+    let scroll = this.shadowRoot.current;
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_2__["MyCaller"].Send("LiveAssistFireEventByAdmin", {
+      CustomerId: _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedCustomer.Id,
+      x: ev.x,
+      y: ev.y,
+      event: JSON.stringify(e),
+      type: type,
+      sx: scroll.scrollLeft,
+      sy: scroll.scrollTop
+    });
+  }
+
+  fireMouseEventAndReRender(mouseEvent) {
+    this.mouseEvent = mouseEvent; // Ask the browser to call render to start our animation
+
+    requestAnimationFrame(a => {
+      this.renderMouse(a);
+    });
+  }
+
+  renderMouse(a) {
+    // The a variable is the amount of milliseconds since we started our script
+    // Get a noise value based on the elapsed time
+    // This noise algorithm is returning values between [-1, 1] so we need to map them to [0, 1] by adding one to the value and dividing it by 2
+    //  const noiseX = (noise.simplex2(0, a*0.0005) + 1) / 2;
+    // We get another noise value for the y axis but because we don't want the same value than x, we need to use another value for the first parameter
+    //  const noiseY = (noise.simplex2(1, a*0.0005) + 1) / 2;
+    // Convert the noise values from [0, 1] to the size of the window
+    const x = this.mouseEvent.x; //this.getMousePos(this.mouseEvent).x; //noiseX * window.innerWidth;
+
+    const y = this.mouseEvent.y; // this.getMousePos(this.mouseEvent).y; //noiseY * window.innerHeight;
+    // Apply the x & y coordinates on our element
+
+    this.mouse.current.style.transform = `translate(${x}px, ${y}px)`; // Call the render function once the browser is ready to make it an infinite loop
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (LiveAssistShower);
+
+function getScroll() {
+  if (window.pageYOffset != undefined) {
+    return {
+      sx: window.pageXOffset,
+      sy: window.pageYOffset
+    };
+  } else {
+    var sx,
+        sy,
+        d = document,
+        r = d.documentElement,
+        b = d.body;
+    sx = r.scrollLeft || b.scrollLeft || 0;
+    sy = r.scrollTop || b.scrollTop || 0;
+    return {
+      sx,
+      sy
+    };
+  }
+}
+
+function scaleValue(value, from, to) {
+  var scale = (to[1] - to[0]) / (from[1] - from[0]);
+  var capped = Math.min(from[1], Math.max(from[0], value)) - from[0];
+  return Math.round(capped * scale + to[0]);
+}
+
+function getPosition(event, referenceElement) {
+  const position = {
+    x: event.pageX,
+    y: event.pageY
+  };
+  const offset = {
+    left: referenceElement.offsetLeft,
+    top: referenceElement.offsetTop
+  };
+  let reference = referenceElement.offsetParent;
+  /*while(reference){
+    offset.left += reference.offsetLeft;
+    offset.top += reference.offsetTop;
+    reference = reference.offsetParent;
+  }*/
+
+  return {
+    x: position.x - offset.left,
+    y: position.y - offset.top
+  };
+}
+
+/***/ }),
+
 /***/ "./src/Components/MarkAsResovled.js":
 /*!******************************************!*\
   !*** ./src/Components/MarkAsResovled.js ***!
@@ -22748,6 +23516,20 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }
     }, "\u067E\u0631\u0648\u0641\u0627\u06CC\u0644"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
       variant: "light",
+      id: 'usersSeparation',
+      className: 'btn btn-default ' + (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].currentPage === 'usersSeparation' ? ' bg-primary text-white ' : ''),
+      type: "button",
+      onClick: () => {
+        this.setPage('usersSeparation');
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69,
+        columnNumber: 17
+      }
+    }, "\u062A\u0641\u06A9\u06CC\u06A9 \u06A9\u0627\u0631\u0628\u0631\u0627\u0646 \u0639\u0636\u0648"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      variant: "light",
       className: 'btn btn-default ' + (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].currentPage === 'FormDataPage' ? ' bg-primary text-white ' : ''),
       type: "button",
       onClick: () => {
@@ -22756,7 +23538,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69,
+        lineNumber: 75,
         columnNumber: 17
       }
     }, "\u0627\u0637\u0644\u0627\u0639\u0627\u062A \u06A9\u0627\u0631\u0628\u0631\u0627\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -22771,7 +23553,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78,
+        lineNumber: 84,
         columnNumber: 17
       }
     }, "Help Desk  \u0645\u0642\u0627\u0644\u0627\u062A"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -22785,7 +23567,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87,
+        lineNumber: 93,
         columnNumber: 17
       }
     }, "\u0641\u0631\u0645 \u0633\u0627\u0632"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -22798,7 +23580,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 102,
         columnNumber: 17
       }
     }, "\u0634\u0628\u06A9\u0647 \u0647\u0627\u06CC \u0627\u062C\u062A\u0645\u0627\u0639\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -22811,7 +23593,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104,
+        lineNumber: 110,
         columnNumber: 17
       }
     }, "\u0627\u0631\u0633\u0627\u0644 \u0647\u0627\u06CC \u0627\u062A\u0648\u0645\u0627\u062A\u06CC\u06A9"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -22824,7 +23606,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111,
+        lineNumber: 117,
         columnNumber: 17
       }
     }, "\u0647\u0627     EventTrigger"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -22837,7 +23619,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 118,
+        lineNumber: 124,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShowPlusCount, {
@@ -22845,7 +23627,7 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123,
+        lineNumber: 129,
         columnNumber: 21
       }
     }), "\u0627\u062A\u0627\u0642 \u0686\u062A"), _Help_MyGlobal__WEBPACK_IMPORTED_MODULE_6__["MyGlobal"].isTestingEnvirement && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -22858,21 +23640,21 @@ class Menu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131,
+        lineNumber: 137,
         columnNumber: 25
       }
     }, "FakeServerMonitor"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 139,
+        lineNumber: 145,
         columnNumber: 17
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SubMenu__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141,
+        lineNumber: 147,
         columnNumber: 17
       }
     })))));
@@ -22886,7 +23668,7 @@ function ShowPlusCount(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153,
+        lineNumber: 159,
         columnNumber: 17
       }
     }, props.Count, "+");
@@ -23542,9 +24324,13 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 50
       }
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-      "aria-label": "\u0645\u0631\u0648\u0631\u06AF\u0631 \u0645\u0634\u062A\u0631\u06A9",
+      "aria-label": "\u0645\u0631\u0648\u0631\u06AF\u0631 \u0645\u0634\u062A\u0631\u06A9 \u06CC\u0627 \u06A9\u0645\u06A9 \u0628\u0631 \u062E\u0637 ",
       "data-microtip-position": "top",
       role: "tooltip",
+      onClick: () => {
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].Back = null;
+        _Help_Socket__WEBPACK_IMPORTED_MODULE_4__["CurrentUserInfo"].Menu.setPage('LiveAssistPage'); //CurrentUserInfo.Modals['LiveAssistModal'].show();
+      },
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -23556,7 +24342,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83,
+        lineNumber: 92,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -23564,7 +24350,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84,
+        lineNumber: 93,
         columnNumber: 37
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -23572,14 +24358,14 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84,
+        lineNumber: 93,
         columnNumber: 50
       }
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 100,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -23592,7 +24378,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92,
+        lineNumber: 101,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -23600,7 +24386,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97,
+        lineNumber: 106,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -23608,7 +24394,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98,
+        lineNumber: 107,
         columnNumber: 41
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -23617,7 +24403,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99,
+        lineNumber: 108,
         columnNumber: 45
       }
     })))))))));
@@ -25313,6 +26099,7 @@ class PrimengModal extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_dialog__WEBPACK_IMPORTED_MODULE_2__["Dialog"], {
+      maximized: this.props.maximized,
       maximizable: true,
       modal: true,
       header: this.props.title,
@@ -26949,17 +27736,868 @@ class UserTags extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./src/Components/UsersSeparation/UsersSeparationData.js":
+/*!***************************************************************!*\
+  !*** ./src/Components/UsersSeparation/UsersSeparationData.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Table */ "./node_modules/react-bootstrap/esm/Table.js");
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Help/DataHolder */ "./src/Help/DataHolder.js");
+/* harmony import */ var _styles_myStyle_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../styles/myStyle.css */ "./src/styles/myStyle.css");
+/* harmony import */ var _styles_myStyle_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_myStyle_css__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\UsersSeparation\\UsersSeparationData.js";
+
+
+
+
+
+class UsersSeparationData extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].selectedCustomer || !_Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].selectedCustomer.UsersSeparationParams) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+    }
+
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "card  ",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "card-header bg-info text-white",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18,
+        columnNumber: 21
+      }
+    }, "\u06A9\u0627\u0631\u0628\u0631 \u0639\u0636\u0648 \u0627\u0633\u062A"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "card-body usData ",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 21
+      }
+    }, _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].selectedCustomer && _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].selectedCustomer.UsersSeparationParams && _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].selectedCustomer.UsersSeparationParams.map((data, i, arr) => {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 32
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31,
+          columnNumber: 29
+        }
+      }, data.paramText), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37,
+          columnNumber: 29
+        }
+      }, data.paramValue));
+    }))))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (UsersSeparationData);
+
+/***/ }),
+
+/***/ "./src/Components/UsersSeparation/UsersSeparationForm.js":
+/*!***************************************************************!*\
+  !*** ./src/Components/UsersSeparation/UsersSeparationForm.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Utilities_Utility__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Utilities/Utility */ "./src/Components/Utilities/Utility.js");
+/* harmony import */ var react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap/Card */ "./node_modules/react-bootstrap/esm/Card.js");
+/* harmony import */ var primereact_radiobutton__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primereact/radiobutton */ "./node_modules/primereact/radiobutton.js");
+/* harmony import */ var primereact_radiobutton__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(primereact_radiobutton__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Help/Socket */ "./src/Help/Socket.js");
+/* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Help/DataHolder */ "./src/Help/DataHolder.js");
+/* harmony import */ var react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap/Container */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap/Col */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap/Row */ "./node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var _styles_myStyle_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../styles/myStyle.css */ "./src/styles/myStyle.css");
+/* harmony import */ var _styles_myStyle_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_styles_myStyle_css__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-bootstrap/Table */ "./node_modules/react-bootstrap/esm/Table.js");
+var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\UsersSeparation\\UsersSeparationForm.js";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class UsersSeparationForm extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      enabled: true
+    };
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].UsersSeparationForm = this;
+  }
+
+  componentDidMount() {
+    Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showMsg"])("در حال خواندن اطلاعات");
+
+    this.setState({
+      loading: true
+    });
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["MyCaller"].Send('GetUsersSeparationForm');
+  }
+
+  getUsersSeparationFormCallback(res) {
+    this.setState({
+      loading: false
+    });
+
+    if (!res || !res.Content) {
+      //  _showError("اطلاعات بازگشتی از سرور دارای خطاست" + "getUsersSeparationForm");
+      return;
+    }
+
+    this.setState({
+      enabled: res.Content.enabled,
+      type: res.Content.type,
+      RestApiUrl: res.Content.RestApiUrl,
+      params: res.Content.params,
+      UrlPattern: res.Content.UrlPattern,
+      Id: res.Content.Id
+    });
+  }
+
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.loading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
+      animation: "border",
+      role: "status",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "sr-only",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58,
+        columnNumber: 21
+      }
+    }, "\u0644\u0637\u0641\u0627 \u0645\u0646\u062A\u0638\u0631 \u0628\u0645\u0627\u0646\u06CC\u062F ....")), !this.state.loading && this.renderBody());
+  }
+
+  renderBody() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71,
+        columnNumber: 16
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 74,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 76,
+        columnNumber: 17
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: 'justify-content-md-center',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 80,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "p-field-radiobutton",
+      style: {
+        display: 'flex'
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 82,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 83,
+        columnNumber: 25
+      }
+    }, "\u0641\u0639\u0627\u0644"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_radiobutton__WEBPACK_IMPORTED_MODULE_3__["RadioButton"], {
+      value: "\u0641\u0639\u0627\u0644",
+      name: "enabled",
+      id: 'enable',
+      onChange: e => this.setState({
+        enabled: true
+      }),
+      checked: this.state.enabled,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 84,
+        columnNumber: 25
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 88,
+        columnNumber: 25
+      }
+    }, "\u063A\u06CC\u0631 \u0641\u0639\u0627\u0644"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_radiobutton__WEBPACK_IMPORTED_MODULE_3__["RadioButton"], {
+      value: "\u063A\u06CC\u0631 \u0641\u0639\u0627\u0644",
+      name: "enabled",
+      onChange: e => this.setState({
+        enabled: false
+      }),
+      checked: !this.state.enabled,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 88,
+        columnNumber: 49
+      }
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 95,
+        columnNumber: 17
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 100,
+        columnNumber: 13
+      }
+    }), this.state.enabled && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 104,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      md: {
+        span: 8,
+        offset: 2,
+        pull: 2
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 106,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_2__["default"].Header, {
+      className: 'bg-info text-white',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 107,
+        columnNumber: 29
+      }
+    }, "\u0627\u0637\u0644\u0627\u0639\u0627\u062A \u0627\u0635\u0644\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_2__["default"].Body, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 108,
+        columnNumber: 29
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_1__["MyInputG"], {
+      id: 'url-pattern',
+      title: 'الگو تفکیک صفحات ',
+      name: 'UrlPattern',
+      parent: this,
+      placeholder: 'چه صفحاتی مخصوص کاربران عضو است ؟ برای مثال : siteurl.com/dashboard/*',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 111,
+        columnNumber: 25
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 114,
+        columnNumber: 25
+      }
+    }, "\u062F\u0631 \u0635\u0648\u0631\u062A \u062E\u0627\u0644\u06CC \u0628\u0648\u062F\u0646 \u0627\u0644\u06AF\u0648\u06CC \u062A\u0641\u06A9\u06CC\u06A9. \u062F\u0631 \u0647\u0645\u0647 \u0635\u0641\u062D\u0627\u062A \u0641\u0639\u0627\u0644 \u062E\u0648\u0627\u0647\u062F \u0628\u0648\u062F "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: 'marginTop',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 117,
+        columnNumber: 25
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "p-field-radiobutton",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 119,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 120,
+        columnNumber: 29
+      }
+    }, "(rest api) \u0627\u0633\u062A\u0641\u0627\u062F\u0647 \u0627\u0632 \u0631\u0648\u0634 \u0648\u0628 \u0633\u0631\u0648\u06CC\u0633 "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_radiobutton__WEBPACK_IMPORTED_MODULE_3__["RadioButton"], {
+      value: "(rest api)  \u0627\u0633\u062A\u0641\u0627\u062F\u0647 \u0627\u0632 \u0631\u0648\u0634 \u0648\u0628 \u0633\u0631\u0648\u06CC\u0633  ",
+      name: "type",
+      id: 'rest-api-type',
+      onChange: e => this.setState({
+        type: 'rest-api-type'
+      }),
+      checked: this.state.type === 'rest-api-type',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 122,
+        columnNumber: 29
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "p-field-radiobutton",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 127,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 128,
+        columnNumber: 29
+      }
+    }, " css selector \u0627\u0633\u062A\u0641\u0627\u062F\u0647 \u0627\u0632 \u0631\u0648\u0634 "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_radiobutton__WEBPACK_IMPORTED_MODULE_3__["RadioButton"], {
+      value: "  css selector  \u0627\u0633\u062A\u0641\u0627\u062F\u0647 \u0627\u0632 \u0631\u0648\u0634   ",
+      name: "css-selector-type",
+      onChange: e => this.setState({
+        type: 'css-selector-type'
+      }),
+      checked: this.state.type === 'type',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 129,
+        columnNumber: 29
+      }
+    })), this.state.type === 'rest-api-type' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_1__["MyInputG"], {
+      id: 'rest-api',
+      title: 'آدرس وب سرویس خواندن اطلاعات کاربر',
+      name: 'RestApiUrl',
+      parent: this,
+      placeholder: 'برای مثال: siteurl.com/api/getCurrentUserInfo',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 138,
+        columnNumber: 29
+      }
+    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 149,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_2__["default"].Header, {
+      className: 'bg-info text-white',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 150,
+        columnNumber: 29
+      }
+    }, "\u062A\u0639\u0631\u06CC\u0641 \u067E\u0627\u0631\u0627\u0645\u062A\u0631 \u0647\u0627\u06CC \u0642\u0627\u0628\u0644 \u062E\u0648\u0627\u0646\u062F\u0646 "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_2__["default"].Body, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 151,
+        columnNumber: 29
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 153,
+        columnNumber: 25
+      }
+    }, "\u062A\u0639\u0631\u06CC\u0641 \u067E\u0627\u0631\u0627\u0645\u062A\u0631 \u0647\u0627\u06CC \u0642\u0627\u0628\u0644 \u062E\u0648\u0627\u0646\u062F\u0646 "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      id: 'addNewParam',
+      variant: 'light',
+      onClick: () => {
+        let params = this.state.params;
+
+        if (!params) {
+          params = [];
+        }
+
+        params.push({});
+        this.setState({
+          params: params
+        });
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 156,
+        columnNumber: 25
+      }
+    }, "\u067E\u0627\u0631\u0627\u0645\u062A\u0631 \u062C\u062F\u06CC\u062F", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: 'fa fa-plus',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 169,
+        columnNumber: 29
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 173,
+        columnNumber: 25
+      }
+    }), this.showParams())))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 187,
+        columnNumber: 13
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      id: 'save',
+      variant: 'primary',
+      onClick: () => {
+        this.save();
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 189,
+        columnNumber: 13
+      }
+    }, "\u0630\u062E\u06CC\u0631\u0647", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: 'fa fa-check',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 194,
+        columnNumber: 17
+      }
+    })));
+  }
+
+  showParams() {
+    if (!this.state.params || !this.state.params.length) return;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 205,
+        columnNumber: 16
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 206,
+        columnNumber: 13
+      }
+    }, this.state.params.filter(p => !p.IsDeleted).map((param, i, arr) => {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 209,
+          columnNumber: 24
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 210,
+          columnNumber: 20
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UserSeparationParameter, {
+        param: param,
+        onChange: (paramName, paramText, paramType) => {
+          this.state.params[i].paramName = paramName;
+          this.state.params[i].paramText = paramText;
+          this.state.params[i].paramType = paramType;
+          this.setState({
+            params: this.state.params,
+            tn: Math.random()
+          });
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 211,
+          columnNumber: 24
+        }
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 223,
+          columnNumber: 19
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+        variant: 'danger',
+        onClick: () => {
+          let params = this.state.params.filter(p => p !== param); //  this.state.params[i].IsDeleted = true;
+
+          this.setState({
+            params: params,
+            tn: Math.random()
+          });
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 224,
+          columnNumber: 23
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: 'fa fa-minus',
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 233,
+          columnNumber: 27
+        }
+      }))));
+    })));
+  }
+
+  save() {
+    if (this.state.enabled) {
+      if (!this.state.UrlPattern) {
+        Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])("خالی بودن الگوی انتخاب ");
+      }
+
+      if (!this.state.params || !this.state.params.length) {
+        Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])("هیچ پارامتری تعریف نشده است");
+
+        return;
+      }
+
+      if (!this.state.type === 'rest-api-type' || !this.state.RestApiUrl) {
+        Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showError"])("ادرس وب سرویس وارد نشده است");
+
+        return;
+      }
+    }
+
+    Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showMsg"])("در حال ثبت");
+
+    this.setState({
+      loading: true
+    });
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["MyCaller"].Send("SaveUsersSeparationForm", {
+      Id: this.state.Id,
+      enabled: this.state.enabled,
+      type: this.state.type,
+      RestApiUrl: this.state.RestApiUrl,
+      params: this.state.params,
+      UrlPattern: this.state.UrlPattern
+    });
+  }
+
+  saveUsersSeparationFormCallback(res) {
+    this.setState({
+      loading: false
+    });
+
+    Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_6__["_showMsg"])("ثبت شد");
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (UsersSeparationForm);
+
+const UserSeparationParameter = props => {
+  let fakeParent = {
+    state: props.param
+  };
+  const [paramType, setParamType] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.param.paramType);
+  const [paramName, setParamName] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.param.paramName);
+  const [paramText, setParamText] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.param.paramText);
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    setParamType(props.param.paramType);
+  }, [props.param.paramType]);
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    setParamName(props.param.paramName);
+  }, [props.param.paramName]);
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    setParamText(props.param.paramText);
+  }, [props.param.paramText]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "p-field-radiobutton",
+    style: {
+      display: 'flex'
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 322,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 324,
+      columnNumber: 13
+    }
+  }, "\u067E\u0627\u0631\u0627\u0645\u062A\u0631 \u0648\u0628 \u0633\u0631\u0648\u06CC\u0633"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_radiobutton__WEBPACK_IMPORTED_MODULE_3__["RadioButton"], {
+    value: "\u067E\u0627\u0631\u0627\u0645\u062A\u0631 \u0648\u0628 \u0633\u0631\u0648\u06CC\u0633",
+    name: "param-type",
+    className: 'param-type-rest',
+    onChange: e => {
+      setParamType('param-type-rest');
+      props.onChange(paramName, paramText, 'param-type-rest');
+    },
+    checked: paramType === 'param-type-rest',
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 325,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 334,
+      columnNumber: 13
+    }
+  }, "\u067E\u0627\u0631\u0627\u0645\u062A\u0631 css selector"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_radiobutton__WEBPACK_IMPORTED_MODULE_3__["RadioButton"], {
+    value: "\u067E\u0627\u0631\u0627\u0645\u062A\u0631 css selector",
+    name: "param-type",
+    className: 'param-type-css',
+    onChange: e => {
+      setParamType('param-type-css');
+      props.onChange(paramName, paramText, 'param-type-css');
+    },
+    checked: paramType === 'param-type-css',
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 335,
+      columnNumber: 13
+    }
+  })), paramType === 'param-type-css' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_1__["MyInputG"], {
+    id: 'param-name',
+    className: 'param-name',
+    title: 'نام پارامتر در  css selector',
+    name: 'paramName',
+    parent: fakeParent,
+    placeholder: 'ایی که خوانده خواهد شد(Unique) نام یکتای  ',
+    onChange: val => {
+      setParamName(val);
+      props.onChange(val, paramText, paramType);
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 347,
+      columnNumber: 9
+    }
+  }), paramType === 'param-type-rest' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_1__["MyInputG"], {
+    id: 'param-name',
+    className: 'param-name',
+    title: 'نام پارامتر در وب سرویس',
+    name: 'paramName',
+    parent: fakeParent,
+    placeholder: 'ایی که خوانده خواهد شد(Unique) نام یکتای  ',
+    onChange: val => {
+      setParamName(val);
+      props.onChange(val, paramText, paramType);
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 360,
+      columnNumber: 9
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utility__WEBPACK_IMPORTED_MODULE_1__["MyInputG"], {
+    id: 'param-text',
+    className: 'param-text',
+    title: 'نام فارسی پارامتر',
+    name: 'paramText',
+    parent: fakeParent,
+    placeholder: 'ایی که در قسمت داشبورد نمایش داده خواهد شد(Unique) نام یکتای  ',
+    onChange: val => {
+      setParamText(val);
+      props.onChange(paramName, val, paramType);
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 370,
+      columnNumber: 9
+    }
+  }));
+};
+
+/***/ }),
+
+/***/ "./src/Components/UsersSeparation/UsersSeparationLayout.js":
+/*!*****************************************************************!*\
+  !*** ./src/Components/UsersSeparation/UsersSeparationLayout.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _UsersSeparationForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UsersSeparationForm */ "./src/Components/UsersSeparation/UsersSeparationForm.js");
+var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\UsersSeparation\\UsersSeparationLayout.js";
+
+
+
+class UsersSeparationLayout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: 'text-center',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 15
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 19
+      }
+    }, "\u0635\u0641\u062D\u0647 \u062A\u0641\u06A9\u06CC\u06A9 \u06A9\u0627\u0631\u0628\u0631\u0627\u0646 \u0639\u0636\u0648"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12,
+        columnNumber: 19
+      }
+    }, "\u062F\u0631 \u0627\u06CC\u0646 \u0628\u062E\u0634 \u0645\u06CC\u062A\u0648\u0627\u0646\u06CC\u062F \u0628\u0627\u0632\u062F\u06CC\u062F\u06A9\u0646\u0646\u062F\u06AF\u0627\u0646 \u0633\u0627\u06CC\u062A \u062E\u0648\u062F \u0631\u0627 \u0628\u0627 \u06A9\u0627\u0631\u0628\u0631\u0627\u0646 \u0639\u0636\u0648 \u062A\u0641\u06A9\u06CC\u06A9 \u0646\u0645\u0648\u062F\u0647 \u0628\u0627 \u0627\u0637\u0644\u0627\u0639\u0627\u062A \u0648 \u0634\u0646\u0627\u062E\u062A \u0628\u0647\u062A\u0631 \u060C \u06A9\u06CC\u0641\u06CC\u062A \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC \u0631\u0627 \u0627\u0641\u0632\u0627\u06CC\u0634 \u062F\u0647\u06CC\u062F")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UsersSeparationForm__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19,
+        columnNumber: 17
+      }
+    }));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (UsersSeparationLayout);
+
+/***/ }),
+
 /***/ "./src/Components/Utilities/Utility.js":
 /*!*********************************************!*\
   !*** ./src/Components/Utilities/Utility.js ***!
   \*********************************************/
-/*! exports provided: MyInput, MySwitcher, AddLocalizedMessage, FormInModalWithTable */
+/*! exports provided: MyInput, MySwitcher, MyInputG, AddLocalizedMessage, FormInModalWithTable */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyInput", function() { return MyInput; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MySwitcher", function() { return MySwitcher; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyInputG", function() { return MyInputG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddLocalizedMessage", function() { return AddLocalizedMessage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormInModalWithTable", function() { return FormInModalWithTable; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -27007,7 +28645,7 @@ const MyInput = props => {
       lineNumber: 25,
       columnNumber: 9
     }
-  }, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputtext__WEBPACK_IMPORTED_MODULE_1__["InputText"], {
+  }, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputtext__WEBPACK_IMPORTED_MODULE_1__["InputText"], Object.assign({}, props, {
     placeholder: props.placeholder,
     className: 'float-left',
     style: {
@@ -27038,7 +28676,7 @@ const MyInput = props => {
       lineNumber: 26,
       columnNumber: 9
     }
-  }));
+  })));
 };
 const MySwitcher = props => {
   const [val, setVal] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.checked);
@@ -27100,6 +28738,52 @@ const MySwitcher = props => {
     }
   }), val && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, props.children));
 };
+const MyInputG = props => {
+  const [val, setVal] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
+  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(() => {
+    setVal(props.parent.state[props.name]);
+  }, [props.parent.state[props.name]]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: 'float-right',
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99,
+      columnNumber: 9
+    }
+  }, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputtext__WEBPACK_IMPORTED_MODULE_1__["InputText"], Object.assign({}, props, {
+    placeholder: props.placeholder,
+    className: 'float-left ' + props.className,
+    style: {
+      width: '100%'
+    },
+    value: val,
+    onChange: e => {
+      setVal(e.target.value);
+
+      if (props.parent && props.parent.setState) {
+        props.parent.state[props.name] = e.target.value;
+        props.parent.setState({
+          tmp: Math.random()
+        });
+      }
+
+      if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger && !props.noEventHandler) {
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_11__["DataHolder"].selectedEventTrigger[props.name] = e.target.value;
+      }
+
+      if (props.onChange) {
+        props.onChange(e.target.value);
+      }
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100,
+      columnNumber: 9
+    }
+  })));
+};
 const AddLocalizedMessage = props => {
   const [textArea, setTextArea] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
   const [lang, setLang] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
@@ -27109,7 +28793,7 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97,
+      lineNumber: 129,
       columnNumber: 19
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -27133,7 +28817,7 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98,
+      lineNumber: 130,
       columnNumber: 9
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -27147,7 +28831,7 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117,
+      lineNumber: 149,
       columnNumber: 9
     }
   }));
@@ -27158,7 +28842,7 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130,
+      lineNumber: 162,
       columnNumber: 9
     }
   }, props.title ? props.title : 'یک پیغام بومی سازی شده اضافه کنید'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_dialog__WEBPACK_IMPORTED_MODULE_4__["Dialog"], {
@@ -27173,21 +28857,21 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140,
+      lineNumber: 172,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144,
+      lineNumber: 176,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145,
+      lineNumber: 177,
       columnNumber: 17
     }
   }, "\u0632\u0628\u0627\u0646 \u0645\u062D\u0644\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HelpDesk_Language_Language__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -27199,49 +28883,49 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147,
+      lineNumber: 179,
       columnNumber: 17
     }
   })), !props.noinput && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158,
+      lineNumber: 190,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159,
+      lineNumber: 191,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160,
+      lineNumber: 192,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161,
+      lineNumber: 193,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162,
+      lineNumber: 194,
       columnNumber: 16
     }
   }, "\u0645\u062A\u0646 \u067E\u06CC\u063A\u0627\u0645"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163,
+      lineNumber: 195,
       columnNumber: 16
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputtextarea__WEBPACK_IMPORTED_MODULE_6__["InputTextarea"], {
@@ -27252,7 +28936,7 @@ const AddLocalizedMessage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164,
+      lineNumber: 196,
       columnNumber: 16
     }
   })), props.body), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, props.children));
@@ -27270,7 +28954,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196,
+      lineNumber: 228,
       columnNumber: 19
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -27285,7 +28969,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 197,
+      lineNumber: 229,
       columnNumber: 9
     }
   }));
@@ -27296,7 +28980,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 242,
       columnNumber: 9
     }
   }, props.linkTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_dialog__WEBPACK_IMPORTED_MODULE_4__["Dialog"], {
@@ -27311,7 +28995,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219,
+      lineNumber: 251,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MyInput, {
@@ -27327,7 +29011,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224,
+      lineNumber: 256,
       columnNumber: 13
     }
   }), props.secondinputTitle && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MyInput, {
@@ -27342,7 +29026,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233,
+      lineNumber: 265,
       columnNumber: 13
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_3__["Button"], {
@@ -27367,7 +29051,7 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240,
+      lineNumber: 272,
       columnNumber: 13
     }
   }, "\u0627\u0641\u0632\u0648\u062F\u0646")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, messages && messages.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -27377,42 +29061,42 @@ const FormInModalWithTable = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271,
+      lineNumber: 303,
       columnNumber: 17
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272,
+      lineNumber: 304,
       columnNumber: 21
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273,
+      lineNumber: 305,
       columnNumber: 21
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274,
+      lineNumber: 306,
       columnNumber: 25
     }
   }, props.inputTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275,
+      lineNumber: 307,
       columnNumber: 25
     }
   }, "\u062D\u0630\u0641"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278,
+      lineNumber: 310,
       columnNumber: 21
     }
   }, messages && messages.length > 0 && messages.map((m, i, arr) => {
@@ -27420,21 +29104,21 @@ const FormInModalWithTable = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 282,
+        lineNumber: 314,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 284,
+        lineNumber: 316,
         columnNumber: 33
       }
     }, m.Name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 285,
+        lineNumber: 317,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -27453,7 +29137,7 @@ const FormInModalWithTable = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 286,
+        lineNumber: 318,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -27461,7 +29145,7 @@ const FormInModalWithTable = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 300,
+        lineNumber: 332,
         columnNumber: 41
       }
     }))));
@@ -28169,54 +29853,14 @@ class WhileWriting extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   render() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.props.IsTyping && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      id: "gapwhileWriting",
+      className: "typing-loader",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
-        columnNumber: 42
+        lineNumber: 31,
+        columnNumber: 41
       }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "lds-ellipsis",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21,
-        columnNumber: 21
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "whileWriting",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 23,
-        columnNumber: 14
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "whileWriting",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24,
-        columnNumber: 14
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "whileWriting",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25,
-        columnNumber: 14
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "whileWriting",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26,
-        columnNumber: 14
-      }
-    }))));
+    }));
   }
 
 }
@@ -28379,15 +30023,49 @@ __webpack_require__.r(__webpack_exports__);
 
 class dispatcher {
   dispatch(res) {
-    if (res.Type == -1) //error
-      {
-        console.error(res.Message);
-      }
+    if (res.Type == -1) {
+      //error
+      console.error(res.Message);
+    }
 
-    console.log('dispatcher===>', res.Name);
+    console.log("dispatcher===>", res.Name);
 
     switch (res.Name) {
+      /* ===============Users Separation =============== */
+      case "getUsersSeparationFormCallback":
+        if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].UsersSeparationForm) {
+          _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].UsersSeparationForm.getUsersSeparationFormCallback(res);
+        }
+
+        break;
+
+      case "saveUsersSeparationFormCallback":
+        if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].UsersSeparationForm) {
+          _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].UsersSeparationForm.saveUsersSeparationFormCallback(res);
+        }
+
+        break;
+
+      /* =============== END =============== */
+
+      /* =============== live Assist =============== */
+
+      case "liveAssistSendDocCallback":
+        if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LiveAssistShower) {
+          _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LiveAssistShower.liveAssistSendDocCallback(res);
+        }
+
+        break;
+
+      case "liveAssistFireEventCallback":
+        if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LiveAssistShower) {
+          _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LiveAssistShower.liveAssistFireEventCallback(res);
+        }
+
+        break;
+
       /*========== eventTrigger==========*/
+
       case "eventTriggerGetAllCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].EventTriggerIndex) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].EventTriggerIndex.eventTriggerGetAllCallback(res);
@@ -28518,10 +30196,10 @@ class dispatcher {
         break;
 
       /*======= helpDeskSettin
-      
-      
-      
-       */
+            
+            
+            
+             */
 
       /*=============article===========*/
 
@@ -28612,14 +30290,14 @@ class dispatcher {
 
         break;
 
-      case 'saveFormDataCallback':
+      case "saveFormDataCallback":
         /*لیست کامپونت های فرم ها در این ابجکت نگه داری می شود|*/
         if (_Components_FormShowerInChat__WEBPACK_IMPORTED_MODULE_4__["FormShowerInChatHolder"]) {
           /*form.AfterMessage,
-                      formId,
-                      chatId,
-                      FormValues*/
-          let FormShowerInChat = _Components_FormShowerInChat__WEBPACK_IMPORTED_MODULE_4__["FormShowerInChatHolder"][res.Content.formId + '' + res.Content.UniqId];
+                                formId,
+                                chatId,
+                                FormValues*/
+          let FormShowerInChat = _Components_FormShowerInChat__WEBPACK_IMPORTED_MODULE_4__["FormShowerInChatHolder"][res.Content.formId + "" + res.Content.UniqId];
 
           if (FormShowerInChat) {
             FormShowerInChat.saveFormDataCallback(res);
@@ -28628,28 +30306,28 @@ class dispatcher {
 
         break;
 
-      case 'deleteFormCallback':
+      case "deleteFormCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormCreatorPage) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormCreatorPage.deleteFormCallback(res);
         }
 
         break;
 
-      case 'saveFormCallback':
+      case "saveFormCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormCreatorPage) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormCreatorPage.saveFormCallback(res);
         }
 
         break;
 
-      case 'getFormDataCallback':
+      case "getFormDataCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormDataTable) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormDataTable.getFormDataCallback(res);
         }
 
         break;
 
-      case 'getFormSingleCallback':
+      case "getFormSingleCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormCreatorPage) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormCreatorPage.getFormSingleCallback({
             Content: res.Content.form
@@ -28659,7 +30337,7 @@ class dispatcher {
 
 
         if (_Components_FormShowerInChat__WEBPACK_IMPORTED_MODULE_4__["FormShowerInChatHolder"]) {
-          let FormShowerInChat = _Components_FormShowerInChat__WEBPACK_IMPORTED_MODULE_4__["FormShowerInChatHolder"][res.Content.form.Id + '' + res.Content.UniqId];
+          let FormShowerInChat = _Components_FormShowerInChat__WEBPACK_IMPORTED_MODULE_4__["FormShowerInChatHolder"][res.Content.form.Id + "" + res.Content.UniqId];
 
           if (FormShowerInChat) {
             FormShowerInChat.getFormSingleCallback({
@@ -28670,7 +30348,7 @@ class dispatcher {
 
         break;
 
-      case 'customerGetFormSingleCallback':
+      case "customerGetFormSingleCallback":
         //       debugger
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormCreatorPage) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].FormCreatorPage.getFormSingleCallback(res);
@@ -28679,7 +30357,7 @@ class dispatcher {
 
 
         if (_Components_FormShowerInChat__WEBPACK_IMPORTED_MODULE_4__["FormShowerInChatHolder"]) {
-          let FormShowerInChat = _Components_FormShowerInChat__WEBPACK_IMPORTED_MODULE_4__["FormShowerInChatHolder"][res.Content.form.Id + '' + res.Content.UniqId];
+          let FormShowerInChat = _Components_FormShowerInChat__WEBPACK_IMPORTED_MODULE_4__["FormShowerInChatHolder"][res.Content.form.Id + "" + res.Content.UniqId];
 
           if (FormShowerInChat) {
             FormShowerInChat.getFormSingleCallback({
@@ -28690,7 +30368,7 @@ class dispatcher {
 
         break;
 
-      case 'customerStartTypingCallback':
+      case "customerStartTypingCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].OnlineCustomerListHolder) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].OnlineCustomerListHolder.customerStartTypingCallback(res);
         }
@@ -28703,9 +30381,13 @@ class dispatcher {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].CustomersPage.customerStartTypingCallback(res);
         }
 
+        if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ChatPage) {
+          _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ChatPage.customerStartTypingCallback(res);
+        }
+
         break;
 
-      case 'getCreatedFormsCallback':
+      case "getCreatedFormsCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].CreatedForms) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].CreatedForms.getCreatedFormsCallback(res);
         }
@@ -28727,7 +30409,7 @@ class dispatcher {
 
         break;
 
-      case 'saveSocialChannelsInfoCallback':
+      case "saveSocialChannelsInfoCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].SocialChannelsPage) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].SocialChannelsPage.saveSocialChannelsInfoCallback(res);
         }
@@ -28768,8 +30450,8 @@ class dispatcher {
 
       case "ClearCookie":
         //cookieManager.removeItem('customerToken')
-        _CookieManager__WEBPACK_IMPORTED_MODULE_1__["cookieManager"].removeItem('adminToken');
-        console.log('ClearCookie==>adminToken===>', _CookieManager__WEBPACK_IMPORTED_MODULE_1__["cookieManager"].getItem('adminToken'));
+        _CookieManager__WEBPACK_IMPORTED_MODULE_1__["cookieManager"].removeItem("adminToken");
+        console.log("ClearCookie==>adminToken===>", _CookieManager__WEBPACK_IMPORTED_MODULE_1__["cookieManager"].getItem("adminToken"));
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].customerToken = null;
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LayoutPage.setState({
           tmp: Math.random(),
@@ -28803,8 +30485,8 @@ class dispatcher {
           }
         }
         /*else{
-            CurrentUserInfo.LayoutPage.showError('dispatcher CurrentUserInfo.OnlineCustomerListHolder is null');
-           }*/
+                            CurrentUserInfo.LayoutPage.showError('dispatcher CurrentUserInfo.OnlineCustomerListHolder is null');
+                           }*/
 
 
         break;
@@ -28855,7 +30537,7 @@ class dispatcher {
         break;
       //end
 
-      case 'totalUserCountsChangedCallback':
+      case "totalUserCountsChangedCallback":
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].SubMenu.totalUserCountsChangedCallback(res);
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].Menu.totalUserCountsChangedCallback(res);
 
@@ -28906,9 +30588,8 @@ class dispatcher {
 
       case "searchHandlerCallback":
         /* customerlist,
-                            sendMsgList,
-                            receiveMsgList*/
-        ;
+                                    sendMsgList,
+                                    receiveMsgList*/
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].CustomersPage.searchHandlerCallback(res.Content.customerlist); //CurrentUserInfo.AdminsPage.searchHandlerCallback(res.customerlist);
 
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ChatPage.searchHandlerCallback(res.Content.sendMsgList, res.Content.receiveMsgList);
@@ -28926,7 +30607,7 @@ class dispatcher {
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ChatPage.EditMessageCallback(res);
         break;
 
-      case 'getVisitedPagesForCurrentSiteCallback':
+      case "getVisitedPagesForCurrentSiteCallback":
         _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].SepratePerPage.getVisitedPagesForCurrentSiteCallback(res);
         break;
 
@@ -28937,35 +30618,35 @@ class dispatcher {
 
         break;
 
-      case 'deleteTagFormUserTagsByIdCallback':
+      case "deleteTagFormUserTagsByIdCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].CustomerTags) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].CustomerTags.deleteTagFormUserTagsByIdCallback(res);
         }
 
         break;
 
-      case 'deleteTagByIdCallback':
+      case "deleteTagByIdCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].TagList) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].TagList.deleteTagByIdCallback(res);
         }
 
         break;
 
-      case 'getMyProfileCallback':
+      case "getMyProfileCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ProfilePage) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ProfilePage.getMyProfileCallback(res);
         }
 
         break;
 
-      case 'saveMyProfileCallback':
+      case "saveMyProfileCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ProfilePage) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ProfilePage.saveMyProfileCallback(res);
         }
 
         break;
 
-      case 'userAddedToTagsCallback':
+      case "userAddedToTagsCallback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ChatPage) {
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].ChatPage.userAddedToTagsCallback(res);
         } // باعث loop می شود لذا if گذاشته ایم
@@ -28992,20 +30673,20 @@ class dispatcher {
           console.error(res.Message);
           _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LayoutPage.showError(res.Message);
 
-          if (res.Message.indexOf('کانکشکن متفاوت') >= 0) {
+          if (res.Message.indexOf("کانکشکن متفاوت") >= 0) {
             /*cookieManager.removeItem('customerToken')
-            cookieManager.removeItem('adminToken')
-            CurrentUserInfo.customerToken=null;
-            _currentAdminInfo.adminToken=null;*/
+                        cookieManager.removeItem('adminToken')
+                        CurrentUserInfo.customerToken=null;
+                        _currentAdminInfo.adminToken=null;*/
 
             /*   if (debugMode){
-                   alert('اتصال مجدد')
-               }
-               cookieManager.removeItem('customerToken')
-               cookieManager.removeItem('adminToken')
-               CurrentUserInfo.customerToken=null;
-               _currentAdminInfo.adminToken=null;
-               startUp();*/
+                               alert('اتصال مجدد')
+                           }
+                           cookieManager.removeItem('customerToken')
+                           cookieManager.removeItem('adminToken')
+                           CurrentUserInfo.customerToken=null;
+                           _currentAdminInfo.adminToken=null;
+                           startUp();*/
           }
         }
 
@@ -31629,7 +33310,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! react-bootstrap/Container */ "./node_modules/react-bootstrap/esm/Container.js");
 /* harmony import */ var _CustomerProfilePage__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./CustomerProfilePage */ "./src/Pages/CustomerProfilePage.js");
 /* harmony import */ var _Event_TriggersPage__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./Event_TriggersPage */ "./src/Pages/Event_TriggersPage.js");
+/* harmony import */ var _LiveAssistPage__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./LiveAssistPage */ "./src/Pages/LiveAssistPage.js");
+/* harmony import */ var _Components_UsersSeparation_UsersSeparationLayout__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../Components/UsersSeparation/UsersSeparationLayout */ "./src/Components/UsersSeparation/UsersSeparationLayout.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Pages\\LayoutPage.js";
+
+
 
 
 
@@ -31752,7 +33437,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 120,
+            lineNumber: 122,
             columnNumber: 21
           }
         }, this.state.focusForSelectingAdmin && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -31760,7 +33445,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 121,
+            lineNumber: 123,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -31769,28 +33454,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 122,
+            lineNumber: 124,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 124,
+            lineNumber: 126,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 125,
+            lineNumber: 127,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ChatPage__WEBPACK_IMPORTED_MODULE_1__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 127,
+            lineNumber: 129,
             columnNumber: 13
           }
         }));
@@ -31799,8 +33484,8 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 134,
-            columnNumber: 19
+            lineNumber: 136,
+            columnNumber: 21
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
           position: "bottom-left",
@@ -31808,29 +33493,68 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 135,
-            columnNumber: 23
+            lineNumber: 137,
+            columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 136,
-            columnNumber: 23
+            lineNumber: 138,
+            columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 137,
-            columnNumber: 23
+            lineNumber: 139,
+            columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fakeServer_FakeServerMonitor__WEBPACK_IMPORTED_MODULE_17__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 141,
-            columnNumber: 23
+            lineNumber: 143,
+            columnNumber: 25
+          }
+        }));
+      } else if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].currentPage === 'usersSeparation') {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 153,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
+          position: "bottom-left",
+          ref: el => this.toast = el,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 154,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 155,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 156,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_UsersSeparation_UsersSeparationLayout__WEBPACK_IMPORTED_MODULE_34__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 160,
+            columnNumber: 25
           }
         }));
       } else if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].currentPage === "FormCreator") {
@@ -31839,7 +33563,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 153,
+            lineNumber: 172,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -31848,28 +33572,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 155,
+            lineNumber: 174,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 156,
+            lineNumber: 175,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 157,
+            lineNumber: 176,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormCreatorPage__WEBPACK_IMPORTED_MODULE_20__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 159,
+            lineNumber: 178,
             columnNumber: 25
           }
         }));
@@ -31879,7 +33603,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 167,
+            lineNumber: 186,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -31888,28 +33612,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 169,
+            lineNumber: 188,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 170,
+            lineNumber: 189,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 171,
+            lineNumber: 190,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Event_TriggersPage__WEBPACK_IMPORTED_MODULE_32__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 173,
+            lineNumber: 192,
             columnNumber: 25
           }
         }));
@@ -31919,7 +33643,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 180,
+            lineNumber: 199,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -31928,28 +33652,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 181,
+            lineNumber: 200,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 183,
+            lineNumber: 202,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 184,
+            lineNumber: 203,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Chat__WEBPACK_IMPORTED_MODULE_22__["AutomaticSendPage"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 186,
+            lineNumber: 205,
             columnNumber: 25
           }
         }));
@@ -31959,7 +33683,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 195,
+            lineNumber: 214,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -31968,28 +33692,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 197,
+            lineNumber: 216,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 198,
+            lineNumber: 217,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 199,
+            lineNumber: 218,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfilePage__WEBPACK_IMPORTED_MODULE_18__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 201,
+            lineNumber: 220,
             columnNumber: 25
           }
         }));
@@ -31999,7 +33723,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 209,
+            lineNumber: 228,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -32008,28 +33732,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 211,
+            lineNumber: 230,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 212,
+            lineNumber: 231,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 213,
+            lineNumber: 232,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CustomerProfilePage__WEBPACK_IMPORTED_MODULE_31__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 215,
+            lineNumber: 234,
             columnNumber: 25
           }
         }));
@@ -32039,7 +33763,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 222,
+            lineNumber: 241,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -32048,28 +33772,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 224,
+            lineNumber: 243,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 225,
+            lineNumber: 244,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 226,
+            lineNumber: 245,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormDataPage__WEBPACK_IMPORTED_MODULE_21__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 228,
+            lineNumber: 247,
             columnNumber: 25
           }
         }));
@@ -32079,7 +33803,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 235,
+            lineNumber: 254,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -32088,28 +33812,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 237,
+            lineNumber: 256,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 238,
+            lineNumber: 257,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 239,
+            lineNumber: 258,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SocialChannelsPage__WEBPACK_IMPORTED_MODULE_19__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 241,
+            lineNumber: 260,
             columnNumber: 25
           }
         }));
@@ -32119,7 +33843,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 249,
+            lineNumber: 268,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -32128,43 +33852,83 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 251,
+            lineNumber: 270,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 252,
+            lineNumber: 271,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 253,
+            lineNumber: 272,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_30__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 256,
-            columnNumber: 29
+            lineNumber: 275,
+            columnNumber: 25
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_HelpDesk_Language_LanguageHolder__WEBPACK_IMPORTED_MODULE_29__["default"], {
           onSelect: countryCode => {},
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 257,
-            columnNumber: 33
+            lineNumber: 276,
+            columnNumber: 29
           }
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HelpDeskPage__WEBPACK_IMPORTED_MODULE_27__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 262,
+            lineNumber: 281,
+            columnNumber: 25
+          }
+        }));
+      } else if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].currentPage === "LiveAssistPage") {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.focusForSelectingAdmin && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "hideWhole",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 292,
+            columnNumber: 64
+          }
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
+          position: "bottom-left",
+          ref: el => this.toast = el,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 294,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 295,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 296,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LiveAssistPage__WEBPACK_IMPORTED_MODULE_33__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 299,
             columnNumber: 25
           }
         }));
@@ -32174,7 +33938,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 277,
+            lineNumber: 314,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -32183,77 +33947,77 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 279,
+            lineNumber: 316,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 280,
+            lineNumber: 317,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 281,
+            lineNumber: 318,
             columnNumber: 25
           }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'WaitingForAnswer' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WaitingForAnswer__WEBPACK_IMPORTED_MODULE_9__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 284,
+            lineNumber: 321,
             columnNumber: 25
           }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'Answered' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Answered__WEBPACK_IMPORTED_MODULE_11__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 287,
+            lineNumber: 324,
             columnNumber: 25
           }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'AllCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllCustomerListPage__WEBPACK_IMPORTED_MODULE_10__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 291,
+            lineNumber: 328,
             columnNumber: 25
           }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'NotChatted' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NotChatted__WEBPACK_IMPORTED_MODULE_12__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 295,
+            lineNumber: 332,
             columnNumber: 25
           }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'ChattedAndReturnedCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ChattedAndReturnedCustomerListPage__WEBPACK_IMPORTED_MODULE_14__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 298,
+            lineNumber: 335,
             columnNumber: 25
           }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'NotChattedLeftCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NotChattedLeftCustomerListPage__WEBPACK_IMPORTED_MODULE_13__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 301,
+            lineNumber: 338,
             columnNumber: 25
           }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'SepratePerPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SepratePerPage__WEBPACK_IMPORTED_MODULE_15__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 305,
+            lineNumber: 342,
             columnNumber: 25
           }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'SeparatePerPageCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SeparatePerPageCustomerListPage__WEBPACK_IMPORTED_MODULE_16__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 310,
+            lineNumber: 347,
             columnNumber: 25
           }
         }));
@@ -32263,7 +34027,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 321,
+          lineNumber: 358,
           columnNumber: 17
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -32272,14 +34036,14 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 322,
+          lineNumber: 359,
           columnNumber: 21
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 323,
+          lineNumber: 360,
           columnNumber: 21
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginPage__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -32287,7 +34051,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 325,
+          lineNumber: 362,
           columnNumber: 21
         }
       }));
@@ -32310,7 +34074,7 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358,
+      lineNumber: 395,
       columnNumber: 51
     }
   }, _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.err), _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.msg && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -32318,7 +34082,7 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359,
+      lineNumber: 396,
       columnNumber: 50
     }
   }, _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.msg), _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.constantMsg && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -32326,7 +34090,7 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364,
+      lineNumber: 401,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_26__["Button"], {
@@ -32338,7 +34102,7 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 367,
+      lineNumber: 404,
       columnNumber: 13
     }
   }), _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.constantMsg, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Spinner__WEBPACK_IMPORTED_MODULE_25__["default"], {
@@ -32347,11 +34111,141 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 375,
+      lineNumber: 412,
       columnNumber: 13
     }
   })));
 }
+
+/***/ }),
+
+/***/ "./src/Pages/LiveAssistPage.js":
+/*!*************************************!*\
+  !*** ./src/Pages/LiveAssistPage.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Help/DataHolder */ "./src/Help/DataHolder.js");
+/* harmony import */ var _Components_Customers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Customers */ "./src/Components/Customers.js");
+/* harmony import */ var react_bootstrap_cjs_Row__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap/cjs/Row */ "./node_modules/react-bootstrap/cjs/Row.js");
+/* harmony import */ var react_bootstrap_cjs_Row__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_cjs_Row__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/Col */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var _Components_Chat__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Components/Chat */ "./src/Components/Chat.js");
+/* harmony import */ var _Components_LiveAssist_LiveAssistLayout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Components/LiveAssist/LiveAssistLayout */ "./src/Components/LiveAssist/LiveAssistLayout.js");
+/* harmony import */ var react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/Container */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var _styles_myStyle_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/myStyle.css */ "./src/styles/myStyle.css");
+/* harmony import */ var _styles_myStyle_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_myStyle_css__WEBPACK_IMPORTED_MODULE_8__);
+var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Pages\\LiveAssistPage.js";
+
+
+
+
+
+
+
+
+
+
+class LiveAssistPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13,
+        columnNumber: 13
+      }
+    }, !_Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedCustomer && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Row__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Customers__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21,
+        columnNumber: 29
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 29
+      }
+    }, " \u0627\u0628\u062A\u062F\u0627 \u06CC\u06A9 \u06A9\u0627\u0631\u0628\u0631 \u0631\u0627 \u0627\u0646\u062A\u062E\u0627\u0628 \u06A9\u0646\u06CC\u062F")))), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedCustomer && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Row__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      md: 9,
+      className: 'scallSmall',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40,
+        columnNumber: 29
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_LiveAssist_LiveAssistLayout__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41,
+        columnNumber: 33
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      md: 3,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 29
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Chat__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 33
+      }
+    }))))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (LiveAssistPage);
 
 /***/ }),
 
@@ -34332,7 +36226,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
-_serviceWorker__WEBPACK_IMPORTED_MODULE_4__["unregister"]();
+/*serviceWorker.unregister();*/
 
 /***/ }),
 
@@ -34609,6 +36503,83 @@ module.exports = __webpack_require__(/*! D:\mohammad\workplace\1399\shahrivar\00
 
 /***/ }),
 
+/***/ 10:
+/*!************************!*\
+  !*** buffer (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 11:
+/*!************************!*\
+  !*** buffer (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 12:
+/*!************************!*\
+  !*** buffer (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 13:
+/*!************************!*\
+  !*** buffer (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 14:
+/*!************************!*\
+  !*** buffer (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 15:
+/*!************************!*\
+  !*** buffer (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 16:
+/*!************************!*\
+  !*** crypto (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
 /***/ 2:
 /*!**********************!*\
   !*** util (ignored) ***!
@@ -34621,6 +36592,28 @@ module.exports = __webpack_require__(/*! D:\mohammad\workplace\1399\shahrivar\00
 /***/ }),
 
 /***/ 3:
+/*!**********************!*\
+  !*** util (ignored) ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 4:
+/*!**********************!*\
+  !*** util (ignored) ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 5:
 /*!************************!*\
   !*** buffer (ignored) ***!
   \************************/
@@ -34631,7 +36624,18 @@ module.exports = __webpack_require__(/*! D:\mohammad\workplace\1399\shahrivar\00
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
+/*!************************!*\
+  !*** buffer (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 7:
 /*!************************!*\
   !*** crypto (ignored) ***!
   \************************/
@@ -34642,10 +36646,21 @@ module.exports = __webpack_require__(/*! D:\mohammad\workplace\1399\shahrivar\00
 
 /***/ }),
 
-/***/ 5:
-/*!************************!*\
-  !*** crypto (ignored) ***!
-  \************************/
+/***/ 8:
+/*!**********************!*\
+  !*** util (ignored) ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 9:
+/*!**********************!*\
+  !*** util (ignored) ***!
+  \**********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -34653,5 +36668,5 @@ module.exports = __webpack_require__(/*! D:\mohammad\workplace\1399\shahrivar\00
 
 /***/ })
 
-},[[0,"runtime-main",0]]]);
+},[[0,"runtime-main",1]]]);
 //# sourceMappingURL=main.chunk.js.map
