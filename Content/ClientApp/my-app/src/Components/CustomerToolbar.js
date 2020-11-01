@@ -97,7 +97,8 @@ class CustomerToolbar extends Component {
                 <UserTags/>
              
            
-           <LastPagesVisited/>
+                {DataHolder.selectedCustomer && <LastPagesVisited/> }
+           
 
 
                 <PrimengModal title={'انتخاب از مقالات مرکز پشتیبانی'} ok={true}>

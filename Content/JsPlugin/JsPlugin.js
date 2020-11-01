@@ -2053,6 +2053,9 @@ class BasePlugin {
         }
 
 
+        testDo();
+
+
         //     getDoc().getElementById('chatPanel').innerHTML = html;
 
 
@@ -3572,6 +3575,9 @@ class DomManager {
     bindDotOnClick() {
 
         getDoc().querySelector('#dot').onclick = function () {
+            
+            
+            
 
             getDoc().querySelector('#gapOnTheFlyMessage').style.display = 'none'
 
@@ -3918,6 +3924,18 @@ class dispatcher {
         }
         switch (res.Name) {
 
+            
+            /*============================ Rating ===========================*/
+            case 'adminSendRatingRequestCallback':
+                adminSendRatingRequestCallback(res);
+                break;
+
+            /*============================ END ===========================*/
+
+                
+                
+                
+                
             /*============================ Users Separation ===========================*/
             case 'customerGetUsersSeparationConfigCallback':
                 customerGetUsersSeparationConfigCallback(res);
@@ -6886,3 +6904,81 @@ function CustomerSaveUsersSeparationValues(usersSeparation){
 }
 
 /*--------------------------------------------- END -------------------------------------*/
+
+
+
+/*--------------------------------------------- rating -------------------------------------*/
+
+function adminSendRatingRequestCallback(res){
+   /* if (getDoc().querySelector('#gapComment'))
+        return ;*/
+
+    let html=`
+    <div id="gapComment" style="margin:20px;border-radius: 5px 5px 5px 5px;background-color: white;
+    padding:20px;border:1px solid black">
+    <h3>
+    <i class="fa fa-comment" aria-hidden="true"></i>
+
+    از این که از خدمات ما استفاده کردید از شما متشکریم  </h3>
+    <p>با ارسال بازخورد ما را در ارائه هرچه بهتر خدمات یاری فرمایید</p>
+    
+    <button onclick="gapComment(6,this)" style="background-color: greenyellow;border-radius: 5px 5px 5px 5px;border:none;padding:5px">عالی</button>
+    <button onclick="gapComment(3,this)" style="background-color: #0df3a3;border-radius: 5px 5px 5px 5px;border:none;padding:5px">خوب</button>
+    <button onclick="gapComment(2,this)" style="background-color: yellow;border-radius: 5px 5px 5px 5px;border:none;padding:5px">بد نبود</button>
+    <button  onclick="gapComment(1,this)" style="background-color: red;border-radius: 5px 5px 5px 5px;border:none;padding:5px"> بد</button>
+    
+    <i style="font-size: 25px;float:left" class="fa fa-paper-plane" aria-hidden="true"></i>
+
+</div>
+    `;
+
+
+
+    if (getDoc().querySelector('#dot').style.display === 'none') {
+        getDoc().querySelector('#chatPanel').append(createElementFromHTML(html));
+
+    }else{
+        getDoc().querySelector('#gapOnTheFlyMessageText').innerHTML=html;
+        getDoc().querySelector('#gapOnTheFlyMessage').style.display=null;
+    }
+
+}
+
+function gapComment(rate,el){
+    
+    
+    MyCaller.Send("CustomerRate",{rate});
+    let html=`
+   
+    <h3>
+    
+    <i style="font-size: 25px;color:#0df3a3" class="fa fa-smile-o" aria-hidden="true"></i>
+
+    بازخورد شما دریافت شد متشکریم
+    
+    <i style="font-size: 25px;" class="fa fa-check" aria-hidden="true"></i>
+
+    </h3>
+  
+
+    `;
+
+    if (getDoc().querySelector('#dot').style.display === 'none') {
+       html+=`    <i style="font-size: 25px;float:left" class="fa fa-comment" aria-hidden="true"></i>`;
+
+    }else{
+        html+=`    <i style="font-size: 25px;" class="fa fa-comment" aria-hidden="true"></i>`;
+    }
+
+   el.parentNode.innerHTML=html;
+
+}
+
+
+
+function testDo(){
+
+  //  adminSendRatingRequestCallback();
+}
+
+

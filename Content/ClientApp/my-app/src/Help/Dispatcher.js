@@ -70,6 +70,28 @@ class dispatcher {
                 break;
             /*===========rating end============*/
 
+
+
+
+
+                /*========== rating==========*/
+
+            case "getLastVisitedPagesCallback":
+                if (CurrentUserInfo.LastPagesVisited) {
+                    CurrentUserInfo.LastPagesVisited.getLastVisitedPagesCallback(res);
+                }
+                break;
+                /*========== END==========*/
+
+
+
+                
+                
+                
+                
+                
+                
+
             /*===========customer data===============*/
             case "saveKeyCallback":
                 if (CurrentUserInfo.CustomerData) {
@@ -190,6 +212,12 @@ class dispatcher {
 
             /*===========category===================*/
 
+                
+
+            case "category_GetById_Callback":
+                if (CurrentUserInfo.CategorySave) {
+                    CurrentUserInfo.CategorySave.category_GetById_Callback(res);
+                }
             case "category_Get_List_Callback":
                 if (CurrentUserInfo.CategoryIndex) {
                     CurrentUserInfo.CategoryIndex.category_Get_List_Callback(res);

@@ -61,7 +61,15 @@ class OtherTools extends Component {
                                 </Badge>
                             </h1>
 
-                            <h1 aria-label="نمایش در نقشه" data-microtip-position="top" role="tooltip">
+                            <h1 aria-label="نمایش در نقشه" data-microtip-position="top" role="tooltip"  onClick={() => {
+
+
+                                DataHolder.Back=null;
+                                CurrentUserInfo.Menu.setPage('Map')
+
+                                //CurrentUserInfo.Modals['LiveAssistModal'].show();
+
+                            }}>
                                 <Badge variant={'light'}>
                                     <a href='#'> <i className={'fa fa-map-marker bigIcon'}></i></a>
                                 </Badge>

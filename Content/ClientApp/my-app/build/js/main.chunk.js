@@ -3248,12 +3248,12 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 97,
         columnNumber: 17
       }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LastPagesVisited__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_5__["DataHolder"].selectedCustomer && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LastPagesVisited__WEBPACK_IMPORTED_MODULE_11__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 100,
-        columnNumber: 12
+        columnNumber: 49
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SendFromHelpDeskModal__WEBPACK_IMPORTED_MODULE_13__["default"], {
       title: 'انتخاب از مقالات مرکز پشتیبانی',
@@ -3261,14 +3261,14 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103,
+        lineNumber: 104,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SendFromHelpDesk__WEBPACK_IMPORTED_MODULE_14__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104,
+        lineNumber: 105,
         columnNumber: 21
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SendFromHelpDeskModal__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -3278,14 +3278,14 @@ class CustomerToolbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109,
+        lineNumber: 110,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ScreenRecordShowerSendRequest__WEBPACK_IMPORTED_MODULE_17__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111,
+        lineNumber: 112,
         columnNumber: 21
       }
     })));
@@ -3343,7 +3343,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_myStyle_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_myStyle_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 /* harmony import */ var _WhileWriting__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./WhileWriting */ "./src/Components/WhileWriting.js");
+/* harmony import */ var primereact_tabview__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! primereact/tabview */ "./node_modules/primereact/tabview.js");
+/* harmony import */ var primereact_tabview__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(primereact_tabview__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\Customers.js";
+
 
 
 
@@ -3472,11 +3475,21 @@ class Customers extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
   }
 
-  componentWillMount() {
+  componentDidMount() {
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].UserType = 'CustomersChattedWithMe';
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].selectedTagId = null;
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].gapIsOnlyOnly = null;
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].currentUsersIsAdmins = null;
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send("GetClientsListForAdmin", {
+      userType: _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].UserType
+    });
+  }
+
+  getCustomersChattedWithMe() {
+    this.setState({
+      loading: true
+    });
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].UserType = 'CustomersChattedWithMe';
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send("GetClientsListForAdmin", {
       userType: _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].UserType
     });
@@ -3499,6 +3512,10 @@ class Customers extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   getClientsListForAdminCallback(res) {
+    this.setState({
+      loading: false
+    });
+
     if (!res || !res.Content || !res.Content.EntityList) {
       _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].LayoutPage.showError('getClientsListForAdminCallback returns null');
       return;
@@ -3571,7 +3588,7 @@ class Customers extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 245,
+        lineNumber: 254,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3579,35 +3596,124 @@ class Customers extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 246,
+        lineNumber: 255,
         columnNumber: 17
       }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "card-header",
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_tabview__WEBPACK_IMPORTED_MODULE_6__["TabView"], {
+      className: "tabview-custom",
+      activeIndex: this.state.activeIndex,
+      onTabChange: e => {
+        this.setState({
+          activeIndex: e.index
+        });
+
+        if (e.index === 2) {
+          this.getSharedChatBoxUsers();
+        } else {
+          this.getCustomersChattedWithMe();
+        }
+      },
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 247,
-        columnNumber: 3
+        lineNumber: 256,
+        columnNumber: 17
       }
-    }, "\u06A9\u0627\u0631\u0628\u0631\u0627\u0646 \u0622\u0646\u0644\u0627\u06CC\u0646"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-      className: "list-group list-group-flush",
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_tabview__WEBPACK_IMPORTED_MODULE_6__["TabPanel"], {
+      header: "\u0645\u0646",
+      leftIcon: "pi pi-user",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 250,
-        columnNumber: 3
+        lineNumber: 269,
+        columnNumber: 21
       }
-    }, this.state.arr && this.state.arr.length && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShowOnlineUsers, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 271,
+        columnNumber: 25
+      }
+    }, "\u0628\u0627 \u0645\u0646 \u0686\u062A \u06A9\u0631\u062F\u0647 \u0627\u0646\u062F"), this.state.loading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
+      animation: "border",
+      role: "status",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 274,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "sr-only",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 275,
+        columnNumber: 29
+      }
+    }, "\u062F\u0631 \u062D\u0627\u0644 \u062E\u0648\u0627\u0646\u062F\u0646 \u0627\u0637\u0644\u0627\u0639\u0627\u062A...")), this.state.arr && this.state.arr.length && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShowOnlineUsers, {
       arr: this.state.arr,
       parent: this,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 251,
-        columnNumber: 70
+        lineNumber: 280,
+        columnNumber: 25
       }
-    }))));
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_tabview__WEBPACK_IMPORTED_MODULE_6__["TabPanel"], {
+      header: "\u0645\u0634\u062A\u0631\u06A9",
+      rightIcon: "pi pi-users ",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 283,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 285,
+        columnNumber: 24
+      }
+    }, "\u0686\u062A \u0628\u0627\u06A9\u0633 \u0645\u0634\u062A\u0631\u06A9"), this.state.loading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Spinner"], {
+      animation: "border",
+      role: "status",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 289,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "sr-only",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 290,
+        columnNumber: 29
+      }
+    }, "\u062F\u0631 \u062D\u0627\u0644 \u062E\u0648\u0627\u0646\u062F\u0646 \u0627\u0637\u0644\u0627\u0639\u0627\u062A...")), this.state.arr && this.state.arr.length && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShowOnlineUsers, {
+      arr: this.state.arr,
+      parent: this,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 294,
+        columnNumber: 25
+      }
+    })))));
+  }
+
+  getSharedChatBoxUsers() {
+    this.setState({
+      loading: true
+    });
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].UserType = 'SharedChatBox';
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send("GetClientsListForAdmin", {
+      userType: _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].UserType
+    });
   }
 
 }
@@ -3619,8 +3725,8 @@ const showTotalUnRead = function (el) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 261,
-        columnNumber: 17
+        lineNumber: 328,
+        columnNumber: 16
       }
     }, el.NewMessageCount, "+");
   } else {
@@ -3684,7 +3790,7 @@ function ShowOnlineUsers(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 286,
+        lineNumber: 354,
         columnNumber: 16
       }
     }, showTotalUnRead(el), el.Name, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WhileWriting__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -3692,7 +3798,7 @@ function ShowOnlineUsers(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 329,
+        lineNumber: 395,
         columnNumber: 13
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ShowFlag, {
@@ -3700,7 +3806,7 @@ function ShowOnlineUsers(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 332,
+        lineNumber: 398,
         columnNumber: 13
       }
     }), el.OnlineStatus === 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -3711,7 +3817,7 @@ function ShowOnlineUsers(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 343,
+        lineNumber: 408,
         columnNumber: 17
       }
     }), el.OnlineStatus === 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -3722,7 +3828,7 @@ function ShowOnlineUsers(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 347,
+        lineNumber: 412,
         columnNumber: 17
       }
     }), el.OnlineStatus === 2 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -3733,7 +3839,7 @@ function ShowOnlineUsers(props) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 351,
+        lineNumber: 416,
         columnNumber: 17
       }
     }));
@@ -3746,7 +3852,7 @@ const ShowFlag = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 363,
+      lineNumber: 428,
       columnNumber: 5
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -3758,7 +3864,7 @@ const ShowFlag = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364,
+      lineNumber: 429,
       columnNumber: 9
     }
   })), (!props.el.LastTrackInfo || !props.el.LastTrackInfo.country_code) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["Badge"], {
@@ -3767,8 +3873,8 @@ const ShowFlag = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 372,
-      columnNumber: 5
+      lineNumber: 437,
+      columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     style: {
@@ -3779,8 +3885,8 @@ const ShowFlag = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 373,
-      columnNumber: 9
+      lineNumber: 438,
+      columnNumber: 13
     }
   })));
 };
@@ -7636,7 +7742,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var primereact_inputnumber__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(primereact_inputnumber__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
 /* harmony import */ var _Pages_HelpDeskPage__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../Pages/HelpDeskPage */ "./src/Pages/HelpDeskPage.js");
+/* harmony import */ var primereact_fileupload__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! primereact/fileupload */ "./node_modules/primereact/fileupload.js");
+/* harmony import */ var primereact_fileupload__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(primereact_fileupload__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-bootstrap/Card */ "./node_modules/react-bootstrap/esm/Card.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\HelpDesk\\Category\\CategorySave.js";
+
+
 
 
 
@@ -7660,7 +7771,7 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22,
+        lineNumber: 24,
         columnNumber: 20
       }
     }, "\u0648\u06CC\u0631\u0627\u06CC\u0634 \u062F\u0633\u062A\u0647 \u0628\u0646\u062F\u06CC");
@@ -7668,7 +7779,7 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23,
+        lineNumber: 25,
         columnNumber: 16
       }
     }, "\u062F\u0633\u062A\u0647 \u0628\u0646\u062F\u06CC \u062C\u062F\u06CC\u062F");
@@ -7731,14 +7842,14 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82,
+        lineNumber: 86,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85,
+        lineNumber: 89,
         columnNumber: 17
       }
     }, this.showHeader(), this.state.loading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["Spinner"], {
@@ -7747,7 +7858,7 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91,
+        lineNumber: 95,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -7755,21 +7866,21 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92,
+        lineNumber: 96,
         columnNumber: 25
       }
     }, "\u0644\u0637\u0641\u0627 \u0645\u0646\u062A\u0638\u0631 \u0628\u0645\u0627\u0646\u06CC\u062F ....")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94,
+        lineNumber: 98,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 100,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormInputs__WEBPACK_IMPORTED_MODULE_2__["Input"], {
@@ -7786,14 +7897,14 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97,
+        lineNumber: 101,
         columnNumber: 29
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107,
+        lineNumber: 111,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_7__["Button"], {
@@ -7817,14 +7928,14 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109,
+        lineNumber: 113,
         columnNumber: 29
       }
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127,
+        lineNumber: 131,
         columnNumber: 21
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
@@ -7832,7 +7943,7 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129,
+        lineNumber: 133,
         columnNumber: 21
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -7840,14 +7951,14 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130,
+        lineNumber: 134,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131,
+        lineNumber: 135,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -7855,14 +7966,14 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132,
+        lineNumber: 136,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133,
+        lineNumber: 137,
         columnNumber: 29
       }
     }, "\u062A\u0648\u0636\u06CC\u062D\u0627\u062A"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputtextarea__WEBPACK_IMPORTED_MODULE_12__["InputTextarea"], {
@@ -7878,14 +7989,14 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136,
+        lineNumber: 140,
         columnNumber: 29
       }
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146,
+        lineNumber: 150,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -7893,14 +8004,14 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147,
+        lineNumber: 151,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148,
+        lineNumber: 152,
         columnNumber: 33
       }
     }, "\u0627\u0648\u0644\u0648\u06CC\u062A \u0646\u0645\u0627\u06CC\u0634"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inputnumber__WEBPACK_IMPORTED_MODULE_13__["InputNumber"], {
@@ -7917,7 +8028,7 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151,
+        lineNumber: 155,
         columnNumber: 33
       }
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -7925,37 +8036,106 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162,
+        lineNumber: 167,
         columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      style: {
+        width: '100%'
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 169,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_17__["default"].Header, {
+      className: 'bg-info text-white',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 170,
+        columnNumber: 29
+      }
+    }, "\u062A\u0635\u0648\u06CC\u0631 \u0648 \u0631\u0646\u06AF"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_17__["default"].Body, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 171,
+        columnNumber: 29
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 172,
+        columnNumber: 31
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 163,
-        columnNumber: 25
+        lineNumber: 173,
+        columnNumber: 35
       }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_6___default.a, {
+    }, _Help_DataHolder__WEBPACK_IMPORTED_MODULE_3__["DataHolder"].selectedCategory && _Help_DataHolder__WEBPACK_IMPORTED_MODULE_3__["DataHolder"].selectedCategory.Content && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      width: 150,
+      height: 150,
+      src: _Help_DataHolder__WEBPACK_IMPORTED_MODULE_3__["DataHolder"].selectedCategory.Content,
+      alt: '',
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 167,
-        columnNumber: 25
+        lineNumber: 176,
+        columnNumber: 39
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_fileupload__WEBPACK_IMPORTED_MODULE_16__["FileUpload"], {
+      mode: "basic",
+      name: "demo[]",
+      onSelect: event => {
+        if (event.files && event.files[0]) {
+          let reader = new FileReader();
+
+          reader.onload = e => {
+            _Help_DataHolder__WEBPACK_IMPORTED_MODULE_3__["DataHolder"].selectedCategory.Content = e.target.result;
+            this.setState({
+              Content: e.target.result
+            });
+          };
+
+          reader.readAsDataURL(event.files[0]); // convert to base64 string
+        }
+      },
+      accept: "image/*",
+      maxFileSize: 1000000,
+      chooseLabel: "\u0622\u067E\u0644\u0648\u062F \u062A\u0635\u0648\u06CC\u0631 \u062F\u0633\u062A\u0647 \u0628\u0646\u062F\u06CC",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 178,
+        columnNumber: 39
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 199,
+        columnNumber: 35
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 168,
-        columnNumber: 29
+        lineNumber: 200,
+        columnNumber: 39
       }
     }, "\u0631\u0646\u06AF \u062F\u0633\u062A\u0647 \u0628\u0646\u062F\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "p-field p-col-12 p-md-3",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 171,
-        columnNumber: 29
+        lineNumber: 203,
+        columnNumber: 39
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_colorpicker__WEBPACK_IMPORTED_MODULE_10__["ColorPicker"], {
       value: _Help_DataHolder__WEBPACK_IMPORTED_MODULE_3__["DataHolder"].selectedCategory.BgColor,
@@ -7968,10 +8148,10 @@ class CategorySave extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 173,
-        columnNumber: 33
+        lineNumber: 205,
+        columnNumber: 43
       }
-    }))))));
+    })))))))));
   }
 
 }
@@ -8005,6 +8185,10 @@ class GoToHelpCenter extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _Help_Socket__WEBPACK_IMPORTED_MODULE_2__["CurrentUserInfo"].GoToHelpCenter = this;
   }
 
+  componentDidMount() {
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_2__["MyCaller"].Send("Language_GetCurrentHelpDesk_SelectedLanguage");
+  }
+
   language_GetCurrentHelpDesk_SelectedLanguageCallback(res) {
     this.setState({
       link: window.location.origin + "/HelpDesk/Index?websiteBaseUrl=" + res.Content.baseUrl + "&lang=" + Object(_Pages_HelpDeskPage__WEBPACK_IMPORTED_MODULE_1__["_getHelpDesk"])().language.alpha2Code
@@ -8017,7 +8201,7 @@ class GoToHelpCenter extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25,
+        lineNumber: 31,
         columnNumber: 13
       }
     }, this.state.link && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -8029,7 +8213,7 @@ class GoToHelpCenter extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31,
+        lineNumber: 37,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -8037,7 +8221,7 @@ class GoToHelpCenter extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33,
+        lineNumber: 39,
         columnNumber: 25
       }
     }), "Help Center \u0648\u0628 \u0633\u0627\u06CC\u062A    ")));
@@ -8073,7 +8257,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var primereact_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primereact/button */ "./node_modules/primereact/button.js");
 /* harmony import */ var primereact_button__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(primereact_button__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
+/* harmony import */ var react_bootstrap_Card__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap/Card */ "./node_modules/react-bootstrap/esm/Card.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\HelpDesk\\HelpDeskSetting\\HelpDeskSetting.js";
+
 
 
 
@@ -8128,7 +8314,8 @@ class HelpDeskSetting extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     _Help_Socket__WEBPACK_IMPORTED_MODULE_7__["MyCaller"].Send('HelpDeskSaveDetail', {
       id: Object(_Pages_HelpDeskPage__WEBPACK_IMPORTED_MODULE_1__["_getHelpDesk"])().helpDeskId,
       HeaderText: this.state.HelpDesk.HeaderText,
-      BgColor: this.state.HelpDesk.BgColor
+      BgColor: this.state.HelpDesk.BgColor,
+      GoToWebsiteUrl: this.state.HelpDesk.GoToWebsiteUrl
     });
   }
 
@@ -8138,7 +8325,7 @@ class HelpDeskSetting extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63,
+          lineNumber: 65,
           columnNumber: 21
         }
       }, "\u0647\u06CC\u0686 \u0645\u0631\u06A9\u0632 \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC \u0627\u0646\u062A\u062E\u0627\u0628 \u0646\u0634\u062F\u0647 \u0627\u0633\u062A");
@@ -8148,7 +8335,7 @@ class HelpDeskSetting extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67,
+        lineNumber: 69,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -8156,20 +8343,20 @@ class HelpDeskSetting extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
+        lineNumber: 72,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71,
+        lineNumber: 73,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormInputs__WEBPACK_IMPORTED_MODULE_8__["Input"], {
       value: this.state.HelpDesk.HeaderText,
       type: 'text',
-      name: 'عنوان دسته بندی',
+      name: 'عنوان مرکز پشتیبانی یا هدر',
       onChange: e => {
         this.state.HelpDesk.HeaderText = e.target.value;
         this.setState({
@@ -8180,24 +8367,24 @@ class HelpDeskSetting extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73,
+        lineNumber: 75,
         columnNumber: 25
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_3___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85,
+        lineNumber: 87,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86,
+        lineNumber: 88,
         columnNumber: 25
       }
-    }, "\u0631\u0646\u06AF \u062F\u0633\u062A\u0647 \u0628\u0646\u062F\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "\u0631\u0646\u06AF \u0645\u0631\u06A9\u0632 \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "p-field p-col-12 p-md-3",
       __self: this,
       __source: {
@@ -8233,6 +8420,37 @@ class HelpDeskSetting extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 101,
         columnNumber: 21
       }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormInputs__WEBPACK_IMPORTED_MODULE_8__["Input"], {
+      value: this.state.HelpDesk.GoToWebsiteUrl,
+      type: 'text',
+      name: 'آدرس لینک بروبه وب سایت',
+      onChange: e => {
+        this.state.HelpDesk.GoToWebsiteUrl = e.target.value;
+        this.setState({
+          tmp: Math.random()
+        });
+      },
+      placeholder: '',
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 102,
+        columnNumber: 25
+      }
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 114,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_cjs_Col__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 115,
+        columnNumber: 21
+      }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_9__["Button"], {
       disabled: this.state.loading,
       label: "\u0630\u062E\u06CC\u0631\u0647 ",
@@ -8247,7 +8465,7 @@ class HelpDeskSetting extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103,
+        lineNumber: 117,
         columnNumber: 25
       }
     }))));
@@ -22431,9 +22649,10 @@ var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupport
 
 
 class LastPagesVisited extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(...args) {
-    super(...args);
+  constructor(props) {
+    super(props);
     this.state = {};
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_4__["CurrentUserInfo"].LastPagesVisited = this;
   }
 
   componentDidMount() {
@@ -22453,13 +22672,15 @@ class LastPagesVisited extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       return;
     }
 
+    if (!res.Content.length) return;
+
     if (!_Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedCustomer) {
       return;
     }
 
-    if (res.Content.CustomerId === _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedCustomer.Id) {
+    if (res.Content[0].CustomerId === _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].selectedCustomer.Id) {
       this.setState({
-        list: res.Content.EntityList
+        list: res.Content
       });
     }
   }
@@ -22473,7 +22694,7 @@ class LastPagesVisited extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 51,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -22481,7 +22702,7 @@ class LastPagesVisited extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48,
+        lineNumber: 54,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -22489,7 +22710,7 @@ class LastPagesVisited extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50,
+        lineNumber: 56,
         columnNumber: 21
       }
     }, "\u0622\u062E\u0631\u06CC\u0646 \u0635\u0641\u062D\u0627\u062A \u0628\u0627\u0632\u062F\u06CC\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -22501,7 +22722,7 @@ class LastPagesVisited extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54,
+        lineNumber: 60,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Table__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -22511,81 +22732,70 @@ class LastPagesVisited extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56,
+        lineNumber: 62,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57,
+        lineNumber: 63,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58,
+        lineNumber: 64,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59,
+        lineNumber: 65,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59,
-        columnNumber: 37
-      }
-    }, "\u0645\u06CC\u0632\u0627\u0646 \u0628\u0627\u0632\u062F\u06CC\u062F")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60,
-        columnNumber: 33
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60,
+        lineNumber: 65,
         columnNumber: 37
       }
     }, "\u0639\u0646\u0648\u0627\u0646 \u0635\u0641\u062D\u0647")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63,
+        lineNumber: 68,
         columnNumber: 29
       }
     }, this.state.list && this.state.list.map((l, i, arr) => {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+        key: i,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66,
+          lineNumber: 71,
           columnNumber: 40
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67,
+          lineNumber: 73,
           columnNumber: 37
         }
-      }, l.Count), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        target: '_blank',
+        href: l.Url,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68,
-          columnNumber: 37
+          lineNumber: 73,
+          columnNumber: 41
         }
-      }, l.Title));
+      }, l.PageTitle)));
     }))))));
   }
 
@@ -23264,6 +23474,84 @@ function getPosition(event, referenceElement) {
     y: position.y - offset.top
   };
 }
+
+/***/ }),
+
+/***/ "./src/Components/Map/MyMap.js":
+/*!*************************************!*\
+  !*** ./src/Components/Map/MyMap.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\Map\\MyMap.js";
+
+
+
+
+
+
+class MyMap extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_0__["MapContainer"], {
+      center: [51.505, -0.09],
+      zoom: 13,
+      scrollWheelZoom: false,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_0__["TileLayer"], {
+      attribution: "\xA9 <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
+      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 21
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_0__["Marker"], {
+      position: [51.505, -0.09],
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_leaflet__WEBPACK_IMPORTED_MODULE_0__["Popup"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19,
+        columnNumber: 25
+      }
+    }, "A pretty CSS3 popup. ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20,
+        columnNumber: 50
+      }
+    }), " Easily customizable."))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MyMap);
 
 /***/ }),
 
@@ -24256,6 +24544,10 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       "aria-label": "\u0646\u0645\u0627\u06CC\u0634 \u062F\u0631 \u0646\u0642\u0634\u0647",
       "data-microtip-position": "top",
       role: "tooltip",
+      onClick: () => {
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_2__["DataHolder"].Back = null;
+        _Help_Socket__WEBPACK_IMPORTED_MODULE_4__["CurrentUserInfo"].Menu.setPage('Map'); //CurrentUserInfo.Modals['LiveAssistModal'].show();
+      },
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -24267,7 +24559,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
+        lineNumber: 73,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -24275,7 +24567,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66,
+        lineNumber: 74,
         columnNumber: 37
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -24283,7 +24575,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66,
+        lineNumber: 74,
         columnNumber: 50
       }
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -24296,7 +24588,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
+        lineNumber: 78,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -24304,7 +24596,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77,
+        lineNumber: 85,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -24312,7 +24604,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78,
+        lineNumber: 86,
         columnNumber: 37
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -24320,7 +24612,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78,
+        lineNumber: 86,
         columnNumber: 50
       }
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -24334,7 +24626,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82,
+        lineNumber: 90,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -24342,7 +24634,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92,
+        lineNumber: 100,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -24350,7 +24642,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93,
+        lineNumber: 101,
         columnNumber: 37
       }
     }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -24358,14 +24650,14 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93,
+        lineNumber: 101,
         columnNumber: 50
       }
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100,
+        lineNumber: 108,
         columnNumber: 29
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -24378,7 +24670,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101,
+        lineNumber: 109,
         columnNumber: 33
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Badge__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -24386,7 +24678,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106,
+        lineNumber: 114,
         columnNumber: 37
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -24394,7 +24686,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107,
+        lineNumber: 115,
         columnNumber: 41
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -24403,7 +24695,7 @@ class OtherTools extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108,
+        lineNumber: 116,
         columnNumber: 45
       }
     })))))))));
@@ -24447,7 +24739,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Help_Socket__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Help/Socket */ "./src/Help/Socket.js");
 /* harmony import */ var _Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Pages/LayoutPage */ "./src/Pages/LayoutPage.js");
 /* harmony import */ var _Help_DataHolder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Help/DataHolder */ "./src/Help/DataHolder.js");
+/* harmony import */ var primereact_inplace__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primereact/inplace */ "./node_modules/primereact/inplace.js");
+/* harmony import */ var primereact_inplace__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(primereact_inplace__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/esm/Button.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Components\\Satistification.js";
+
+
 
 
 
@@ -24457,7 +24754,7 @@ class Satistification extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
-      ratingCount: 0
+      ratingCount: []
     };
     _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["CurrentUserInfo"].Satistification = this;
   }
@@ -24485,6 +24782,7 @@ class Satistification extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }
 
     if (res.Content.CustomerId === _Help_DataHolder__WEBPACK_IMPORTED_MODULE_3__["DataHolder"].selectedCustomer.Id) {
+      if (res.Content.IsNew) Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_2__["_showMsg"])("بازخورد کاربر دریافت شد", 'success');
       this.setState({
         ratingCount: res.Content.RatingCount
       });
@@ -24502,18 +24800,37 @@ class Satistification extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       stars.push(i);
     }
 
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "aria-label": "\u0631\u0636\u0627\u06CC\u062A\u0645\u0646\u062F\u06CC",
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inplace__WEBPACK_IMPORTED_MODULE_4__["Inplace"], {
+      closable: true,
+      active: this.state.active,
+      onToggle: e => this.setState({
+        active: e.value
+      }),
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inplace__WEBPACK_IMPORTED_MODULE_4__["InplaceDisplay"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      "aria-label": "\u0631\u0636\u0627\u06CC\u062A\u0645\u0646\u062F\u06CC \u060C \u0628\u0631\u0627\u06CC \u0627\u0631\u0633\u0627\u0644 \u06A9\u0644\u06CC\u06A9 \u06A9\u0646\u06CC\u062F   ",
       "data-microtip-position": "top",
       role: "tooltip",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52,
-        columnNumber: 13
+        lineNumber: 61,
+        columnNumber: 25
       }
     }, stars.map((val, i, arr) => {
-      if (i < this.state.ratingCount) {
+      if (i < this.state.ratingCount.length) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           style: {
             color: '#f8d007'
@@ -24523,8 +24840,8 @@ class Satistification extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 58,
-            columnNumber: 47
+            lineNumber: 67,
+            columnNumber: 59
           }
         });
       } else {
@@ -24537,12 +24854,56 @@ class Satistification extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61,
-            columnNumber: 48
+            lineNumber: 70,
+            columnNumber: 60
           }
         });
       }
-    }));
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 76,
+        columnNumber: 29
+      }
+    }, ":\u0631\u0636\u0627\u06CC\u062A\u0645\u0646\u062F\u06CC"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_inplace__WEBPACK_IMPORTED_MODULE_4__["InplaceContent"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 89,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      variant: 'info',
+      onClick: () => {
+        this.sendRatingRequest();
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 91,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 97,
+        columnNumber: 1
+      }
+    }, "\u062F\u0631\u062E\u0648\u0627\u0633\u062A \u0646\u0638\u0631 \u0633\u0646\u062C\u06CC")))));
+  }
+
+  sendRatingRequest() {
+    this.setState({
+      active: false
+    });
+
+    Object(_Pages_LayoutPage__WEBPACK_IMPORTED_MODULE_2__["_showMsg"])("\n" + "درخواست نظر سنجی از کاربر ارسال شد");
+
+    _Help_Socket__WEBPACK_IMPORTED_MODULE_1__["MyCaller"].Send('AdminSendRatingRequest', {
+      customerId: _Help_DataHolder__WEBPACK_IMPORTED_MODULE_3__["DataHolder"].selectedCustomer.Id
+    });
   }
 
 }
@@ -24595,7 +24956,19 @@ var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupport
 class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(ar) {
     super(ar);
-    this.state = {};
+    this.state = {
+      /*Publish=2,Hidden=1,Draft=0*/
+      ArticleStatusList: [{
+        Title: 'انتشار',
+        Value: 2
+      }, {
+        Title: 'مخفی',
+        Value: 1
+      }, {
+        Title: 'پیش نویس',
+        Value: 0
+      }]
+    };
     _Help_Socket__WEBPACK_IMPORTED_MODULE_9__["CurrentUserInfo"].SaveArticle = this;
   }
 
@@ -24611,8 +24984,10 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
     _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].HelpDeskRowDataSelected = res.Content;
     this.preSelectHelpDesk();
+    let ArticleStatus = this.state.ArticleStatusList.find(f => f.Value === _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].HelpDeskRowDataSelected.ArticleStatus);
     this.setState({
-      tmp: Math.random()
+      tmp: Math.random(),
+      ArticleStatus: ArticleStatus
     });
   }
 
@@ -24728,7 +25103,7 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151,
+        lineNumber: 162,
         columnNumber: 20
       }
     }, "\u0641\u0631\u0645 \u0648\u06CC\u0631\u0627\u06CC\u0634 \u0645\u0642\u0627\u0644\u0647");
@@ -24736,7 +25111,7 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153,
+        lineNumber: 164,
         columnNumber: 16
       }
     }, "\u0641\u0631\u0645 \u062B\u0628\u062A \u0645\u0642\u0627\u0644\u0647");
@@ -24761,21 +25136,21 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 172,
+        lineNumber: 183,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 175,
+        lineNumber: 186,
         columnNumber: 17
       }
     }, this.showTitle(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 181,
+        lineNumber: 192,
         columnNumber: 21
       }
     }, "\u0628\u0639\u062F \u0627\u0632 \u0627\u0639\u0645\u0627\u0644 \u062A\u063A\u06CC\u06CC\u0631\u0627\u062A \u062F\u06A9\u0645\u0647 \u062B\u0628\u062A \u0631\u0627 \u0641\u0634\u0627\u0631 \u062F\u0647\u06CC\u062F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -24790,7 +25165,7 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184,
+        lineNumber: 195,
         columnNumber: 21
       }
     }, "\u0628\u0627\u0632\u06AF\u0634\u062A", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -24799,7 +25174,7 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 191,
+        lineNumber: 202,
         columnNumber: 25
       }
     })), this.state.wait && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Spinner__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -24808,7 +25183,7 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197,
+        lineNumber: 208,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -24816,42 +25191,42 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 198,
+        lineNumber: 209,
         columnNumber: 25
       }
     }, "\u0644\u0637\u0641\u0627 \u0645\u0646\u062A\u0638\u0631 \u0628\u0645\u0627\u0646\u06CC\u062F...")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 201,
+        lineNumber: 212,
         columnNumber: 21
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 202,
+        lineNumber: 213,
         columnNumber: 21
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 203,
+        lineNumber: 214,
         columnNumber: 21
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 204,
+        lineNumber: 215,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_10__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 205,
+        lineNumber: 216,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormInputs__WEBPACK_IMPORTED_MODULE_2__["Input"], {
@@ -24868,28 +25243,28 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 206,
+        lineNumber: 217,
         columnNumber: 29
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_10__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 218,
+        lineNumber: 229,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 219,
+        lineNumber: 230,
         columnNumber: 29
       }
     }, "\u0627\u0646\u062A\u062E\u0627\u0628 \u062F\u0633\u062A\u0647 \u0628\u0646\u062F\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 220,
+        lineNumber: 231,
         columnNumber: 29
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_dropdown__WEBPACK_IMPORTED_MODULE_12__["Dropdown"], {
@@ -24905,21 +25280,59 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 221,
+        lineNumber: 232,
+        columnNumber: 29
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 242,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 243,
+        columnNumber: 29
+      }
+    }, "\u0627\u0646\u062A\u062E\u0627\u0628 \u062F\u0633\u062A\u0647 \u0628\u0646\u062F\u06CC"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 244,
+        columnNumber: 29
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_dropdown__WEBPACK_IMPORTED_MODULE_12__["Dropdown"], {
+      value: this.state.ArticleStatus,
+      options: this.state.ArticleStatusList,
+      onChange: e => {
+        this.setState({
+          ArticleStatus: e.value
+        });
+        _Help_DataHolder__WEBPACK_IMPORTED_MODULE_1__["DataHolder"].HelpDeskRowDataSelected.ArticleStatus = e.value.Value;
+      },
+      optionLabel: "Title",
+      placeholder: "\u0646\u062D\u0648\u0647 \u0627\u0646\u062A\u0634\u0627\u0631",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 245,
         columnNumber: 29
       }
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 233,
+        lineNumber: 258,
         columnNumber: 21
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_5__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 234,
+        lineNumber: 259,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -24930,14 +25343,14 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 235,
+        lineNumber: 260,
         columnNumber: 25
       }
     }, "\u062B\u0628\u062A")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 242,
+        lineNumber: 267,
         columnNumber: 21
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_editor__WEBPACK_IMPORTED_MODULE_3__["Editor"], {
@@ -24955,7 +25368,7 @@ class SaveArticle extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 243,
+        lineNumber: 268,
         columnNumber: 21
       }
     })));
@@ -25913,7 +26326,7 @@ class SendFromHelpDesk extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   statusTemplate(rowData) {
-    if (rowData.status === 1) {
+    if (rowData.status === 2) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: 'text-success',
         __self: this,
@@ -25925,12 +26338,24 @@ class SendFromHelpDesk extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       }, "\u0645\u0646\u062A\u0634\u0631 \u0634\u062F\u0647");
     }
 
+    if (rowData.status === 0) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: 'text-success',
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 277,
+          columnNumber: 20
+        }
+      }, "\u067E\u06CC\u0634 \u0646\u0645\u0627\u06CC\u0634");
+    }
+
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: 'text-warning',
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 276,
+        lineNumber: 279,
         columnNumber: 16
       }
     }, "\u0645\u062E\u0641\u06CC");
@@ -25942,7 +26367,7 @@ class SendFromHelpDesk extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 282,
+        lineNumber: 285,
         columnNumber: 16
       }
     }, rowData.visitsCount);
@@ -25955,7 +26380,7 @@ class SendFromHelpDesk extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 287,
+        lineNumber: 290,
         columnNumber: 16
       }
     }, rowData.lastPublishTime);
@@ -30100,6 +30525,17 @@ class dispatcher {
 
       /*===========rating end============*/
 
+      /*========== rating==========*/
+
+      case "getLastVisitedPagesCallback":
+        if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LastPagesVisited) {
+          _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].LastPagesVisited.getLastVisitedPagesCallback(res);
+        }
+
+        break;
+
+      /*========== END==========*/
+
       /*===========customer data===============*/
 
       case "saveKeyCallback":
@@ -30227,6 +30663,11 @@ class dispatcher {
       /*============article END=============*/
 
       /*===========category===================*/
+
+      case "category_GetById_Callback":
+        if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].CategorySave) {
+          _Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].CategorySave.category_GetById_Callback(res);
+        }
 
       case "category_Get_List_Callback":
         if (_Socket__WEBPACK_IMPORTED_MODULE_0__["CurrentUserInfo"].CategoryIndex) {
@@ -32955,11 +33396,15 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
+    if (!_getHelpDesk().helpDeskId) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+    }
+
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 138,
+        lineNumber: 142,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -32967,14 +33412,14 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140,
+        lineNumber: 144,
         columnNumber: 17
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141,
+        lineNumber: 145,
         columnNumber: 21
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_tabview__WEBPACK_IMPORTED_MODULE_13__["TabView"], {
@@ -32985,7 +33430,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 143,
+        lineNumber: 147,
         columnNumber: 21
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_tabview__WEBPACK_IMPORTED_MODULE_13__["TabPanel"], {
@@ -32993,14 +33438,14 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144,
+        lineNumber: 148,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_HelpDesk_Category_CategoryLayout__WEBPACK_IMPORTED_MODULE_12__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145,
+        lineNumber: 149,
         columnNumber: 29
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_tabview__WEBPACK_IMPORTED_MODULE_13__["TabPanel"], {
@@ -33008,14 +33453,14 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147,
+        lineNumber: 151,
         columnNumber: 25
       }
     }, !_Help_DataHolder__WEBPACK_IMPORTED_MODULE_7__["DataHolder"].subPage && this.showArticles(), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_7__["DataHolder"].subPage === 'SaveArticle' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_SaveArticle__WEBPACK_IMPORTED_MODULE_15__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153,
+        lineNumber: 157,
         columnNumber: 29
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_tabview__WEBPACK_IMPORTED_MODULE_13__["TabPanel"], {
@@ -33023,14 +33468,14 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 156,
+        lineNumber: 160,
         columnNumber: 25
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_HelpDesk_HelpDeskSetting_HelpDeskSetting__WEBPACK_IMPORTED_MODULE_16__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 158,
+        lineNumber: 162,
         columnNumber: 29
       }
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_9__["Toast"], {
@@ -33039,7 +33484,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 168,
+        lineNumber: 172,
         columnNumber: 17
       }
     }));
@@ -33066,7 +33511,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 198,
+          lineNumber: 202,
           columnNumber: 15
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -33074,7 +33519,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 199,
+          lineNumber: 203,
           columnNumber: 19
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -33082,7 +33527,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 200,
+          lineNumber: 204,
           columnNumber: 23
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -33093,14 +33538,14 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 201,
+          lineNumber: 205,
           columnNumber: 27
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 202,
+          lineNumber: 206,
           columnNumber: 27
         }
       }, "\u0622\u06CC\u0627 \u0627\u0632 \u062D\u0630\u0641 \u0627\u06CC\u0646 \u0645\u0642\u0627\u0644\u0647 \u0627\u0637\u0645\u06CC\u0646\u0627\u0646 \u062F\u0627\u0631\u06CC\u062F \u061F"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -33108,14 +33553,14 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 206,
+          lineNumber: 210,
           columnNumber: 19
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207,
+          lineNumber: 211,
           columnNumber: 22
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -33123,7 +33568,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 208,
+          lineNumber: 212,
           columnNumber: 26
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -33143,7 +33588,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 209,
+          lineNumber: 213,
           columnNumber: 30
         }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -33151,7 +33596,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 218,
+          lineNumber: 222,
           columnNumber: 26
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -33170,7 +33615,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 219,
+          lineNumber: 223,
           columnNumber: 30
         }
       })))))
@@ -33202,7 +33647,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 254,
+        lineNumber: 258,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -33224,21 +33669,21 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 256,
+        lineNumber: 260,
         columnNumber: 17
       }
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 272,
+        lineNumber: 276,
         columnNumber: 13
       }
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_6__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 274,
+        lineNumber: 278,
         columnNumber: 13
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_SendFromHelpDesk__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -33246,7 +33691,7 @@ class HelpDeskPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 275,
+        lineNumber: 279,
         columnNumber: 17
       }
     })));
@@ -33312,7 +33757,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Event_TriggersPage__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./Event_TriggersPage */ "./src/Pages/Event_TriggersPage.js");
 /* harmony import */ var _LiveAssistPage__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./LiveAssistPage */ "./src/Pages/LiveAssistPage.js");
 /* harmony import */ var _Components_UsersSeparation_UsersSeparationLayout__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../Components/UsersSeparation/UsersSeparationLayout */ "./src/Components/UsersSeparation/UsersSeparationLayout.js");
+/* harmony import */ var _MapPage__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./MapPage */ "./src/Pages/MapPage.js");
 var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Pages\\LayoutPage.js";
+
 
 
 
@@ -33387,12 +33834,12 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }
   }
 
-  showMsg(msg) {
+  showMsg(msg, TYPE) {
     if (msg) {
       if (this.toast && this.toastRunning < 3 && this.toastRunning >= 0) {
         this.toastRunning++;
         this.toast.show({
-          severity: 'info',
+          severity: TYPE ? TYPE : 'info',
           summary: 'پیغام',
           detail: msg
         });
@@ -33437,7 +33884,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 122,
+            lineNumber: 123,
             columnNumber: 21
           }
         }, this.state.focusForSelectingAdmin && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -33445,7 +33892,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 123,
+            lineNumber: 124,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33454,28 +33901,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 124,
+            lineNumber: 125,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 126,
+            lineNumber: 127,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 127,
+            lineNumber: 128,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ChatPage__WEBPACK_IMPORTED_MODULE_1__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 129,
+            lineNumber: 130,
             columnNumber: 13
           }
         }));
@@ -33484,7 +33931,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 136,
+            lineNumber: 137,
             columnNumber: 21
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33493,28 +33940,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 137,
+            lineNumber: 138,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 138,
+            lineNumber: 139,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 139,
+            lineNumber: 140,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fakeServer_FakeServerMonitor__WEBPACK_IMPORTED_MODULE_17__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143,
+            lineNumber: 144,
             columnNumber: 25
           }
         }));
@@ -33523,7 +33970,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 153,
+            lineNumber: 154,
             columnNumber: 21
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33532,28 +33979,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 154,
+            lineNumber: 155,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 155,
+            lineNumber: 156,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 156,
+            lineNumber: 157,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_UsersSeparation_UsersSeparationLayout__WEBPACK_IMPORTED_MODULE_34__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 160,
+            lineNumber: 161,
             columnNumber: 25
           }
         }));
@@ -33563,7 +34010,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 172,
+            lineNumber: 173,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33572,28 +34019,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 174,
+            lineNumber: 175,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 175,
+            lineNumber: 176,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 176,
+            lineNumber: 177,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormCreatorPage__WEBPACK_IMPORTED_MODULE_20__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 178,
+            lineNumber: 179,
             columnNumber: 25
           }
         }));
@@ -33603,7 +34050,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 186,
+            lineNumber: 187,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33612,28 +34059,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 188,
+            lineNumber: 189,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 189,
+            lineNumber: 190,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 190,
+            lineNumber: 191,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Event_TriggersPage__WEBPACK_IMPORTED_MODULE_32__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 192,
+            lineNumber: 193,
             columnNumber: 25
           }
         }));
@@ -33643,7 +34090,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 199,
+            lineNumber: 200,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33652,28 +34099,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 200,
+            lineNumber: 201,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 202,
+            lineNumber: 203,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 203,
+            lineNumber: 204,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Chat__WEBPACK_IMPORTED_MODULE_22__["AutomaticSendPage"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 205,
+            lineNumber: 206,
             columnNumber: 25
           }
         }));
@@ -33683,7 +34130,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 214,
+            lineNumber: 215,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33692,28 +34139,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 216,
+            lineNumber: 217,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 217,
+            lineNumber: 218,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 218,
+            lineNumber: 219,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProfilePage__WEBPACK_IMPORTED_MODULE_18__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 220,
+            lineNumber: 221,
             columnNumber: 25
           }
         }));
@@ -33723,7 +34170,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 228,
+            lineNumber: 229,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33732,28 +34179,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 230,
+            lineNumber: 231,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 231,
+            lineNumber: 232,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 232,
+            lineNumber: 233,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CustomerProfilePage__WEBPACK_IMPORTED_MODULE_31__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 234,
+            lineNumber: 235,
             columnNumber: 25
           }
         }));
@@ -33763,7 +34210,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 241,
+            lineNumber: 242,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33772,28 +34219,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 243,
+            lineNumber: 244,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 244,
+            lineNumber: 245,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 245,
+            lineNumber: 246,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_FormDataPage__WEBPACK_IMPORTED_MODULE_21__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 247,
+            lineNumber: 248,
             columnNumber: 25
           }
         }));
@@ -33803,7 +34250,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 254,
+            lineNumber: 255,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33812,28 +34259,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 256,
+            lineNumber: 257,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 257,
+            lineNumber: 258,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 258,
+            lineNumber: 259,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SocialChannelsPage__WEBPACK_IMPORTED_MODULE_19__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 260,
+            lineNumber: 261,
             columnNumber: 25
           }
         }));
@@ -33843,7 +34290,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 268,
+            lineNumber: 269,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33852,28 +34299,28 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 270,
+            lineNumber: 271,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 271,
+            lineNumber: 272,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 272,
+            lineNumber: 273,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Container__WEBPACK_IMPORTED_MODULE_30__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 275,
+            lineNumber: 276,
             columnNumber: 25
           }
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_HelpDesk_Language_LanguageHolder__WEBPACK_IMPORTED_MODULE_29__["default"], {
@@ -33881,24 +34328,24 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 276,
+            lineNumber: 277,
             columnNumber: 29
           }
         })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HelpDeskPage__WEBPACK_IMPORTED_MODULE_27__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 281,
+            lineNumber: 283,
             columnNumber: 25
           }
         }));
-      } else if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].currentPage === "LiveAssistPage") {
+      } else if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].currentPage === "Map") {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.focusForSelectingAdmin && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "hideWhole",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 292,
+            lineNumber: 294,
             columnNumber: 64
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -33907,32 +34354,32 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 294,
+            lineNumber: 296,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 295,
+            lineNumber: 297,
             columnNumber: 25
           }
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 296,
+            lineNumber: 298,
             columnNumber: 25
           }
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LiveAssistPage__WEBPACK_IMPORTED_MODULE_33__["default"], {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapPage__WEBPACK_IMPORTED_MODULE_35__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 299,
+            lineNumber: 303,
             columnNumber: 25
           }
         }));
-      } else if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].currentPage === "CustomerList") {
+      } else if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].currentPage === "LiveAssistPage") {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.focusForSelectingAdmin && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "hideWhole",
           __self: this,
@@ -33964,60 +34411,100 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
             lineNumber: 318,
             columnNumber: 25
           }
-        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'WaitingForAnswer' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WaitingForAnswer__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LiveAssistPage__WEBPACK_IMPORTED_MODULE_33__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 321,
             columnNumber: 25
           }
-        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'Answered' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Answered__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        }));
+      } else if (_Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].currentPage === "CustomerList") {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.focusForSelectingAdmin && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "hideWhole",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 324,
-            columnNumber: 25
+            lineNumber: 336,
+            columnNumber: 64
           }
-        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'AllCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllCustomerListPage__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 328,
-            columnNumber: 25
-          }
-        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'NotChatted' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NotChatted__WEBPACK_IMPORTED_MODULE_12__["default"], {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 332,
-            columnNumber: 25
-          }
-        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'ChattedAndReturnedCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ChattedAndReturnedCustomerListPage__WEBPACK_IMPORTED_MODULE_14__["default"], {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 335,
-            columnNumber: 25
-          }
-        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'NotChattedLeftCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NotChattedLeftCustomerListPage__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
+          position: "bottom-left",
+          ref: el => this.toast = el,
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 338,
             columnNumber: 25
           }
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Menu__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 339,
+            columnNumber: 25
+          }
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 340,
+            columnNumber: 25
+          }
+        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'WaitingForAnswer' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WaitingForAnswer__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 343,
+            columnNumber: 25
+          }
+        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'Answered' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Answered__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 346,
+            columnNumber: 25
+          }
+        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'AllCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AllCustomerListPage__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 350,
+            columnNumber: 25
+          }
+        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'NotChatted' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NotChatted__WEBPACK_IMPORTED_MODULE_12__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 354,
+            columnNumber: 25
+          }
+        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'ChattedAndReturnedCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ChattedAndReturnedCustomerListPage__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 357,
+            columnNumber: 25
+          }
+        }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'NotChattedLeftCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NotChattedLeftCustomerListPage__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 360,
+            columnNumber: 25
+          }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'SepratePerPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SepratePerPage__WEBPACK_IMPORTED_MODULE_15__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 342,
+            lineNumber: 364,
             columnNumber: 25
           }
         }), _Help_DataHolder__WEBPACK_IMPORTED_MODULE_6__["DataHolder"].filterType === 'SeparatePerPageCustomerListPage' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SeparatePerPageCustomerListPage__WEBPACK_IMPORTED_MODULE_16__["default"], {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 347,
+            lineNumber: 369,
             columnNumber: 25
           }
         }));
@@ -34027,7 +34514,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 358,
+          lineNumber: 380,
           columnNumber: 17
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_toast__WEBPACK_IMPORTED_MODULE_23__["Toast"], {
@@ -34036,14 +34523,14 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 359,
+          lineNumber: 381,
           columnNumber: 21
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MessageAlerts, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 360,
+          lineNumber: 382,
           columnNumber: 21
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoginPage__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -34051,7 +34538,7 @@ class LayoutPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 362,
+          lineNumber: 384,
           columnNumber: 21
         }
       }));
@@ -34065,8 +34552,8 @@ function _showError(msgf) {
 function _showConstantMsg(msgf, type, callback) {
   _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.showConstantMsg(msgf, type, callback);
 }
-function _showMsg(msg) {
-  _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.showMsg(msg);
+function _showMsg(msg, TYPE) {
+  _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.showMsg(msg, TYPE);
 }
 function MessageAlerts(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.err && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -34074,7 +34561,7 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 395,
+      lineNumber: 417,
       columnNumber: 51
     }
   }, _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.err), _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.msg && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -34082,7 +34569,7 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396,
+      lineNumber: 418,
       columnNumber: 50
     }
   }, _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.msg), _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.constantMsg && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -34090,7 +34577,7 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 401,
+      lineNumber: 423,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(primereact_button__WEBPACK_IMPORTED_MODULE_26__["Button"], {
@@ -34102,7 +34589,7 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404,
+      lineNumber: 426,
       columnNumber: 13
     }
   }), _Help_Socket__WEBPACK_IMPORTED_MODULE_5__["CurrentUserInfo"].LayoutPage.state.constantMsg, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Spinner__WEBPACK_IMPORTED_MODULE_25__["default"], {
@@ -34111,7 +34598,7 @@ function MessageAlerts(props) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 412,
+      lineNumber: 434,
       columnNumber: 13
     }
   })));
@@ -34444,6 +34931,96 @@ class LoginPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
 }
+
+/***/ }),
+
+/***/ "./src/Pages/MapPage.js":
+/*!******************************!*\
+  !*** ./src/Pages/MapPage.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Components_CustomerToolbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/CustomerToolbar */ "./src/Components/CustomerToolbar.js");
+/* harmony import */ var _Components_Chat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Chat */ "./src/Components/Chat.js");
+/* harmony import */ var _Components_Customers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/Customers */ "./src/Components/Customers.js");
+/* harmony import */ var _Components_Map_MyMap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Components/Map/MyMap */ "./src/Components/Map/MyMap.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap/Row */ "./node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap/Col */ "./node_modules/react-bootstrap/esm/Col.js");
+var _jsxFileName = "D:\\mohammad\\workplace\\1399\\shahrivar\\0028-onlinesupportsite\\SignalRMVCChat\\Content\\ClientApp\\my-app\\src\\Pages\\MapPage.js";
+
+
+
+
+
+
+
+
+
+class MapPage extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Container"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Row__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20,
+        columnNumber: 21
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      md: 9,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Map_MyMap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23,
+        columnNumber: 29
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Col__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      md: 3,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27,
+        columnNumber: 25
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Customers__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28,
+        columnNumber: 29
+      }
+    })))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MapPage);
 
 /***/ }),
 
