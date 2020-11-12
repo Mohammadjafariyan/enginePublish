@@ -36,7 +36,7 @@ class BotLogTable extends Component {
         let obj = {};
         if (CurrentUserInfo.BotLogForm) {
 
-            obj["order"] = CurrentUserInfo.BotLogForm.state.order;
+            obj["order"] = CurrentUserInfo.BotLogForm.state.order ? CurrentUserInfo.BotLogForm.state.order .name== 'اولین' ? true:false :false;
             obj["botId"] = CurrentUserInfo.BotLogForm.state.selectedbot ? CurrentUserInfo.BotLogForm.state.selectedbot.Id : null;
         }
 
@@ -44,7 +44,7 @@ class BotLogTable extends Component {
         obj["page"] = this.state.page;
 
 
-        MyCaller.Send('GetBotLogList');
+        MyCaller.Send('GetBotLogList',obj);
 
     }
 
@@ -54,13 +54,13 @@ class BotLogTable extends Component {
         if (!res || !res.Content) {
             _showError('getBotLogListCallback res is null')
 
-            this.setState({
-                EntityList: res.Content.list,
-                page: res.Content.page,
-                total: res.Content.total
-            });
+          
         }
-
+        this.setState({
+            EntityList: res.Content.EntityList,
+            page: res.Content.page,
+            total: res.Content.total
+        });
 
     }
 

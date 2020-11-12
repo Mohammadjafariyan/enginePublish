@@ -17,7 +17,7 @@ class BotLogDetail extends Component {
 
                 <Button label="بستن" className="p-button-raised p-button-warning p-button-text" onClick={() => {
 
-                    this.props.setState({SelectedBotLog: null});
+                    this.props.parent.setState({SelectedBotLog: null});
 
                 }}/>
 

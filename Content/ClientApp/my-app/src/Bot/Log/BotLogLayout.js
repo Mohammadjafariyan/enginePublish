@@ -18,9 +18,31 @@ class BotLogLayout extends Component {
             _showError('دیتای بازگشتی نال است')
             return;
         }
+        
 
-        this.setState({SelectedBotLog: res.Content});
+        let bot=res.Content;
+        bot.MutableChildren=bot.children;
+        
+        bot=this.ConnectChildrenRecursive(bot);
+        console.log(bot);
+        this.setState({SelectedBotLog: bot});
 
+    }
+
+    ConnectChildrenRecursive(bot) {
+        if (!bot.MutableChildren || bot.MutableChildren.length == 0 || bot.MutableChildren.length == null) {
+            return bot;
+        }
+        bot.children = bot.MutableChildren;
+
+        for (let i = 0;
+             i < bot.MutableChildren.length;
+             i++
+        ) {
+            bot.MutableChildren[i]=   this.ConnectChildrenRecursive(bot.MutableChildren[i])
+        }
+        
+        return bot;
     }
 
     render() {
@@ -31,10 +53,10 @@ class BotLogLayout extends Component {
 
                 {!this.state.SelectedBotLog &&
                 <>
-                    
+
                     <BotLogForm/>
 
-                    
+
                     <hr/>
 
                     <BotLogTable/>
