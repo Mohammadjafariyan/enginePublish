@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="68cf5853-eec4-45b1-b6d0-2aeeaf3282f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Areas/Admin/Views/Web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Common/Views/Web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Customer/Views/Web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/HubPartials/Views/Web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/security/Views/Web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/sysAdmin/Views/Web.config" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kGhFvRfXLpUtF9nWCiLXe95u3C" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68cf5853-eec4-45b1-b6d0-2aeeaf3282f3" name="Default Changelist" comment="" />
+      <created>1605332735389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605332735389</updated>
+      <workItem from="1605332738187" duration="256000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="247" y="160" width="994" height="664" key="find.popup" timestamp="1605332828348">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="247" y="160" width="994" height="664" key="find.popup/0.0.1280.984@0.0.1280.984" timestamp="1605332828348" />
+    <state x="219" y="0" width="840" height="1034" key="search.everywhere.popup" timestamp="1605332759509">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="219" y="0" width="840" height="1034" key="search.everywhere.popup/0.0.1280.984@0.0.1280.984" timestamp="1605332759509" />
+  </component>
+</project>
