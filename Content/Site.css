@@ -1,4 +1,30 @@
-﻿/*----------------------------- pulsing circle animation-------------------------*/
+﻿/*---------------------------------------------------speach bubbles--------------------------------------*/
+
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+    from{border-right-color: rgba(0,255,0,.75);}
+    to{border-right-color: transparent;}
+}
+/*---------------------------------------------------animations--------------------------------------*/
+
+/* The animation code */
+
+@keyframes one {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(10deg);
+    }
+}
+
+/*---------------------------------------------------END--------------------------------------*/
+
+
+
+/*----------------------------- pulsing circle animation-------------------------*/
 
 .pulsating-circle {
     position: absolute;
