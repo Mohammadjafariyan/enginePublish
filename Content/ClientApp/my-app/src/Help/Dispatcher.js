@@ -13,12 +13,173 @@ class dispatcher {
         }
         console.log("dispatcher===>", res.Name);
         switch (res.Name) {
+            /*-------------------- stats--------------------*/
+
+            case "getVisitedPagesForCurrentSiteCallback":
+                if (CurrentUserInfo.PageVisitStat) {
+                    CurrentUserInfo.PageVisitStat.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.PageOnlineCount) {
+                    CurrentUserInfo.PageOnlineCount.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.StatInMap) {
+                    CurrentUserInfo.StatInMap.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.StatPerState) {
+                    CurrentUserInfo.StatPerState.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.StatPerCity) {
+                    CurrentUserInfo.StatPerCity.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.StatForeignCountries) {
+                    CurrentUserInfo.StatForeignCountries.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.MostExitUrlInSite) {
+                    CurrentUserInfo.MostExitUrlInSite.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.SiteViewsInWeek) {
+                    CurrentUserInfo.SiteViewsInWeek.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.SiteViewsInHoursOfToday) {
+                    CurrentUserInfo.SiteViewsInHoursOfToday.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.SiteViewsInMonths) {
+                    CurrentUserInfo.SiteViewsInMonths.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.SiteViewsInLast5Year) {
+                    CurrentUserInfo.SiteViewsInLast5Year.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.SiteViewsMostOnlineTime) {
+                    CurrentUserInfo.SiteViewsMostOnlineTime.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                if (CurrentUserInfo.SiteVisit) {
+                    CurrentUserInfo.SiteVisit.getVisitedPagesForCurrentSiteCallback(res);
+                }
+                break;
+            /*-------------------- end--------------------*/
+
+
+            /*-------------------- Compaign--------------------*/
+
+
+           
+           
+            /*--------------------- compaignLog------------*/
+            case "getCompaignLogListCallback":
+                if (CurrentUserInfo.CompaignLogTable) {
+                    CurrentUserInfo.CompaignLogTable.getCompaignLogListCallback(res);
+                }
+                break;
+
+            case "getCompaignLogReceiverListCallback":
+                if (CurrentUserInfo.CompaignLogReceiverTable) {
+                    CurrentUserInfo.CompaignLogReceiverTable.getCallback(res);
+                }
+                break;
+
+
+                
+            /*--------------------- end------------*/
+                
+
+            case "getCompaignTemplatesCallback":
+                if (CurrentUserInfo.CompaignTemplates) {
+                    CurrentUserInfo.CompaignTemplates.getCompaignTemplatesCallback(res);
+                }
+                break;
+            case "searchCustomersCallback":
+                if (CurrentUserInfo.SelectCustomers) {
+                    CurrentUserInfo.SelectCustomers.searchCustomersCallback(res);
+                }
+                break;
+            case "getCompaignListCallback":
+                if (CurrentUserInfo.CompaignLayout) {
+                    CurrentUserInfo.CompaignLayout.getCallback(res);
+                }
+
+                if (CurrentUserInfo.CompaignTable) {
+                    CurrentUserInfo.CompaignTable.getCompaignListCallback(res);
+                }
+
+                break;
+            case "compaignSaveCallback":
+                if (CurrentUserInfo.CompaignSave) {
+                    CurrentUserInfo.CompaignSave.compaignSaveCallback(res);
+                }
+
+                if (CurrentUserInfo.CompaignLayout) {
+                    CurrentUserInfo.CompaignLayout.saveCallback(res);
+                    CurrentUserInfo.CompaignLayout.saveDraftCallback(res);
+                }
+
+                break;
+            case "deleteCompaignCallback":
+                if (CurrentUserInfo.CompaignLayout) {
+                    CurrentUserInfo.CompaignLayout.deleteCallback(res);
+                }
+                break;
+            case "setIsEnabledCompaignCallback":
+                if (CurrentUserInfo.CompaignLayout) {
+                    CurrentUserInfo.CompaignLayout.setIsEnabledCallback(res);
+                }
+                break;
+            case "saveCompaignCallback":
+                if (CurrentUserInfo.CompaignLayout) {
+                    CurrentUserInfo.CompaignLayout.saveCallback(res);
+                }
+                break;
+            /*-------------------- end--------------------*/
+
+            /*-------------------- Routing--------------------*/
+            case "getRoutingListCallback":
+                if (CurrentUserInfo.RoutingLayout) {
+                    CurrentUserInfo.RoutingLayout.getCallback(res);
+                }
+                break;
+            case "routingSaveCallback":
+                if (CurrentUserInfo.RoutingSave) {
+                    CurrentUserInfo.RoutingSave.routingSaveCallback(res);
+                }
+
+                if (CurrentUserInfo.RoutingLayout) {
+                    CurrentUserInfo.RoutingLayout.saveCallback(res);
+                    CurrentUserInfo.RoutingLayout.saveDraftCallback(res);
+                }
+
+                break;
+            case "deleteRoutingCallback":
+                if (CurrentUserInfo.RoutingLayout) {
+                    CurrentUserInfo.RoutingLayout.deleteCallback(res);
+                }
+                break;
+            case "setIsEnabledRoutingCallback":
+                if (CurrentUserInfo.RoutingLayout) {
+                    CurrentUserInfo.RoutingLayout.setIsEnabledCallback(res);
+                }
+                break;
+            case "saveRoutingCallback":
+                if (CurrentUserInfo.RoutingLayout) {
+                    CurrentUserInfo.RoutingLayout.saveCallback(res);
+                }
+                break;
+
+            /*-------------------- End--------------------*/
+
+
+            /*-------------------- Tracking--------------------*/
+            case "getContactsCallback":
+                if (CurrentUserInfo.ContactsIndex) {
+                    CurrentUserInfo.ContactsIndex.getContactsCallback(res);
+                }
+            /*-------------------- End--------------------*/
+
+
             /*-------------------- Tracking--------------------*/
             case "getCustomerTrackingInfoDetailCallback":
                 if (CurrentUserInfo.CustomerTimeSpent) {
                     CurrentUserInfo.CustomerTimeSpent.getCustomerTrackingInfoDetailCallback(res);
                 }
-                
+
                 if (CurrentUserInfo.CustomerProfile) {
                     CurrentUserInfo.CustomerProfile.getCustomerTrackingInfoDetailCallback(res);
                 }
@@ -27,27 +188,34 @@ class dispatcher {
 
             /*-------------------- End--------------------*/
 
-            
+
             /*-------------------- BOT LOG--------------------*/
             case "getBotLogSingleCallback":
                 if (CurrentUserInfo.BotLogLayout) {
                     CurrentUserInfo.BotLogLayout.getBotLogSingleCallback(res);
                 }
                 break;
-                
+
             case "getBotListCallback":
                 if (CurrentUserInfo.BotLogForm) {
                     CurrentUserInfo.BotLogForm.getBotListCallback(res);
                 }
+
+
+                if (CurrentUserInfo.CompaignConditions) {
+                    CurrentUserInfo.CompaignConditions.botListCallback(res);
+                }
+
+
                 break;
             case "getBotLogListCallback":
                 if (CurrentUserInfo.BotLogTable) {
                     CurrentUserInfo.BotLogTable.getBotLogListCallback(res);
                 }
                 break;
-                
-                
-                
+
+
+
             /*-------------------- BOT--------------------*/
             case "botSaveCallback":
                 if (CurrentUserInfo.BotDesign) {
@@ -192,6 +360,10 @@ class dispatcher {
             case "eventTriggerGetAllCallback":
                 if (CurrentUserInfo.EventTriggerIndex) {
                     CurrentUserInfo.EventTriggerIndex.eventTriggerGetAllCallback(res);
+                }
+
+                if (CurrentUserInfo.CompaignConditions) {
+                    CurrentUserInfo.CompaignConditions.eventTriggerGetAllCallback(res);
                 }
                 break;
 
@@ -606,6 +778,12 @@ class dispatcher {
                 if (CurrentUserInfo.BotEventAction) {
                     CurrentUserInfo.BotEventAction.GetAdminsListCallback(res);
                 }
+
+                if (CurrentUserInfo.SelectAdmins) {
+                    CurrentUserInfo.SelectAdmins.GetAdminsListCallback(res);
+                }
+
+
                 break;
 
             case "getAutomaticSendChatsSocketHandlerCallback":
@@ -642,8 +820,7 @@ class dispatcher {
             case "readChatCallback":
                 CurrentUserInfo.ChatPage.readChatCallback(res);
                 CurrentUserInfo.ChatPage.LoadForms(res);
-                
-                
+
 
                 break;
             case "adminLoginCallback":
@@ -677,7 +854,6 @@ class dispatcher {
                 }
 
 
-             
                 /*else{
          
                          CurrentUserInfo.LayoutPage.showError('dispatcher CurrentUserInfo.OnlineCustomerListHolder is null');
@@ -826,8 +1002,8 @@ class dispatcher {
             case "getVisitedPagesForCurrentSiteCallback":
                 if (CurrentUserInfo.SepratePerPage) {
                     CurrentUserInfo.SepratePerPage.getVisitedPagesForCurrentSiteCallback(
-                    res
-                );
+                        res
+                    );
                 }
 
                 if (CurrentUserInfo.PageVisitStat) {
@@ -857,8 +1033,8 @@ class dispatcher {
                 if (CurrentUserInfo.StatForeignCountries) {
                     CurrentUserInfo.StatForeignCountries.getVisitedPagesForCurrentSiteCallback(res);
                 }
-                
-                
+
+
                 break;
 
             case "getAllTagsForCurrentAdminCallback":
@@ -898,7 +1074,7 @@ class dispatcher {
                     CurrentUserInfo.CurrentPlanInMenu.getMyProfileCallback(res);
                 }
 
-                
+
                 break;
             case "saveMyProfileCallback":
                 if (CurrentUserInfo.ProfilePage) {
@@ -926,6 +1102,11 @@ class dispatcher {
                 if (CurrentUserInfo.TagList) {
                     CurrentUserInfo.TagList.getTagsCallback(res);
                 }
+
+                if (CurrentUserInfo.SelectSegments) {
+                    CurrentUserInfo.SelectSegments.getTagsCallback(res);
+                }
+
                 break;
             default:
                 if (res && res.Message) {
