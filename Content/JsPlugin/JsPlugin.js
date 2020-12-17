@@ -750,14 +750,14 @@ class EventTrigger {
         }
 
 
-        if (getDoc().querySelector('#dot').style.display !== 'none') {
+        if (window.getComputedStyle(getDoc().querySelector('#dot'), null).display !== 'none') {
             getDoc().querySelector('#dot').click();
         }
     }
 
     openChat() {
 
-        if (getDoc().querySelector('#dot').style.display !== 'none') {
+        if (window.getComputedStyle(getDoc().querySelector('#dot'), null).display !== 'none') {
             getDoc().querySelector('#dot').click();
         }
     }
@@ -3673,10 +3673,7 @@ class DomManager {
 
             }
 
-            if (CurrentUserInfo.targetId) {
                 CurrentUserInfo.plugin.readChat(CurrentUserInfo.targetId);
-
-            }
 
 
             /*     if (!CurrentUserInfo.IsCustomer) {
@@ -3922,7 +3919,10 @@ let MyCaller = {
 
             return;
         } else {
-            clearMsg(null);
+            //if (clearMsg) {
+            //    clearMsg(null);
+
+            //}
 
         }
 
@@ -7003,7 +7003,7 @@ function adminSendRatingRequestCallback(res) {
     `;
 
 
-    if (getDoc().querySelector('#dot').style.display === 'none') {
+    if (window.getComputedStyle(getDoc().querySelector('#dot'), null).display === 'none') {
         getDoc().querySelector('#chatPanel').append(createElementFromHTML(html));
 
     } else {
@@ -7032,7 +7032,7 @@ function gapComment(rate, el) {
 
     `;
 
-    if (getDoc().querySelector('#dot').style.display === 'none') {
+    if (window.getComputedStyle(getDoc().querySelector('#dot'), null).display === 'none') {
         html += `    <i style="font-size: 25px;float:left" class="fa fa-comment" aria-hidden="true"></i>`;
 
     } else {
