@@ -33,6 +33,8 @@
         <p>@l.Id</p>
         <br />
     }
+    <h4>@list.Count</h4>
+
 
     var list2 = ticketService.GetQuery().ToList();
     foreach (var l in list2)
@@ -41,6 +43,16 @@
         <br />
     }
     <h4>@list2.Count</h4>
+
+
+    using (var db = Engine.SysAdmin.Service.ContextFactory.GetContext(null) as SignalRMVCChat.Models.GapChatContext.GapChatContext)
+    {
+
+        <h4>tickets count: @db.Tickets.Count()</h4>
+
+    }
+
+
 }
 ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 @*var parent = ticketService.GetQuery()
