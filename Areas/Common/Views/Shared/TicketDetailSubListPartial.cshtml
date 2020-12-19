@@ -23,6 +23,16 @@
         .Include(e => e.AppAdmin)
         .Include(e => e.MyFiles);
 
+
+    var list=ticketService.GetQuery()
+        .Include(c => c.AppUser)
+        .Include(c => c.AppAdmin)
+        .Include(d => d.MyFiles).ToList();
+    foreach (var l in list)
+    {
+        <p>@l.Id</p><br/>
+    }
+
     var parent = ticketService.GetQuery()
         .Include(c => c.AppUser)
         .Include(c => c.AppAdmin)
