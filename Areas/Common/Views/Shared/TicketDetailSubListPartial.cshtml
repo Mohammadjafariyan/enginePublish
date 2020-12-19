@@ -30,114 +30,121 @@
         .Include(d => d.MyFiles).ToList();
     foreach (var l in list)
     {
-        <p>@l.Id</p><br/>
+        <p>@l.Id</p>
+        <br />
     }
 
-    <h4>@list.Count</h4>
+    var list2 = ticketService.GetQuery().ToList();
+    foreach (var l in list2)
+    {
+        <p>@l.Id</p>
+        <br />
+    }
+    <h4>@list2.Count</h4>
 }
 ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    @*var parent = ticketService.GetQuery()
-        .Include(c => c.AppUser)
-        .Include(c => c.AppAdmin)
-        .Include(d => d.MyFiles).Where(t => t.Id == ticketId).First();
+@*var parent = ticketService.GetQuery()
+            .Include(c => c.AppUser)
+            .Include(c => c.AppAdmin)
+            .Include(d => d.MyFiles).Where(t => t.Id == ticketId).First();
 
-    tickets = tickets.OrderByDescending(o => o.Id);
+        tickets = tickets.OrderByDescending(o => o.Id);
 
-    var resp = new MyDataTableResponse<Ticket>();
-    resp.Total = tickets.Count();
+        var resp = new MyDataTableResponse<Ticket>();
+        resp.Total = tickets.Count();
 
-    ;
-    int LastTake, LastSkip;
-    bool hasLastTake = int.TryParse(Request.Params["take"] ?? "", out LastTake);
-    bool hasLastSkip = int.TryParse(Request.Params["skip"] ?? "", out LastSkip);
-    if (!hasLastTake)
-    {
-        hasLastTake = true;
-        LastTake = 10;
-    }
-    resp.LastTake = LastTake;
-    resp.LastSkip = LastSkip;
-
-
-
-    if (hasLastSkip)
-    {
-        tickets = tickets.Skip(LastSkip);
-    }
-    if (hasLastTake)
-    {
-        tickets = tickets.Take(LastTake);
-    }
-
-    resp.EntityList = tickets.ToList();
-
-    resp.EntityList.Add(parent);
-
-    @Html.Partial("~/Areas/sysAdmin/Views/Shared/pagingPartial.cshtml", resp)
+        ;
+        int LastTake, LastSkip;
+        bool hasLastTake = int.TryParse(Request.Params["take"] ?? "", out LastTake);
+        bool hasLastSkip = int.TryParse(Request.Params["skip"] ?? "", out LastSkip);
+        if (!hasLastTake)
+        {
+            hasLastTake = true;
+            LastTake = 10;
+        }
+        resp.LastTake = LastTake;
+        resp.LastSkip = LastSkip;
 
 
-    var appRoleService = Injector.Inject<SignalRMVCChat.Areas.security.Service.AppRoleService>();
 
-    foreach (var tick in resp.EntityList)
-    {
+        if (hasLastSkip)
+        {
+            tickets = tickets.Skip(LastSkip);
+        }
+        if (hasLastTake)
+        {
+            tickets = tickets.Take(LastTake);
+        }
 
-        <div class="card">
-            <div class="card-header">
+        resp.EntityList = tickets.ToList();
 
-                @if (tick.IsAdmin)
-                {
-                    <p>ادمین :@tick.AppAdmin.Name @tick.AppAdmin.LastName </p>
-                }
-                else
-                {
+        resp.EntityList.Add(parent);
 
-                    if (CurrentRequestSingleton.CurrentRequest.AppLoginViewModel.IsAdmin)
+        @Html.Partial("~/Areas/sysAdmin/Views/Shared/pagingPartial.cshtml", resp)
+
+
+        var appRoleService = Injector.Inject<SignalRMVCChat.Areas.security.Service.AppRoleService>();
+
+        foreach (var tick in resp.EntityList)
+        {
+
+            <div class="card">
+                <div class="card-header">
+
+                    @if (tick.IsAdmin)
                     {
-                        <a target="_blank" href="/admin/operator/detail?operatorId=@tick.AppUser.Id">کاربر : @tick.AppUser.Name @tick.AppUser.LastName</a>
-
+                        <p>ادمین :@tick.AppAdmin.Name @tick.AppAdmin.LastName </p>
                     }
                     else
                     {
-                        <p>کاربر : @tick.AppUser.Name @tick.AppUser.LastName</p>
 
-                    }
-
-                }
-
-                <span style="float: left">@tick.ChangeDateTime</span>
-
-                <div>@tick.Title</div>
-          
-
-            </div>
-            <div class="card-block">
-
-
-                <textarea class="form-control" readonly="readonly">@tick.Body</textarea>
-
-                <div>
-                    @if (tick.MyFiles != null && tick.MyFiles.Count > 0)
-                    {
-                        <hr />
-                        <p>فایل ها</p>
-
-                        foreach (var file in tick.MyFiles)
+                        if (CurrentRequestSingleton.CurrentRequest.AppLoginViewModel.IsAdmin)
                         {
-                            if (file.FileExtention.Contains("image"))
-                            {
-                                <a target="_blank" href="/Common/file/download?fileId=@file.Id">
+                            <a target="_blank" href="/admin/operator/detail?operatorId=@tick.AppUser.Id">کاربر : @tick.AppUser.Name @tick.AppUser.LastName</a>
 
-                                    <img src="/Common/file/download?fileId=@file.Id" width="50" height="50" />
-                                </a>
-                            }
-                            <a target="_blank" href="/Common/file/download?fileId=@file.Id">@file.FileName</a>
                         }
+                        else
+                        {
+                            <p>کاربر : @tick.AppUser.Name @tick.AppUser.LastName</p>
+
+                        }
+
                     }
+
+                    <span style="float: left">@tick.ChangeDateTime</span>
+
+                    <div>@tick.Title</div>
+
+
                 </div>
+                <div class="card-block">
 
+
+                    <textarea class="form-control" readonly="readonly">@tick.Body</textarea>
+
+                    <div>
+                        @if (tick.MyFiles != null && tick.MyFiles.Count > 0)
+                        {
+                            <hr />
+                            <p>فایل ها</p>
+
+                            foreach (var file in tick.MyFiles)
+                            {
+                                if (file.FileExtention.Contains("image"))
+                                {
+                                    <a target="_blank" href="/Common/file/download?fileId=@file.Id">
+
+                                        <img src="/Common/file/download?fileId=@file.Id" width="50" height="50" />
+                                    </a>
+                                }
+                                <a target="_blank" href="/Common/file/download?fileId=@file.Id">@file.FileName</a>
+                            }
+                        }
+                    </div>
+
+                </div>
             </div>
-        </div>
-    }
-    @Html.Partial("~/Areas/sysAdmin/Views/Shared/pagingPartial.cshtml", resp)
+        }
+        @Html.Partial("~/Areas/sysAdmin/Views/Shared/pagingPartial.cshtml", resp)
 
-}*@
+    }*@
