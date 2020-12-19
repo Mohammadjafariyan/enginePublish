@@ -29,9 +29,9 @@
 
 
 @if (Request.Params["ticketId"] != null)
-{
-    TempData["Url"] = SignalRMVCChat.Areas.sysAdmin.Service.MyGlobal.GetBaseUrl(Request.Url) + "/Admin/AdminTickets/Detail?ticketId=" +Request.Params["ticketId"];
-}
+                 {
+                     TempData["Url"] = "/Admin/AdminTickets/Detail?ticketId="+Request.Params["ticketId"];
+                 }
 @Html.Partial("~/Areas/Common/Views/Shared/TicketDetailSubListPartial.cshtml")
 
 </div>
