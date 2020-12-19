@@ -24,7 +24,7 @@
         .Include(e => e.MyFiles);
 
 
-    var list=ticketService.GetQuery()
+    var list = ticketService.GetQuery()
         .Include(c => c.AppUser)
         .Include(c => c.AppAdmin)
         .Include(d => d.MyFiles).ToList();
@@ -32,8 +32,8 @@
     {
         <p>@l.Id</p><br/>
     }
-
-    var parent = ticketService.GetQuery()
+}
+    @*var parent = ticketService.GetQuery()
         .Include(c => c.AppUser)
         .Include(c => c.AppAdmin)
         .Include(d => d.MyFiles).Where(t => t.Id == ticketId).First();
@@ -74,7 +74,6 @@
 
 
     var appRoleService = Injector.Inject<SignalRMVCChat.Areas.security.Service.AppRoleService>();
-    // resp.EntityList = appRoleService.SetIsInRole(resp.EntityList, "superAdmin");
 
     foreach (var tick in resp.EntityList)
     {
@@ -105,12 +104,7 @@
                 <span style="float: left">@tick.ChangeDateTime</span>
 
                 <div>@tick.Title</div>
-                @*<span >
-            @{
-                string name = tick.Status.GetAttributeOfType<EnumName>()?.Name;
-                <span> @name</span>
-            }
-        </span>*@
+          
 
             </div>
             <div class="card-block">
@@ -143,4 +137,4 @@
     }
     @Html.Partial("~/Areas/sysAdmin/Views/Shared/pagingPartial.cshtml", resp)
 
-}
+}*@
