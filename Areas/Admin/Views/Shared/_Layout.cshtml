@@ -287,24 +287,31 @@
 <div class="pcoded-inner-navbar main-menu">
     <div class="pcoded-navigatio-lavel">منوی اصلی</div>
     <ul class="pcoded-item pcoded-left-item">
-    
-                    <li> <a href="/Admin/SignUsers/Index">لیست کاربران</a></li>
-                    <li> <a href="/Admin/PaymentBills/ShowMyAccountsBills">	صورتحساب ها</a></li>
-                    <li> <a href="/Admin/Plan/Index">	پلن ها</a></li>
-                    <li> <a id="sendTicketPage" href="/Admin/AdminTickets/Index">
 
-    @Html.Partial("~/Areas/Common/Views/Shared/UnSeenTicketsCount.cshtml")
+        <li> <a href="/Admin/SignUsers/Index">لیست کاربران</a></li>
+        <li> <a href="/Admin/PaymentBills/ShowMyAccountsBills">	صورتحساب ها</a></li>
+        <li> <a href="/Admin/Plan/Index">	پلن ها</a></li>
+        <li>
+            <a id="sendTicketPage" href="/Admin/AdminTickets/Index">
 
-    تیکت ها
-</a></li>
-                    <li> <a href="/Admin/SignWebsites/Index">سایت های ثبت نام شده</a></li>
-                    <li> <a href="/Admin/Setting/Detail?id=0">تنظیمات سیستم</a></li>
-                    <li> <a href="/Admin/DashboardLog/Index">لاگ سیستم</a></li>
-                    <li> <a href="/Admin/DashboardLog/Comments">نظرات دریافت شده</a></li>
-        <li> <a href="/Admin/AdminHelpDeskList/Index">
-            
-         های ایجاد شده   HelpDesk
-        </a></li>
+                @Html.Partial("~/Areas/Common/Views/Shared/UnSeenTicketsCount.cshtml")
+
+                تیکت ها
+            </a>
+        </li>
+        <li> <a href="/Admin/SignWebsites/Index">سایت های ثبت نام شده</a></li>
+        <li> <a href="/Admin/Setting/Detail?id=0">تنظیمات سیستم</a></li>
+        <li> <a href="/Admin/DashboardLog/Index">لاگ سیستم</a></li>
+        <li> <a href="/Admin/DashboardLog/Comments">نظرات دریافت شده</a></li>
+        <li>
+            <a href="/Admin/AdminHelpDeskList/Index">
+
+                های ایجاد شده   HelpDesk
+            </a>
+        </li>
+
+        <li> <a href="/Admin/Editor/Index">صفحات معمول</a></li>
+
 
     </ul>
 
