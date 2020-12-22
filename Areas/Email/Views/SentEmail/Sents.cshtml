@@ -1,0 +1,132 @@
+﻿@using SignalRMVCChat.DependencyInjection
+@using SignalRMVCChat.Service
+@using SignalRMVCChat.Extentions
+@model List<SignalRMVCChat.Areas.Email.Model.EmailSent>
+
+<style>
+    input {
+        direction: ltr;
+    }
+</style>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+    ViewBag.Title = "دریافت کنندگان ایمیل ارسال شده";
+
+}
+
+
+
+<a id="backToList" href="/Email/SentEmail/Index">بازگشت به لیست</a>
+<hr />
+<div>
+
+    <h4>@ViewBag.Title</h4>
+    <h4>@ViewBag.TemplateTitle</h4>
+
+    <table class="table" id="example">
+
+        <thead>
+
+            <tr>
+                <th>
+                    عنوان
+                </th>
+                <th>
+                    نام خانوادگی
+                </th>
+                <th>
+                    نام کاربری
+                </th>
+
+                <th>
+                    وضعیت
+                </th>
+                <th>
+                    علت خطا
+                </th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @foreach (var rec in Model)
+            {
+                <tr>
+                    <td>
+                        @rec.AppUser.Name
+                    </td>
+                    <td>
+                        @rec.AppUser.LastName
+                    </td>
+                    <td>
+                        @rec.AppUser.UserName
+                    </td>
+
+                    <td>
+                        @rec.Status.GetDisplayName()
+                    </td>
+                    <td>
+                        @rec.StatusLog
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+</div>
+
+
+
+@section scripts{
+
+
+    <link rel="stylesheet" href="~/Content/Tablesjs/Tablesjs.css" />
+    <script type="text/javascript" src="~/Content/Tablesjs/TablesJs.js"></script>
+    <script type="text/javascript" src="~/Content/Tablesjs/tableJsSelect.js"></script>
+    <script>
+        let table;
+        $(document).ready(function () {
+            table = $('#example').DataTable({
+                responsive: true,
+                'columnDefs': [{
+                    'targets': 0,
+                    'searchable': false,
+                    'orderable': false,
+                    'render': function (data, type, full, meta) {
+                        console.log('data:', data)
+                        console.log('type:', type)
+                        console.log('full:', full)
+                        return `<input name="list" value="${data}" type="checkbox" />`;
+                    }
+                }],
+                select: {
+                    style: 'os',
+                    selector: 'td:first-child'
+                },
+                order: [[1, 'asc']],
+                "language": {
+                    "lengthMenu": "نمایش _MENU_ در هر صفحه",
+                    "zeroRecords": "هیچ رکوردی یافت نشد",
+                    "info": "نمایش _PAGE_ از کل  _PAGES_",
+                    "infoEmpty": "هیچ رکوردی یافت نشد",
+                    "infoFiltered": "(فیلتر شده از  _MAX_ کل رکورد ها )",
+
+                    processing: "Traitement en cours...",
+                    search: "جستجو&nbsp;:",
+                    paginate: {
+                        first: "ابتدا",
+                        previous: "قبلی",
+                        next: "بعدی",
+                        last: "آخرین"
+                    },
+                }
+            });
+        });
+    </script>
+}
