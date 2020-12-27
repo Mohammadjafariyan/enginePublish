@@ -15,6 +15,7 @@ import MarkAsResovled from "./MarkAsResovled";
 import ScreenRecordShower from "./ScreenRecordShower";
 import DOMPurify from "dompurify";
 import WhileWriting from "./WhileWriting";
+import { Editor } from "primereact/editor";
 
 export default class Chat extends Component {
   constructor(arg) {
@@ -71,11 +72,31 @@ export default class Chat extends Component {
 
       this.setState({ rndom: Math.random() });
     } else {
-      chat = { Message: res.Content.text };
+      chat = { Message: res.Content.text,UniqId: Math.random() };
       chat.IsReceive = true;
       chat.IsTyping = true;
 
       this.addChat(chat, true);
+    }
+  }
+
+  customerStopTypingCallback(res) {
+    if (!res || !res.Content ) {
+      return;
+    }
+
+    let chat;
+    var i = this.state.chats.findIndex((c) => c.IsTyping);
+
+    if (i >= 0) {
+      this.state.chats[i].Message = res.Content.text;
+      this.state.chats[i].IsTyping = false;
+
+
+      let chats=this.state.chats.filter(c=>c!=this.state.chats[i]);
+      this.setState({ rndom: Math.random() ,chats:chats});
+    } else {
+     
     }
   }
 
@@ -748,16 +769,19 @@ export function ChatPannel(props) {
                 textAlign: "right",
               }}
             >
-              یک پیغام خصوصی از <b>{el.senderAdmin.Name}</b> به ادمین های زیر :
+              یک پیغام خصوصی از{" "}
+              <b>{el.senderAdmin ? el.senderAdmin.Name : ""}</b> به ادمین های
+              زیر :
             </span>
             <div style={{ display: "flex" }}>
-              {el.selectedAdmins.map((admin, j, admins) => {
-                return (
-                  <>
-                    <b style={{ textAlign: "right" }}>{admin.Name}:</b>
-                  </>
-                );
-              })}
+              {el.selectedAdmins &&
+                el.selectedAdmins.map((admin, j, admins) => {
+                  return (
+                    <>
+                      <b style={{ textAlign: "right" }}>{admin.Name}:</b>
+                    </>
+                  );
+                })}
             </div>
             <br />
             {el.formId && (
@@ -787,9 +811,13 @@ export function ChatPannel(props) {
                 el.IsReceive=true;
             }
         }*/
-
+    if (el.ChatType == 2) {
+      //automatic send
+      return <ShowAutomaticSendChatType el={el} onDelete={props.onDelete} />;
+    }
     if (!el.IsReceive) {
-      if (el.ChatType) {
+      if (el.ChatType == 5) {
+        // private note
         return showChatType();
       } else {
         return (
@@ -1091,10 +1119,15 @@ export class AutomaticSendPage extends Chat {
               </small>
             </div>
             <div className="form-group">
-              <ChatForm
+              <Editor
+                style={{ height: "320px" }}
+                value={this.state.text}
+                onTextChange={(e) => this.setState({ text: e.htmlValue })}
+              />
+
+              {/*    <ChatForm
                 onPaste={(e) => {
                   this.setState({ text: e.target.value });
-                  /*                                    this.onPaste(e)*/
                 }}
                 upload={(e) => {
                   this.uploadFile(e);
@@ -1105,15 +1138,8 @@ export class AutomaticSendPage extends Chat {
                 onChange={(val) => {
                   this.setState({ text: val });
 
-                  /*let multiMedia = showMultimedia(e.target.value);
-
-                                if (!multiMedia) {
-                                    this.setState({text: e.target.value});
-                                } else {
-                                    this.setState({text: ""});
-                                }*/
                 }}
-              />
+              /> */}
               {/* <form onSubmit={this.submit}>
                             <input
                                 value={this.state.text}
@@ -1144,6 +1170,7 @@ export class AutomaticSendPage extends Chat {
                             />
                         </form>*/}
             </div>
+
             <button
               onClick={() => {
                 this.saveAutomaticSendChats();
@@ -1153,6 +1180,27 @@ export class AutomaticSendPage extends Chat {
               className="btn btn-primary"
             >
               ثبت
+            </button>
+            <button
+              onClick={() => {
+                if (!this.state.text) {
+                  _showError("متن خالی است");
+                  return;
+                }
+                if (this.state.delay < 0) {
+                  _showError("زمان نمی تواند منفی باشد");
+                  return;
+                }
+
+                this.addChat({ Message: this.state.text, ChatType: 2 }, true);
+
+                this.setState({ text: "", delay: 1 });
+              }}
+              type="submit"
+              disabled={this.state.sending}
+              className="btn btn-primary"
+            >
+              افزودن
             </button>
           </div>
         </div>
@@ -1323,6 +1371,54 @@ const DeleteEditButtons = (props) => {
           </button>
         </div>
       )}
+    </>
+  );
+};
+
+const ShowAutomaticSendChatType = (props) => {
+  let el=props.el;
+  return (
+    <>
+      <div className="card post card post" key={el.UniqId}>
+        <div
+          className="card-body"
+          style={{ wordBreak: "break-all", direction: "ltr" }}
+          key={el.UniqId}
+          >
+            {props.onDelete && (
+              <div className="card-header card-header-left">
+                <button
+                  onClick={(e) => {
+                    props.onDelete(el);
+                  }}
+                >
+                  x
+                </button>
+              </div>
+            )}
+
+
+          {el.formId && (
+            <FormShowerInChat
+              chatId={el.Id}
+              formName={el.formName}
+              chatUniqId={el.UniqId}
+              formId={el.formId}
+              elements={el.elements}
+            ></FormShowerInChat>
+          )}
+
+          <div
+            key={el.Message}
+            dangerouslySetInnerHTML={{ __html: el.Message }}
+          ></div>
+
+          {el.Delay && <p dir="rtl"> بعد از {el.Delay}دقیقه </p>}
+          {el.delay && <p dir="rtl"> بعد از {el.delay}دقیقه </p>}
+
+          
+        </div>
+      </div>
     </>
   );
 };

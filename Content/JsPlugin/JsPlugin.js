@@ -5659,15 +5659,20 @@ let CustomerStartTypingSent = false;
 
 function bindIsTyping() {
     var searchTimeout;
-    getDoc().querySelector('#gapChatInput').onchange = function () {
+    getDoc().querySelector('#gapChatInput').onkeyup = function () {
         if (searchTimeout !== undefined) clearTimeout(searchTimeout);
 
         let strg = getDoc().querySelector('#gapChatInput').value;
 
-        if (strg || strg.trim() === '') {
-            //   if (strg || strg.trim() === '' && !CustomerStartTypingSent) {
+        if (strg) {
+
+         
             MyCaller.Send('CustomerStartTyping', { text: strg });
+
             CustomerStartTypingSent = true;
+
+            //   if (strg || strg.trim() === '' && !CustomerStartTypingSent) {
+          
 
         } else {
 
@@ -7004,7 +7009,7 @@ function customerGetUsersSeparationConfigCallback(res) {
 
     } else {
 
-        if (!usersSeparation.params || usersSeparation.params.length) {
+        if (!usersSeparation.params || !usersSeparation.params.length) {
             return;
         }
 
@@ -7018,7 +7023,7 @@ function customerGetUsersSeparationConfigCallback(res) {
                 let param = document.querySelector(usersSeparation.params[i].paramName);
 
                 if (param) {
-                    let value = param.value;
+                    let value = param.value ? param.value : param.innerText;
 
                     if (!value) {
                         value = param.value.innerText;
@@ -7036,8 +7041,13 @@ function customerGetUsersSeparationConfigCallback(res) {
             }
 
         }
+        CustomerSaveUsersSeparationValues(usersSeparation);
+
 
     }
+
+
+
 
 
 }

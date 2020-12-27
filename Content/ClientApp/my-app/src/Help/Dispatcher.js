@@ -520,7 +520,7 @@ class dispatcher {
         if (CurrentUserInfo.DefinedLanguages) {
           CurrentUserInfo.DefinedLanguages.selectHelpDeskCallback(res);
         }
-        
+
         break;
 
       case "removeHelpDeskCallback":
@@ -858,6 +858,10 @@ class dispatcher {
           CurrentUserInfo.CustomersPage.customerStopTypingCallback(res);
         }
 
+        if (CurrentUserInfo.ChatPage) {
+          CurrentUserInfo.ChatPage.customerStopTypingCallback(res);
+        }
+
         break;
       case "forwardChatSuccessCallback":
         CurrentUserInfo.ForwardChat.forwardChatSuccessCallback(res);
@@ -922,12 +926,25 @@ class dispatcher {
         CurrentUserInfo.LoginPage.adminLoginCallback(res);
         break;
 
+      case "getDefinedFormInputsCallback":
+        if (CurrentUserInfo.BotEventCondition) {
+          CurrentUserInfo.BotEventCondition.getDefinedFormInputsCallback(res);
+        }
+        if (CurrentUserInfo.BotEventNodeSetting) {
+          CurrentUserInfo.BotEventNodeSetting.getDefinedFormInputsCallback(res);
+        }
+        break;
+
       case "getClientsListForAdminCallback":
         // CurrentUserInfo.CustomersPage.getClientsListForAdminCallback(res);
 
-
-        if(CurrentUserInfo.MyMapCustomerTypes){
-          CurrentUserInfo.MyMapCustomerTypes.getClientsListForAdminCallback(res);
+        if (CurrentUserInfo.CustomersPaging) {
+          CurrentUserInfo.CustomersPaging.getClientsListForAdminCallback(res);
+        }
+        if (CurrentUserInfo.MyMapCustomerTypes) {
+          CurrentUserInfo.MyMapCustomerTypes.getClientsListForAdminCallback(
+            res
+          );
         }
 
         if (!DataHolder.currentPage) {
@@ -942,9 +959,9 @@ class dispatcher {
           }
 
           if (DataHolder.currentPage === "Map") {
-            if (CurrentUserInfo.CustomersPage) {
+           /*  if (CurrentUserInfo.CustomersPage) {
               CurrentUserInfo.CustomersPage.getClientsListForAdminCallback(res);
-            }
+            } */
 
             if (CurrentUserInfo.MyMapHolder) {
               CurrentUserInfo.MyMapHolder.getClientsListForAdminCallback(res);
