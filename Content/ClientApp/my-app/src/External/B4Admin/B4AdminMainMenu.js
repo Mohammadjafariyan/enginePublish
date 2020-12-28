@@ -46,7 +46,9 @@ export default class B4AdminMainMenu extends Component {
         this.setState({
             TotalNewChatReceived: res.Content.TotalNewChatReceived,
             TotalWaitingForAnswerCount: res.Content.TotalWaitingForAnswerCount,
-            NotChattedCount: res.Content.NotChattedCount
+            NotChattedCount: res.Content.NotChattedCount,
+            TotalAnswered: res.Content.TotalAnswered,
+            AssignedToMeCount: res.Content.AssignedToMeCount,
         })
 
 

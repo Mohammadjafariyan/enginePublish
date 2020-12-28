@@ -844,6 +844,10 @@ class dispatcher {
 
         break;
       case "customerStopTypingCallback":
+        if (CurrentUserInfo.CustomersPage) {
+          CurrentUserInfo.CustomersPage.customerStopTypingCallback(res);
+        }
+        
         if (CurrentUserInfo.OnlineCustomerListHolder) {
           CurrentUserInfo.OnlineCustomerListHolder.customerStopTypingCallback(
             res
@@ -854,9 +858,7 @@ class dispatcher {
           CurrentUserInfo.MyHeader.customerStopTypingCallback(res);
         }
 
-        if (CurrentUserInfo.CustomersPage) {
-          CurrentUserInfo.CustomersPage.customerStopTypingCallback(res);
-        }
+   
 
         if (CurrentUserInfo.ChatPage) {
           CurrentUserInfo.ChatPage.customerStopTypingCallback(res);
@@ -984,7 +986,8 @@ class dispatcher {
         break;
 
       case "customerSendToAdminCallback":
-        if (CurrentUserInfo.ChatPage && !DataHolder.currentPage)
+       // if (CurrentUserInfo.ChatPage && !DataHolder.currentPage)
+        if (CurrentUserInfo.ChatPage )
           CurrentUserInfo.ChatPage.customerSendToAdminCallback(res);
 
         if (CurrentUserInfo.CustomersPage)

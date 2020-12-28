@@ -16,6 +16,8 @@ import ScreenRecordShower from "./ScreenRecordShower";
 import DOMPurify from "dompurify";
 import WhileWriting from "./WhileWriting";
 import { Editor } from "primereact/editor";
+import { colors } from "./Utilities/GlobalLoading";
+import { Spinner } from "react-bootstrap";
 
 export default class Chat extends Component {
   constructor(arg) {
@@ -64,6 +66,10 @@ export default class Chat extends Component {
       return;
     }
 
+    if (!DataHolder.selectedCustomer || DataHolder.selectedCustomer.Id != res.Content.targetCustomerId) {
+      return;
+    }
+
     let chat;
     var i = this.state.chats.findIndex((c) => c.IsTyping);
 
@@ -72,7 +78,7 @@ export default class Chat extends Component {
 
       this.setState({ rndom: Math.random() });
     } else {
-      chat = { Message: res.Content.text,UniqId: Math.random() };
+      chat = { Message: res.Content.text, UniqId: Math.random() };
       chat.IsReceive = true;
       chat.IsTyping = true;
 
@@ -81,7 +87,11 @@ export default class Chat extends Component {
   }
 
   customerStopTypingCallback(res) {
-    if (!res || !res.Content ) {
+    if (!res || !res.Content) {
+      return;
+    }
+
+    if (!DataHolder.selectedCustomer || DataHolder.selectedCustomer.Id != res.Content.targetCustomerId) {
       return;
     }
 
@@ -92,11 +102,9 @@ export default class Chat extends Component {
       this.state.chats[i].Message = res.Content.text;
       this.state.chats[i].IsTyping = false;
 
-
-      let chats=this.state.chats.filter(c=>c!=this.state.chats[i]);
-      this.setState({ rndom: Math.random() ,chats:chats});
+      let chats = this.state.chats.filter((c) => c != this.state.chats[i]);
+      this.setState({ rndom: Math.random(), chats: chats });
     } else {
-     
     }
   }
 
@@ -167,6 +175,8 @@ export default class Chat extends Component {
   }
 
   readChatCallback(res) {
+    this.setState({ loading: false });
+
     var arr = [];
     arr = res.Content.EntityList;
 
@@ -332,6 +342,8 @@ export default class Chat extends Component {
   }
 
   render() {
+    let color = colors[Math.floor(Math.random() * colors.length)];
+
     return (
       <div>
         <MarkAsResovled />
@@ -358,6 +370,13 @@ export default class Chat extends Component {
               {this.state.chats && this.state.chats.length === 0 && (
                 <p>هیچ چتی یافت نشد</p>
               )}
+
+              {this.state.loading && (
+                <Spinner animation="border" role="status" variant={color}>
+                  <span className="sr-only">در حال خواندن اطلاعات...</span>
+                </Spinner>
+              )}
+
               <ChatPannel chats={this.state.chats} parent={this} />
             </div>
 
@@ -403,7 +422,7 @@ export default class Chat extends Component {
         CurrentUserInfo.pageNumber = 1;
       }
 
-      this.setState({ scroll: true });
+      this.setState({ scroll: true, loading: true });
       CurrentUserInfo.pageNumber++;
       MyCaller.Send("ReadChat", {
         targetId: DataHolder.selectedCustomer.Id,
@@ -737,13 +756,18 @@ export function ChatPannel(props) {
   }
 
   return props.chats.map((el, i, arr) => {
+
+    if(!el.rn){
+      el.rn=Math.random();
+    }
+
     let showChatType = () => {
       return (
         <div
           className={
             "card post gapMsg  offset-md-4 " + getColorBasedOnChatType(el)
           }
-          key={el.UniqId}
+          key={el.rn}
         >
           {props.onDelete && (
             <div className="card-header card-header-left">
@@ -1291,7 +1315,7 @@ export const SenderIcon = (props) => {
   let name = props.el.AccountName;
   let ProfilePhotoId = props.el.ProfilePhotoId;
 
-  let direction = "right";
+  let direction = "left";
   if (!props.el.IsReceive) {
     direction = "left";
   } else {
@@ -1310,7 +1334,7 @@ export const SenderIcon = (props) => {
 
   let charAt;
   if (name) {
-    charAt = name.charAt(0);
+    charAt = FindAnyCharAt(name);
   }
 
   return (
@@ -1376,7 +1400,7 @@ const DeleteEditButtons = (props) => {
 };
 
 const ShowAutomaticSendChatType = (props) => {
-  let el=props.el;
+  let el = props.el;
   return (
     <>
       <div className="card post card post" key={el.UniqId}>
@@ -1384,19 +1408,18 @@ const ShowAutomaticSendChatType = (props) => {
           className="card-body"
           style={{ wordBreak: "break-all", direction: "ltr" }}
           key={el.UniqId}
-          >
-            {props.onDelete && (
-              <div className="card-header card-header-left">
-                <button
-                  onClick={(e) => {
-                    props.onDelete(el);
-                  }}
-                >
-                  x
-                </button>
-              </div>
-            )}
-
+        >
+          {props.onDelete && (
+            <div className="card-header card-header-left">
+              <button
+                onClick={(e) => {
+                  props.onDelete(el);
+                }}
+              >
+                x
+              </button>
+            </div>
+          )}
 
           {el.formId && (
             <FormShowerInChat
@@ -1415,10 +1438,38 @@ const ShowAutomaticSendChatType = (props) => {
 
           {el.Delay && <p dir="rtl"> بعد از {el.Delay}دقیقه </p>}
           {el.delay && <p dir="rtl"> بعد از {el.delay}دقیقه </p>}
-
-          
         </div>
       </div>
     </>
   );
 };
+
+const FindAnyCharAt = (str) => {
+  if (!str) {
+    return "ک";
+  }
+
+  str = reverse(str);
+  str = trim(str);
+
+  let c = str.length;
+  while (c > 0) {
+    let char = str.charAt(c--);
+
+    if (char && char != "") {
+      return char;
+      break;
+    }
+  }
+
+  return "ک";
+};
+
+function reverse(s) {
+  return s.split("").reverse().join("");
+}
+
+function trim(str) {
+  str = str.replace(/\s/g, "");
+  return str;
+}

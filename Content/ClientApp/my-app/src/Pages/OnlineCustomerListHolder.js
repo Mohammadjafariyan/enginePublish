@@ -5,6 +5,7 @@ import { MyCaller } from "./../Help/Socket";
 import { DataHolder } from "../Help/DataHolder";
 import { Badge } from "react-bootstrap";
 import CustomersPaging from "./../Components/Map/CustomersPaging";
+import { _SetLoading } from "../Components/Utilities/GlobalLoading";
 
 export default class OnlineCustomerListHolder extends Component {
   constructor(args) {
@@ -145,6 +146,8 @@ export default class OnlineCustomerListHolder extends Component {
   }
 
   getClientsListForAdminCallback(res) {
+    _SetLoading(false);
+
     if (!res || !res.Content || !res.Content.EntityList) {
       CurrentUserInfo.LayoutPage.showError(
         "getClientsListForAdminCallback res is null"
@@ -159,6 +162,9 @@ export default class OnlineCustomerListHolder extends Component {
   }
 
   GetClientsListForAdmin() {
+
+    _SetLoading(true);
+
     MyCaller.Send("GetClientsListForAdmin", {
       userType: CurrentUserInfo.UserType,
       selectedPage: DataHolder.SelectedPage,
