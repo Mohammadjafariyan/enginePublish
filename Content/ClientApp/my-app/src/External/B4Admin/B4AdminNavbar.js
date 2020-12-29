@@ -439,7 +439,7 @@ class B4AdminNavbar extends Component {
                                      src="https://source.unsplash.com/QAB-WJcbgJk/60x60"/>*/}
               </a>
               {/* <!-- Dropdown - User Information-->*/}
-              <div
+              <div   
                 className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                 aria-labelledby="userDropdown"
               >

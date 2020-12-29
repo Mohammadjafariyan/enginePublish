@@ -66,7 +66,10 @@ export default class Chat extends Component {
       return;
     }
 
-    if (!DataHolder.selectedCustomer || DataHolder.selectedCustomer.Id != res.Content.targetCustomerId) {
+    if (
+      !DataHolder.selectedCustomer ||
+      DataHolder.selectedCustomer.Id != res.Content.targetCustomerId
+    ) {
       return;
     }
 
@@ -91,7 +94,10 @@ export default class Chat extends Component {
       return;
     }
 
-    if (!DataHolder.selectedCustomer || DataHolder.selectedCustomer.Id != res.Content.targetCustomerId) {
+    if (
+      !DataHolder.selectedCustomer ||
+      DataHolder.selectedCustomer.Id != res.Content.targetCustomerId
+    ) {
       return;
     }
 
@@ -514,9 +520,10 @@ export default class Chat extends Component {
     }
 
     if (!chat.IsReceive && !chat.AccountName) {
-      chat.AccountName = CurrentUserInfo.B4AdminLayout.state.currentUser.Name;
+
+      chat.AccountName = _currentUser().Name;
       chat.ProfilePhotoId =
-        CurrentUserInfo.B4AdminLayout.state.currentUser.ProfileImageId;
+      _currentUser().ProfileImageId;
     }
 
     chats.push(chat);
@@ -647,7 +654,7 @@ export default class Chat extends Component {
         Message: this.state.text,
         ChatType: 5,
         selectedAdmins: CurrentUserInfo.SelectAdmin.state.selectedAdmins,
-        senderAdmin: CurrentUserInfo.B4AdminLayout.state.currentUser,
+        senderAdmin: _currentUser(),
       });
     } else {
       this.addChat({ Message: this.state.text });
@@ -756,9 +763,8 @@ export function ChatPannel(props) {
   }
 
   return props.chats.map((el, i, arr) => {
-
-    if(!el.rn){
-      el.rn=Math.random();
+    if (!el.rn) {
+      el.rn = Math.random();
     }
 
     let showChatType = () => {
@@ -831,7 +837,6 @@ export function ChatPannel(props) {
       );
     };
     /* if (el.ChatType){
-            if (el.MyAccountId!=CurrentUserInfo.B4AdminLayout.state.currentUser.Id){
                 el.IsReceive=true;
             }
         }*/
@@ -1473,3 +1478,17 @@ function trim(str) {
   str = str.replace(/\s/g, "");
   return str;
 }
+
+
+const _currentUser = () => {
+  if (
+    CurrentUserInfo.B4AdminLayout &&
+    CurrentUserInfo.B4AdminLayout.state &&
+    CurrentUserInfo.B4AdminLayout.state.currentUser 
+  ) {
+    return  CurrentUserInfo.B4AdminLayout.state.currentUser;
+  }
+  MyCaller.Send('GetMyProfile')
+
+  return {};
+};
