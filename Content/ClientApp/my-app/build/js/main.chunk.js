@@ -70159,5 +70159,5 @@ module.exports = __webpack_require__(/*! D:\mohammad\workplace\1399\shahrivar\00
 
 /***/ })
 
-},[[0,"runtime-main",0]]]);
+},[[0,"runtime-main",1]]]);
 //# sourceMappingURL=main.chunk.js.map
