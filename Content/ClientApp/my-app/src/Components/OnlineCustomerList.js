@@ -44,6 +44,7 @@ export default class OnlineCustomerList extends Component {
     );
   }
   showCustomers() {
+
     return (
       <Row>
         {!this.props.list && <p>در حال خواندن اطلاعات</p>}
@@ -53,6 +54,11 @@ export default class OnlineCustomerList extends Component {
 
         {this.props.list &&
           this.props.list.map((item, i, arr) => {
+
+    let lastMsg=item.LastMessage && item.LastMessage.Message? item.LastMessage.Message : '';
+
+console.log('showCustomers==>item',item);
+console.log('showCustomers==>item->lastMsg',lastMsg);
             return (
               <Col md={3} className="userCard">
                 {" "}
@@ -67,26 +73,32 @@ export default class OnlineCustomerList extends Component {
                     <Card.Text>
                       {this.showNewMessageCount(item)}
 
-                      {item.Message && item.Message.Message && (
+                      {lastMsg && (
                         <div>
-                          {item.Message.ChatType === 1 && (
+                        <hr/>
+                          {(!item.LastMessage.ChatType || item.LastMessage.ChatType == 1) && (
                             <span>
-                              <Badge variant="warning">
-                                {item.Message.Message}
+                            
+                              <Badge variant="warning" className='text-summary' 
+                              style={{height:'unset'}}>
+                              آخرین پیغام : {lastMsg}
                               </Badge>
                             </span>
                           )}
 
-                          {item.Message.ChatType === 2 && (
-                            <Badge variant="warning">
-                              ربات :{item.Message.Message}{" "}
+                          {item.LastMessage.ChatType === 2 && (
+                            <Badge variant="warning" className='text-summary'
+                            style={{height:'unset'}}>
+                              ربات :{lastMsg}{" "}
                             </Badge>
                           )}
-                          {item.Message.ChatType === 4 && (
-                            <Badge variant="success">
-                              فرم :{item.Message.Message}{" "}
+                          {item.LastMessage.ChatType === 4 && (
+                            <Badge variant="success" className='text-summary'
+                            style={{height:'unset'}}>
+                              فرم :{lastMsg}{" "}
                             </Badge>
                           )}
+                          <hr/>
                         </div>
                       )}
                       <CustomerTags customer={item} />
@@ -152,7 +164,7 @@ export default class OnlineCustomerList extends Component {
     } else {
       return (
         <>
-          <i>بدون پیغام</i>
+          <i>بدون پیغام خوانده نشده</i>
         </>
       );
     }

@@ -41,6 +41,11 @@ export default class OnlineCustomerListHolder extends Component {
 
     this.state.list[j].IsTyping = isTyping;
 
+    if (!this.state.list[j].LastMessage) {
+      this.state.list[j].LastMessage = {};
+    }
+    this.state.list[j].LastMessage.Message = res.Content.text;
+
     this.setState({ tmp: Math.random() });
   }
 
@@ -146,6 +151,11 @@ export default class OnlineCustomerListHolder extends Component {
   }
 
   getClientsListForAdminCallback(res) {
+    if (res && res.Content)
+      if (res.Content.userType != CurrentUserInfo.UserType) {
+        return;
+      }
+
     _SetLoading(false);
 
     if (!res || !res.Content || !res.Content.EntityList) {
@@ -162,7 +172,6 @@ export default class OnlineCustomerListHolder extends Component {
   }
 
   GetClientsListForAdmin() {
-
     _SetLoading(true);
 
     MyCaller.Send("GetClientsListForAdmin", {
