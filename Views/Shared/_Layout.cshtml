@@ -1,0 +1,160 @@
+﻿@using Engine.Localization
+@using SautinSoft.Document
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - سیستم کاربردی بلوسافت </title>
+    @*    @Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    @if (ViewBag.Bootstrap == null || ViewBag.Bootstrap == 3)
+    {
+        @Styles.Render("~/Content/Bootstrap3")
+    }
+    else if (ViewBag.Bootstrap == 4)
+    {
+        @Styles.Render("~/Content/Bootstrap4")
+    }
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+
+    <style>
+            @@media (max-width:320px)  {  .navbar {display: none}/* smartphones, iPhone, portrait 480x320 phones */ }
+            @@media (max-width:481px)  {  .navbar {display: none}/* portrait e-readers (Nook/Kindle), smaller tablets @@ 600 or @@ 640 wide. */ }
+            @@media (max-width:641px)  {  .navbar {display: none}/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+            @@media (max-width:961px)  { .navbar {display: none}/* tablet, landscape iPad, lo-res laptops ands desktops */ }
+            @@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+            @@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+<div id="body">
+
+
+    @if (ViewBag.Bootstrap == null || ViewBag.Bootstrap == 3)
+    {
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                @Html.Partial("_LanguagePartial")
+
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink(Request.GetText(" سیستم مدیریت تردد بلوسافت"), "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        @*
+                    <li>@Html.ActionLink(Request.GetText("گزارش ساز"), "index", "RHome", new { Area = "reportGenerator" }, new { })</li>
+                    <li>@Html.ActionLink("(فرم ساز) App Generator", "Index", "Home", new { Area = "" }, new { })</li>
+                    <li>@Html.ActionLink("(زیر  سیستم مدیریت تردد) Attendance System", "Index", "AttendanceHome", new { Area = "Absence" }, new { })</li>
+                    *@
+                        <li> @Html.Partial("_LoginPartial")</li>
+
+
+                    </ul> @*@Html.Partial("_LoginPartial")*@
+                </div>
+
+
+            </div>
+        </nav>
+    }
+    else if (ViewBag.Bootstrap == 4)
+    {
+        
+        
+      
+        
+        <nav class="  navbar navbar-expand-lg navbar-light bg-light">
+            @*<a class="navbar-brand" href="#">Navbar</a>*@
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                                           @Html.ActionLink(Request.GetText(" سیستم مدیریت تردد بلوسافت"), "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+ @Html.Partial("_LanguagePartial")
+            
+                <ul class="navbar-nav mr-auto">
+
+                    @*<li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>*@
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    @Html.Partial("_LoginPartial")
+
+                </div>
+                @*<form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>*@
+            </div>
+        </nav>
+    }
+
+
+    <div class="body-content">
+        @RenderBody()
+        <footer style="    position: absolute;
+                           bottom: 0px;
+                           z-index: -1;">
+            <p>&copy; @DateTime.Now.Year - سیستم کاربردی بلوسافت - کلیه حقوق محفوظ است</p>
+        </footer>
+    </div>
+
+    @if (ViewBag.Bootstrap == null || ViewBag.Bootstrap == 3)
+    {
+        @Scripts.Render("~/Content/Bootstrap3js")
+    }
+    else if (ViewBag.Bootstrap == 4)
+    {
+        @Scripts.Render("~/Content/Bootstrap4js")
+    }
+
+
+</div>
+
+<div id="printHelper"></div>
+
+<link rel="preload" href="/Content/admin/main.js" as="script">
+
+</body>
+</html>

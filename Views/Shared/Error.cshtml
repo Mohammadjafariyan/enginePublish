@@ -1,0 +1,30 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "عدم دسترسی به صفحه مورد نظر";
+    Layout = null;
+}
+
+<h1 class="text-danger">خطا.</h1>
+<h2 class="text-danger">شما به این صفحه دسترسی ندارید </h2>
+
+@if (ViewData["Error"] != null)
+{
+
+    <div class="alert">
+        <p class="alert-danger">@ViewData["Error"]</p>
+
+    </div>
+
+
+}
+
+
+    <div class="alert">
+        <p class="alert-danger">@ViewData["errorMessage"] </p>
+        <p class="alert-danger">@ViewData["stackTrace"] </p>
+    </div>
+
+
+
+

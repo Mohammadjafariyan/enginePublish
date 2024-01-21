@@ -1,0 +1,31 @@
+@using System.Collections.Specialized
+@using System.Web.Mvc.Html
+@using Engine.Areas.JUiEngine.Controllers
+@using Engine.Entities.Models.UiGeneratorModels
+@using WebAppIDEEngine.Models.Core
+@model dynamic
+
+@{
+
+    ViewBag.Title = "فراموشی کارت";
+    ViewBag.SaveAction = ViewBag.SaveAction ?? "Save";
+    ViewBag.SaveController = ViewBag.SaveController ?? this.ViewContext.RouteData.Values["controller"].ToString();
+    ViewData["inline"] = true;
+    var form=ViewData[UiHomeController.Form] as UiForm;  
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+
+    
+}
+
+@{
+
+/*
+    ViewData[UiFormEngineController.Model] = Model;
+*/
+}
+
+
+
+<div class="container">
+@Html.Partial("~/Areas/JUiEngine/Views/UiFormEngine/ShowView.cshtml", form)
+</div>
