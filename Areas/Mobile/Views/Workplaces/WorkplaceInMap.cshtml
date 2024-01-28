@@ -227,7 +227,7 @@ var drawnItems;
                     }
                 },
                 polyline: false,
-                circle: true, // Turns off this drawing tool
+                circle: false, // Turns off this drawing tool
                 rectangle: true,
                 marker: false
             }
@@ -315,6 +315,7 @@ var drawnItems;
         console.warn("success position.coords.latitude", position.coords.latitude);
 
         mymap = L.map('mapid').setView([position.coords.latitude, position.coords.longitude], 13);
+        
 
         var latlng = new L.LatLng(position.coords.latitude, position.coords.longitude);
         var marker = L.marker(latlng).addTo(mymap);
