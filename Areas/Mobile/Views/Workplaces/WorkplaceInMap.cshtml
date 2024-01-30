@@ -108,10 +108,21 @@ if (length>0){
 
 
 function resetMap(){
-    mymap.off();
+  /*  mymap.off();
     mymap.remove();
     
-    showDefault();
+    showDefault();*/
+    
+    
+    // Remove all other layers (polylines, polygons, etc.)
+    mymap.eachLayer(function (layer) {
+        if (!(layer instanceof L.TileLayer)) {
+            mymap.removeLayer(layer);
+        }
+    });
+    
+    
+
     
     }
     var mymap;
