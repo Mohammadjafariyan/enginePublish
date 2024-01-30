@@ -31,6 +31,13 @@
     }
 }
 <script>
+
+ @{
+        <text>
+            window['rootUrl'] = '@Request.ApplicationPath'
+        </text>
+    }
+    
     var path = "@Request.Url.AbsoluteUri";
     var modelId = "@Model?.Id";
     $(document).ready(function() {
@@ -40,10 +47,32 @@
             {
 
                 <text>
-                    if (window.location.href.indexOf("Absence/ObligatedRange/Index/#/absence/home") == -1)
+                    /*if (window.location.href.indexOf("Absence/ObligatedRange/Index/#/absence/home") == -1)
                     {
                         window.location.href = path + "/#/absence/home" + '@querystring';
                     }
+                    */
+                   
+                   window["onAngularLoadEnd"]=function() {
+                     
+                        if ('URLSearchParams' in window) {
+                        var searchParams = new URLSearchParams(window.location.search);
+                        
+                        @{
+                        
+                            foreach (var key in Request.QueryString.AllKeys)
+                            {
+                                <text>
+                                 searchParams.set("@key", "@Request.QueryString[key]");
+                                </text>
+                            }
+                        }
+                        
+                        window.location.search = searchParams.toString();
+                        }
+                        
+                   }
+                    
                  </text>
             }
         }
