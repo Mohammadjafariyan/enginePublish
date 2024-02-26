@@ -1,4 +1,15 @@
-﻿/*---------------------------------------------------recording animation--------------------------------------*/
+﻿@media (min-width: 768px)
+{
+    .sidebar .nav-item .nav-link {
+        display: block;
+        padding: 0px;
+        text-align: right;
+        width: 100%;
+        width: 14rem;
+    }
+}
+
+/*---------------------------------------------------recording animation--------------------------------------*/
 .whiteRecording {
     width: 35px;
     height: 35px;
