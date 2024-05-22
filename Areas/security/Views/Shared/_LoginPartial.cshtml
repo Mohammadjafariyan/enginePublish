@@ -1,9 +1,10 @@
 ﻿@using Microsoft.AspNet.Identity
 @using Microsoft.AspNet.Identity.EntityFramework
 @using SignalRMVCChat.Areas.security.Models
+@using SignalRMVCChat.Models.GapChatContext
 @if (Request.IsAuthenticated)
 {
-    using (Html.BeginForm("LogOff", "Account" 
+    using (Html.BeginForm("LogOff", "OldAccount" 
         , new {area=""}, FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
     @Html.AntiForgeryToken()
@@ -11,7 +12,7 @@
     <ul class="nav navbar-nav navbar-right">
         <li>
             @{
-                using (var db = new ApplicationDbContext())
+                using (var db = new GapChatContext())
                 {
                     string currentUserId = User.Identity.GetUserId();
                     ApplicationUser currentUser = db.Users.FirstOrDefault(x => x.Id == currentUserId);
@@ -26,7 +27,7 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("ثبت نام", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("ورود", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.ActionLink("ثبت نام", "Register", "OldAccount", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("ورود", "Login", "OldAccount", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }
