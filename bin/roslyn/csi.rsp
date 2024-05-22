@@ -1,10 +1,7 @@
 ﻿/r:System
 /r:System.Core
 /r:Microsoft.CSharp
-<<<<<<< HEAD
 /r:System.ValueTuple.dll
-=======
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
 /u:System
 /u:System.IO
 /u:System.Collections.Generic

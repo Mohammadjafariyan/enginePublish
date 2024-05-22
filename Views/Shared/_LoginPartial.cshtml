@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿@using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated) {
     using (Html.BeginForm("LogOff", "Account", 
@@ -24,34 +23,5 @@ else {
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues:  {
                 area="security"
             }, htmlAttributes: new { id = "loginLink" })</li>
-=======
-﻿@using Engine.Localization
-@using Microsoft.AspNet.Identity
-@if (Request.IsAuthenticated)
-{
-    using (Html.BeginForm("LogOff", "Account",new {area=""}, FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-    {
-    @Html.AntiForgeryToken()
-
-    <ul class="nav navbar-nav navbar-right">
-        @*<li>
-            @Html.ActionLink("سلام " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>*@
-        <li style="    margin-left: 20px;margin-right: 20px"><a href="javascript:document.getElementById('logoutForm').submit()">خروج</a></li>
-        
-        <li>
-              <a class="" href="@Url.Action( "Index", "AttendanceHome", new {Area = "Absence"})">
-                       داشبورد
-                    </a>
-        </li>
-    </ul>
-    }
-}
-else
-{
-    <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink(Request.GetText( "ثبت نام"  ), "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class= "nav-link"})</li>
-        <li>@Html.ActionLink(Request.GetText( "ورود"  ), "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = " nav-link " })</li>
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
     </ul>
 }

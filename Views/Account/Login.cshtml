@@ -1,15 +1,8 @@
 ﻿@using Engine.Localization
-<<<<<<< HEAD
 @using SignalRMVCChat.Areas.security.Models
 @model SignalRMVCChat.Areas.security.Models.LoginViewModel
 @{
     ViewBag.Title = "ورود";
-=======
-@using Engine.Models
-@model LoginViewModel
-@{
-    ViewBag.Title = "ورود به سیستم";
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
 
     ViewBag.Bootstrap = 4;
 
@@ -20,15 +13,12 @@
         margin-top: 3%;
         padding: 3%;
     }
-<<<<<<< HEAD
     
     .register{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
 
-=======
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
     .register-left{
         text-align: center;
         color: #fff;
@@ -290,7 +280,6 @@
             <p>حساب کاربری ندارید ؟ </p>
             <input type="button" onclick="window.location.href='@Url.Action("Register")'" name="" value="ثبت نام"/><br/>
             <input style="margin: 0px" type="button" onclick="window.location.href='@Url.Action("ForgotPassword")'" name="" value="فراموشی رمز عبور"/><br/>
-<<<<<<< HEAD
            
                         @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
             
@@ -304,18 +293,6 @@
 
                     @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }
                         , FormMethod.Post, new { @class = "form ", role = "form" }))
-=======
-
-        </div>
-        <div class="col-md-9 register-right">
-
-            <div class="tab-content" id="myTabContent" dir="rtl">
-                <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <h3 class="register-heading">ورود به سیستم</h3>
-
-                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }
-                        , FormMethod.Post, new { @class = "form form-horizontal", role = "form" }))
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
                     {
                         @Html.AntiForgeryToken()
 
@@ -324,12 +301,8 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-<<<<<<< HEAD
                                     @Html.LabelFor(m=>m.Email)
                                     @Html.TextBoxFor(m => m.Email, new { placeholder = Request.GetText("نام کاربری یا ایمیل *"), @class = "form-control" })
-=======
-                                    @Html.TextBoxFor(m => m.UserName, new { placeholder = Request.GetText("نام کاربری یا ایمیل *"), @class = "form-control" })
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
                                 </div>
 
                             </div>
@@ -338,12 +311,8 @@
 
 
                                 <div class="form-group">
-<<<<<<< HEAD
                                                                        @Html.LabelFor(m=>m.Password)
  @Html.PasswordFor(m => m.Password, new { placeholder = Request.GetText("تکرار رمز عبور *"), @class = "form-control" })
-=======
-                                    @Html.PasswordFor(m => m.Password, new { placeholder = Request.GetText("تکرار رمز عبور *"), @class = "form-control" })
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
                                 </div>
                                 <div class="form-group">
 

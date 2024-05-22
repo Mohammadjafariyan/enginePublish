@@ -1,5 +1,4 @@
 ﻿@using Engine.Localization
-<<<<<<< HEAD
 @model SignalRMVCChat.Areas.security.Models.RegisterViewModel
 
 <div class="col-md-6" style="text-align: right"> 
@@ -19,28 +18,10 @@
     <div class="form-group">
                     @Html.LabelFor(m=>m.ConfirmPassword)
   @Html.PasswordFor(m => m.ConfirmPassword, new { placeholder = Request.GetText("تکرار رمز عبور *"), @class = "form-control" })
-=======
-@model Engine.Models.RegisterViewModel
-
-<div class="col-md-6">
-
-    <div class="form-group">
-        @Html.TextBoxFor(m => m.FirstName, new { placeholder = Request.GetText("نام *"), @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.TextBoxFor(m => m.LastName, new { placeholder = Request.GetText("نام خانوادگی *"), @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.PasswordFor(m => m.Password, new { placeholder = Request.GetText("رمز عبور *"), @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.PasswordFor(m => m.ConfirmPassword, new { placeholder = Request.GetText("تکرار رمز عبور *"), @class = "form-control" })
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
     </div>
     
 
 </div>
-<<<<<<< HEAD
 <div class="col-md-6" style="text-align: right">
     <div class="form-group">
                           @Html.LabelFor(m=>m.Email)
@@ -48,14 +29,6 @@
     </div>
     <div class="form-group">
         @*@Html.TextBoxFor(m => m.Mobile, new { placeholder = Request.GetText("موبایل شما "), @class = "form-control" })*@
-=======
-<div class="col-md-6">
-    <div class="form-group">
-        @Html.TextBoxFor(m => m.Email, new { placeholder = Request.GetText("ایمیل شما *"), @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.TextBoxFor(m => m.Mobile, new { placeholder = Request.GetText("موبایل شما "), @class = "form-control" })
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
     </div>
     @*<div class="form-group" style="    height: calc(2.25rem + 2px);">
                                     $1$<select class="form-control" >
@@ -71,7 +44,6 @@
     <div class="form-group" style="text-align: right">
 
 
-<<<<<<< HEAD
         <div >
             <label class=" ">
                               <span> @Request.GetText("مرد") </span>
@@ -84,18 +56,6 @@
         </div>
         
      
-=======
-        <div class="maxl">
-            <label class="radio inline">
-                <input type="radio" name="Gender" value="male" checked>
-                <span> @Request.GetText("مرد") </span>
-            </label>
-            <label class="radio inline">
-                <input type="radio" name="Gender" value="female">
-                <span>@Request.GetText("زن") </span>
-            </label>
-        </div>
->>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
     </div>
     
     
