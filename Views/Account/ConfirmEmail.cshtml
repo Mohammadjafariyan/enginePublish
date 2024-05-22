@@ -1,4 +1,5 @@
 ﻿@{
+<<<<<<< HEAD
     ViewBag.Title = "احراز هویت ایمیل";
 }
 
@@ -331,3 +332,14 @@ else
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+=======
+    ViewBag.Title = "Confirm Email";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div>
+    <p>
+        Thank you for confirming your email. Please @Html.ActionLink("Click here to Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+    </p>
+</div>
+>>>>>>> 106c578037b333c973fee489ba8ef6e474141af4

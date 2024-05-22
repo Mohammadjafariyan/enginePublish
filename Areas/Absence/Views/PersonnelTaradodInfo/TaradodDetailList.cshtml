@@ -1,0 +1,327 @@
+@using System.Globalization
+@using Engine.Areas.Absence.Controllers
+@using Engine.Areas.Absence.Models
+@using Engine.Controllers.AbstractControllers
+@using Engine.Entities.Data.Absence.Models
+@{
+    Layout = null;
+
+    List<BiometryCalculatedDetail> taradodInfo = (List<BiometryCalculatedDetail>) ViewData[PersonnelTaradodInfoController.taradodInfo];
+
+    BiometryCalculatedDetail total = (BiometryCalculatedDetail) ViewData[PersonnelTaradodInfoController.total];
+
+    ObligatedRange obligatedRange = (ObligatedRange) ViewData[PersonnelTaradodInfoController.obligatedRangeName];
+
+
+    var fromdate = ViewData["fromdate"] as DateTime?;
+    var todate = ViewData["dateto"] as DateTime?;
+    
+    
+    
+    PersianCalendar persianCalendar = new PersianCalendar();
+    
+    var fromdateStr =fromdate.HasValue ? $@"{persianCalendar.GetYear(fromdate.Value)}/{persianCalendar.GetMonth(fromdate.Value)}/{persianCalendar.GetDayOfMonth(fromdate.Value)}" : "";
+    var todateStr =todate.HasValue ? $@"{persianCalendar.GetYear(todate.Value)}/{persianCalendar.GetMonth(todate.Value)}/{persianCalendar.GetDayOfMonth(todate.Value)}": "";
+}
+
+<style id="beforePrint">
+
+
+    .range {
+        border: 1px solid cornflowerblue;
+        background-color: aliceblue;
+        display:flow-root;
+    }
+        .range:hover {
+            border: 1px solid red;
+            background-color: red;
+            cursor:pointer;
+            color:white;
+        }
+</style>
+
+
+@if (ViewData[PersonnelTaradodInfoController.NoStyle] as bool? == true)
+{
+    
+}
+else
+{
+    
+    <style>
+        .friday {
+            background-color: #ffd2d1 !important;
+        }
+    </style>
+
+}
+
+    <style>
+    td {
+         text-align: center;
+         white-space: nowrap;
+     }
+
+
+        * {
+            font-family: "bykan" !important;
+        }
+    
+/*.range {
+        background-color: #8e6969;
+        color: white;
+        border: red solid;
+    }
+    */
+    
+</style>
+<div id="dataDetail">
+    
+    <table class="table table-striped table-bordered table-condensed table-responsive" style="direction: ltr">
+       
+        <thead>
+        <tr>
+            <td >وضعیت</td>
+            <td >تعطیل کاری</td>
+            <td >مرخصی</td>
+            <td >ماموریت</td>
+            <td >شب کاری</td>
+            <td >نوبت کاری</td>
+            <td >نامجاز</td>
+            <td >مجاز</td>
+            <td >اضافه کار</td>
+            <td >کسری کار و غیبت</td>
+            <td >کل ساعت حظور</td>
+            <td > خروج</td>
+            <td >ورود</td>
+            <td>روز هفته</td>
+            <td >تاریخ</td>
+        </tr>
+        
+        </thead>
+        <tbody>
+       
+        
+        
+        @foreach (var daytime in taradodInfo)
+        {
+            string friday = "";
+            if (daytime.Date.DayOfWeek == DayOfWeek.Friday)
+            {
+                friday = "friday";
+            }
+            <tr class="@friday">
+                @if (daytime.Date.DayOfWeek == obligatedRange.OffDay)
+                {
+                    if (daytime.Date.DayOfWeek == DayOfWeek.Friday)
+                    {
+                        <td >
+                            جمعه
+                        </td>
+                    }
+                    else
+                    {
+                        <td >
+                            تعطیل موظفی
+                        </td>
+                    }
+                }
+                else
+                {
+                    <td >
+
+                    </td>
+                }
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td > </td>
+                <td > </td>
+                <td >
+                    @PrintTimes(daytime.Times, BiometryCalculatedDetailTimeType.NotValid)
+                </td>
+
+                <td >
+                    @PrintTimes(daytime.Times, BiometryCalculatedDetailTimeType.Valid)
+                </td>
+                <td >
+                    @PrintTimes(daytime.Times, BiometryCalculatedDetailTimeType.Overtime)
+                </td>
+                <td >
+                    @PrintTimes(daytime.Times, BiometryCalculatedDetailTimeType.Absence)
+                </td>
+                <td >
+                    @if(daytime.Total.Hours!=0 && daytime.Total.Minutes==0 && daytime.Total.Seconds == 0)
+                    {
+                        <span>[@daytime.Total.Hours:@daytime.Total.Minutes:@daytime.Total.Seconds]</span>
+                    }
+                </td>
+                <td >
+                    @if (daytime.BiometricData != null)
+                    {
+                        foreach (var data in daytime.BiometricData.BiometricDataTimes)
+                        {
+                            if (data.TimeOut.HasValue)
+                            {
+                                <span class="range">@data.TimeOut.Value.Hour:@data.TimeOut.Value.Minute:@data.TimeOut.Value.Second</span><br>
+                            }
+                            else
+                            {
+                                <span class="range"></span><br>
+                            }
+                        }
+                    }
+                </td>
+                <td >
+                    @if (daytime.BiometricData != null)
+                    {
+                        foreach (var data in daytime.BiometricData.BiometricDataTimes)
+                        {
+
+                            if (data.TimeIn.HasValue )
+                            {
+                                <span class="range">@data.TimeIn.Value.Hour:@data.TimeIn.Value.Minute:@data.TimeIn.Value.Second</span><br>
+                            }
+                            else
+                            {
+                                <span class="range"></span><br>
+                            }
+
+                        }
+                    }
+
+                </td>
+
+                <td >@Engine.Controllers.AbstractControllers.EngineUtility.GetTranslate(daytime.Date.DayOfWeek) </td>
+
+                <td>
+                    @*
+                    <span >@persianCalendar.GetYear(daytime.Date)/@persianCalendar.GetMonth(daytime.Date)/@persianCalendar.GetDayOfMonth(daytime.Date)</span>
+                    *@
+                    <span >@EngineUtility.ConvertToShamsiDate(daytime.Date,false,false)</span>
+
+                </td>
+            </tr>
+        }
+      
+        </tbody>
+    </table>
+    
+    @*<table class="table table-bordered table-condensed table-responsive" style="direction: ltr">
+        <thead>
+        <tr>
+            <th colspan="3"> </th>
+            <th colspan="2">مدیر واحد</th>
+            <th colspan="3"></th>
+            <th colspan="2">تایید کننده</th>
+            <th colspan="3"></th>
+            <th colspan="2">تهیه کننده</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td >0</td>
+            <td >0</td>
+            <td >0</td>
+            <td >0</td>
+            <td >0</td>
+            <td >0</td>
+            <td >@Math.Floor(total.InValid.TotalHours) : @total.InValid.Minutes : @total.InValid.Seconds </td>
+            <td >@Math.Floor(total.TotalValid.TotalHours) : @total.TotalValid.Minutes : @total.TotalValid.Seconds </td>
+            <td >@Math.Floor(total.TotalOvertime.TotalHours) : @total.TotalOvertime.Minutes : @total.TotalOvertime.Seconds </td>
+            <td >@Math.Floor(total.TotalAbsence.TotalHours) : @total.TotalAbsence.Minutes : @total.TotalAbsence.Seconds </td>
+            <td >@Math.Floor(total.Total.TotalHours) : @total.Total.Minutes : @total.Total.Seconds </td>
+            <td colspan="4">جمع</td>
+        </tr>
+
+        <tr>
+            <td colspan="3"> </td>
+            <td colspan="2">مدیر واحد</td>
+            <td colspan="3"></td>
+            <td colspan="2">تایید کننده</td>
+            <td colspan="3"></td>
+            <td colspan="2">تهیه کننده</td>
+        </tr>
+
+        </tbody>
+    
+    </table>
+    <table class="table table-bordered table-condensed table-responsive" style="direction: ltr">
+        <tbody>
+        <tr>
+            <td colspan="2">
+                <span >@todateStr</span>
+            </td>
+            <td colspan="2">تا تاریخ</td>
+            <td colspan="2">                 
+                <span >@fromdateStr</span>
+            </td>
+            <td colspan="2">از تاریخ</td>
+                        
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>محل خدمت</td>
+            <td>-</td>
+            <td>گروه کاری</td>
+            <td>@total.PersonnelId</td>
+            <td>شماره پرسنلی</td>
+            <td>@total.PersonnelName</td>
+            <td>نام و نام خانوادگی</td>
+        </tr>
+        </tbody>
+    </table>*@
+</div>
+
+@helper PrintTimes(ICollection<BiometryCalculatedDetailTime> Times, BiometryCalculatedDetailTimeType type)
+{
+var _times = Times.Where(t => t.Type == type);
+   
+
+
+
+foreach (BiometryCalculatedDetailTime detailTime in _times)
+{
+
+    string timeIn = null;
+    string timeOut = null;
+    if (detailTime.TimeIn.HasValue)
+    {
+        timeIn = $@"{detailTime.TimeIn.Value.Hour}:{detailTime.TimeIn.Value.Minute}:{detailTime.TimeIn.Value.Second}";
+    }
+    else
+    {
+        timeIn = "ورود ندارد";
+    }
+
+    if (detailTime.TimeOut.HasValue)
+    {
+        timeOut = $@"{detailTime.TimeOut.Value.Hour}:{detailTime.TimeOut.Value.Minute}:{detailTime.TimeOut.Value.Second}";
+    }
+    else
+    {
+        timeOut = "خروج ندارد";
+    }
+
+    switch (detailTime.Type)
+    {
+        case BiometryCalculatedDetailTimeType.Absence:
+                <span class="range">@timeIn - @timeOut</span><br>
+            break;
+        case BiometryCalculatedDetailTimeType.Overtime:
+                @*<span class="range">@detailTime.TimeIn.Value.Hour:@detailTime.TimeIn.Value.Minute:@detailTime.TimeIn.Value.Second - @detailTime.TimeOut.Value.Hour:@detailTime.TimeOut.Value.Minute:@detailTime.TimeOut.Value.Second</span><br>*@
+                <span class="range">@timeIn - @timeOut</span><br>
+            break;
+        case BiometryCalculatedDetailTimeType.Valid:
+                <span class="range">@timeIn - @timeOut</span><br>
+                @*<span class="range">@detailTime.TimeIn.Value.Hour:@detailTime.TimeIn.Value.Minute:@detailTime.TimeIn.Value.Second - @detailTime.TimeOut.Value.Hour:@detailTime.TimeOut.Value.Minute:@detailTime.TimeOut.Value.Second</span><br>*@
+    break;
+case BiometryCalculatedDetailTimeType.NotValid:
+    <span class="range">@timeIn - @timeOut</span><br>
+                @*<span class="range">@detailTime.TimeIn.Value.Hour:@detailTime.TimeIn.Value.Minute:@detailTime.TimeIn.Value.Second - @detailTime.TimeOut.Value.Hour:@detailTime.TimeOut.Value.Minute:@detailTime.TimeOut.Value.Second</span><br>*@
+            break;
+    }
+
+}
+}
+    

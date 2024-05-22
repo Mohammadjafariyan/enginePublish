@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@model SignalRMVCChat.Areas.security.Models.IndexViewModel
 @{
     ViewBag.Title = "مدیریت پروفایل";
@@ -11,10 +12,28 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>رمز عبور:</dt>
+=======
+﻿@model Engine.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <h4>Change your account settings</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Password:</dt>
+>>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
         <dd>
             [
             @if (Model.HasPassword)
             {
+<<<<<<< HEAD
                 @Html.ActionLink("تغییر رمز عبور", "ChangePassword")
             }
             else
@@ -28,6 +47,21 @@
             @Model.Logins.Count [
             @Html.ActionLink("Manage", "ManageLogins") ]
         </dd>*@
+=======
+                @Html.ActionLink("Change your password", "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink("Create", "SetPassword")
+            }
+            ]
+        </dd>
+        <dt>External Logins:</dt>
+        <dd>
+            @Model.Logins.Count [
+            @Html.ActionLink("Manage", "ManageLogins") ]
+        </dd>
+>>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
         @*
             Phone Numbers can used as a second factor of verification in a two-factor authentication system.
              
@@ -56,13 +90,21 @@
                 }
             </dd>
         *@
+<<<<<<< HEAD
         @*<dt>Two-Factor Authentication:</dt>
+=======
+        <dt>Two-Factor Authentication:</dt>
+>>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
         <dd>
             <p>
                 There are no two-factor authentication providers configured. See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
                 for details on setting up this ASP.NET application to support two-factor authentication.
             </p>
+<<<<<<< HEAD
             @#1#if (Model.TwoFactor)
+=======
+            @*@if (Model.TwoFactor)
+>>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
                 {
                     using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                     {
@@ -81,7 +123,12 @@
                         <input type="submit" value="Enable" class="btn btn-link" />
                         </text>
                     }
+<<<<<<< HEAD
                 }#1#
         </dd>*@
+=======
+                }*@
+        </dd>
+>>>>>>> 106c578037b333c973fee489ba8ef6e474141af4
     </dl>
 </div>

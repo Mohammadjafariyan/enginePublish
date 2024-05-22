@@ -1,0 +1,58 @@
+لیست محل های کار
+
+<app-crud [header]="'لیست محل های کار'" [cols]="cols" [form]="form"
+          [formFields]="fields" [service]="workplacesService"
+
+>
+
+  <ng-template #columnHeaderContent let-columns>
+    <th>مکان در نقشه</th>
+    <th>انتخاب پرسنل</th>
+  </ng-template>
+
+  <ng-template #columnContent let-item>
+    <td>
+      <a target="_blank" [href]="'/Mobile/Workplaces/WorkplaceInMap?id='+item.Id" class="btn btn-outline-success " *ngIf="item.Gps">
+        تعیین شده
+      </a>
+      <a  target="_blank"  [href]="'/Mobile/Workplaces/WorkplaceInMap?id='+item.Id" class="btn  btn-outline-danger " *ngIf="!item.Gps">
+تعیین نشده
+      </a>
+
+    </td>
+    <td>
+      <a (click)="showDialog(item)" class="btn btn-outline-info ">
+        {{item.PersonnelCount}}
+        پرسنل
+      </a>
+    </td>
+
+
+  </ng-template>
+
+</app-crud>
+
+
+<p-dialog header="انتخاب پرسنل این محل کار" [(visible)]="display"
+          [modal]="true"
+          [responsive]="true"
+          (onHide)="reload()"
+>
+
+  <div *ngIf="display">
+    <!--todo:ss-->
+    <!---->
+    <app-one-work-place-many-personnel [oneId]="selectedOneId" [oneTitle]="oneTitle">
+
+
+    </app-one-work-place-many-personnel>
+  </div>
+
+
+  <ng-template pTemplate="footer">
+    <button type="button" pButton icon="pi pi-check" (click)="submitOneToManyForm(); " label="ثبت"></button>
+    <button type="button" pButton icon="pi pi-close" (click)="display=false;" label="بستن"></button>
+  </ng-template>
+
+</p-dialog>
+
